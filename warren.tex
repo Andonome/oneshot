@@ -72,38 +72,50 @@ Every time they make a new roll:
 
 Of course, if the player figures out the trap, all rolls can be dispenses with, and the player can ascend to room at the top, on page \pageref{laddertop}.
 
-\mapentry{Magic Portal}
-
-\begin{boxtext}
-
-	In this room there stands before you a Magical portal 8' high and 4' wide.
-	A warm wind blows through the portal and there are runes above it.
-	There are lit Sconces on the walls and the room seems empty accept for the scuff marks leading to and from the portal. 
-
-\end{boxtext}
-
-If any of the players are literate and speak the Gnomish tongue they can read the runes above the magical portal which read Desert Realm.
-
 \mapentry{Dining Room}
 
 \begin{boxtext}
 
-As you climb the stairs away from your cell you enter a room full of benches and tables overturned and broken. 
-The floor is strewn with pots and plates, Knives,forks and candlesticks but no candles and not of scrap of food remains it looks like a pack of ravenous dogs swept through here and licked ever morsel from every surface.
-In the middle of the room you can see upon a table 2 creatures one you now define as a goblin and the other you would call a rat but only if the rat had been mated with a Great Dane.
-The two creatures seem to be fighting over something and as you focus on the scene before you it becomes clear that what they are fighting over is a bone (possibly human).
-It looks at first like they are pulling at it one on each end but then you hear the sound of grinding and snapping and you realise that they are both biting into either end of this bone.
+	As you climb the stairs away from your cell you enter a room full of benches and tables, all overturned and broken. 
+	The floor is strewn with pots and plates, knives, forks and candlesticks, but no candles and not of scrap of food remains.
+	It looks like a pack of ravenous dogs swept through here and licked ever morsel from every surface.
+	In the middle of the room you can see upon a table two creatures -- a goblin and the other you would call a rat, but only if the rat had been mated with a Great Dane.
+	The two creatures seem to be fighting over something and as you focus on the scene before you it becomes clear that what they are fighting over is a bone (possibly human).
+	It looks at first like they are pulling at it, one on each end, but then you hear the sound of grinding and snapping and you realise that they are both just chewing at either end.
 
 \end{boxtext}
 
 \paragraph{If the players make a sound}
 the goblin will stop fighting with the rat for the ownership of the bone and run out of the room shouting for the shaman who had left them in the cell previously.
-There are 2 knives in this room that can be wielded as daggers 
-Whatever happens, the rat will Swollow the reaining bone whole and attack.
+There are two knives in this room that can be wielded as daggers.
 
-\goblin[\npc{\F\N}{Random Goblin}]
+\paragraph{Whatever happens,}
+the rat will swallow the remaining bone whole, then attack.
+
+\goblin[\npc{\F\N}{Hungry Goblin}]
 
 \nurarat[\npc{\A\N}{Nura Rat}]
+
+\mapentry{Magic Portal}
+
+\begin{boxtext}
+
+	In this room there stands before you a Magical portal 8' high and 4' wide.
+	A warm wind blows through the portal and on the other side you can see an endless desert of bright, yellow rocks.
+	Runic writing sits above the portal.
+	The room seems empty except for the scuff marks leading to and from the portal, and the massive double-doorway behind you. 
+
+	The passageway continues, but becomes quickly lost in darkness as it loses the Sunlight through the portal.
+
+\end{boxtext}
+
+\paragraph{If any of the PCs are literate and speak the Gnomish tongue,}
+they can read the runes above the magical portal; they read ``Desert Realm''.
+
+\paragraph{If the PCs enter the portal and journey through the Realm of Bright Rocks,}
+they won't find much -- not even a place to hide, given the desert is expansive and flat.
+If they stay there long, give them the usual 4 Fatigue Points and roll an encounter for that Realm.%
+\footnote{See Adventures in Fenestra for more on the Realm of Bright Rocks.}
 
 \mapentry{Spellcasters}
 
@@ -118,14 +130,15 @@ Whatever happens, the rat will Swollow the reaining bone whole and attack.
 the roll is Dexterity + Stealth, TN 10.
 They will also have to put out their torch, if they have one.
 
-\paragraph{If the characters search the bodies,}
+\paragraph{If the characters kill the nuramancers and search the bodies,}
 they find a Portal Scroll,%
 \footnote{This scroll opens a portal to the Realm of Shifting corridors. See Adventures in Fenestra for more on it.}%
  and a Scroll of Uprising.
 
 \magicitem{Scroll of Uprising}{Ghoul Calling}{Saurecanta}{Instant}{Pocket Spell}{+3}{7}
 
-Once the spell is cast, all creatures with 11 HP or fewer in the surrounding 3 areas, raise from the dead.
+Once the spell is cast, all creatures with 11 HP or fewer in the surrounding 3 areas, raise from the dead as ghouls.
+See Appendix \ref{undeadstats} for stats on the various ghouls.
 
 \magicitem{Portal Scroll}{Unrestrained, Open Teleport}{Alchemy}{2 Scenes}{Pocket Spell}{4}{5}
 
@@ -135,10 +148,8 @@ The portal remains open for 2 scenes.
 
 
 \goblinnuramancer[\npc{\F}{Screamer}]
-\goblinnuramancer[\npc{\F\N}{Screamer}]
 
 \goblinnuramancer[\npc{\M}{Brock}]
-\goblinnuramancer[\npc{\M\N}{Brock}]
 
 \goblin[\npc{\T}{3 Goblins}]
 

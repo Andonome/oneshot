@@ -203,6 +203,8 @@ The lift responds to magical passwords -- the gnomish words for `farm' (for the 
 The various ogres and goblins who use the lift only know the passwords for the bottom and middle section.
 Only the nuramancer goblins know the word for the top.
 
+The lift responds to any password within earshot.
+
 \paragraph{If a party member goes up the lift without the party,}
 player the encounter quickly.
 They will most likely die at the top.
@@ -572,17 +574,81 @@ Otherwise, only a farmer and a wandering noble, unlucky enough to be journeying 
 
 \mapentry{Trapped Hallway}
 
+\begin{boxtext}
+
+	Your lantern illuminates dirty footprints leading out the door, to the left, and down a dark corridor.
+	Ahead, two statues of ogres stand, like stooping gargoyles, blocking your path.
+	All around, the path glistens with tiny gemstones carved into the centre of flagstones.
+
+\end{boxtext}
+
+The squares between the exit door and the party's path can turn anyone stepping upon them into stone.
+One ogre was unfortunate enough to trigger the trap.
+The second ogre did not believe the goblins about why the first was there, and ignored the statue, so he was turned to stone too.
+
+This magical trap didn't look quite right when the flagstones had to be inlaid with gems in order to complete the alchemical spell -- that kind of shine gives the game away.
+The gnomes' solution was to make sure \textit{all} flagstones had a magical amulet in them, so nobody could tell which might hold a deadly spell.
+
+\paragraph{If anyone steps into the trap,}
+they may spend 5 FP to ignore the effects of the trap.
+If this happens, explain that their foot or hand begins to harden, then turn to stone for half a second before they retract it.
+
+\paragraph{If the players figure out that the area is trapped and try to jump over it,}
+remind them that they cannot see where the trap starts and where it ends.
+If they avoid stepping into the trap, they can make a Speed + Athletics roll, TN 9, to jump over the afflicted area.
+
+\mapentry{The Top of the Shaft}
+
+\begin{boxtext}
+
+	Ahead lies to massive double-doors.
+	To the right, the hallway extends into a massive room, where you can hear the sound of sawing.
+
+\end{boxtext}
+
+Grank the nuramancer goblin has heard the PCs coming, and has no intention of fighting them alone.
+He knows he has the only key to the exit door, so he intends to untie the hell-hounds he has tied up at the room's side before fleeing into the fungal gardens.
+
+By the time the party reach round the corner, he will have disappeared, leaving unchained nura wolves.
+
+\nurawolf[\npc{\A\N\T}{4 Nura Wolves}]
+
 \mapentry{Fungal Gardens}
 
-Jellies have taken over most of the area -- ogres simply grab what crawls out.
+\begin{exampletext}
+
+	This beautiful fungal garden took dripping rain from above, and sieved it through the roof then the soil below, until it distributed nutrients for a forest of mushrooms, big and small.
+	The fungal garden was regularly invaded by oozes which can creep into small cracks when young, and grow massive quickly.
+	The nura never really kept up with the garden's maintenance, so the room festered with dangerous jellies.
+
+\end{exampletext}
 
 \jelly
 
 \jelly
+
+\label{grank}
+\npc{\M\N}{Grank}
+\person{-2}% STRENGTH
+{1}% DEXTERITY 
+{4}% SPEED
+{{1}% INTELLIGENCE
+{2}% WITS
+{-4}}% CHARISMA
+{0}% DR
+{1}% COMBAT
+{Projectiles 1, Athletics 2, Medicine 1, Stealth 2, Tactics 2%
+\Path{Nura}{Invocation 2, Necromancy 3, Saurecanta 2}}% SKILLS
+{Nothing}% EQUIPMENT
+{}
+
+\mapentry{The Locked Door}
+
+The locked door has a bronze border and cannot be broken without a Strength + Crafts roll, TN 18.
+The key, however, fits in nicely.
 
 \mapentry{The Exit}
 
-\umberhulk
 
 \end{multicols}
 

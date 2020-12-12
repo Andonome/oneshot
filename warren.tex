@@ -430,9 +430,11 @@ Upon stepping through it, the illusion fades, revealing the sleeping nura.
 each attempt requires a Dexterity + Stealth roll, TN 7.
 Failure will awaken the entire horde.
 
-\goblin[\npc{\N\T}{10 Goblins}]
+\goblin[\npc{\N\T}{\arabic{enemyNo} Goblins}]
 
-\ogre
+\addtocounter{enemyNo}{-4}
+
+\ogre[\npc{\N\T}{\arabic{enemyNo} Goblins}]
 
 \mapentry{The Grand Library}
 
@@ -461,7 +463,9 @@ This lock scroll will lock any door, increasing the TN to break through it by 4.
 As with any Portal Scroll, it leads to the Realm of Shifting Corridors.
 Once activated, you should roll three encounters for that area, as usual, and see if anything comes out.
 
-\magicitem{Ring of Wishes}{Conjuration 4}{Alchemy}{3 Scenes}{Talisman $\times 3$}{5}{8}
+\iftoggle{hardcore}{}{
+	\magicitem{Ring of Wishes}{Conjuration 4}{Alchemy}{3 Scenes}{Talisman $\times 3$}{5}{8}
+}
 
 This ring is actually three pocket spells -- each ruby in the ring is a separate magical item, and each use will make one ruby go dark.
 
@@ -480,7 +484,11 @@ If wrapped up in heavy sheets and suddenly displayed, the light can blind oppone
 
 \goblinnuramancer
 
-\ogre[\npc{\N\T}{2 Ogres}]
+\iftoggle{hardcore}{
+	\ogre[\npc{\N\T}{Sleeping Ogre}]
+}{
+	\ogre[\npc{\N\T}{2 Ogres}]
+}
 
 \end{multicols}
 
@@ -500,6 +508,12 @@ If wrapped up in heavy sheets and suddenly displayed, the light can blind oppone
 If the party have made no noise, they can avoid alerting this ogre with a Wits + Stealth roll, TN 9.
 Whoever is at the front makes the roll.
 If it's unclear who's at the front, the character with the highest Speed + Athletics is in the lead.
+With a successful roll,
+\iftoggle{hardcore}{
+	the ogre is resting, and must take a round to pick up his weapon and gather what's left of his wits.
+}{%
+ the party find the ogre sleeping.
+}
 
 \ogre[\npc{\N\M}{Rick, the Ogre Guard}]
 
@@ -659,7 +673,6 @@ Have them make a Wits + Athletics check (TN 7) to back off before they fall.
 
 \paragraph{If Grank ever feels like is is under threat of death by the PCs who have chased him into the Fungal Garden,}
 then he will taunt them with the key he has in is position to the outside world and throw it into the nearest  Ooze. He then let out a giggle and dash off into the undergrowth leaving the players to face the hulking pulsating mass.
-
 
 \mapentry{The Locked Door}
 

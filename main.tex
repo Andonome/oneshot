@@ -7,6 +7,18 @@
 
 \settoggle{verbose}{true}
 
+\newtoggle{hardcore}
+
+\settoggle{hardcore}{true}
+
+\newcounter{enemyNo}
+
+\iftoggle{hardcore}{
+	\setcounter{enemyNo}{10}
+}{
+	\setcounter{enemyNo}{6}
+}
+
 \begin{document}
 
 \tableofcontents
@@ -18,6 +30,10 @@
 \input{timeline.tex}
 
 \input{warren.tex}
+
+\iftoggle{hardcore}{
+	\input{top.tex}
+}{}
 
 \input{siege.tex}
 

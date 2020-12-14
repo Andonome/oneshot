@@ -12,5 +12,5 @@ They awaken in a cell with nothing but their clothes, and must find a way to esc
 
 The adventure gives the players an introduction to the main themes and entities within Fenestra.
 
-You can find more on the full campaign world [here](https://gitlab.com/bindrpg/aif)
+You can find more on the full campaign world [here](https://gitlab.com/bindrpg/aif).
 

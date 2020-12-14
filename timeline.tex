@@ -81,11 +81,13 @@ These ogres have shed human blood, and have already forgotten about most of thei
 As they return and talk about how much they ate, the other ogres begin to accept their new lives, and accept that they must kill humans to live.
 From this point onwards, ogres will not hesitate to enter battle.
 
-\ogre[\npc{\T\N}{10 ogres}]
+\ogre[\npc{\T\N}{\arabic{enemyNo} ogres}]
 
 \ogre[\npc{\T\N}{5 ogres handling prisoners}]
 
+\iftoggle{hardcore}{
 \goblin[\npc{\T\N}{5 goblins}]
+}{}
 
 The ten prisoners do not have the strength to fight, but will flee if pushed.
 

@@ -46,7 +46,9 @@ Once new prisoners are in, the players can spend Story Points to introduce old f
 
 If the players attempt to climb, they find that every rung of a multiple of five (the fifth, tenth, fifteenth, and so on), are coated in a slipper substance made from the fungal gardens.
 The rungs which are a multiple of 7 are set to break once anything with a Weight Rating 7 or more will break the rung.%
-\footnote{A creature's Weight Rating is equal to its HP.}
+\footnote{A creature's Weight Rating is equal to its HP.\iftoggle{core}{%
+	See the core book, page \pageref{weightrating}.
+}{}}
 These breakable sections are actually solid illusions, so they appear again shortly after breaking, but will resist any markings such as paint, as those marking disappear as the illusion resets every so often.
 Meanwhile, any rung which is both a multiple of 5 and 7 indicates that the next section is invisible and has switch to the wall on the left.
 
@@ -115,7 +117,10 @@ they can read the runes above the magical portal; they read ``Desert Realm''.
 \paragraph{If the PCs enter the portal and journey through the Realm of Bright Rocks,}
 they won't find much -- not even a place to hide, given the desert is expansive and flat.
 If they stay there long, give them the usual 4 Fatigue Points and roll an encounter for that Realm.%
-\footnote{See Adventures in Fenestra for more on the Realm of Bright Rocks.}
+\footnote{See Adventures in Fenestra for more on the Realm of Bright Rocks\iftoggle{aif}{%
+	, page \pageref{brightrocks}}%
+	{}
+.}
 
 \mapentry{Spellcasters}
 
@@ -131,9 +136,7 @@ the roll is Dexterity + Stealth, TN 10.
 They will also have to put out their torch, if they have one.
 
 \paragraph{If the characters kill the nuramancers and search the bodies,}
-they find a Portal Scroll,%
-\footnote{This scroll opens a portal to the Realm of Shifting corridors. See Adventures in Fenestra for more on it.}%
- and a Scroll of Uprising.
+they find a Portal Scroll, and a Scroll of Uprising.
 
 \magicitem{Scroll of Uprising}{Ghoul Calling}{Saurecanta}{Instant}{Pocket Spell}{+3}{7}
 
@@ -142,10 +145,8 @@ See Appendix \ref{undeadstats} for stats on the various ghouls.
 
 \magicitem{Portal Scroll}{Unrestrained, Open Teleport}{Alchemy}{2 Scenes}{Pocket Spell}{4}{5}
 
-The scroll takes 5 rounds to speak properly, and opens a doorway to the Realm of Shifting Corridors.%
-\footnote{See Adventures in Fenestra for more on this realm.}
+The scroll takes 5 rounds to speak properly, and opens a doorway to the Realm of Shifting Corridors.
 The portal remains open for 2 scenes.
-
 
 \goblinnuramancer[\npc{\F}{Screamer}]
 

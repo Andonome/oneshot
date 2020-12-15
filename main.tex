@@ -2,10 +2,16 @@
 \usepackage{glossaries}
 \usepackage{glossary-mcols}
 
-\input{config/preamble.tex}
-\input{config/monsters.tex}
+\usepackage{config/bind}
+\usepackage{config/monsters}
 
 \settoggle{verbose}{true}
+
+% Check if 'adventures in fenestra' is present in directory aif.
+% If it is, set up a toggle 'aif', and make it true.
+% Repeat for 'core'.
+\externalReferent{aif}
+\externalReferent{core}
 
 \newtoggle{hardcore}
 

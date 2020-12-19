@@ -4,8 +4,6 @@ output: svg-inkscape main.pdf
 	pdflatex ${filename}.tex
 svg-inkscape:
 	pdflatex -shell-escape ${filename}.tex
-	makeindex main.idx
-	makeglossaries main
 main.pdf:
 	pdflatex ${filename}.tex
 tree:

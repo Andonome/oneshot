@@ -272,7 +272,7 @@ The dragon's eventual goal is to obtain the rest of the treasure, then return th
 {5}% DR
 {2}% COMBAT
 {Aggression 2, Projectiles 2, Academics 3, Athletics 1, Deceit 3, Tactics 2, Vigilance 4\Path{Blood}{Enchantment 2, Fate 3, Invocation 4}}% SKILLS
-{Assorted treasures}% EQUIPMENT
+{Nothing}% EQUIPMENT
 {\mana{8}}
 
 \paragraph{If the party request he kill nura for them}
@@ -531,12 +531,12 @@ If wrapped up in heavy sheets and suddenly displayed, the light can blind oppone
 
 \end{boxtext}
 
-If the party have made no noise, they can avoid alerting this ogre with a Wits + Stealth roll, TN 9.
+If the party have made a reasonable attempt at staying quiet, they can avoid alerting this ogre with a Wits + Stealth roll, TN 9.
 Whoever is at the front makes the roll.
 If it's unclear who's at the front, the character with the highest Speed + Athletics is in the lead.
 With a successful roll,
 \iftoggle{hardcore}{
-	the ogre is resting, and must take a round to pick up his weapon and gather what's left of his wits.
+	the ogre is resting, and must take a round to pick up his weapon and gather what's left of his wits, but it will still wake if approached.
 }{%
  the party find the ogre sleeping.
 }
@@ -545,8 +545,9 @@ With a successful roll,
 
 Rick has only recently been turned into an ogre, and he has eaten his fill of mushrooms, so a Wits + Empathy roll, TN 10, will allow the party to convince him to let them go.
 However, if Rick lets them go, he will insist on joining them so he can be free.
-While he genuinely wants to escape and become human again, the moment the party enter battle with other nura his instincts will kick in, and he will turn on the party.%
+While he genuinely wants to escape and become human again,%
 \footnote{Nura who have recently turned can change back to their original forms if they are starved for twice as long as they have been nura.}
+the moment the party enter battle with other nura his instincts will kick in, and he will turn on the party.%
 
 \mapentry{Second Prison}
 
@@ -617,8 +618,8 @@ Otherwise, only a farmer and a wandering noble, unlucky enough to be journeying 
 \begin{boxtext}
 
 	Your lantern illuminates dirty footprints leading out the door, to the left, and down a dark corridor.
-	Ahead, two statues of ogres stand, like stooping gargoyles, blocking your path.
-	All around, the path glistens with tiny gemstones carved into the centre of flagstones.
+	To your right, two statues of ogres stand, like stooping gargoyles, blocking the path.
+	All around, the floor glistens with tiny gemstones carved into the centre of flagstones.
 
 \end{boxtext}
 
@@ -657,8 +658,11 @@ By the time the party reach round the corner, he will have disappeared, leaving 
 the wolves go straight for the kill.
 
 \paragraph{If the party attempt to run through the double doors,}
-they will suddenly find an empty lift, unless they have taken the lift to the top themselves.
+they will suddenly find an empty lift-shaft, unless they have taken the lift to the top themselves.
 Have them make a Wits + Athletics check (TN 7) to back off before they fall.
+
+\paragraph{If the party fall into the lift,}
+they end up in the mid-section of the warren.
 
 \mapentry{Fungal Gardens}
 
@@ -678,9 +682,26 @@ Have them make a Wits + Athletics check (TN 7) to back off before they fall.
 
 \end{exampletext}
 
-\jelly
+While the place looks serene, it is inhabited by
+\iftoggle{hardcore}{%
+	dangerous oozes.
+
+	\jelly
+	\jelly
+
+}{
+	a dangerous ooze.
+}
 
 \jelly
+
+\paragraph{Once the players enter the room,}
+\iftoggle{hardcore}{%
+	the oozes begin to stalk them.
+	If multiple oozes chase them, the smaller ones will always back away from the larger ones, so no more than one ooze should follow them at a time (always the largest one).
+}{%
+	the ooze begins to stalk them.
+}
 
 \label{grank}
 \npc{\M\N}{Grank}
@@ -695,21 +716,73 @@ Have them make a Wits + Athletics check (TN 7) to back off before they fall.
 {Projectiles 1, Athletics 2, Medicine 1, Stealth 2, Tactics 2%
 \Path{Nura}{Invocation 2, Necromancy 3, Saurecanta 2}}% SKILLS
 {Nothing}% EQUIPMENT
-{}
+{\mana{4}}
 
-\paragraph{If Grank ever feels like is is under threat of death by the PCs who have chased him into the Fungal Garden,}
-then he will taunt them with the key he has in is position to the outside world and throw it into the nearest  Ooze. He then let out a giggle and dash off into the undergrowth leaving the players to face the hulking pulsating mass.
+\paragraph{If the PCs approach Grank,}
+he will hide while casting a \textit{Wide, Raging Fireball}.
+Finding him in the darkness before he finishes his spell requires a Wits + Vigilance roll, TN 10.
+If he is successful, the party make a group roll against TN 9.
+\iftoggle{core}{%
+See the core book, page \pageref{edgy} for more on Keeping Edgy to avoid missile attacks.}%
+{
+Anyone \textit{Keeping Edgy} can add their Speed + Combat to the roll, otherwise, they gain no bonus.
+}
+
+\paragraph{If Grank ever feels like his life is under threat of death,}
+then he will taunt the PCs with the key to the outside world he has in is position, and throw it into the nearest ooze.
+He then lets out a giggle and dashes off into the fungal undergrowth, leaving the players to face the hulking pulsating mass.
 
 \mapentry{The Locked Door}
 
 The locked door has a bronze border and cannot be broken without a Strength + Crafts roll, TN 18.
-The key, however, fits in nicely.
+The exit key, however, fits in nicely.
 
 If the party rest here long enough (perhaps because they have failed to get any key), a raiding party of nura return.
 See page \pageref{raidingParty} for the returning raiding party.
 
 \mapentry{The Exit}
 
+\iftoggle{hardcore}{%
+
+This is where the party exit the lower portion of the warren, and enter the upper part.
+
+\paragraph{If the PCs don't have a key,}
+they might try tricking the goblin on the other side, who has a key to let people in and out.
+See area 1, chapter \ref{upper}.
+
+\paragraph{If the PCs examine the door,}
+they can see the goblin in the next area by a glimmer of candle-light.
+
+}{
+
+\begin{boxtext}
+
+	As the key turns, the door swings open, and daylight floods in.
+	Green trees cover the road down the hill, and in the far distance, chimney-fires from little hamlets wander into the sky.
+
+	You have finally escaped from the warren.
+
+\end{boxtext}
+
+Whatever the party attempt now, the nura will notice their absence, and start chasing after them, down the hillside, and perhaps into the hamlets.
+\iftoggle{core}{See the core book, page \pageref{chases} for specifics on chase scenes.}{}
+
+The party have eight areas to run through before getting to civilization, so this will be a long chase if they decide to run the entire way.
+
+\paragraph{If the party hide,}
+have them roll Intelligence + Stealth to find the best spot and best time to hide, TN 8.
+
+\paragraph{If the party fight,}
+have them roll Intelligence + Tactics, TN 8, to ambush the nura.
+A successful roll means the entire party gain an Initiative Bonus equal to the Tactics Skill being used.
+
+\paragraph{If the nura wolves from before lived,}
+then goblins will mount them, and use them to chase after the party, then alert other nura about where they are.
+Hiding moves from TN 8 to TN 11 for as long as those wolves live.
+
+\goblin[\npc{\N\T}{12 Scout Goblins}]
+
+}
 
 \end{multicols}
 

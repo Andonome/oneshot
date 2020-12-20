@@ -76,6 +76,7 @@ one does, but the other two stay put.
 {}
 
 \ogre[\npc{\M\N}{Chasing Ogre}]
+\label{chasingogre}
 
 \mapentry{The Trapped Hallway}
 
@@ -133,9 +134,19 @@ then as soon as the gnomes spot them, they will draw their weapons while Tar\'ik
 remember to keep track of their Fate Points.
 Each scene they will regenerate 2.
 
-\gnome[\npc{\M}{Derkel}]
+\setcounter{enc}{\value{list}}
+\addtocounter{enc}{1}
 
-\gnome[\npc{\F}{Merkel}]
+\paragraph{Before the party leave,}
+the gnomes request they nip out to the kitchen, (room \arabic{enc}) and get them some food.
+
+With proper food, the party and the gnomes can rest, regain any Fatigue Points they may have accumulated, and the gnomes can do the same.
+
+\gnomishsoldier[\npc{\M}{Derkel}]
+
+\gnomishsoldier[\npc{\F}{Merkel}]
+
+\gnomishsoldier[\npc{\M}{Klaus}]
 
 \NPC{\F}{Tar\'ik the Alchemist}{Nosey}{Picks nose}{Tribe}
 \person{-3}% STRENGTH
@@ -148,14 +159,85 @@ Each scene they will regenerate 2.
 {0}% COMBAT
 {Projectiles 1, Academics 2, Empathy 1, Tactics 2
 \Path{Alchemy}{Force 1, Invocation 3, Illusion 3}}% SKILLS
-{Mana stone with 4 mana}% EQUIPMENT
-{\mana{6}\lockedmana{3}\addtocounter{sp}{5}}
+{Mana stone with 4 MP}% EQUIPMENT
+{\mana{6}\lockedmana{4}\addtocounter{sp}{8}}
+
+\mapentry{The Kitchen}
+
+\begin{boxtext}
+
+	This Spartan kitchen has pans, pots, and boxes strewn all over the place.
+	A fireplace with ventilation through the roof sits to your right.
+	Amid the mess of sacks and broken plates, you can see that a little food remains, apparently dumped here.
+
+\end{boxtext}
+
+A recent raiding party managed to get enough food to save, and one of the goblins convinced the ogres to leave it here for later.
+
+If the party want the food, they will have to make a Dexterity + Stealth roll to pilfer it without making any noise, TN 8.
+Each margin on the roll gives them enough food to heal 4 Fatigue Points.
+They can roll as many times as they like, but each roll carries the danger of being spotted.
+
+\paragraph{If the party make any noise,}
+the chasing ogre from the central room rushes after them (Page \pageref{chasingogre}).
 
 \mapentry{The Storage Room}
 
-\mapentry{Woodspy Garden}
+\begin{boxtext}
+
+	Inside the next room, you find weapons, leather armour, rope, mining supplies, and a desk with a full map on the wall.
+
+	A portal at the other end leads out into a long, dark hallway.
+
+\end{boxtext}
+
+The room contains every item which could be called `Adventuring Equipment',
+\iftoggle{core}{%
+\footnote{See the core book, page \pageref{start_equipment}}
+}{}%
+in addition to:
+
+\begin{itemize}
+
+	\item{10 shortswords}
+	\item{2 suits of partial leather (for someone with Strength 2)}
+	\item{1 suit of partial leather (for someone with Strength 1)}
+	\item{A longbow for Strength +2}
+	\item{3 quivers of 20 arrows}
+
+\end{itemize}
+
+If the party examine the map on the wall, they find it to be a map of the current level of the warren.
+See Appendix \ref{handouts} for the map.
 
 \mapentry{The Woodspy Pool}
+
+\begin{boxtext}
+
+	In the distance, you can see a massive pool of water shimmering in the dark room.
+	It seems to move a little, as if it had its own subtle tides.
+
+\end{boxtext}
+
+\begin{exampletext}
+
+	The gnomes once bread woodspies in this little pool.
+	They would chuck in various leftover food and organic waste from the surface world, and as soon as a woodspy laid some eggs, the gnomes would catch it and eat it.
+	They never presented a danger, so long as they stayed small.
+
+	Since then, the nuramancers decided to cast a spell on two of them, turning them into nura.
+	They ate all the others, and now sit hungrily, at the bottom of the pool.
+
+\end{exampletext}
+
+\nurawoodspy[\npc{\A\N}{2 Nura Woodspies}]
+
+\paragraph{If any non-nura attempt to run past the pool of water,}
+the woodspies within reach up and try to grab them.
+
+\paragraph{If the PCs attempt to shoot at the woodspies,}
+then the woodspies retreat into the water, where they cannot be hit by anything.
+
 
 \mapentry{The Duelling Room}
 

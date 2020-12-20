@@ -27,7 +27,7 @@ then the goblins down the hall are coming for them, and they had better move fas
 Make it clear the party have little chance of success in a head-to-head combat, so they should run the other way.
 
 \paragraph{If the PCs exit quietly,}
-they have free reign to explore.
+they will likely be spotted in the next room.
 
 \paragraph{If the party do not manage to escape}
 then add 3 Fatigue Points for their time starving in prison, and throw in a load of new prisoners.
@@ -79,7 +79,7 @@ Of course, if the player figures out the trap, all rolls can be dispenses with, 
 \begin{boxtext}
 
 	As you climb the stairs away from your cell you enter a room full of benches and tables, all overturned and broken. 
-	The floor is strewn with pots and plates, knives, forks and candlesticks, but no candles and not of scrap of food remains.
+	The floor is strewn with pots and plates, knives, forks and candlesticks, but no candles and not a scrap of food remains.
 	It looks like a pack of ravenous dogs swept through here and licked ever morsel from every surface.
 	In the middle of the room you can see upon a table two creatures -- a goblin and the other you would call a rat, but only if the rat had been mated with a Great Dane.
 	The two creatures seem to be fighting over something and as you focus on the scene before you it becomes clear that what they are fighting over is a bone (possibly human).
@@ -91,12 +91,51 @@ Of course, if the player figures out the trap, all rolls can be dispenses with, 
 the goblin will stop fighting with the rat for the ownership of the bone and run out of the room shouting for the shaman who had left them in the cell previously.
 There are two knives in this room that can be wielded as daggers.
 
-\paragraph{Whatever happens,}
-the rat will swallow the remaining bone whole, then attack.
+\paragraph{If the party have crept in quietly, then leave}
+the nura rat and goblin will leave.
+The goblin will go up the lift, and the rat will leave to wander the hall, searching for more food.
 
 \goblin[\npc{\F\N}{Hungry Goblin}]
 
 \nurarat[\npc{\A\N}{Nura Rat}]
+
+\mapentry{Spellcasters}
+
+\begin{boxtext}
+
+	Two goblins wearing long black robes bicker with each other over a little table.
+	\iftoggle{hardcore}{%
+		Other goblins stand at the side, apparently bored of the argument.
+	}{}
+
+\end{boxtext}
+
+The two spell casters cannot figure out what the scrolls on the table do, despite the fact that one is a Scroll of uprising, brought here by the nura.
+
+\paragraph{If the players try to sneak past,}
+the roll is Dexterity + Stealth, TN 10.
+They will also have to put out their torch, if they have one.
+
+\paragraph{If the characters investigate the table,}
+they find a Portal Scroll, and a Scroll of Uprising.
+
+\magicitem{Scroll of Uprising}{Ghoul Calling}{Saurecanta}{Instant}{Pocket Spell}{+3}{7}
+
+Once the spell is cast, all creatures with 11 HP or fewer in the surrounding 3 areas, raise from the dead as ghouls.
+See Appendix \ref{undeadstats} for stats on the various ghouls.
+
+\magicitem{Portal Scroll}{Unrestrained, Open Teleport}{Alchemy}{2 Scenes}{Pocket Spell}{4}{5}
+
+The scroll takes 5 rounds to speak properly, and opens a doorway to the Realm of Shifting Corridors.
+The portal remains open for 2 scenes.
+
+\goblinnuramancer[\npc{\F}{Screamer}]
+
+\goblinnuramancer[\npc{\M}{Brock}]
+
+\iftoggle{hardcore}{
+\goblin[\npc{\T}{3 Goblins}]
+}{}
 
 \mapentry{Magic Portal}
 
@@ -122,42 +161,6 @@ If they stay there long, give them the usual 4 Fatigue Points and roll an encoun
 	{}
 .}
 
-\mapentry{Spellcasters}
-
-\begin{boxtext}
-
-	Two goblins wearing long black robes bicker with each other over a little table.
-	Other goblins stand at the side, apparently bored of the argument.
-
-\end{boxtext}
-
-\paragraph{If the players try to sneak past,}
-the roll is Dexterity + Stealth, TN 10.
-They will also have to put out their torch, if they have one.
-
-\paragraph{If the characters kill the nuramancers and search the bodies,}
-they find a Portal Scroll, and a Scroll of Uprising.
-
-\magicitem{Scroll of Uprising}{Ghoul Calling}{Saurecanta}{Instant}{Pocket Spell}{+3}{7}
-
-Once the spell is cast, all creatures with 11 HP or fewer in the surrounding 3 areas, raise from the dead as ghouls.
-See Appendix \ref{undeadstats} for stats on the various ghouls.
-
-\magicitem{Portal Scroll}{Unrestrained, Open Teleport}{Alchemy}{2 Scenes}{Pocket Spell}{4}{5}
-
-The scroll takes 5 rounds to speak properly, and opens a doorway to the Realm of Shifting Corridors.
-The portal remains open for 2 scenes.
-
-\goblinnuramancer[\npc{\F}{Screamer}]
-
-\goblinnuramancer[\npc{\M}{Brock}]
-
-\goblin[\npc{\T}{3 Goblins}]
-
-\goblinnuramancer
-
-\goblin
-
 \mapentry{Kitchen}
 
 \begin{boxtext}
@@ -174,7 +177,7 @@ In the room the players can find two cleavers which would be the equivalent to s
 There is also a sixth goblin in the room hiding in the far corner in the dark; players can make a Wits + Vigilance roll at TN 8 to spot him.
 Should they make to much noise or light up the room, all goblins will wake up and attack.
 The players can unlock the cold store
-\footnote{A cold store is an old fashioned fridge.}%
+\footnote{A cold store is an old fashioned fridge where people put ice to keep food from going bad.}%
 with a Dexterity + Larceny roll at TN 10 to pick the lock, at which point they discover that the larder is still full of food.
 
 
@@ -198,7 +201,7 @@ The gnomes created the lift with the Force sphere.
 It can lift a combined Weight Rating of 13, and safely descend with a total Weight Rating of 26 standing on it.%
 \footnote{A creature's Weight Rating is equal to its HP.
 Some items count towards this total, but items with a negative Weight Rating do not.}
-If the party step on it with a greater Weight Rating than this, each additional point inflicts 2 Fatigue Points on everyone in the lift.
+If the party step on it with a greater Weight Rating than this, each additional point inflicts 2 Fatigue Points on everyone in the lift upon impact with the ground.
 
 The lift responds to magical passwords -- the gnomish words for `farm' (for the top), `sleep' (for the middle), and `food' (for the bottom).
 The various ogres and goblins who use the lift only know the passwords for the bottom and middle section.
@@ -253,8 +256,9 @@ They will be able to figure out that it has the same markings as any other porta
 
 \end{exampletext}
 
-The dragon will happily talk with anyone who approaches, but only speaks Quenya (the Elvish language).
+The dragon will happily talk with anyone who approaches, but only understands Quenya (the Elvish language).
 Remind the players that they can spend a Story Point to say that they know another language, as long as they say when they learnt the language.
+Despite his linguistic deficits, he can communicate using the Enchantment sphere to send ideas to characters.
 
 The dragon's eventual goal is to obtain the rest of the treasure, then return through the portal to the Realm of Bright Rocks.
 
@@ -268,7 +272,7 @@ The dragon's eventual goal is to obtain the rest of the treasure, then return th
 {5}% DR
 {2}% COMBAT
 {Aggression 2, Projectiles 2, Academics 3, Athletics 1, Deceit 3, Tactics 2, Vigilance 4\Path{Blood}{Enchantment 2, Fate 3, Invocation 4}}% SKILLS
-{Assorted treasures}% EQUIPMENT
+{Nothing}% EQUIPMENT
 {\mana{8}}
 
 \paragraph{If the party request he kill nura for them}
@@ -290,6 +294,16 @@ If the dragon parts on good terms, he blesses them all with \textit{Fortune}, al
 
 \mapentry{The Treasure Room}
 
+\begin{boxtext}
+
+	Through the door, two locked chests lie on the ground.
+	Above them, a shortbow and two beautiful short swords stand affixed to the wall, with a quiver of arrows with gemstones used as arrow tips.
+	\iftoggle{hardcore}{%
+		The scroll cabinet has two scrolls left.
+	}{The scroll cabinet has three scrolls inside.}
+
+\end{boxtext}
+
 \begin{itemize}
 
 	\item{A short bow}
@@ -298,7 +312,11 @@ If the dragon parts on good terms, he blesses them all with \textit{Fortune}, al
 	\item{Four magical arrows which explode, dealing $2D6$ damage upon striking}
 	\item{A chest containing 432cp}
 	\item{A chest containing 300sp}
-	\item{A scroll of stone}
+	\item{A Scroll of Stone}
+	\item{Lock Scroll}
+	\iftoggle{hardcore}{}{
+		\item{Portal Scroll}
+	}
 
 \end{itemize}
 
@@ -321,13 +339,6 @@ This spell was designed to evade oozes or other unintelligent creatures by becom
 
 \mapentry{Nursery}
 
-\begin{exampletext}
-
-	The gnomes locked this door tightly, while leaving enough food for their children to survive for days, then destroyed the key.
-	Unfortunately, those gnomes have turned into goblins, and if they entered the room they would probably eat their own children.
-
-\end{exampletext}
-
 \begin{boxtext}
 
 	The sound of crying emanates from the door as you swing it open.
@@ -336,6 +347,14 @@ This spell was designed to evade oozes or other unintelligent creatures by becom
 
 \end{boxtext}
 
+\begin{exampletext}
+
+	When the nura arrived, the gnomes put their children in here, then left enough food for a few days, locked the door, and destroyed the key.
+	Unfortunately, those gnomes have turned into goblins, and if they entered the room they would probably eat their own children.
+
+\end{exampletext}
+
+The door is locked, but can be picked with a Dexterity + Larceny check, TN 9.
 If the PCs enter the room, they may think these little gnomes are little goblins and kill them.
 If any of them try to do so, have them roll a Wits + Medicine check to realize their mistake, TN 8.
 Any gnomes in the party will automatically pass this check.
@@ -378,7 +397,7 @@ they find two dead gnomes, one with a torch, the other with a Portal Scroll.
 
 \begin{boxtext}
 
-	At the top of the stairs, this massive chamber lies empty, except for the fireflies darting about the chamber.
+	At the top of the stairs, this massive chamber lies empty, except for the fireflies darting about.
 	To the right, there are two short tunnels.
 	Ahead of you, two grand staircases lead up into a dim but unwavering light.
 	Below you, the entire floor is sticky and greasy.
@@ -392,12 +411,18 @@ A single sound means they will be in serious trouble.
 The greasy floor results from a mixture of faeces, drool, blood and leftover mushroom-juice.
 Anyone who can use Conjuration magic will be able to turn it into a slipper surface.
 
-\paragraph{If the PCs look around,}
-they will quickly notice the other staircase on their left.
+\setcounter{enc}{\value{list}}
+\addtocounter{enc}{-1}
+
+\paragraph{If the PCs have come from room \arabic{enc},}
+they will not immediately see the staircase on their left, but will see it after doing literally anything (fighting, searching, et c.).
 
 \paragraph{If the PCs tarry or talk,}
 have them make a Dexterity + Stealth check, TN 9.
-They make this as a \textit{Group Roll}, so a single roll counts for the whole group.
+They make this as a \textit{Group Roll}, so a single roll counts for the whole group.%
+\iftoggle{core}{%
+	\footnote{See the core book, page \pageref{grouproll} for group rolls.}
+}{}
 
 \mapentry{The Workshop}
 
@@ -435,7 +460,7 @@ Failure will awaken the entire horde.
 
 \addtocounter{enemyNo}{-4}
 
-\ogre[\npc{\N\T}{\arabic{enemyNo} Goblins}]
+\ogre[\npc{\N\T}{\arabic{enemyNo} Ogres}]
 
 \mapentry{The Grand Library}
 
@@ -506,12 +531,12 @@ If wrapped up in heavy sheets and suddenly displayed, the light can blind oppone
 
 \end{boxtext}
 
-If the party have made no noise, they can avoid alerting this ogre with a Wits + Stealth roll, TN 9.
+If the party have made a reasonable attempt at staying quiet, they can avoid alerting this ogre with a Wits + Stealth roll, TN 9.
 Whoever is at the front makes the roll.
 If it's unclear who's at the front, the character with the highest Speed + Athletics is in the lead.
 With a successful roll,
 \iftoggle{hardcore}{
-	the ogre is resting, and must take a round to pick up his weapon and gather what's left of his wits.
+	the ogre is resting, and must take a round to pick up his weapon and gather what's left of his wits, but it will still wake if approached.
 }{%
  the party find the ogre sleeping.
 }
@@ -520,8 +545,9 @@ With a successful roll,
 
 Rick has only recently been turned into an ogre, and he has eaten his fill of mushrooms, so a Wits + Empathy roll, TN 10, will allow the party to convince him to let them go.
 However, if Rick lets them go, he will insist on joining them so he can be free.
-While he genuinely wants to escape and become human again, the moment the party enter battle with other nura his instincts will kick in, and he will turn on the party.%
+While he genuinely wants to escape and become human again,%
 \footnote{Nura who have recently turned can change back to their original forms if they are starved for twice as long as they have been nura.}
+the moment the party enter battle with other nura his instincts will kick in, and he will turn on the party.%
 
 \mapentry{Second Prison}
 
@@ -592,8 +618,8 @@ Otherwise, only a farmer and a wandering noble, unlucky enough to be journeying 
 \begin{boxtext}
 
 	Your lantern illuminates dirty footprints leading out the door, to the left, and down a dark corridor.
-	Ahead, two statues of ogres stand, like stooping gargoyles, blocking your path.
-	All around, the path glistens with tiny gemstones carved into the centre of flagstones.
+	To your right, two statues of ogres stand, like stooping gargoyles, blocking the path.
+	All around, the floor glistens with tiny gemstones carved into the centre of flagstones.
 
 \end{boxtext}
 
@@ -632,8 +658,11 @@ By the time the party reach round the corner, he will have disappeared, leaving 
 the wolves go straight for the kill.
 
 \paragraph{If the party attempt to run through the double doors,}
-they will suddenly find an empty lift, unless they have taken the lift to the top themselves.
+they will suddenly find an empty lift-shaft, unless they have taken the lift to the top themselves.
 Have them make a Wits + Athletics check (TN 7) to back off before they fall.
+
+\paragraph{If the party fall into the lift,}
+they end up in the mid-section of the warren.
 
 \mapentry{Fungal Gardens}
 
@@ -653,9 +682,26 @@ Have them make a Wits + Athletics check (TN 7) to back off before they fall.
 
 \end{exampletext}
 
-\jelly
+While the place looks serene, it is inhabited by
+\iftoggle{hardcore}{%
+	dangerous oozes.
+
+	\jelly
+	\jelly
+
+}{
+	a dangerous ooze.
+}
 
 \jelly
+
+\paragraph{Once the players enter the room,}
+\iftoggle{hardcore}{%
+	the oozes begin to stalk them.
+	If multiple oozes chase them, the smaller ones will always back away from the larger ones, so no more than one ooze should follow them at a time (always the largest one).
+}{%
+	the ooze begins to stalk them.
+}
 
 \label{grank}
 \npc{\M\N}{Grank}
@@ -670,21 +716,73 @@ Have them make a Wits + Athletics check (TN 7) to back off before they fall.
 {Projectiles 1, Athletics 2, Medicine 1, Stealth 2, Tactics 2%
 \Path{Nura}{Invocation 2, Necromancy 3, Saurecanta 2}}% SKILLS
 {Nothing}% EQUIPMENT
-{}
+{\mana{4}}
 
-\paragraph{If Grank ever feels like is is under threat of death by the PCs who have chased him into the Fungal Garden,}
-then he will taunt them with the key he has in is position to the outside world and throw it into the nearest  Ooze. He then let out a giggle and dash off into the undergrowth leaving the players to face the hulking pulsating mass.
+\paragraph{If the PCs approach Grank,}
+he will hide while casting a \textit{Wide, Raging Fireball}.
+Finding him in the darkness before he finishes his spell requires a Wits + Vigilance roll, TN 10.
+If he is successful, the party make a group roll against TN 9.
+\iftoggle{core}{%
+See the core book, page \pageref{edgy} for more on Keeping Edgy to avoid missile attacks.}%
+{
+Anyone \textit{Keeping Edgy} can add their Speed + Combat to the roll, otherwise, they gain no bonus.
+}
+
+\paragraph{If Grank ever feels like his life is under threat of death,}
+then he will taunt the PCs with the key to the outside world he has in is position, and throw it into the nearest ooze.
+He then lets out a giggle and dashes off into the fungal undergrowth, leaving the players to face the hulking pulsating mass.
 
 \mapentry{The Locked Door}
 
 The locked door has a bronze border and cannot be broken without a Strength + Crafts roll, TN 18.
-The key, however, fits in nicely.
+The exit key, however, fits in nicely.
 
 If the party rest here long enough (perhaps because they have failed to get any key), a raiding party of nura return.
 See page \pageref{raidingParty} for the returning raiding party.
 
 \mapentry{The Exit}
 
+\iftoggle{hardcore}{%
+
+This is where the party exit the lower portion of the warren, and enter the upper part.
+
+\paragraph{If the PCs don't have a key,}
+they might try tricking the goblin on the other side, who has a key to let people in and out.
+See area 1, chapter \ref{upper}.
+
+\paragraph{If the PCs examine the door,}
+they can see the goblin in the next area by a glimmer of candle-light.
+
+}{
+
+\begin{boxtext}
+
+	As the key turns, the door swings open, and daylight floods in.
+	Green trees cover the road down the hill, and in the far distance, chimney-fires from little hamlets wander into the sky.
+
+	You have finally escaped from the warren.
+
+\end{boxtext}
+
+Whatever the party attempt now, the nura will notice their absence, and start chasing after them, down the hillside, and perhaps into the hamlets.
+\iftoggle{core}{See the core book, page \pageref{chases} for specifics on chase scenes.}{}
+
+The party have eight areas to run through before getting to civilization, so this will be a long chase if they decide to run the entire way.
+
+\paragraph{If the party hide,}
+have them roll Intelligence + Stealth to find the best spot and best time to hide, TN 8.
+
+\paragraph{If the party fight,}
+have them roll Intelligence + Tactics, TN 8, to ambush the nura.
+A successful roll means the entire party gain an Initiative Bonus equal to the Tactics Skill being used.
+
+\paragraph{If the nura wolves from before lived,}
+then goblins will mount them, and use them to chase after the party, then alert other nura about where they are.
+Hiding moves from TN 8 to TN 11 for as long as those wolves live.
+
+\goblin[\npc{\N\T}{12 Scout Goblins}]
+
+}
 
 \end{multicols}
 

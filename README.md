@@ -1,5 +1,7 @@
 This is a one-shot adventure for the [BIND RPG](https://gitlab.com/bindrpg/core).
 
+It's a work-in-progress, and you can find a current version of the incomplete pdf [here][download]
+
 ## Plot
 
 The PCs have been captured by goblins.
@@ -14,3 +16,4 @@ The adventure gives the players an introduction to the main themes and entities 
 
 You can find more on the full campaign world [here](https://gitlab.com/bindrpg/aif).
 
+[download]: https://belgradecats.tk/pdfs/oneshot.pdf

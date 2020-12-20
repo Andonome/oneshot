@@ -27,7 +27,7 @@ then the goblins down the hall are coming for them, and they had better move fas
 Make it clear the party have little chance of success in a head-to-head combat, so they should run the other way.
 
 \paragraph{If the PCs exit quietly,}
-they have free reign to explore.
+they will likely be spotted in the next room.
 
 \paragraph{If the party do not manage to escape}
 then add 3 Fatigue Points for their time starving in prison, and throw in a load of new prisoners.
@@ -79,7 +79,7 @@ Of course, if the player figures out the trap, all rolls can be dispenses with, 
 \begin{boxtext}
 
 	As you climb the stairs away from your cell you enter a room full of benches and tables, all overturned and broken. 
-	The floor is strewn with pots and plates, knives, forks and candlesticks, but no candles and not of scrap of food remains.
+	The floor is strewn with pots and plates, knives, forks and candlesticks, but no candles and not a scrap of food remains.
 	It looks like a pack of ravenous dogs swept through here and licked ever morsel from every surface.
 	In the middle of the room you can see upon a table two creatures -- a goblin and the other you would call a rat, but only if the rat had been mated with a Great Dane.
 	The two creatures seem to be fighting over something and as you focus on the scene before you it becomes clear that what they are fighting over is a bone (possibly human).
@@ -91,8 +91,9 @@ Of course, if the player figures out the trap, all rolls can be dispenses with, 
 the goblin will stop fighting with the rat for the ownership of the bone and run out of the room shouting for the shaman who had left them in the cell previously.
 There are two knives in this room that can be wielded as daggers.
 
-\paragraph{Whatever happens,}
-the rat will swallow the remaining bone whole, then attack.
+\paragraph{If the party have crept in quietly, then leave}
+the nura rat and goblin will leave.
+The goblin will go up the lift, and the rat will leave to wander the hall, searching for more food.
 
 \goblin[\npc{\F\N}{Hungry Goblin}]
 
@@ -103,15 +104,19 @@ the rat will swallow the remaining bone whole, then attack.
 \begin{boxtext}
 
 	Two goblins wearing long black robes bicker with each other over a little table.
-	Other goblins stand at the side, apparently bored of the argument.
+	\iftoggle{hardcore}{%
+		Other goblins stand at the side, apparently bored of the argument.
+	}{}
 
 \end{boxtext}
+
+The two spell casters cannot figure out what the scrolls on the table do, despite the fact that one is a Scroll of uprising, brought here by the nura.
 
 \paragraph{If the players try to sneak past,}
 the roll is Dexterity + Stealth, TN 10.
 They will also have to put out their torch, if they have one.
 
-\paragraph{If the characters kill the nuramancers and search the bodies,}
+\paragraph{If the characters investigate the table,}
 they find a Portal Scroll, and a Scroll of Uprising.
 
 \magicitem{Scroll of Uprising}{Ghoul Calling}{Saurecanta}{Instant}{Pocket Spell}{+3}{7}
@@ -128,11 +133,9 @@ The portal remains open for 2 scenes.
 
 \goblinnuramancer[\npc{\M}{Brock}]
 
+\iftoggle{hardcore}{
 \goblin[\npc{\T}{3 Goblins}]
-
-\goblinnuramancer
-
-\goblin
+}{}
 
 \mapentry{Magic Portal}
 
@@ -174,7 +177,7 @@ In the room the players can find two cleavers which would be the equivalent to s
 There is also a sixth goblin in the room hiding in the far corner in the dark; players can make a Wits + Vigilance roll at TN 8 to spot him.
 Should they make to much noise or light up the room, all goblins will wake up and attack.
 The players can unlock the cold store
-\footnote{A cold store is an old fashioned fridge.}%
+\footnote{A cold store is an old fashioned fridge where people put ice to keep food from going bad.}%
 with a Dexterity + Larceny roll at TN 10 to pick the lock, at which point they discover that the larder is still full of food.
 
 
@@ -198,7 +201,7 @@ The gnomes created the lift with the Force sphere.
 It can lift a combined Weight Rating of 13, and safely descend with a total Weight Rating of 26 standing on it.%
 \footnote{A creature's Weight Rating is equal to its HP.
 Some items count towards this total, but items with a negative Weight Rating do not.}
-If the party step on it with a greater Weight Rating than this, each additional point inflicts 2 Fatigue Points on everyone in the lift.
+If the party step on it with a greater Weight Rating than this, each additional point inflicts 2 Fatigue Points on everyone in the lift upon impact with the ground.
 
 The lift responds to magical passwords -- the gnomish words for `farm' (for the top), `sleep' (for the middle), and `food' (for the bottom).
 The various ogres and goblins who use the lift only know the passwords for the bottom and middle section.
@@ -253,8 +256,9 @@ They will be able to figure out that it has the same markings as any other porta
 
 \end{exampletext}
 
-The dragon will happily talk with anyone who approaches, but only speaks Quenya (the Elvish language).
+The dragon will happily talk with anyone who approaches, but only understands Quenya (the Elvish language).
 Remind the players that they can spend a Story Point to say that they know another language, as long as they say when they learnt the language.
+Despite his linguistic deficits, he can communicate using the Enchantment sphere to send ideas to characters.
 
 The dragon's eventual goal is to obtain the rest of the treasure, then return through the portal to the Realm of Bright Rocks.
 
@@ -290,6 +294,16 @@ If the dragon parts on good terms, he blesses them all with \textit{Fortune}, al
 
 \mapentry{The Treasure Room}
 
+\begin{boxtext}
+
+	Through the door, two locked chests lie on the ground.
+	Above them, a shortbow and two beautiful short swords stand affixed to the wall, with a quiver of arrows with gemstones used as arrow tips.
+	\iftoggle{hardcore}{%
+		The scroll cabinet has two scrolls left.
+	}{The scroll cabinet has three scrolls inside.}
+
+\end{boxtext}
+
 \begin{itemize}
 
 	\item{A short bow}
@@ -298,7 +312,11 @@ If the dragon parts on good terms, he blesses them all with \textit{Fortune}, al
 	\item{Four magical arrows which explode, dealing $2D6$ damage upon striking}
 	\item{A chest containing 432cp}
 	\item{A chest containing 300sp}
-	\item{A scroll of stone}
+	\item{A Scroll of Stone}
+	\item{Lock Scroll}
+	\iftoggle{hardcore}{}{
+		\item{Portal Scroll}
+	}
 
 \end{itemize}
 
@@ -321,13 +339,6 @@ This spell was designed to evade oozes or other unintelligent creatures by becom
 
 \mapentry{Nursery}
 
-\begin{exampletext}
-
-	The gnomes locked this door tightly, while leaving enough food for their children to survive for days, then destroyed the key.
-	Unfortunately, those gnomes have turned into goblins, and if they entered the room they would probably eat their own children.
-
-\end{exampletext}
-
 \begin{boxtext}
 
 	The sound of crying emanates from the door as you swing it open.
@@ -336,6 +347,14 @@ This spell was designed to evade oozes or other unintelligent creatures by becom
 
 \end{boxtext}
 
+\begin{exampletext}
+
+	When the nura arrived, the gnomes put their children in here, then left enough food for a few days, locked the door, and destroyed the key.
+	Unfortunately, those gnomes have turned into goblins, and if they entered the room they would probably eat their own children.
+
+\end{exampletext}
+
+The door is locked, but can be picked with a Dexterity + Larceny check, TN 9.
 If the PCs enter the room, they may think these little gnomes are little goblins and kill them.
 If any of them try to do so, have them roll a Wits + Medicine check to realize their mistake, TN 8.
 Any gnomes in the party will automatically pass this check.

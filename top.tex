@@ -9,6 +9,20 @@
 	\includesvg{images/Dyson_Logos/upper}
 \end{figure*}
 
+\mapentry{Entrance Hallway}
+
+At the other side of this door sits the lonely guard, Bobble.
+He only turned into a goblin recently, and he doesn't like it.
+He is also extremely hungry.
+
+\paragraph{If the party attempt to trick Bobble,}
+it's not terribly difficult.
+
+\paragraph{If the party simple enter,}
+then Bobble will run as fast as he can, away from the door, in order to alert the rest of the upper warren.
+
+\goblin[\npc{\N\M}{Bobble}]
+
 \mapentry{Banquet Hall}
 
 \begin{boxtext}
@@ -33,7 +47,22 @@ they can find a knife which functions as a dagger.
 
 \end{boxtext}
 
-\npc{\N\T}{3 Armoured Ogres}
+The party can see the exit, but cannot get up it without near-certain death.
+In order to progress, they could do any number of things:
+
+\begin{itemize}
+
+	\item{Trick one of the ogres into chasing them.}
+	\item{Find a missile weapon in order to force guardian ogres into chasing them.}
+	\item{Distract the ogres with illusions of something, while running up the stairs.}
+\end{itemize}
+
+Exactly what plans they come up with and how well they work depends entirely on your players and how their situation emerges.
+
+\paragraph{If the party attempt to get the ogres to chase them,}
+one does, but the other two stay put.
+
+\npc{\N\T}{2 Guardian Ogres}
 \person{6}% STRENGTH
 {0}% DEXTERITY 
 {4}% SPEED
@@ -42,13 +71,85 @@ they can find a knife which functions as a dagger.
 {-3}}% CHARISMA
 {0}% DR
 {1}% COMBAT
-{Crafts 1, Vigilance 1}% SKILLS
+{Crafts 1, Vigilance 2}% SKILLS
 {\greatsword, \partialleather}% EQUIPMENT
 {}
 
+\ogre[\npc{\M\N}{Chasing Ogre}]
+
 \mapentry{The Trapped Hallway}
 
+\begin{boxtext}
+
+	The door swings open with a loud creek, revealing a hallway covered wall-to-wall with sticky webs.
+	Two goblin corpses stand upright, pierced in multiple places, with a pool of their own blood lying on the ground.
+
+\end{boxtext}
+
+\begin{exampletext}
+
+	When the nura invaded, three little gnomes found themselves trapped in this little side-room.
+	They got together enough food for a few days, and have been waiting since then for someone to come and rescue them.
+
+\end{exampletext}
+
+\paragraph{If anyone tries to wriggle past the webbing,}
+have them roll Dexterity + Athletics, TN 12.
+
+\paragraph{If they get caught,}
+three gnomes will rush out and try to kill them while they're trapped and unable to defend themselves.
+Have them make a Wits + Empathy roll, TN 8, to avoid the initial attack.
+
+\paragraph{If the party use torches to destroy the webs,}
+it works okay, but moving through quietly isn't easy.
+Have them roll Intelligence + Stealth to plan a route through, without upsetting the goblin corpses (which could fall and clatter), or otherwise make a racket.
+
+\mapentry{The Lounge}
+
+\begin{boxtext}
+
+	Row after row of beds, little hammocks, and tables with old, cold pipes sitting on them stretch across the room.
+	In the distance, little voices come through an open doorway.
+	They talk lazily, quite unlike the goblinoid chatter you normally hear.
+
+\end{boxtext}
+
+If the party entered secretly, have them roll Wits + Vigilance, TN 8, to notice a dozing gnome.
+If the party move through without explaining themselves, he wakes, then sounds the alarm, and Tar\'ik in the far room incinerates the place with a \textit{Wide Fireball}, inflicting $1D6 +3$ Damage.
+
 \mapentry{Trapped Gnomes}
+
+What happens here depends entirely on how the party have come through the previous rooms.
+
+\paragraph{If they shouted in a loud, friendly manner,}
+they get a friendly greeting as all the gnomes here thank them for their presumed rescue, and hope to join them in the escape.
+
+These gnomes know the entire warren, and can tell them about the contents of every room.
+
+\paragraph{If the party entered secretly,}
+then as soon as the gnomes spot them, they will draw their weapons while Tar\'ik throws invocation spells at them.
+
+\paragraph{If the gnomes join the party,}
+remember to keep track of their Fate Points.
+Each scene they will regenerate 2.
+
+\gnome[\npc{\M}{Derkel}]
+
+\gnome[\npc{\F}{Merkel}]
+
+\NPC{\F}{Tar\'ik the Alchemist}{Nosey}{Picks nose}{Tribe}
+\person{-3}% STRENGTH
+{1}% DEXTERITY 
+{-2}% SPEED
+{{2}% INTELLIGENCE
+{1}% WITS
+{-1}}% CHARISMA
+{0}% DR
+{0}% COMBAT
+{Projectiles 1, Academics 2, Empathy 1, Tactics 2
+\Path{Alchemy}{Force 1, Invocation 3, Illusion 3}}% SKILLS
+{Mana stone with 4 mana}% EQUIPMENT
+{\mana{6}\lockedmana{3}\addtocounter{sp}{5}}
 
 \mapentry{The Storage Room}
 

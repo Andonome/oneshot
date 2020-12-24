@@ -1,4 +1,4 @@
-\chapter{The Top Floor}
+\section{The Top Floor}
 \label{upper}
 
 \setcounter{list}{0}
@@ -42,8 +42,10 @@ they can find a knife which functions as a dagger.
 
 \begin{boxtext}
 
-	In the sunlit intersection of four hallways, three ogres sit playing a game of dice.
-	Each one is clad in leather armour, and has a massive sword by its side.
+	In the sunlit intersection of four hallways,
+	\iftoggle{hardcore}%
+		{three ogres sit playing a game of dice.  Two are clad in black leather armour, with a massive sword by its side.}%
+		{two ogres sit playing a game of dice, one of which is clad in black, leather armour, with a massive sword by its side.}%
 
 \end{boxtext}
 
@@ -55,6 +57,7 @@ In order to progress, they could do any number of things:
 	\item{Trick one of the ogres into chasing them.}
 	\item{Find a missile weapon in order to force guardian ogres into chasing them.}
 	\item{Distract the ogres with illusions of something, while running up the stairs.}
+
 \end{itemize}
 
 Exactly what plans they come up with and how well they work depends entirely on your players and how their situation emerges.
@@ -62,7 +65,11 @@ Exactly what plans they come up with and how well they work depends entirely on 
 \paragraph{If the party attempt to get the ogres to chase them,}
 one does, but the other two stay put.
 
+\iftoggle{hardcore}{%
 \npc{\N\T}{2 Guardian Ogres}
+}{
+\npc{\N\T}{Guardian Ogre}
+}
 \person{6}% STRENGTH
 {0}% DEXTERITY 
 {4}% SPEED
@@ -130,6 +137,10 @@ These gnomes know the entire warren, and can tell them about the contents of eve
 \paragraph{If the party entered secretly,}
 then as soon as the gnomes spot them, they will draw their weapons while Tar\'ik throws invocation spells at them.
 
+\paragraph{If the party ask what has happened here,}
+the gnomes tell them everything.
+See page \pageref{invasionhistory} for the complete history.
+
 \paragraph{If the gnomes join the party,}
 remember to keep track of their Fate Points.
 Each scene they will regenerate 2.
@@ -185,7 +196,7 @@ the chasing ogre from the central room rushes after them (Page \pageref{chasingo
 
 \begin{boxtext}
 
-	Inside the next room, you find weapons, leather armour, rope, mining supplies, and a desk with a full map on the wall.
+	Inside the next room, you find weapons, leather armour, rope, mining supplies, scrolls, and a desk with a full map on the wall.
 
 	A portal at the other end leads out into a long, dark hallway.
 
@@ -204,6 +215,7 @@ in addition to:
 	\item{1 suit of partial leather (for someone with Strength 1)}
 	\item{A longbow for Strength +2}
 	\item{3 quivers of 20 arrows}
+	\item{A portal scroll}
 
 \end{itemize}
 
@@ -227,12 +239,23 @@ See Appendix \ref{handouts} for the map.
 	They would chuck in various leftover food and organic waste from the surface world, and as soon as a woodspy laid some eggs, the gnomes would catch it and eat it.
 	They never presented a danger, so long as they stayed small.
 
+	\iftoggle{hardcore}{%
 	Since then, the nuramancers decided to cast a spell on two of them, turning them into nura.
 	They ate all the others, and now sit hungrily, at the bottom of the pool.
 
 \end{exampletext}
 
-\nurawoodspy[\npc{\A\N}{2 Nura Woodspies}]
+\nurawoodspy[\npc{\A\N\T}{2 Nura Woodspies}]
+
+	}{
+	Since then, the nuramancers decided to cast a spell on one, turning it into a nura.
+	It ate all the others, and now sits hungrily, at the bottom of the pool.
+
+\end{exampletext}
+
+\nurawoodspy[\npc{\A\N}{Nura Woodspy}]
+
+	}
 
 \paragraph{If any non-nura attempt to run past the pool of water,}
 the woodspies within reach up and try to grab them.
@@ -251,7 +274,11 @@ then the woodspies retreat into the water, where they cannot be hit by anything.
 
 Currently the room hosts a rabble of goblins, arguing over battle-plans in the common tongue, while a nuramancer in the corner tries to get them to calm down.
 
-\goblin
+\iftoggle{hardcore}{%
+	\goblin
+}{
+	\goblin[\npc{\N\T}{4 Bickering Goblins}]
+}
 
 \goblinnuramancer
 

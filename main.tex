@@ -35,11 +35,13 @@
 
 \input{warren.tex}
 
-\iftoggle{hardcore}{
-	\input{top.tex}
-}{}
+\input{top.tex}
 
-\input{siege.tex}
+\iftoggle{hardcore}{
+
+	\input{siege.tex}
+
+}{}
 
 \appendix
 

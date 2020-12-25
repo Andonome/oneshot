@@ -255,7 +255,6 @@ Success indicates that they can pass unnoticed, or stay and listen.
 Understanding the conversation from outside the room requires a Wits + Empathy check, TN 9.
 If the roll succeeds, tell the players that the Black Alchemist is hiding on the roof, and the head goblin is having a hard time explaining that if anyone goes up there, they will have their head incinerated by magic.
 
-
 \mapentry{Storage Room}
 
 This room contains spare clothing and all manner of long-life food.
@@ -280,8 +279,30 @@ The Baron will not speak about this in any way.
 \end{boxtext}
 
 Players may spot at this point that the maps pertain to the Realm of Bright Rocks.
+What they may not spot, is a little goblin who came up to look for food, who ended up hiding behind a table.
+
+\paragraph{If the players succeed on a Wits + Vigilance roll}
+(TN 10), they find the hiding goblin.
+If not, the last one to exit the room has a nasty surprise in store as the goblin attacks from behind, prompting a Sneak Attack.%
+\iftoggle{core}{%
+\footnote{See the core rules, page \pageref{sneakattack}.}%
+}{}
+
+\goblin[\npc{\N}{Hiding Goblin}]
+
+\paragraph{Once the PCs enter}
+they notice a trapdoor in the roof.
+
+If any goblins enter, they will be fried by the Black Alchemist, but the players only need to shout up in a friendly voice, and say they mean no harm to come up without being incinerated.
+
+\paragraph{If the PCs scour the room,}
+they find magical item: \lootMagic.%
+\iftoggle{aif}{%
+\footnote{See \textit{Adventures in Fenestra}, page \pageref{magicalitems}, for magical items.}
+}{}
 
 \mapentry{The Roof}
+
 
 \npc{\M}{Baron Quenn}
 \person{1}% STRENGTH

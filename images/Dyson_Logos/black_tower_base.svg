@@ -8,13 +8,15 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="3376.000000pt"
-   height="4173.000000pt"
-   viewBox="0 0 3376.000000 4173.000000"
+   width="3376pt"
+   height="2850pt"
+   viewBox="0 0 3376 2850"
    preserveAspectRatio="xMidYMid meet"
    id="svg860"
-   sodipodi:docname="black_tower_f1.svg"
-   inkscape:version="1.0.1 (unknown)">
+   sodipodi:docname="black_tower_base.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <title
+     id="title197">Base</title>
   <defs
      id="defs864" />
   <sodipodi:namedview
@@ -26,17 +28,18 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1156"
-     inkscape:window-height="970"
+     inkscape:window-width="1880"
+     inkscape:window-height="974"
      id="namedview862"
      showgrid="false"
      inkscape:zoom="0.084221901"
-     inkscape:cx="2117.5561"
+     inkscape:cx="579.95129"
      inkscape:cy="1266.9597"
-     inkscape:window-x="736"
+     inkscape:window-x="20"
      inkscape:window-y="56"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g858" />
+     inkscape:current-layer="g858"
+     inkscape:document-rotation="0" />
   <metadata
      id="metadata2">
 Created by potrace 1.16, written by Peter Selinger 2001-2019
@@ -46,12 +49,17 @@ Created by potrace 1.16, written by Peter Selinger 2001-2019
     <dc:format>image/svg+xml</dc:format>
     <dc:type
        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-    <dc:title></dc:title>
+    <dc:title>Base</dc:title>
+    <dc:creator>
+      <cc:Agent>
+        <dc:title>Dyson Logos</dc:title>
+      </cc:Agent>
+    </dc:creator>
   </cc:Work>
 </rdf:RDF>
 </metadata>
   <g
-     transform="translate(0.000000,4173.000000) scale(0.100000,-0.100000)"
+     transform="matrix(0.1,0,0,-0.1,0,4173)"
      fill="#000000"
      stroke="none"
      id="g858">
@@ -808,10 +816,10 @@ Created by potrace 1.16, written by Peter Selinger 2001-2019
        id="path674"
        style="stroke-width:2.57227" />
     <path
-       d="M10247 10362 c3 -12 9 -25 14 -28 14 -8 11 10 -6 32 -13 18 -14 18 -8 -4z"
+       d="m 10247,10362 c 3,-12 9,-25 14,-28 14,-8 11,10 -6,32 -13,18 -14,18 -8,-4 z"
        id="path848" />
     <path
-       d="M10200 1080 c0 -5 4 -10 9 -10 6 0 13 5 16 10 3 6 -1 10 -9 10 -9 0 -16 -4 -16 -10z"
+       d="m 10200,1080 c 0,-5 4,-10 9,-10 6,0 13,5 16,10 3,6 -1,10 -9,10 -9,0 -16,-4 -16,-10 z"
        id="path854" />
   </g>
 </svg>

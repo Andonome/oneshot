@@ -8,13 +8,15 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
-   width="3376.000000pt"
-   height="4173.000000pt"
-   viewBox="0 0 3376.000000 4173.000000"
+   width="3376pt"
+   height="3450pt"
+   viewBox="0 0 3376 3450"
    preserveAspectRatio="xMidYMid meet"
    id="svg860"
    sodipodi:docname="black_tower_f3.svg"
-   inkscape:version="1.0.1 (unknown)">
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <title
+     id="title31">F3</title>
   <defs
      id="defs864" />
   <sodipodi:namedview
@@ -26,17 +28,18 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1114"
-     inkscape:window-height="1002"
+     inkscape:window-width="1326"
+     inkscape:window-height="662"
      id="namedview862"
      showgrid="false"
-     inkscape:zoom="0.098152592"
-     inkscape:cx="3249.562"
-     inkscape:cy="3466.7129"
-     inkscape:window-x="778"
-     inkscape:window-y="20"
+     inkscape:zoom="0.069404363"
+     inkscape:cx="493.04576"
+     inkscape:cy="2912.6069"
+     inkscape:window-x="1940"
+     inkscape:window-y="368"
      inkscape:window-maximized="0"
-     inkscape:current-layer="g858" />
+     inkscape:current-layer="g858"
+     inkscape:document-rotation="0" />
   <metadata
      id="metadata2">
 Created by potrace 1.16, written by Peter Selinger 2001-2019
@@ -46,12 +49,17 @@ Created by potrace 1.16, written by Peter Selinger 2001-2019
     <dc:format>image/svg+xml</dc:format>
     <dc:type
        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-    <dc:title></dc:title>
+    <dc:title>F3</dc:title>
+    <dc:creator>
+      <cc:Agent>
+        <dc:title>Dyson Logos</dc:title>
+      </cc:Agent>
+    </dc:creator>
   </cc:Work>
 </rdf:RDF>
 </metadata>
   <g
-     transform="translate(0.000000,4173.000000) scale(0.100000,-0.100000)"
+     transform="matrix(0.1,0,0,-0.1,0,4173)"
      fill="#000000"
      stroke="none"
      id="g858">

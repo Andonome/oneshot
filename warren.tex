@@ -560,7 +560,13 @@ The prisoners require no locks or handcuffs -- the ogre waiting outside suffices
 \paragraph{If any of the PCs have died,}
 a new PC can be found here once another has spent the requisite Story Points to bring someone back.
 
-Otherwise, only a farmer and a wandering noble, unlucky enough to be journeying on horseback at the wrong time, lie in the cells.
+\iftoggle{hardcore}{%
+	\paragraph{If the party get a moment to ask about the outside world,}
+	Anna tells them that she last saw hundreds of nura swarming around town, and she was on her horse to get away.
+	She suspects that the entire place will have been overrun.
+}{%
+	Otherwise, only a farmer and a wandering noble, unlucky enough to be journeying on horseback at the wrong time, lie in the cells.
+}
 
 \npc{\F}{Anna of the Twisted Glen}
 \person{0}% STRENGTH

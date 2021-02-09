@@ -1,3 +1,13 @@
+<!--
+
+The config/ directory is a subtree.  Best not to touch it.
+
+- git-lfs
+- inkscape (for composing svg images)
+- pdflatex (loads of packages)
+
+-->
+
 | [Download][download] | [Core book][core]
 
 This is a one-shot adventure for the [BIND RPG][core].

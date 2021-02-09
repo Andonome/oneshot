@@ -703,14 +703,9 @@ While the place looks serene, it is inhabited by
 \iftoggle{hardcore}{%
 	dangerous oozes.
 
-	\jelly
-	\jelly
-
-}{
+}{%
 	a dangerous ooze.
 }
-
-\jelly
 
 \paragraph{Once the players enter the room,}
 \iftoggle{hardcore}{%
@@ -719,6 +714,28 @@ While the place looks serene, it is inhabited by
 }{%
 	the ooze begins to stalk them.
 }
+
+\paragraph{If the PCs approach Grank,}
+he will hide while casting a \textit{Wide, Raging Fireball}.
+Finding him in the darkness before he finishes his spell requires a Wits + Vigilance roll, TN 10.
+If he is successful, the party make a group roll against TN 9.
+\iftoggle{core}{%
+See the core book, page \pageref{edgy} for more on Keeping Edgy to avoid missile attacks.}%
+{
+Anyone \textit{Keeping Edgy} can add their Speed + Combat to the roll, otherwise, they gain no bonus.
+}
+
+\paragraph{If Grank ever feels like his life is under threat of death,}
+then he will taunt the PCs with the key to the outside world he has in is position, and throw it into the nearest ooze.
+He then lets out a giggle and dashes off into the fungal undergrowth, leaving the players to face the hulking pulsating mass.
+
+\iftoggle{hardcore}{%
+	\jelly
+
+	\jelly
+}{}
+
+\jelly
 
 \label{grank}
 \npc{\M\N}{Grank}
@@ -741,19 +758,6 @@ The Seeing Stone is a simple stone with a hole.
 Staring into the hole allows one to watch the Realm of Bright Rocks.
 Particularly perceptive watchers will notice that those watching in the stone can see exactly the spot where the portal on the bottom level of the warren opens.
 
-\paragraph{If the PCs approach Grank,}
-he will hide while casting a \textit{Wide, Raging Fireball}.
-Finding him in the darkness before he finishes his spell requires a Wits + Vigilance roll, TN 10.
-If he is successful, the party make a group roll against TN 9.
-\iftoggle{core}{%
-See the core book, page \pageref{edgy} for more on Keeping Edgy to avoid missile attacks.}%
-{
-Anyone \textit{Keeping Edgy} can add their Speed + Combat to the roll, otherwise, they gain no bonus.
-}
-
-\paragraph{If Grank ever feels like his life is under threat of death,}
-then he will taunt the PCs with the key to the outside world he has in is position, and throw it into the nearest ooze.
-He then lets out a giggle and dashes off into the fungal undergrowth, leaving the players to face the hulking pulsating mass.
 
 \mapentry{The Locked Door}
 

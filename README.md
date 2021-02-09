@@ -1,6 +1,6 @@
-This is a one-shot adventure for the [BIND RPG](https://gitlab.com/bindrpg/core).
+| [Download][download] | [Core book][core]
 
-It's a work-in-progress, and you can find a current version of the incomplete pdf [here][download]
+This is a one-shot adventure for the [BIND RPG][core].
 
 ## Plot
 
@@ -12,8 +12,11 @@ They awaken in a cell with nothing but their clothes, and must find a way to esc
 
 ## Aims
 
-The adventure gives the players an introduction to the main themes and entities within Fenestra.
+The adventure is a PC meat-grinder, with plenty of prisons scattered through the dungeon for players to return with new characters once they die.
+As they travel upwards towards the sunlight, they learn about the rules and the wider world of Fenestra.
 
-You can find more on the full campaign world [here](https://gitlab.com/bindrpg/aif).
+You can find more on the full campaign world [here][aif].
 
-[download]: https://belgradecats.tk/pdfs/oneshot.pdf
+[download]: https://belgradecats.tk/share/oneshot.pdf
+[core]: https://belgradecats.tk/BIND/core
+[aif]: https://belgradecats.tk/BIND/aif

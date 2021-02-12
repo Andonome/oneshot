@@ -165,14 +165,13 @@ If a PC (or indeed, a \textit{player}) actually states the word, then the scroll
 
 \subsubsection{Talismans and Artefacts}
 
-For all other items, the party can roll Intelligence + Academics to figure out how to activate them.
-\iftoggle{core}{%
-	See the core book, page \pageref{magicidentification} for more on figuring out magical items.
-}{
+For all other items, the party can roll Intelligence + Academics to figure out how to activate them, TN 10.
 	However, knowing what makes a magical item go, and knowing what it does are different things.
-	Figuring out the function, rather than just the activation command, requires a Margin of 2, meaning that the player must roll a 16.
-}
+	Figuring out the function, rather than just the activation command, an Academics roll at TN 12.
 
+\iftoggle{core}{%
+	See the core book, page \pageref{magicidentification} for more on identifying magical items.
+}{}
 
 \subsubsection{Portal Scrolls}
 
@@ -262,8 +261,7 @@ They cannot get beyond the tall, stone walls, but that raiding party has plenty 
 \noindent
 These are the scenes which are coming for the PCs, whether they like it or not, no matter which paths in the warren they move through.
 
-The first is the introduction scene.
-The rest, you can throw at them when the right time comes.
+The first introduces the adventure, the second throws a raiding party in their path, and the third is stop guard to them them some chance of surviving a bad encounter.
 
 \subsection{The Escape}
 \label{escape}
@@ -278,28 +276,64 @@ The rest, you can throw at them when the right time comes.
 Here the PCs awaken to their hopeless situation.
 The players may make their characters at this juncture -- everyone's in the dark, so nobody knows who anyone is at this point.
 
-Once your players have made their PCs, have everyone roll Dexterity + Larceny against TN 11 to escape.
+Once your players have made their PCs, give them a chance to introduce themselves, then introduce the quite voice of Chris.
+Remember, that everything is pitch black -- at best they can feel out the room a little, but they don't have long.
+
+\paragraph{If anyone tries to wriggle free of their ropes,}
+have them roll Dexterity + Larceny,
+\iftoggle{hardcore}{%
+	TN 11.
+	Freeing another character requires a Dexterity + Crafts roll, TN 7, over the space of a round.
+}{%
+	TN 9.
+	Freeing another character requires a full round.
+}
+
+Remember that if a player cannot make a roll, it's possible for them to take a resting action.%
+\iftoggle{core}{%
+	\footnote{See the core book, page \pageref{restingaction}.}
+}{}
 
 \begin{boxtext}
 
 	Heavy footsteps pad down the hall, you hear the door's bar being lifted, and a little goblinoid face peeps in, with a massive sack over her shoulder.
 	Behind her, an ogre stoops to the height of a man to avoid the low ceiling while she unties the sack.
 	The contents are chucked into the room -- apples, pies, raw potatoes, and lettuce, all in a pile on the filthy floor.
-	Chris shouts to the ogre `Alf -- don't do this! Help me!', but the ogre only stares back at him before the little goblin shuts the door.
+	Chris shouts to the ogre `Alf -- don't do this! Help me!', but the ogre only stares back at him before the little goblin retreats, taking the massive, deformed man with him.
 
 \end{boxtext}
 
 Chris bleats for a moment before he crawls over and begins eating the food.
 He knows what will happen to him, but he cannot stand to wait, starving in a cell, any more.
 
-Resolve the scene, then check out the cell's description on page \pageref{entrycell}.
-
 \paragraph{If the party kill Chris immediately}
 then this is a good time to introduce the Sneak Attack rules.
 Chris will be very vulnerable to attack in this state.
+
+\paragraph{If the party take time to escape,}
+Chris has already reached his ogre form.
+
 Remember also that if the party get a Vitals Shot in, they can deal Damage, rather than just inflicting Fatigue.
 
-\goblinnuramancer[\npc{\F}{Blara the Goblin}]
+Once you resolve the scene, then check out the cell's description on page \pageref{entrycell}.
+
+\npc{\M}{Chris (as an Ogre)}
+\person{4}% STRENGTH
+{0}% DEXTERITY 
+{3}% SPEED
+{{-3}% INTELLIGENCE
+{-1}% WITS
+{-3}}% CHARISMA
+{0}% DR
+{0}% COMBAT
+{Academics 2, Empathy 1}% SKILLS
+{Nothing}% EQUIPMENT
+{}
+
+\paragraph{If the party somehow stop Chris eating the tainted nura-food,}
+he will accompany them out, but his nerves are too shot to be of any use.
+
+\goblin[\npc{\F}{Blara the Goblin}]
 \label{alf}
 
 \ogre[\npc{\M}{Alf the Ogre}]
@@ -334,7 +368,7 @@ Since the PCs are outnumbered, they will most likely attempt to hide from the ra
 }{}
 
 \paragraph{If the party encounter the raiding party by the lift,}
-they can only go down a couple of ogres at a time, due to the weight limit.%
+remember that the raiding party can only go down a couple of ogres at a time, due to the weight limit.%
 \footnote{See page \pageref{lift}.}
 
 The ten prisoners do not have the strength to fight, but will flee if pushed.

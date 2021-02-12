@@ -164,31 +164,52 @@ If they stay there long, give them the usual 4 Fatigue Points and roll an encoun
 	{}%
 .}
 
+\paragraph{If the enter the portal to flee from the nura,}
+\iftoggle{hardcore}{%
+	it won't do much good\ldots at first, however nura without food tire very quickly.
+	If they run through 3 or more areas, the nura must turn back due to exhaustion.
+}{%
+	the nura leave them alone -- their hyperactive metabolism tires too quickly without food.
+	They can only journey through that realm with a well-stocked supply line.
+}
+
 \mapentry{Kitchen}
 
 \begin{boxtext}
 
-The door creaks open and as you peer into the darkness you can just make out the 5 figuers sprawled over tables and chairs or curled up on the floor snooring quietly. 
+The door creaks open and as you peer into the darkness you can just make out the four figures sprawled over tables and chairs or curled up on the oven, snoring quietly.
 From the embers of the hearth you can see the ovens and cooking utensils that make up a substantial kitchen. 
-Opening the door further, the light from the hall's sconces fills the room, and you can see that the five figures are more goblins with little fat bellies.
+Opening the door further, the light from the hall's sconces fills the room, and you can see that the four figures are more goblins with little fat bellies.
 At the end of the kitchen you can see a large door to a cold store with a lock on it and some large cleavers stuck into a butchers block.
 
 \end{boxtext}
 
 \noindent
-In the room the players can find two cleavers which would be the equivalent to short swords and two large pot lids which could be used as bucklers.
-There is also a sixth goblin in the room hiding in the far corner in the dark; players can make a Wits + Vigilance roll at TN 8 to spot him.
-Should they make to much noise or light up the room, all goblins will wake up and attack.
-The players can unlock the cold store
-\footnote{A cold store is an old fashioned fridge where people put ice to keep food from going bad.}%
+\paragraph{If the players try to find weapons,}
+they can use either of the two cast iron skillets.
+\iftoggle{hardcore}{
+	Two more goblins lie sleeping out of sight on the dark floor.
+	Players can make a Wits + Vigilance roll, TN 9, to spot them.
+}{
+
+}
+\paragraph{Should they make too much noise or light up the room,}
+all goblins will wake up and attack.
+Any action, movement, or speech requires a Dexterity + Stealth check, TN 8, made as a group.
+Any character not moving does not contribute to the noise.
+
+The players can unlock the cold store%
+\footnote{A cold store is an old fashioned fridge where people put ice to keep food from going bad.}
 with a Dexterity + Larceny roll at TN 10 to pick the lock, at which point they discover that the larder is still full of food.
 
 
 \goblin[\npc{\T\N}{2 Goblins on the table}]
 
-\goblin[\npc{\T\N}{2 Goblins on the floor}]
-
 \goblin[\npc{\T\N}{2 Goblins on the oven}]
+
+\iftoggle{hardcore}{
+\goblin[\npc{\T\N}{2 Goblins on the floor}]
+}{}
 
 \paragraph{If the party raid the room for food,}
 they'll find a few canteens of water, one of wine, and some spare sacks of vegetables.
@@ -205,7 +226,7 @@ they'll find a few canteens of water, one of wine, and some spare sacks of veget
 \end{boxtext}
 
 The gnomes created the lift with the Force sphere.
-It can lift a combined Weight Rating of 13, and safely descend with a total Weight Rating of 26 standing on it.%
+It can lift a combined Weight Rating of 16, and safely descend with a total Weight Rating of 26 standing on it.%
 \footnote{A creature's Weight Rating is equal to its HP.
 Some items count towards this total, but items with a negative Weight Rating do not.}
 If the party step on it with a greater Weight Rating than this, each additional point inflicts 2 Fatigue Points on everyone in the lift upon impact with the ground.
@@ -215,10 +236,6 @@ The various ogres and goblins who use the lift only know the passwords for the b
 Only the nuramancer goblins know the word for the top.
 
 The lift responds to any password within earshot.
-
-\paragraph{If a party member goes up the lift without the party,}
-player the encounter quickly.
-They will most likely die at the top.
 
 \paragraph{If anyone tries to cling onto the walls,}
 they will find less purchase than a Sun-screen salesman in a Scotland.
@@ -276,6 +293,10 @@ The dragon's eventual goal is to obtain the rest of the treasure, then return th
 then he obliges, in return for getting all treasure out of the treasure room, and leaving it with him.
 \paragraph{If the party offer to split the treasure,}
 he agrees to letting them take half the coinage, while he takes the other half and all other items.
+
+\iftoggle{hardcore}{
+	The treasure chinks noisily of course, so the party will then receive a -1 penalty to all Stealth checks.}{}
+
 \paragraph{If the party push for more treasure,}
 the dragon asks if they would like to challenge him to a game of riddles.
 Each point anyone scores allows them to demand a single item, such as a chest, or quiver.
@@ -287,7 +308,12 @@ then the dragon declares that he has won the first round.
 
 See Appendix \ref{riddles} for riddles.
 
-If the dragon parts on good terms, he blesses them all with \textit{Fortune}, allowing them to receive +1 to their Combat Skill for the remainder of the adventure.
+If the dragon parts on good terms, he blesses them all with \textit{Fortune}, allowing them to receive +1 to their Combat Skill for the remainder of the%
+\iftoggle{hardcore}{%
+	chapter.
+}{
+	adventure.
+}
 
 \NPC{\M}{Makil the Dragon}{Inquisitive}{Drums Fingers}{Acquisition}
 \person{7}% STRENGTH

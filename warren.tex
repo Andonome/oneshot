@@ -198,21 +198,26 @@ all goblins will wake up and attack.
 Any action, movement, or speech requires a Dexterity + Stealth check, TN 8, made as a group.
 Any character not moving does not contribute to the noise.
 
-The players can unlock the cold store%
-\footnote{A cold store is an old fashioned fridge where people put ice to keep food from going bad.}
-with a Dexterity + Larceny roll at TN 10 to pick the lock, at which point they discover that the larder is still full of food.
-
+\paragraph{On the second round of combat,}
+roll a Morale check for the goblins.%
+\iftoggle{core}{%
+	\footnote{See the core book, page \pageref{morale}.}
+}{}
 
 \goblin[\npc{\T\N}{2 Goblins on the table}]
 
 \goblin[\npc{\T\N}{2 Goblins on the oven}]
 
 \iftoggle{hardcore}{
-\goblin[\npc{\T\N}{2 Goblins on the floor}]
+	\goblin[\npc{\T\N}{2 Goblins on the floor}]
 }{}
 
 \paragraph{If the party raid the room for food,}
 they'll find a few canteens of water, one of wine, and some spare sacks of vegetables.
+
+The players can unlock the cold store%
+\footnote{A cold store is an old fashioned fridge where people put ice to keep food from going bad.}
+	with a Dexterity + Larceny roll at TN 10 to pick the lock, at which point they discover that the larder is still full of food.
 
 \mapentry{The Gnomish Lift}
 \label{lift}

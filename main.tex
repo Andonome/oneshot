@@ -13,7 +13,7 @@
 
 \newtoggle{hardcore}
 
-\settoggle{hardcore}{true}
+\settoggle{hardcore}{false}
 
 \newcounter{enemyNo}
 
@@ -27,21 +27,10 @@
 
 \frontmatter
 
-\begin{titlepage}
-	\centering
-	\vspace{2cm}
-	{\scshape\Huge\bfseries Escape from the Horde\par}
-	\vspace{2cm}
-	\includegraphics[width=0.6\textwidth]{images/Brian_Garabrant/goblin_tongue.jpg}\par\vspace{1cm}
-	\iftoggle{hardcore}{
-	{\Large A meat-grinder dungeon for foolish adventurers\par}
-	}{
-	{\Large An introductory adventure for BIND\par}
-	}
-	\vspace{1.5cm}
-	{\large Last edited \today\par}
-
-\end{titlepage}
+\frontpage{Escape from the Horde}{\iftoggle{hardcore}%
+{A meat-grinder for foolish adventurers}%
+{An introductory adventure for BIND}
+}{images/Brian_Garabrant/goblin_tongue.jpg}
 
 \cleardoublepage
 

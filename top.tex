@@ -7,14 +7,7 @@
 
 \mapentry{Entrance Hallway}
 
-\iftoggle{hardcore}{%
-\begin{figure*}[b!]
-
-	\pic{Roch_Hercka/spiral_staircase}
-	\label{roch:ogres}
-
-\end{figure*}
-}{}
+	\toppic{Roch_Hercka/spiral_staircase}{\label{roch:ogres}}
 
 At the other side of this door sits the lonely guard, Bobble.
 He only turned into a goblin recently, and he doesn't like it.
@@ -49,17 +42,20 @@ they can find a knife which functions as a dagger.
 
 	In the sunlit intersection of four hallways,
 	\iftoggle{hardcore}%
-		{three ogres sit playing a game of dice.  Two are clad in black leather armour, with a massive sword by their side.  One sucks on a horse's uncooked head, and the other chews the rest of the body.}%
-		{two ogres sit playing a game of dice, one of which is clad in black, leather armour, with a massive sword by its side.}%
+		{four ogres sit playing a game of dice.  Two are clad in black leather armour, with a massive sword by their side.
+		Another sucks on a horse's uncooked head, while the third goes for a piss behind the staircase.}%
+		{three ogres sit playing dice.
+		Two are clad in black, leather armour, apparently pieced together from multiple suits.
+		The third sits watching them play some dice game.}%
 
 \end{boxtext}
 
-The party can see the exit, but cannot get up it without near-certain death.
+The party can see the exit, but escape without near-certain death.
 In order to progress, they could do any number of things:
 
 \begin{itemize}
 
-	\item{Trick one of the ogres into chasing them.}
+	\item{Trick one of the ogres into chasing them (but only one).}
 	\item{Find a missile weapon in order to force guardian ogres into chasing them.}
 	\item{Distract the ogres with illusions of something, while running up the stairs.}
 
@@ -68,13 +64,10 @@ In order to progress, they could do any number of things:
 Exactly what plans they come up with and how well they work depends entirely on your players and how their situation emerges.
 
 \paragraph{If the party attempt to get the ogres to chase them,}
-only the ogre without armour gives chase, as he has no orders.
+the armour-wearing ogres remain where they are, as they have strict orders not to leave the base of the staircase.
 
-\iftoggle{hardcore}{%
-\npc{\N\T}{2 Guardian Ogres}
-}{
-\npc{\N\T}{Guardian Ogre}
-}
+\npc{\N\T}{2 Armoured Ogres}
+
 \person{6}% STRENGTH
 {0}% DEXTERITY 
 {4}% SPEED
@@ -87,8 +80,25 @@ only the ogre without armour gives chase, as he has no orders.
 {\greatsword, \partialleather}% EQUIPMENT
 {}
 
-\ogre[\npc{\M\N}{Chasing Ogre}]
+\npc{\N\M}{Sitting Ogre}
+
 \label{chasingogre}
+
+\person{4}% STRENGTH
+{0}% DEXTERITY 
+{4}% SPEED
+{{-3}% INTELLIGENCE
+{0}% WITS
+{-3}}% CHARISMA
+{0}% DR
+{1}% COMBAT
+{Crafts~1, Vigilance~2}% SKILLS
+{\greatclub}% EQUIPMENT
+{}
+
+\iftoggle{hardcore}{%
+	\ogre[\npc{\M\N}{Hidden Ogre}]
+}{}
 
 \mapentry{The Trapped Hallway}
 

@@ -9,8 +9,8 @@ svg-inkscape:
 	pdflatex -jobname=${out} ${filename}.tex
 	pdflatex -jobname=${out} ${filename}.tex
 hardcore:
-	touch .hard
 	make clean
+	touch .hard
 	make
 	rm .hard
 tree:
@@ -19,4 +19,4 @@ tree:
 	git subtree -P config pull ../config ${branch}
 	git subtree -P config push ../config ${branch}
 clean:
-	rm -fr *.aux *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf svg-inkscape
+	rm -fr *.aux *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf svg-inkscape .hard

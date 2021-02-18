@@ -13,7 +13,13 @@
 
 \newtoggle{hardcore}
 
-\settoggle{hardcore}{false}
+\settoggle{hardcore}{true}
+
+\IfFileExists{.hard}{
+	\settoggle{hardcore}{true}
+}{
+	\settoggle{hardcore}{false}
+}
 
 \newcounter{enemyNo}
 

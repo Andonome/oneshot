@@ -1,12 +1,18 @@
 filename=main
+out=oneshot
 branch := $(shell git rev-parse --abbrev-ref HEAD)
 output: ${filename}.pdf
 ${filename}.pdf: $(wildcard *.tex) svg-inkscape
-	pdflatex ${filename}.tex
+	pdflatex -jobname=${out} ${filename}.tex
 svg-inkscape:
-	pdflatex -shell-escape ${filename}.tex
-	pdflatex ${filename}.tex
-	pdflatex ${filename}.tex
+	pdflatex -jobname=${out} -shell-escape ${filename}.tex
+	pdflatex -jobname=${out} ${filename}.tex
+	pdflatex -jobname=${out} ${filename}.tex
+hardcore:
+	touch .hard
+	make clean
+	make
+	rm .hard
 tree:
 	[ -e ../config ] || ( echo "You don't have a local config repo" && exit 1 )
 	git status

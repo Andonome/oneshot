@@ -27,6 +27,6 @@ As they travel upwards towards the sunlight, they learn about the rules and the 
 
 You can find more on the full campaign world [here][aif].
 
-[download]: https://belgradecats.tk/share/oneshot.pdf
-[core]: https://belgradecats.tk/BIND/core
-[aif]: https://belgradecats.tk/BIND/aif
+[download]: https://gitlab.com/bindrpg/oneshot/uploads/d0acc34c494aa3061e6690bb7f5cee63/bind_intro.pdf
+[core]: https://gitlab.com/bindrpg/core
+[aif]: https://gitlab.com/bindrpg/aif

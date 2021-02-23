@@ -229,8 +229,12 @@ in addition to:
 \begin{itemize}
 
 	\item{10 shortswords}
-	\item{2 suits of partial leather (for someone with Strength 2)}
-	\item{1 suit of partial leather (for someone with Strength 1)}
+	\item{2 suits of partial leather (for someone with Strength 2 or 3)}
+	\iftoggle{hardcore}{%
+	\item{1 suit of partial leather (for someone with Strength 1 or 2)}
+	}{
+	\item{2 suits of partial chain (for someone with Strength 1 or 2)}
+	}
 	\item{A longbow for Strength +2}
 	\item{3 quivers of 20 arrows}
 	\item{A portal scroll}
@@ -358,7 +362,7 @@ It is not possible for anyone with a Strength bonus greater than 0 to get throug
 This nasty little room holds a couple of beds and the remnants of gnomish board games.
 Among the wreckage, the party can find
 \iftoggle{aif}%
-	{A three Spider Arrows in a quiver (see Adventures in Fenestra, page \pageref{spiderarrows}).}%
+	{three Spider Arrows in a quiver (see Adventures in Fenestra, page \pageref{spiderarrows}).}%
 	{yet another portal scroll.}
 
 \end{multicols}

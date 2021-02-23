@@ -583,7 +583,8 @@ If wrapped up in heavy sheets and suddenly displayed, the light can blind oppone
 
 \end{boxtext}
 
-If the party have made a reasonable attempt at staying quiet, they can avoid alerting this ogre with a Wits + Stealth roll, TN 9.
+\paragraph{If the party have made a reasonable attempt at staying quiet,}
+they can avoid alerting this ogre with a Wits + Stealth roll, TN 9.
 Whoever is at the front makes the roll.
 If it's unclear who's at the front, the character with the highest Speed + Athletics is in the lead.
 With a successful roll,
@@ -663,9 +664,13 @@ a new PC can be found here once another has spent the requisite Story Points to 
 \begin{itemize}
 
 	\item{3 buckler shields}
-	\item{1 crossbow (unstrung)}
+	\item{1 crossbow (unstrung but usable with an Wits + Crafts roll, TN 7)}
 	\item{3 quivers, each with 20 arrows}
-	\item{shortbows (also unstrung)}
+	\iftoggle{hardcore}{%
+	\item{2 shortbows (also unstrung)}
+	}{
+	\item{2 shortbows}
+	}
 	\item{3 shortswords}
 	\item{7 wood axes}
 
@@ -688,8 +693,16 @@ The second ogre did not believe the goblins about why the first was there, and i
 This magical trap didn't look quite right when the flagstones had to be inlaid with gems in order to complete the alchemical spell -- that kind of shine gives the game away.
 The gnomes' solution was to make sure \textit{all} flagstones had a magical amulet in them, so nobody could tell which might hold a deadly spell.
 
+\magicitem{Petrifying Flagstones}% NAME
+	{Stonespell}% SPELL
+	{Alchemy}% PATH
+	{8 Scenes}% DURATION
+	{Talisman}% TYPE
+	{8}% POTENCY
+	{7}% MP
+
 \paragraph{If anyone steps into the trap,}
-they may spend 5 FP to ignore the effects of the trap.
+they must roll their Weight Rating at TN 15, but anyone failing may spend 5 FP to ignore the effects of the trap.
 If this happens, explain that their foot or hand begins to harden, then turn to stone for half a second before they retract it.
 
 \paragraph{If the players figure out that the area is trapped and try to jump over it,}

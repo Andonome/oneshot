@@ -13,6 +13,10 @@ hardcore:
 	touch .hard
 	make
 	rm .hard
+all:
+	make hardcore
+	mv oneshot.pdf oneshot_hardcore.pdf
+	make
 tree:
 	[ -e ../config ] || ( echo "You don't have a local config repo" && exit 1 )
 	git status

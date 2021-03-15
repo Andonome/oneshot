@@ -4,13 +4,16 @@ branch := $(shell git rev-parse --abbrev-ref HEAD)
 output: ${filename}.pdf
 ${filename}.pdf: $(wildcard *.tex) svg-inkscape
 	pdflatex -jobname=${out} ${filename}.tex
+siege: svg-inkscape/black_tower_base_svg-tex.pdf
+svg-inkscape/black_tower_base_svg-tex.pdf:
+	pdflatex -jobname=${out} -shell-escape ${filename}.tex
 svg-inkscape:
 	pdflatex -jobname=${out} -shell-escape ${filename}.tex
 	pdflatex -jobname=${out} ${filename}.tex
 	pdflatex -jobname=${out} ${filename}.tex
 hardcore:
-	make clean
 	touch .hard
+	make siege
 	make
 	rm .hard
 all:

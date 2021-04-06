@@ -1,0 +1,13 @@
+compile_pdf:
+  image: aergus/latex
+  script:
+    - apt-get update -y
+    - apt-get install -y inkscape
+    - make all
+  only:
+    - master
+    - run
+  artifacts:
+    paths:
+      - horde_escape.pdf
+      - hord_escape_hardcore.pdf

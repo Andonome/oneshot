@@ -1,24 +1,26 @@
 filename=main
-out=oneshot
+out=horde_escape
+hardcore=hord_escape_hardcore
 branch := $(shell git rev-parse --abbrev-ref HEAD)
 output: ${filename}.pdf
-${filename}.pdf: $(wildcard *.tex) svg-inkscape
+${filename}.pdf: $(wildcard *.tex) svg
 	pdflatex -jobname=${out} ${filename}.tex
-siege: svg-inkscape/black_tower_base_svg-tex.pdf
-svg-inkscape/black_tower_base_svg-tex.pdf:
-	pdflatex -jobname=${out} -shell-escape ${filename}.tex
-svg-inkscape:
+svg:
 	pdflatex -jobname=${out} -shell-escape ${filename}.tex
 	pdflatex -jobname=${out} ${filename}.tex
 	pdflatex -jobname=${out} ${filename}.tex
-hardcore:
+svg-hardcore:
+	$(eval out=hardcore)
 	touch .hard
-	make siege
-	make
+	pdflatex -jobname=${hardcore} -shell-escape ${filename}.tex
+	pdflatex -jobname=${hardcore} ${filename}.tex
+	pdflatex -jobname=${hardcore} ${filename}.tex
+hardcore: svg-hardcore
+	make svg-inkscape
+	pdflatex -jobname=${hardcore} ${filename}.tex
 	rm .hard
 all:
 	make hardcore
-	mv oneshot.pdf oneshot_hardcore.pdf
 	make
 tree:
 	[ -e ../config ] || ( echo "You don't have a local config repo" && exit 1 )

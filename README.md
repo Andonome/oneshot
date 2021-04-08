@@ -8,7 +8,7 @@ The config/ directory is a subtree.  Best not to touch it.
 
 -->
 
-| [Download][download] | [Core book][core] | [Rules Printout][resources] |
+| [Download][download] | [Core book][core] | [Player Resources][resources] |
 
 This is a one-shot adventure for the [BIND RPG][core].
 

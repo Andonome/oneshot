@@ -46,7 +46,7 @@ The rungs which are a multiple of 7 are set to break once anything with a Weight
 	See the core book, page \pageref{weightrating}.
 }{}}
 These breakable sections are actually solid illusions, so they appear again shortly after breaking, but will resist any markings such as paint, as those marking disappear as the illusion resets every so often.
-Meanwhile, any rung which is both a multiple of 5 and 7 indicates that the next section is invisible and has switch to the wall on the left.
+Meanwhile, any rung which is both a multiple of 5 and 7 indicates that the next section is entirely illusory -- the real ladder is on the left, but disguised as more wall with clever paint-work.
 
 Despite the ladder switching places, it appears to be one solid piece, reaching upwards.
 
@@ -80,9 +80,9 @@ Of course, if the player figures out the trap, all rolls can be dispenses with, 
 	As you climb the stairs away from your cell you enter a room full of benches and tables, all overturned and broken. 
 	The floor is strewn with pots and plates, knives, forks and candlesticks, but no candles and not a scrap of food remains.
 	It looks like a pack of ravenous dogs swept through here and licked ever morsel from every surface.
-	In the middle of the room you can see upon a table two creatures -- a goblin and the other you would call a rat, but only if the rat had been mated with a Great Dane.
-	The two creatures seem to be fighting over something and as you focus on the scene before you it becomes clear that what they are fighting over is a bone (possibly human).
-	It looks at first like they are pulling at it, one on each end, but then you hear the sound of grinding and snapping and you realise that they are both just chewing at either end.
+
+	In the middle of the room you can see two creatures wrestling on a table -- a goblin and the other you would call a rat, but only if the rat had been mated with a Great Dane.
+	The two creatures seem to be fighting over something and as you focus on the scene before you it becomes clear that what they are fighting over is a human leg.
 
 \end{boxtext}
 
@@ -127,6 +127,10 @@ they find a Portal Scroll, and a Scroll of Uprising.
 Once the spell is cast, all creatures with 11 HP or fewer in the surrounding 3 areas, raise from the dead as ghouls.
 See Appendix \ref{undeadstats} for stats on the various ghouls.
 
+Unlike other magical items in this area, this scroll was made by a nuramancer (not a gnome), so the command word is written plainly in Trade Tongue.
+The scroll contains the epic of Logan, an Elvish poem.
+Once the last line is spoken, the scroll activates (the rest does not need to be spoken).
+
 \magicitem{Portal Scroll}% NAME
 	{Eternal, Ranged, Clairvoyance, Ranged Teleport}% SPELL
 	{Alchemy}% PATH
@@ -134,9 +138,6 @@ See Appendix \ref{undeadstats} for stats on the various ghouls.
 	{Pocket Spell \& Pocket Spell}% TYPE
 	{2}% Potency
 	{3}% MP
-
-The scroll takes 5 rounds to speak properly, and opens a doorway to the Realm of Shifting Corridors.
-The portal remains open for 2 scenes.
 
 \goblinnuramancer[\npc{\F}{Screamer}]
 
@@ -160,19 +161,19 @@ The portal remains open for 2 scenes.
 \end{boxtext}
 
 \paragraph{If any of the PCs are literate and speak the Gnomish tongue,}
-they can read the runes above the magical portal; they read ``Desert Realm''.
+they can read the runes above the magical portal; they read ``Realm of Bright Rocks''.
 
 \paragraph{If the PCs enter the portal and journey through the Realm of Bright Rocks,}
 they won't find much -- not even a place to hide, given the desert is expansive and flat.
 If they stay there long, give them the usual 4 Fatigue Points and roll an encounter for that Realm.%
-\footnote{See Adventures in Fenestra for more on the Realm of Bright Rocks\iftoggle{aif}{%
+\footnote{See \textit{Adventures in Fenestra} for more on the Realm of Bright Rocks\iftoggle{aif}{%
 	, page \pageref{brightrocks}}%
 	{}%
 .}
 
-\paragraph{If the enter the portal to flee from the nura,}
+\paragraph{If they enter the portal to flee from the nura,}
 \iftoggle{hardcore}{%
-	it won't do much good\ldots at first, however nura without food tire very quickly.
+	the nura give chase\ldots for a while, however nura without food tire very quickly.
 	If they run through 3 or more areas, the nura must turn back due to exhaustion.
 }{%
 	the nura leave them alone -- their hyperactive metabolism tires too quickly without food.
@@ -251,30 +252,17 @@ The lift responds to any password within earshot.
 \paragraph{If anyone tries to cling onto the walls,}
 they will find less purchase than a Sun-screen salesman in a Scotland.
 
+\magicitem{Gnomish Lift}%
+{Wide, Sentient, Levitation}%
+{Alchemy}%
+{5 scenes}%
+{Talisman}%
+{5}%
+{7}
+
 \mapentry{Dragon's Approach}
 
 \toppic{Roch_Hercka/dragon}{\label{roch:dragon}}
-
-\begin{boxtext}
-
-	Ahead, three charred goblin corpses lie on the ground.
-	A strange scent wanders down from above, something like a chicken cooked in sulphur.
-
-\end{boxtext}
-
-\begin{exampletext}
-
-	These three goblins came up the stairs with a plan to use a portal scroll next to the dragon, then throw javelins at it until it went away.
-	The dragon, however, was faster.
-	It incinerated them without a pause.
-
-\end{exampletext}
-
-\paragraph{If the party loot the bodies}
-they find a portal scroll wrapped safely in a scroll case.
-
-\mapentry{The Dragon's Lair}
-\label{dragon}
 
 \begin{exampletext}
 
@@ -293,6 +281,19 @@ they find a portal scroll wrapped safely in a scroll case.
 
 \end{exampletext}
 
+\begin{boxtext}
+
+	Ahead, three charred goblin corpses lie on the ground.
+	A strange scent wanders down from above, something like a chicken cooked in sulphur.
+
+\end{boxtext}
+
+\paragraph{If the party loot the bodies}
+they find a portal scroll wrapped safely in a scroll case.
+
+\mapentry{The Dragon's Lair}
+\label{dragon}
+
 The dragon will happily talk with anyone who approaches, but only understands Quenya (the Elvish language).
 \iftoggle{hardcore}{}{%
 Remind the players that they can spend a Story Point to say that they know another language, as long as they say when they learnt the language.
@@ -300,6 +301,19 @@ Remind the players that they can spend a Story Point to say that they know anoth
 Despite his linguistic deficits, he can communicate using the Enchantment sphere to send ideas to characters.
 
 The dragon's eventual goal is to obtain the rest of the treasure, then return through the portal to the Realm of Bright Rocks.
+
+\NPC{\M}{Makil the Dragon}{Inquisitive}{Drums Fingers}{Acquisition}
+\person{7}% STRENGTH
+{2}% DEXTERITY 
+{5}% SPEED
+{{4}% INTELLIGENCE
+{3}% WITS
+{-2}}% CHARISMA
+{5}% DR
+{1}% COMBAT
+{Aggression~2, Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4\Path{Blood}{Enchantment~2, Fate~3, Invocation~4}}% SKILLS
+{Nothing}% EQUIPMENT
+{\mana{8}}
 
 \paragraph{If the party request he kill nura for them}
 then he obliges, in return for getting all treasure out of the treasure room, and leaving it with him.
@@ -334,19 +348,6 @@ he blesses them all with \textit{Fortune}, allowing them to receive +1 to their 
 	adventure.
 }
 
-\NPC{\M}{Makil the Dragon}{Inquisitive}{Drums Fingers}{Acquisition}
-\person{7}% STRENGTH
-{2}% DEXTERITY 
-{5}% SPEED
-{{4}% INTELLIGENCE
-{3}% WITS
-{-2}}% CHARISMA
-{5}% DR
-{2}% COMBAT
-{Aggression~2, Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4\Path{Blood}{Enchantment~2, Fate~3, Invocation~4}}% SKILLS
-{Nothing}% EQUIPMENT
-{\mana{8}}
-
 \mapentry{The Treasure Room}
 
 \begin{boxtext}
@@ -376,15 +377,16 @@ he blesses them all with \textit{Fortune}, allowing them to receive +1 to their 
 \end{itemize}
 
 \magicitem{Scroll of Stone}{Transmutation}{Alchemy}{1 Scene}{Pocket Spell}{6}{1}
-The spell rolls at a TN of 1 plus the caster's Weight Rating (which is equal to their HP).
+The spell rolls at a TN of 7 plus the target's Weight Rating.
 If the spell succeeds, the reader turns to stone.
 
-This spell was designed to evade oozes or other unintelligent creatures by becoming an uninteresting object for a short while.
+This spell was designed to be used on the caster; the gnome would turn themself to stone in order to become uninteresting to oozes and such for a short while.
+However, people can try to use it against other targets.
 
 \magicitem{Lock Scroll}{Lock}{Alchemy}{2 Scenes}{Pocket Spell}{4}{3}
 
-Does what it says on the tin, or scroll.
-It locks a door, which increases the TN to open it by 4 or obstructs a passageway by adding a magical barrier with 9 SP.
+This scroll locks a door, which increases the TN to open it by 4.
+It can also be cast on a passageway, which obstructs it by adding a magical barrier with 9 SP.
 
 \end{multicols}
 
@@ -420,16 +422,16 @@ Any gnomes in the party will automatically pass this check.
 }
 
 \paragraph{If the party save the children,}
-they're smart enough to know to be quiet and to follow, but they will be at the back of the party when moving alone.
+the children know to know to keep quiet and to follow, but they will be at the back of the party when moving alone.
 
-There are six children in total, and they have a Weight Rating between 1 and 2.
+There are six children in total, and they each have a Weight Rating between 1 and 2.
 
 \mapentry{Slug Hall}
 
 \begin{boxtext}
 
 	The doorway reveals a massive hallway of sparkling, floating, lights.
-	Across the earthy floor pieces of paper lie everywhere.
+	Across the earthy floor, pieces of paper lie everywhere.
 	Giant slugs lazily wander, masticating them.
 	Half of the slugs wear the pages, as if someone had thrown the paper in the room from above.
 	Around those pages, little grubs eat into the massive slugs.
@@ -444,7 +446,7 @@ Gnomes grew mushrooms throughout this room in order to grow slugs, so that they 
 While torches work best, having omnipresent fireflies around the warren makes sure that people can coordinate between rooms without worrying about light.
 
 Since then, the nura turned those slugs into nura slugs.
-The fireflies have survived on the enlarged slug, which the nura keep alive as they prefer the human flesh and fresher mushrooms, rather than the grass, corpses, and faeces which the slugs will eat.
+The fireflies have survived on the enlarged slug, which the nura keep alive with the scraps they don't want to eat, such as mushrooms and bones and faeces.
 
 \end{exampletext}
 
@@ -478,7 +480,7 @@ If the PCs have indeed been quiet enough in the previous room to not raise an al
 A single sound means they will be in serious trouble.
 
 The greasy floor results from a mixture of faeces, drool, blood and leftover mushroom-juice.
-Anyone who can use Conjuration magic will be able to turn it into a slippery surface.
+Anyone who can use Conjuration magic will be able to turn the offal on the floor into a slippery substance.
 
 \setcounter{enc}{\value{list}}
 \addtocounter{enc}{-1}
@@ -488,7 +490,7 @@ they will not immediately see the staircase on their left, but will see it after
 
 \paragraph{If the PCs tarry or talk,}
 have them make a Dexterity + Stealth check, TN 6.
-They make this as a \textit{Group Roll}, so a single roll counts for the whole group.%
+They make this as a \textit{Group Roll}, so a single roll counts for the whole group.
 Each margin on the roll allows them an additional round before the horde wakes.
 \iftoggle{core}{%
 	\footnote{See the core book, page \pageref{grouproll} for group rolls and page \pageref{margin} for roll margins.}
@@ -520,7 +522,7 @@ The players can find whatever they need here.
 
 \paragraph{If the PCs have come up from their cells below}
 (room 1, page \pageref{entrycell}), they find the exit has been covered by an illusion of a wall.
-Upon stepping through it, the illusion fades, revealing the sleeping nura.
+If they investigate the area at all, the illusion fades, revealing the sleeping nura.
 
 \paragraph{If the PCs attempt to take either a short sword or a spear,}
 each attempt requires a Dexterity + Stealth roll, TN 7.
@@ -559,18 +561,38 @@ This lock scroll will lock any door, increasing the TN to break through it by 4.
 As with any Portal Scroll, it leads to the Realm of Shifting Corridors.
 Once activated, you should roll three encounters for that area, as usual, and see if anything comes out.
 
-\magicitem{Ring of Wishes}{Conjuration 4}{Alchemy}{5 Scenes}{Talisman $\times 3$}{5}{8}
+\magicitem{Ring of Wishes}%
+{Conjuration 4}%
+{Alchemy}%
+{5 Scenes}%
+{Talisman $\times 3$}%
+{5}%
+{7}
 
 This ring is actually three pocket spells -- each ruby in the ring is a separate magical item, and each use will make one ruby go dark.
 
 The caster can summon anything available for Conjuration level 4.
+With 7 MP, the ring has a Metamagic score of 7, allowing it to cast \textit{Wide} spells, and other Metamagic enhancements.
 
-\magicitem{Scroll of Insight}{Mage Sight}{Alchemy}{4 Scenes}{Pocket Spell}{4}{3}
+\magicitem{Scroll of Insight}%
+{Massive Mage Sight}%
+{Alchemy}%
+{4 Scenes}%
+{Pocket Spell}%
+{4}%
+{3}
 
-The spell allows the user to feel the entire area (meaning `room'), though not with much detail.
+The spell allows the user to feel 4 areas around (meaning `rooms'), though not with much detail.
 
-\magicitem{Staff of Light}{Light}{Alchemy}{Continuous}{Talisman}{4}{3}
+\magicitem{Staff of Light}%
+{Wide Light}%
+{Alchemy}%
+{Continuous}%
+{Talisman}%
+{3}%
+{3}
 
+This `staff' will probably feel more like a wand in the hands of a human, as it's about the height of a short gnome.
 The gnomish word for `morning', activates the light, while the gnomish word for `night' stops it.
 The nura do not know, or have forgotten, these activation words, so they simply keep it under blankets as they find the light irritating.
 
@@ -605,13 +627,14 @@ Whoever is at the front makes the roll.
 If it's unclear who's at the front, the character with the highest Speed + Athletics is in the lead.
 With a successful roll,
 \iftoggle{hardcore}{
-	the ogre is resting, and must take a round to pick up his weapon and gather what's left of his wits, but it will still wake if approached.
+	the ogre is resting, and must take a round to gather what's left of his wits, but it will still wake if approached.
 }{%
  the party find the ogre sleeping.
 }
 
 \ogre[\npc{\N\M}{Rick, the Ogre Guard}]
 
+\paragraph{If the party try to talk with the ogre,}
 Rick has only recently been turned into an ogre, and he has eaten his fill of mushrooms, so a Wits + Empathy roll, TN 10, will allow the party to convince him to let them go.
 However, if Rick lets them go, he will insist on joining them so he can be free.
 While he genuinely wants to escape and become human again,%

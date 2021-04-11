@@ -1,6 +1,6 @@
 filename=main
 out=horde_escape
-hardcore=hord_escape_hardcore
+hardcore=horde_escape_hardcore
 branch := $(shell git rev-parse --abbrev-ref HEAD)
 output: ${filename}.pdf
 ${filename}.pdf: $(wildcard *.tex) svg

@@ -10,4 +10,4 @@ compile_pdf:
   artifacts:
     paths:
       - horde_escape.pdf
-      - hord_escape_hardcore.pdf
+      - horde_escape_hardcore.pdf

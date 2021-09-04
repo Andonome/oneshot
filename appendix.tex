@@ -30,16 +30,18 @@
 
 \ghoul[\npc{\D\N}{Human Ghoul}]
 
-\npc{\D\N}{Nura Woodspy Ghoul}
-\animal{4}% STRENGTH
-{-1}% DEXTERITY 
-{-1}% SPEED
-{-2}% WITS
-{4}% DR
-{2}% AGGRESSION
-{Vigilance 1}% SKILLS
-{Undead}% ABILITIES
-{}
+\iftoggle{oneshot}{}{
+	\npc{\D\N}{Nura Woodspy Ghoul}
+	\animal{4}% STRENGTH
+	{-1}% DEXTERITY 
+	{-1}% SPEED
+	{-2}% WITS
+	{4}% DR
+	{2}% AGGRESSION
+	{Vigilance 1}% SKILLS
+	{Undead}% ABILITIES
+	{}
+}
 
 \undeadogre[\npc{\D\N}{Ogre Ghoul}]
 
@@ -209,13 +211,17 @@ When one does not know what it is, then it is something. When one knows what it 
 
 \end{multicols}
 
-\chapter{Handouts}
-\label{handouts}
-\settoggle{sideTab}{false}
+\iftoggle{oneshot}{}{
+
+	\chapter{Handouts}
+	\label{handouts}
+	\settoggle{sideTab}{false}
 
 
-\includesvg{images/Dyson_Logos/upper-handout}
+	\includesvg{images/Dyson_Logos/upper-handout}
 
-\iftoggle{hardcore}{
-\includesvg{images/Dyson_Logos/town}
-}{}
+	\iftoggle{hardcore}{
+		\includesvg{images/Dyson_Logos/town}
+	}{}
+
+}

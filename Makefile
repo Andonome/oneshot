@@ -1,6 +1,7 @@
 filename=main
 out=horde_escape
 hardcore=horde_escape_hardcore
+oneshot=horde_escape_oneshot
 branch := $(shell git rev-parse --abbrev-ref HEAD)
 output: ${filename}.pdf
 ${filename}.pdf: $(wildcard *.tex) svg
@@ -15,11 +16,25 @@ svg-hardcore:
 	pdflatex -jobname=${hardcore} -shell-escape ${filename}.tex
 	pdflatex -jobname=${hardcore} ${filename}.tex
 	pdflatex -jobname=${hardcore} ${filename}.tex
+	rm .hard
+svg-oneshot:
+	$(eval out=oneshot)
+	touch .oneshot
+	pdflatex -jobname=${oneshot} -shell-escape ${filename}.tex
+	pdflatex -jobname=${oneshot}  ${filename}.tex
+	pdflatex -jobname=${oneshot}  ${filename}.tex
+	rm .oneshot
 hardcore: svg-hardcore
+	touch .hard
 	make svg-inkscape
 	pdflatex -jobname=${hardcore} ${filename}.tex
 	rm .hard
+oneshot: svg-oneshot
+	touch .oneshot
+	pdflatex -jobname=${oneshot} ${filename}.tex
+	rm .oneshot
 all:
+	make oneshot
 	make hardcore
 	make
 tree:

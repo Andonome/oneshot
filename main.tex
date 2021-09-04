@@ -13,12 +13,18 @@
 
 \newtoggle{hardcore}
 
-\settoggle{hardcore}{true}
-
 \IfFileExists{.hard}{
 	\settoggle{hardcore}{true}
 }{
 	\settoggle{hardcore}{false}
+}
+
+\newtoggle{oneshot}
+
+\IfFileExists{.oneshot}{
+	\settoggle{oneshot}{true}
+}{
+	\settoggle{oneshot}{false}
 }
 
 \newcounter{enemyNo}
@@ -33,9 +39,12 @@
 
 \frontmatter
 
-\frontpage{Escape from the Goblin Horde}{\iftoggle{hardcore}%
-{A meat-grinder for foolish adventurers}%
-{An introductory adventure for BIND}
+\frontpage{Escape from the Goblin Horde}{%
+\iftoggle{oneshot}{A oneshot adventure for BIND}{%
+	\iftoggle{hardcore}%
+	{A meat-grinder for foolish adventurers}%
+	{An introductory adventure for BIND}%
+}
 }{images/Brian_Garabrant/goblin_tongue.jpg}
 
 \cleardoublepage
@@ -44,7 +53,9 @@
 
 \tableofcontents
 
-\input{credits.tex}
+\iftoggle{oneshot}{}{%
+	\input{credits.tex}
+}
 
 \mainmatter
 
@@ -52,7 +63,11 @@
 
 \input{warren.tex}
 
-\input{top.tex}
+\iftoggle{oneshot}{}{%
+
+	\input{top.tex}
+
+}
 
 \iftoggle{hardcore}{
 

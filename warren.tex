@@ -71,7 +71,7 @@ Every time they make a new roll:
 
 \end{itemize}
 
-Of course, if the player figures out the trap, all rolls can be dispenses with, and the player can ascend to room at the top, on page \pageref{laddertop}.
+Of course, if the player figures out the trap, all rolls can be dispensed with, and the player can ascend to room at the top, on page \pageref{laddertop}.
 
 \mapentry{Dining Room}
 
@@ -879,46 +879,45 @@ See page \pageref{raidingParty} for the returning raiding party.
 
 \mapentry{The Exit}
 
-\iftoggle{hardcore}{%
+\iftoggle{oneshot}{%
 
-This is where the party exit the lower portion of the warren, and enter the upper part.
+	\begin{boxtext}
 
-\paragraph{If the PCs don't have a key,}
-they might try tricking the goblin on the other side, who has a key to let people in and out.
-See area 1, \autoref{upper}.
+		As the key turns, the door swings open, and daylight floods in.
+		Green trees cover the road down the hill, and in the far distance, chimney-fires from little hamlets wander into the sky.
 
-\paragraph{If the PCs examine the door,}
-they can see the goblin in the next area by a glimmer of candle-light.
+		You have finally escaped from the warren.
+
+	\end{boxtext}
+
+	Whatever the party attempt now, the nura will notice their absence, and start chasing after them, down the hillside, and perhaps into the hamlets.
+	\iftoggle{core}{See the core book, page \pageref{chases} for specifics on chase scenes.}{}
+
+	The party have eight areas to run through before getting to civilization, so this will be a long chase if they decide to run the entire way.
+
+	\paragraph{If the party hide,}
+	have them roll Intelligence + Stealth to find the best spot and best time to hide, TN 8.
+
+	\paragraph{If the party fight,}
+	have them roll Intelligence + Tactics, TN 8, to ambush the nura.
+	A successful roll means the entire party gain an Initiative Bonus equal to the Tactics Skill being used.
+
+	\paragraph{If the nura wolves from before lived,}
+	then goblins will mount them, and use them to chase after the party, then alert other nura about where they are.
+	Hiding moves from TN 8 to TN 11 for as long as those wolves live.
+
+	\goblin[\npc{\N\T}{12 Scout Goblins}]
+
 
 }{
+	This is where the party exit the lower portion of the warren, and enter the upper part.
 
-\begin{boxtext}
+	\paragraph{If the PCs don't have a key,}
+	they might try tricking the goblin on the other side, who has a key to let people in and out.
+	See area 1, \autoref{upper}.
 
-	As the key turns, the door swings open, and daylight floods in.
-	Green trees cover the road down the hill, and in the far distance, chimney-fires from little hamlets wander into the sky.
-
-	You have finally escaped from the warren.
-
-\end{boxtext}
-
-Whatever the party attempt now, the nura will notice their absence, and start chasing after them, down the hillside, and perhaps into the hamlets.
-\iftoggle{core}{See the core book, page \pageref{chases} for specifics on chase scenes.}{}
-
-The party have eight areas to run through before getting to civilization, so this will be a long chase if they decide to run the entire way.
-
-\paragraph{If the party hide,}
-have them roll Intelligence + Stealth to find the best spot and best time to hide, TN 8.
-
-\paragraph{If the party fight,}
-have them roll Intelligence + Tactics, TN 8, to ambush the nura.
-A successful roll means the entire party gain an Initiative Bonus equal to the Tactics Skill being used.
-
-\paragraph{If the nura wolves from before lived,}
-then goblins will mount them, and use them to chase after the party, then alert other nura about where they are.
-Hiding moves from TN 8 to TN 11 for as long as those wolves live.
-
-\goblin[\npc{\N\T}{12 Scout Goblins}]
-
+	\paragraph{If the PCs examine the door,}
+	they can see the goblin in the next area by a glimmer of candle-light.
 }
 
 \end{multicols}

@@ -63,24 +63,24 @@ Keywords={TTRPG,RPG,roleplaying}
 \tableofcontents
 
 \iftoggle{oneshot}{}{%
-	\input{credits.tex}
+	\include{credits.tex}
 }
 
 \mainmatter
 
-\input{intro.tex}
+\include{intro.tex}
 
-\input{warren.tex}
+\include{warren.tex}
 
 \iftoggle{oneshot}{}{%
 
-	\input{top.tex}
+	\include{top.tex}
 
 }
 
 \iftoggle{hardcore}{
 
-	\input{siege.tex}
+	\include{siege.tex}
 
 }{}
 
@@ -90,7 +90,7 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \addappheadtotoc
 
-\input{appendix.tex}
+\include{appendix.tex}
 
 \end{document}
 

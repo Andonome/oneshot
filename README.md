@@ -8,7 +8,7 @@ The config/ directory is a subtree.  Best not to touch it.
 
 -->
 
-| [Download][download] | [Core book][core] | [Player Resources][resources] |
+| [Download][download] | [Core book][core] |
 
 This is a one-shot adventure for the [BIND RPG][core].
 
@@ -27,7 +27,6 @@ As they travel upwards towards the sunlight, they learn about the rules and the 
 
 You can find more on the full campaign world [here][aif].
 
-[download]: https://ttrpgs.org/share/horde_escape.pdf
+[download]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/horde_escape_oneshot.pdf?job=compile_pdf
 [core]: https://gitlab.com/bindrpg/core
 [aif]: https://gitlab.com/bindrpg/aif
-[resources]: https://gitlab.com/bindrpg/core/uploads/aca6c4bc4c1862daa9f288cf3e146672/resources.pdf

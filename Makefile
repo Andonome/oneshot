@@ -6,18 +6,20 @@ branch := $(shell git rev-parse --abbrev-ref HEAD)
 output: ${filename}.pdf
 ${filename}.pdf: $(wildcard *.tex) svg
 	pdflatex -jobname=${out} ${filename}.tex
-svg:
+config/bind.sty:
+	git submodule update --init
+svg: config/bind.sty
 	pdflatex -jobname=${out} -shell-escape ${filename}.tex
 	pdflatex -jobname=${out} ${filename}.tex
 	pdflatex -jobname=${out} ${filename}.tex
-svg-hardcore:
+svg-hardcore: config/bind.sty
 	$(eval out=hardcore)
 	touch .hard
 	pdflatex -jobname=${hardcore} -shell-escape ${filename}.tex
 	pdflatex -jobname=${hardcore} ${filename}.tex
 	pdflatex -jobname=${hardcore} ${filename}.tex
 	rm .hard
-svg-oneshot:
+svg-oneshot: config/bind.sty
 	$(eval out=oneshot)
 	touch .oneshot
 	pdflatex -jobname=${oneshot} -shell-escape ${filename}.tex

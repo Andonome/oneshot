@@ -23,12 +23,14 @@ Soon, the players will be misshapen too, turned into ogres in order to bolster t
 
 They awaken in a cell with nothing but their clothes, and must find a way to escape the chaos.
 
+<img src="images/Roch_Hercka/waking.jpg" width="1000">
+
 ## Aims
 
 The adventure is a PC meat-grinder, with plenty of prisons scattered through the dungeon for players to return with new characters once they die.
 As they travel upwards towards the sunlight, they learn about the rules and the wider world of Fenestra.
 
-You can find more on the full campaign world [here][aif].
+<img src="images/Dyson_Logos/lower.svg" width="500">
 
 [short]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/horde_escape_oneshot.pdf?job=compile_pdf
 [medium]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/horde_escape.pdf?job=compile_pdf

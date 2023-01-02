@@ -23,25 +23,25 @@ Keywords={TTRPG,RPG,roleplaying}
 \newtoggle{hardcore}
 
 \IfFileExists{.hard}{
-	\settoggle{hardcore}{true}
+  \settoggle{hardcore}{true}
 }{
-	\settoggle{hardcore}{false}
+  \settoggle{hardcore}{false}
 }
 
 \newtoggle{oneshot}
 
 \IfFileExists{.oneshot}{
-	\settoggle{oneshot}{true}
+  \settoggle{oneshot}{true}
 }{
-	\settoggle{oneshot}{false}
+  \settoggle{oneshot}{false}
 }
 
 \newcounter{enemyNo}
 
 \iftoggle{hardcore}{
-	\setcounter{enemyNo}{8}
+  \setcounter{enemyNo}{8}
 }{
-	\setcounter{enemyNo}{4}
+  \setcounter{enemyNo}{4}
 }
 
 \begin{document}
@@ -50,9 +50,9 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \frontpage{Escape from the Goblin Horde}{%
 \iftoggle{oneshot}{A oneshot adventure for BIND}{%
-	\iftoggle{hardcore}%
-	{A meat-grinder for foolish adventurers}%
-	{An introductory adventure for BIND}%
+  \iftoggle{hardcore}%
+  {A meat-grinder for foolish adventurers}%
+  {An introductory adventure for BIND}%
 }
 }{images/Brian_Garabrant/goblin_tongue.jpg}
 
@@ -63,7 +63,7 @@ Keywords={TTRPG,RPG,roleplaying}
 \tableofcontents
 
 \iftoggle{oneshot}{}{%
-	\include{credits.tex}
+  \include{credits.tex}
 }
 
 \mainmatter
@@ -74,13 +74,13 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \iftoggle{oneshot}{}{%
 
-	\include{top.tex}
+  \include{top.tex}
 
 }
 
 \iftoggle{hardcore}{
 
-	\include{siege.tex}
+  \include{siege.tex}
 
 }{}
 

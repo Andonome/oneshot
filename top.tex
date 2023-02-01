@@ -7,6 +7,7 @@
 \begin{multicols}{2}
 
 \mapentry{Entrance Hallway}
+\label{entrance}
 
 \widePic{Roch_Hercka/spiral_staircase}
 
@@ -23,6 +24,7 @@ then Bobble will run as fast as he can, away from the door, in order to alert th
 \goblin[\npc{\N\M}{Bobble}]
 
 \mapentry{Banquet Hall}
+\label{banquet}
 
 \begin{boxtext}
 
@@ -38,6 +40,7 @@ then Bobble will run as fast as he can, away from the door, in order to alert th
 they can find a knife which functions as a dagger.
 
 \mapentry{The Spiral Staircase Exit}
+\label{spiral}
 
 \begin{boxtext}
 
@@ -102,6 +105,7 @@ the armour-wearing ogres remain where they are, as they have strict orders not t
 }{}
 
 \mapentry{The Trapped Hallway}
+\label{webTrap}
 
 \begin{boxtext}
 
@@ -142,9 +146,23 @@ Have them roll Intelligence + Stealth to plan a route through, without upsetting
 If the party entered secretly, have them roll Wits + Vigilance, TN 8, to notice a dozing gnome.
 If the party move through without explaining themselves, he wakes, then sounds the alarm, and Tar\'ik in the far room incinerates the place with a \textit{Wide Fireball}, inflicting $1D6 +3$ Damage.
 
-\widePic{Dyson_Logos/upper}
+\mapPic{b}{Dyson_Logos/upper}{
+  \ref{entrance}/85/36,
+  \ref{banquet}/70/13,
+  \ref{spiral}/51/51,
+  \ref{webTrap}/51/13,
+  \ref{lounge}/26/11,
+  \ref{gnomes}/08/51,
+  \ref{kitchen}/45/32,
+  \ref{storage}/70/51,
+  \ref{woodspies}/85/84,
+  \ref{duelling}/42/92,
+  \ref{upperPrison}/21/92,
+  \ref{finalRoom}/08/84,
+}
 
 \mapentry{Trapped Gnomes}
+\label{gnomes}
 
 What happens here depends entirely on how the party have come through the previous rooms.
 
@@ -194,6 +212,7 @@ With proper food, the party and the gnomes can rest, regain any Fatigue Points t
 {\lockedmana{4}\addtocounter{sp}{8}}
 
 \mapentry{The Kitchen}
+\label{kitchen}
 
 \begin{boxtext}
 
@@ -213,6 +232,7 @@ They can roll as many times as they like, but each roll carries the danger of be
 the chasing ogre from the central room rushes after them (Page \pageref{chasingogre}).
 
 \mapentry{The Storage Room}
+\label{storage}
 
 \begin{boxtext}
 
@@ -247,6 +267,7 @@ If the party examine the map on the wall, they find it to be a map of the curren
 See Appendix \ref{handouts} for the map handout.
 
 \mapentry{The Woodspy Pool}
+\label{woodspies}
 
 \begin{boxtext}
 
@@ -277,6 +298,7 @@ the woodspy within reaches up and try to grab them.
 then it retreats into the water, where it remains safe from missile weapons.
 
 \mapentry{The Duelling Room}
+\label{duelling}
 
 \begin{exampletext}
 
@@ -299,6 +321,7 @@ Currently the room hosts a rabble of goblins, arguing over battle-plans in the c
 the prisoners in the next room shout for help.
 
 \mapentry{The Upper Prison}
+\label{upperPrison}
 
 \begin{boxtext}
 
@@ -360,6 +383,7 @@ It is not possible for anyone with a Strength bonus greater than 0 to get throug
 {}
 
 \mapentry{The Last Room}
+\label{finalRoom}
 
 This nasty little room holds a couple of beds and the remnants of gnomish board games.
 Among the wreckage, the party can find

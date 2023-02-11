@@ -1,31 +1,5 @@
 \chapter{The Warren}
 
-\mapPic{b}{Dyson_Logos/lower}{
-  \ref{entrycell}/81/04,
-  \ref{escapeShaft}/86/15,
-  \ref{diningRoom}/72/27,
-  \ref{spellCasters}/58/29,
-  \ref{desertPortal}/47/32,
-  \ref{kitchen}/51/07,
-  \ref{lift}/32/33,
-  \ref{dragonApproach}/08/33,
-  \ref{dragon}/13/47,
-  \ref{treasureRoom}/25/53,
-  \ref{nursery}/425/45,
-  \ref{slugHall}/73/34,
-  \ref{greatHall}/71/69,
-  \ref{workshop}/90/62,
-  \ref{grandLibrary}/905/81,
-  \ref{windingStairs}/58/64,
-  \ref{secondPrison}/43/68,
-  \ref{armoury}/64/84,
-  \ref{trappedHall}/54/84,
-  \ref{topShaft}/25/87,
-  \ref{fungusGarden}/09/77,
-  \ref{lockedDoor}/35/94,
-  \ref{lowerExit}/62/97,
-}
-
 \section{The Lowest Level}
 
 \begin{multicols}{2}
@@ -117,6 +91,32 @@ There are two knives in this room that can be wielded as daggers.
 \paragraph{If the party have crept in quietly, then leave}
 the nura rat and goblin will leave.
 The goblin will go up the lift, and the rat will leave to wander the hall, searching for more food.
+
+\mapPic{b}{Dyson_Logos/lower}{
+  \ref{entrycell}/81/04,
+  \ref{escapeShaft}/86/15,
+  \ref{diningRoom}/72/27,
+  \ref{spellCasters}/58/29,
+  \ref{desertPortal}/47/32,
+  \ref{kitchen}/51/07,
+  \ref{lift}/32/33,
+  \ref{dragonApproach}/08/33,
+  \ref{dragon}/13/47,
+  \ref{treasureRoom}/25/53,
+  \ref{nursery}/425/45,
+  \ref{slugHall}/73/34,
+  \ref{greatHall}/71/69,
+  \ref{workshop}/90/62,
+  \ref{grandLibrary}/905/81,
+  \ref{windingStairs}/58/64,
+  \ref{secondPrison}/43/68,
+  \ref{armoury}/64/84,
+  \ref{trappedHall}/54/84,
+  \ref{topShaft}/25/87,
+  \ref{fungusGarden}/09/77,
+  \ref{lockedDoor}/35/94,
+  \ref{lowerExit}/62/97,
+}
 
 \goblin[\npc{\N\F\Gn}{Hungry Goblin}]
 
@@ -246,6 +246,8 @@ roll a Morale check for the goblins.%
   \goblin[\npc{\T\N}{2 Goblins on the floor}]
 }{}
 
+\widePic{Roch_Hercka/dragon}
+
 \paragraph{If the party raid the room for food,}
 they'll find a few canteens of water, one of wine, and some spare sacks of vegetables.
 
@@ -290,8 +292,6 @@ they will find less purchase than a Sun-screen salesman in a Scotland.
 \mapentry{Dragon's Approach}
 \label{dragonApproach}
 
-\widePic{Roch_Hercka/dragon}
-
 \begin{exampletext}
 
   Shortly after the nura arrived from the Realm of Bright Rocks, a dragon followed.
@@ -330,21 +330,6 @@ Despite his linguistic deficits, he can communicate using the Enchantment sphere
 
 The dragon's eventual goal is to obtain the rest of the treasure, then return through the portal to the Realm of Bright Rocks.
 
-\NPC{\M}{Makil the Dragon}{Inquisitive}{Drums Fingers}{Acquisition}
-\person{7}% STRENGTH
-{2}% DEXTERITY 
-{5}% SPEED
-{{4}% INTELLIGENCE
-{3}% WITS
-{-2}}% CHARISMA
-{5}% DR
-{1}% COMBAT
-{Aggression~2, Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4
-\knacks{\bloodCaster}
-\Path{\enchantment~2, \fate~3, \invocation~4}}% SKILLS
-{Nothing}% EQUIPMENT
-{}
-
 \paragraph{If the party request he kill nura for them}
 then he obliges, in return for getting all treasure out of the treasure room, and leaving it with him.
 \paragraph{If the party offer to split the treasure,}
@@ -377,6 +362,21 @@ he blesses them all with \textit{Fortune}, allowing them to receive +1 to their 
 }{
   adventure.
 }
+
+\NPC{\M}{Makil the Dragon}{Inquisitive}{Drums Fingers}{Acquisition}
+\person{7}% STRENGTH
+{2}% DEXTERITY 
+{5}% SPEED
+{{4}% INTELLIGENCE
+{3}% WITS
+{-2}}% CHARISMA
+{5}% DR
+{1}% COMBAT
+{Aggression~2, Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4
+\knacks{\bloodCaster}
+\Path{\enchantment~2, \fate~3, \invocation~4}}% SKILLS
+{Nothing}% EQUIPMENT
+{}
 
 \mapentry{The Treasure Room}
 \label{treasureRoom}
@@ -610,8 +610,6 @@ This ring is actually three pocket spells -- each ruby in the ring is a separate
 The caster can summon anything available for Conjuration level 4.
 With 7 MP, the ring has a Metamagic score of 7, allowing it to cast \textit{Wide} spells, and other Metamagic enhancements.
 
-\sidepic{Decky/examine}
-
 \magicitem{Scroll of Insight}%
 {Massive Mage Sight}%
 {Alchemy}%
@@ -775,6 +773,8 @@ a new PC can be found here once another has spent the requisite Story Points to 
   All around, the floor glistens with tiny gemstones carved into the centre of flagstones.
 
 \end{boxtext}
+
+\sidepic{Decky/examine}
 
 The squares between the exit door and the party's path can turn anyone stepping upon them into stone.
 One goblin was unfortunate enough to trigger the trap.

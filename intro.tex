@@ -22,8 +22,12 @@
 This short story servers as an introduction to Fenestra.
 \iftoggle{hardcore}{%
   It takes 2-3 sessions to play through, and should provide a real challenge even to seasoned tabletop gamers.
-}{%
-  It takes 1-2 sessions to play through, and shouldn't be too challenging for new people.
+}{
+  \iftoggle{oneshot}{
+    Players will guide their characters to freedom or death within a single session (and, if death, will have to take a new character to guide out).
+  }{
+    It takes 1-2 sessions to play through, and shouldn't be too challenging for new people.
+}
 }
 
 \widePic{Roch_Hercka/transformation}
@@ -143,7 +147,6 @@ Travel times to raise the alarm vary, but if the party make noise and don't mana
 
 \iftoggle{oneshot}{}{%
   \subsection{Sanctuaries}
-
 
   Throughout the warren, a number of rooms are out of bounds to the nura.
   These are \nameref{dragon} (page \pageref{dragon}), \nameref{fungusGarden} (page \pageref{fungusGarden}), and \nameref{lounge} (page \pageref{lounge}).

@@ -1,0 +1,37 @@
+\settoggle{verbose}{true}
+
+% Check if 'adventures in fenestra' is present in directory aif.
+% If it is, set up a toggle 'aif', and make it true.
+% Repeat for 'core'.
+\externalReferent{aif}
+\externalReferent{core}
+
+\iftoggle{core}{
+  \input{../core/glossary.tex}
+  \input{../core/charts.tex}
+}{}
+
+
+\newtoggle{hardcore}
+
+\IfFileExists{.hard}{
+  \settoggle{hardcore}{true}
+}{
+  \settoggle{hardcore}{false}
+}
+
+\newtoggle{oneshot}
+
+\IfFileExists{.oneshot}{
+  \settoggle{oneshot}{true}
+}{
+  \settoggle{oneshot}{false}
+}
+
+\newcounter{enemyNo}
+
+\iftoggle{hardcore}{
+  \setcounter{enemyNo}{8}
+}{
+  \setcounter{enemyNo}{4}
+}

@@ -11,37 +11,7 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \title{Escape from the Horde}
 
-\settoggle{verbose}{true}
-
-% Check if 'adventures in fenestra' is present in directory aif.
-% If it is, set up a toggle 'aif', and make it true.
-% Repeat for 'core'.
-\externalReferent{aif}
-\externalReferent{core}
-
-\newtoggle{hardcore}
-
-\IfFileExists{.hard}{
-  \settoggle{hardcore}{true}
-}{
-  \settoggle{hardcore}{false}
-}
-
-\newtoggle{oneshot}
-
-\IfFileExists{.oneshot}{
-  \settoggle{oneshot}{true}
-}{
-  \settoggle{oneshot}{false}
-}
-
-\newcounter{enemyNo}
-
-\iftoggle{hardcore}{
-  \setcounter{enemyNo}{8}
-}{
-  \setcounter{enemyNo}{4}
-}
+\input{commands.tex}
 
 \begin{document}
 

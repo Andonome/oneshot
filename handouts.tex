@@ -1,0 +1,69 @@
+\documentclass[a4paper,openany]{report}
+
+\usepackage{config/bind}
+
+\settoggle{examplecharacter}{true}
+
+\input{commands.tex}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\iftoggle{hardcore}{
+}{
+  \iftoggle{core}{
+    \newcommand\printCharacter[1]{
+      \input{ex_cs/#1.tex}
+      \input{../core/CS/CS.tex}
+      \input{../core/CS/backpage.tex}
+    }
+    \cleardoublepage
+
+    \ifodd\value{r4}
+      \printCharacter{Roina}
+    \else
+      \printCharacter{Gharsh}
+    \fi
+
+    \ifodd\value{r3}
+      \printCharacter{Gharsh}
+    \else
+      \printCharacter{Bevl}
+    \fi
+
+    \ifnum\value{r4}>2
+      \printCharacter{Lod}
+    \else
+      \ifnum\value{r4}=1
+        \printCharacter{Hugi}
+      \else
+        \printCharacter{Merlin}
+    \fi
+
+    \ifnum\value{r3}>2
+      \printCharacter{Junior}
+    \else
+      \ifnum\value{r3}=1
+        \printCharacter{Charlie}
+      \else
+        \printCharacter{Harad}
+    \fi
+
+    \ifnum\day>14
+      \printCharacter{Aeglir}
+    \else
+      \printCharacter{Archer}
+    \fi
+  }{}
+}
+
+\iftoggle{hardcore}{
+  \includesvg{images/Dyson_Logos/town}
+  \clearpage
+  \shipout\null
+}{}
+
+\pic{Dyson_Logos/upper-handout}
+
+\end{document}

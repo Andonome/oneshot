@@ -9,12 +9,14 @@ ${filename}.pdf: $(wildcard *.tex) svg
 config/bind.sty:
 	git submodule update --init
 svg: config/bind.sty
+	pdflatex -shell-escape handouts.tex
 	pdflatex -jobname=${out} -shell-escape ${filename}.tex
 	pdflatex -jobname=${out} ${filename}.tex
 	pdflatex -jobname=${out} ${filename}.tex
 svg-hardcore: config/bind.sty
 	$(eval out=hardcore)
 	touch .hard
+	pdflatex -shell-escape handouts.tex
 	pdflatex -jobname=${hardcore} -shell-escape ${filename}.tex
 	pdflatex -jobname=${hardcore} ${filename}.tex
 	pdflatex -jobname=${hardcore} ${filename}.tex
@@ -39,6 +41,7 @@ all:
 	make oneshot
 	make hardcore
 	make
+	handouts
 tree:
 	[ -e ../config ] || ( echo "You don't have a local config repo" && exit 1 )
 	git status

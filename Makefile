@@ -2,7 +2,6 @@ filename=main
 out=horde_escape
 hardcore=horde_escape_hardcore
 oneshot=horde_escape_oneshot
-branch := $(shell git rev-parse --abbrev-ref HEAD)
 output: ${filename}.pdf
 ${filename}.pdf: $(wildcard *.tex) svg
 	pdflatex -jobname=${out} ${filename}.tex
@@ -42,9 +41,5 @@ all:
 	make hardcore
 	make
 	handouts
-tree:
-	[ -e ../config ] || ( echo "You don't have a local config repo" && exit 1 )
-	git status
-	git subtree -P config pull ../config ${branch}
 clean:
 	rm -fr *.aux *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf svg-inkscape .hard

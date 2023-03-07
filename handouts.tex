@@ -30,18 +30,18 @@
     \fi
 
     \ifodd\value{r3}
-      \printCharacter{Gharsh}
-    \else
       \printCharacter{Bevl}
+    \else
+      \printCharacter{Fox}
     \fi
 
     \ifnum\value{r4}>2
-      \printCharacter{Lod}
+      \printCharacter{Merlin}
     \else
       \ifnum\value{r4}=1
         \printCharacter{Hugi}
       \else
-        \printCharacter{Merlin}
+        \printCharacter{Lod}
     \fi
 
     \ifnum\value{r3}>2
@@ -58,9 +58,21 @@
     \else
       \printCharacter{Archer}
     \fi
+
+    \ifodd\month
+      \printCharacter{Dent}
+    \else
+      \printCharacter{Ash}
+    \fi
+
+    \ifodd\year
+      \printCharacter{Angel}
+    \else
+      \printCharacter{Alex}
+    \fi
+
   }{}
 }
-
 
 \iftoggle{oneshot}{}{
   \pic{Dyson_Logos/upper-handout}

@@ -11,5 +11,9 @@ compile_pdf:
     - run
   artifacts:
     paths:
-      - horde_escape.pdf
+      - handouts_hardcore.pdf
+      - hardcore_horde_escape.pdf
+      - handouts_oneshot.pdf
+      - oneshot_horde_escape.pdf
       - handouts.pdf
+      - std_horde_escape.pdf

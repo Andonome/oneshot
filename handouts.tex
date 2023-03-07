@@ -11,6 +11,9 @@
 \pagestyle{empty}
 
 \iftoggle{hardcore}{
+  \includesvg{images/Dyson_Logos/town}
+  \clearpage
+  \shipout\null
 }{
   \iftoggle{core}{
     \newcommand\printCharacter[1]{
@@ -58,12 +61,9 @@
   }{}
 }
 
-\iftoggle{hardcore}{
-  \includesvg{images/Dyson_Logos/town}
-  \clearpage
-  \shipout\null
-}{}
 
-\pic{Dyson_Logos/upper-handout}
+\iftoggle{oneshot}{}{
+  \pic{Dyson_Logos/upper-handout}
+}
 
 \end{document}

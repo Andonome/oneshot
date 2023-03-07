@@ -8,10 +8,10 @@ The config/ directory is a subtree.  Best not to touch it.
 
 -->
 
-| Downloads                | Related Books     |
-|:-------------------------|:------------------|
-| [Short Version][short]   | [Core Book][core] |
-| [Long Version][medium]   | [Fenestra][aif]   |
+| Downloads                      | Related Books     |
+|:-------------------------------|:------------------|
+| [Short Version][oneshot]       | [Core Book][core] |
+| [Handouts][handouts_oneshot]   | [Fenestra][aif]   |
 
 This is a one-shot adventure for the [BIND RPG][core].
 
@@ -32,8 +32,11 @@ As they travel upwards towards the sunlight, they learn about the rules and the 
 
 <img src="images/Dyson_Logos/lower.svg" width="500">
 
-[short]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/horde_escape_oneshot.pdf?job=compile_pdf
-[medium]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/horde_escape.pdf?job=compile_pdf
-[hardcore]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/horde_escape_hardcore.pdf?job=compile_pdf
+[oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_horde_escape.pdf?job=compile_pdf
+[handouts_oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/handouts_oneshot.pdf?job=compile_pdf
+[normal]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/horde_escape.pdf?job=compile_pdf
+[handouts_normal]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/handouts.pdf?job=compile_pdf
+[hardcore]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/hardcore_horde_escape.pdf?job=compile_pdf
+[handouts_hardcore]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/handouts_hardcore.pdf?job=compile_pdf
 [core]: https://gitlab.com/bindrpg/core
 [aif]: https://gitlab.com/bindrpg/aif

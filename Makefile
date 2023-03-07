@@ -1,45 +1,45 @@
-filename=main
-out=horde_escape
-hardcore=horde_escape_hardcore
-oneshot=horde_escape_oneshot
-output: ${filename}.pdf
-${filename}.pdf: $(wildcard *.tex) svg
-	pdflatex -jobname=${out} ${filename}.tex
+output=normal
+
+normal: horde_escape.pdf handouts.pdf
+horde_escape.pdf: horde_escape.tex intro.tex warren.tex top.tex svg-inkscape/upper_svg-tex.pdf
+	pdflatex horde_escape.tex
+svg-inkscape/upper_svg-tex.pdf: $(wildcard config/*) images
+	touch .hardcore
+	pdflatex -shell-escape horde_escape.tex
+	pdflatex horde_escape.tex
+
+handouts.pdf: images handouts.tex
+	pdflatex -shell-escape handouts.tex
+
+oneshot: oneshot_horde_escape.pdf handouts_oneshot.pdf
+oneshot_horde_escape.pdf: oneshot_horde_escape.tex intro.tex warren.tex svg-inkscape/lower_svg-tex.pdf
+	pdflatex oneshot_horde_escape.tex
+svg-inkscape/lower_svg-tex.pdf: $(wildcard config/*) images
+	touch .oneshot
+	pdflatex -shell-escape oneshot_horde_escape.tex
+	pdflatex oneshot_horde_escape.tex
+
+handouts_oneshot.pdf: images handouts.tex
+	pdflatex -shell-escape -jobname handouts_oneshot handouts.tex
+	rm .oneshot
+
+hardcore: hardcore_horde_escape.pdf handouts_hardcore.pdf
+hardcore_horde_escape.pdf: hardcore_horde_escape.tex intro.tex warren.tex top.tex siege.tex svg-inkscape/black_tower_f5_svg-tex.pdf
+	pdflatex hardcore_horde_escape.tex
+svg-inkscape/black_tower_f5_svg-tex.pdf: $(wildcard config/*) images
+	touch .hardcore
+	pdflatex -shell-escape hardcore_horde_escape.tex
+	pdflatex hardcore_horde_escape.tex
+
+handouts_hardcore.pdf: images handouts.tex
+	pdflatex -shell-escape -jobname handouts_hardcore handouts.tex
+	rm .hardcore
+
 config/bind.sty:
 	git submodule update --init
-svg: config/bind.sty
-	pdflatex -shell-escape handouts.tex
-	pdflatex -jobname=${out} -shell-escape ${filename}.tex
-	pdflatex -jobname=${out} ${filename}.tex
-	pdflatex -jobname=${out} ${filename}.tex
-svg-hardcore: config/bind.sty
-	$(eval out=hardcore)
-	touch .hard
-	pdflatex -shell-escape handouts.tex
-	pdflatex -jobname=${hardcore} -shell-escape ${filename}.tex
-	pdflatex -jobname=${hardcore} ${filename}.tex
-	pdflatex -jobname=${hardcore} ${filename}.tex
-	rm .hard
-svg-oneshot: config/bind.sty
-	$(eval out=oneshot)
-	touch .oneshot
-	pdflatex -jobname=${oneshot} -shell-escape ${filename}.tex
-	pdflatex -jobname=${oneshot}  ${filename}.tex
-	pdflatex -jobname=${oneshot}  ${filename}.tex
-	rm .oneshot
-hardcore: svg-hardcore
-	touch .hard
-	make svg-inkscape
-	pdflatex -jobname=${hardcore} ${filename}.tex
-	rm .hard
-oneshot: svg-oneshot
-	touch .oneshot
-	pdflatex -jobname=${oneshot} ${filename}.tex
-	rm .oneshot
-all:
-	make oneshot
-	make hardcore
-	make
-	handouts
+
+all: oneshot normal hardcore
+
 clean:
-	rm -fr *.slg *slo *sls *.aux *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf svg-inkscape .hard
+	rm -fr *.slg *slo *sls *.aux *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf svg-inkscape .hardcore .oneshot
+

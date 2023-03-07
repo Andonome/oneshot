@@ -1,4 +1,3 @@
-\settoggle{verbose}{true}
 
 % Check if 'adventures in fenestra' is present in directory aif.
 % If it is, set up a toggle 'aif', and make it true.
@@ -11,17 +10,15 @@
   \input{../core/charts.tex}
 }{}
 
-
+\settoggle{verbose}{true}
 \newtoggle{hardcore}
-
-\IfFileExists{.hard}{
+\IfFileExists{.hardcore}{
   \settoggle{hardcore}{true}
 }{
   \settoggle{hardcore}{false}
 }
 
 \newtoggle{oneshot}
-
 \IfFileExists{.oneshot}{
   \settoggle{oneshot}{true}
 }{

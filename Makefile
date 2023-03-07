@@ -8,7 +8,7 @@ svg-inkscape/upper_svg-tex.pdf: $(wildcard config/*) images
 	pdflatex -shell-escape horde_escape.tex
 	pdflatex horde_escape.tex
 
-handouts.pdf: images handouts.tex
+handouts.pdf: images handouts.tex $(wildcard ex_cs/*)
 	pdflatex -shell-escape handouts.tex
 
 oneshot: oneshot_horde_escape.pdf handouts_oneshot.pdf
@@ -19,7 +19,7 @@ svg-inkscape/lower_svg-tex.pdf: $(wildcard config/*) images
 	pdflatex -shell-escape oneshot_horde_escape.tex
 	pdflatex oneshot_horde_escape.tex
 
-handouts_oneshot.pdf: images handouts.tex
+handouts_oneshot.pdf: images handouts.tex $(wildcard ex_cs/*)
 	pdflatex -shell-escape -jobname handouts_oneshot handouts.tex
 	rm .oneshot
 
@@ -31,7 +31,7 @@ svg-inkscape/black_tower_f5_svg-tex.pdf: $(wildcard config/*) images
 	pdflatex -shell-escape hardcore_horde_escape.tex
 	pdflatex hardcore_horde_escape.tex
 
-handouts_hardcore.pdf: images handouts.tex
+handouts_hardcore.pdf: images handouts.tex $(wildcard ex_cs/*)
 	pdflatex -shell-escape -jobname handouts_hardcore handouts.tex
 	rm .hardcore
 

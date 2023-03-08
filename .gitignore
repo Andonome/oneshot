@@ -35,3 +35,5 @@ old
 *.slg
 *.slo
 *.sls
+.oneshot
+.hardcore

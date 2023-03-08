@@ -114,8 +114,9 @@ The goblin will go up the lift, and the rat will wander the hall, searching for 
   then he runs out of the room, shouting for a shaman in room \ref{spellCasters}.
   \item
   The rat attacks the PCs immediately.
+  \iftoggle{oneshot}{(As before, players roll 2D6 + Dexterity + Combat roll, at TN equal to the creature's `{\scshape Att}', and the winner deals Damage)}{}
   \item
-  The goblin shamans observe for a moment, then flee to the life (room \ref{lift}). 
+  The goblin nuramancers observe for a moment, then flee to the life (room \ref{lift}). 
 
 \end{itemize}
 
@@ -155,7 +156,7 @@ reveals two large knives which can be used as \emph{daggers}.
 
 \nurarat[\npc{\N\A}{Nura Rat}]
 
-\mapentry[spellCasters]{Spellcasters}
+\mapentry[spellCasters]{Spellcaster Arguments}
 
 \begin{boxtext}
 
@@ -223,9 +224,9 @@ Once the last line is spoken, the scroll activates (the rest does not need to be
   {2}% Potency
   {3}% MP
 
-\goblinnuramancer[\npc{\F}{Screamer}]
+\goblinnuramancer[\npc{\F}{Screamer the Nuramancer}]
 
-\goblinnuramancer[\npc{\M}{Brock}]
+\goblinnuramancer[\npc{\M}{Brock the Nuramancer}]
 
 \iftoggle{hardcore}{
 \goblin[\npc{\T}{3 Goblins}]

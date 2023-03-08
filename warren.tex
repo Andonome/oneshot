@@ -111,7 +111,7 @@ The goblin will go up the lift, and the rat will wander the hall, searching for 
   \item
   the goblin grabs the candle on the table (which puts it out),
   \item
-  then he runs out of the room, shouting for a shaman in room \ref{spellCasters}.
+  then he runs out of the room, shouting for a nuramancer in room \ref{spellCasters}.
   \item
   The rat attacks the PCs immediately.
   \iftoggle{oneshot}{(As before, players roll 2D6 + Dexterity + Combat roll, at TN equal to the creature's `{\scshape Att}', and the winner deals Damage)}{}
@@ -155,6 +155,11 @@ reveals two large knives which can be used as \emph{daggers}.
 \goblin[\npc{\N\F\Gn}{Hungry Goblin}]
 
 \nurarat[\npc{\N\A}{Nura Rat}]
+
+\iftoggle{oneshot}{%
+  \paragraph{Once the players leave the room,}
+  give them 1 Fatigue for each round of combat they were in (if any), and let them regenerate 40\% of their Fate Points, because a new scene has ended.
+}{}
 
 \mapentry[spellCasters]{Spellcaster Arguments}
 
@@ -245,12 +250,23 @@ Once the last line is spoken, the scroll activates (the rest does not need to be
 
 \end{boxtext}
 
-\paragraph{If any of the PCs are literate and speak the Gnomish tongue,}
-they can read the runes above the magical portal; they read ``Realm of Bright Rocks''.
+\iftoggle{oneshot}{
+  \paragraph{Ask the players if they think their characters should be able to speak Gnomish.}
+  If any say `yes', ask them to mark off a Story Point, and then explain why they can speak Gnomish, and record that reason on the back of the character sheet.
+
+  Every time players spend a Story Point,%
+  \iftoggle{core}{\footnote{See the core rules, \autoref{stories} for more on Story Points.}}{}%
+  the character gains 1 XP for every Story Point marked off so far (so the second gives 2 XP, the third gives 3, and so on\ldots)
+  
+  If anyone can read the runes, they say ``Realm of Bright Rocks''.
+}{
+  \paragraph{If any of the PCs are literate and speak the Gnomish tongue,}
+  they can read the runes above the magical portal; they read ``Realm of Bright Rocks''.
+}
 
 \paragraph{If the PCs enter the portal and journey through the Realm of Bright Rocks,}
 they won't find much -- not even a place to hide, given the desert is expansive and flat.
-If they stay there long, give them the usual 4 Fatigue Points and roll an encounter for that Realm.%
+If they stay there long, give them 4 Fatigue Points (due to the heat) and roll an encounter for that Realm.%
 \footnote{See \textit{Adventures in Fenestra} for more on the Realm of Bright Rocks\iftoggle{aif}{%
   , page \pageref{brightrocks}}%
   {}%
@@ -265,7 +281,37 @@ If they stay there long, give them the usual 4 Fatigue Points and roll an encoun
   They can only journey through that realm with a well-stocked supply line.
 }
 
+\iftoggle{oneshot}{
+  \paragraph{Fatigue Points}
+  don't do much at first, but every Fatigue Point above the character's \emph{current} HP gives a -1 penalty.
+  So a character with 6 Fatigue Points who gets reduced to 3 HP would take a -3 penalty to all actions.
+}{}
+
+\iftoggle{oneshot}{
+  \paragraph{Staying to stare at the portal}
+  counts as a new area, and therefore a new scene, so the PCs can regenerate 40\% of their FP and some MP again.
+}{}
+
+\iftoggle{oneshot}{% This weapon chart goes next to the kitchen room below.
+  \begin{figure*}[t!]
+  \begin{nametable}[p{0.2\textwidth}YYYY]{Kitchen Weapons}
+
+  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{AP Cost} & \textbf{Weight Rating} \\\hline
+
+  2 x \Dagger 
+  2 x \skillet
+  1 x \woodaxe
+  4 x \chair
+
+  \end{nametable}
+  \end{figure*}
+}{}
+
+
 \mapentry[kitchen]{Kitchen}
+
+\paragraph{If the PCs have avoided making a lot of noise nearby,}
+then the goblins are asleep in the kitchen.
 
 \begin{boxtext}
 
@@ -276,19 +322,71 @@ At the end of the kitchen you can see a large door to a cold store with a lock o
 
 \end{boxtext}
 
-\noindent
-\paragraph{If the players try to find weapons,}
-they can use either of the two cast iron skillets.
-\iftoggle{hardcore}{
-  Two more goblins lie sleeping out of sight on the dark floor.
-  Players can make a Wits + Vigilance roll, TN 9, to spot them.
-}{
+\paragraph{If the PCs try to sneak in,}
+have them make a Group Roll of Dexterity + Stealth, TN 8.
+\iftoggle{oneshot}{%
+  As before, the Group Roll only requires one player to roll, and any character which enters the room produces a different result.
+}{}
 
+\paragraph{If the roll fails,}
+all goblins wake up
+\iftoggle{oneshot}{
+  but must take a morale check before attacking.
+  The Morale check only uses the Combat Skill at TN 5, with some modifiers.
+
+  \begin{itemize}
+    \item
+    -2 if any PC is larger has a higher Strength than the goblin.
+    \item
+    -2 if there are more PCs \emph{in the room} than goblins.
+    \item
+    -2 if the goblin is wounded.
+    \item
+    -1 if any PC has displayed magical powers.
+  \end{itemize}
+
+  Make a Group Roll for all the goblins (one roll, but each goblins adds their own Combat Skill to get a new result).
+  \paragraph{If the goblins fail the Morale Check,}
+  they attempt to flee into the prison cell the PCs just came from.
+}{
+  and take a morale check.
+
+  Two more goblins are sleeping in a corner, making five in total.
 }
-\paragraph{Should they make too much noise or light up the room,}
-all goblins will wake up and attack.
-Any action, movement, or speech requires a Dexterity + Stealth check, TN 8, made as a group.
-Any character not moving does not contribute to the noise.
+
+
+\noindent
+\paragraph{If the players try to find weapons,}%
+\iftoggle{oneshot}{
+  They can find plenty of make-shift weapons around the kitchen.
+
+  These weapons may not be good quality, but they can still improve the PCs' situation immensely.
+
+  \paragraph{As the players select a weapon for their characters,}
+  have them write down the stats one at a time.
+  \begin{itemize}
+
+    \item
+    The \textit{Attack Bonus} adds to their Dexterity + Combat roll in combat.
+    \item
+    The \textit{Damage Bonus} adds to their Damage.
+    Anyone with +4 Damage replaces their Damage Bonus with a $D6$, so $1D6+4$ Damage becomes $2D6$, and $1D6+5$ Damage becomes $2D6+1$.
+    \item
+    The \textit{AP Cost} shows how many AP the character must spend to use the weapon (no matter who instigated the attack).
+    \begin{itemize}
+      \item
+      Characters cannot declare actions when they have less than 1 AP left, but they can (and must) still spend AP to defend themselves.
+      \item
+      Characters can get pushed into negative AP when they are forced to Defend themselves, which then become a penalty (being on -2 AP means a -2 penalty to all actions).
+    \end{itemize}
+    \item
+    The \textit{Weight Rating} tells you what level of Strength Bonus you need to use the weapon unencumbered.
+    If a weapon's Weight Rating is higher than the character's Strength penalty, then every point over gives them -1 AP at the start of Combat, and +1 Fatigue Points at the end of Combat.
+  \end{itemize}
+}{
+  they can use either of the two cast iron skillets.
+}
+
 
 \paragraph{On the second round of combat,}
 roll a Morale check for the goblins.%
@@ -312,6 +410,11 @@ they'll find a few canteens of water, one of wine, and some spare sacks of veget
 The players can unlock the cold store%
 \footnote{A cold store is an old fashioned fridge where people put ice to keep food from going bad.}
   with a Dexterity + Larceny roll at TN 10 to pick the lock, at which point they discover that the larder is still full of food.
+
+\iftoggle{oneshot}{
+  Resting a while in the kitchen regenerates a number of Fatigue Points equal to half the player's current HP (rounded up).
+  And of course, at the end of the scene each character also regenerates 40\% of their FP.
+}{}
 
 \mapentry[lift]{The Gnomish Lift}
 

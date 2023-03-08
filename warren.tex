@@ -116,7 +116,7 @@ The goblin will go up the lift, and the rat will wander the hall, searching for 
   The rat attacks the PCs immediately.
   \iftoggle{oneshot}{(As before, players roll 2D6 + Dexterity + Combat roll, at TN equal to the creature's `{\scshape Att}', and the winner deals Damage)}{}
   \item
-  The goblin nuramancers observe for a moment, then flee to the life (room \ref{lift}). 
+  The goblin nuramancers observe them for a moment, then flee to the life (room \ref{lift}). 
 
 \end{itemize}
 
@@ -165,10 +165,11 @@ reveals two large knives which can be used as \emph{daggers}.
 
 \begin{boxtext}
 
-  Two goblins wearing long black robes bicker with each other over a little table.
+  At the end of the tunnel, in an alcove to the right, goblins wearing long black robes bicker with each other over a little table.
   \iftoggle{hardcore}{%
     Other goblins stand at the side, apparently bored of the argument.
-  }{}
+  }{}%
+  Over on the left, you can see a light so strong it must be daylight.
 
 \end{boxtext}
 
@@ -194,17 +195,15 @@ they respond with aggressive spells.
 
   \item
   Anyone with Invocation 2 or more can spend 2 MP to cast a fireball.
-\begin{itemize}
-
-  \item
-  Players must roll to avoid the magical flames at TN 7 plus the caster's Intelligence + Projectiles.
+  \begin{itemize}
+    \item
+    Players must roll to avoid the magical flames at TN 7 plus the caster's Intelligence + Projectiles.
+    \item
+    Players can spend 1 AP to \textit{Keep Edgy} against missile attacks such as fireballs, for the rest of combat.
+    This allows them to add their Speed + Vigilance Bonus to the roll, but without Keeping Edgy, they gain no bonus to the roll.
+  \end{itemize}
   \item
   If the caster hits, they deal $1D6 + 1 + Int$ Damage (so casters with Intelligence +2 deal $1D6+3$ Damage).
-  \item
-  Players can spend 1 AP to \textit{Keep Edgy} against missile attacks such as fireballs.
-  This allows them to add their Speed + Vigilance Bonus to the roll.
-
-\end{itemize}
 
 \end{itemize}
 }{}
@@ -222,47 +221,65 @@ The scroll contains the epic of Logan, an Elvish poem.
 Once the last line is spoken, the scroll activates (the rest does not need to be spoken).
 
 \magicitem{Portal Scroll}% NAME
-  {Eternal, Ranged, Clairvoyance, Ranged Teleport}% SPELL
+  {Eternal, Ranged, Clairvoyance, Ranged Gate}% SPELL
   {Alchemy}% PATH
   {2 Scenes}% DURATION
   {Pocket Spell \& Pocket Spell}% TYPE
   {2}% Potency
   {3}% MP
 
+\paragraph{Once the Portal Scroll is activated,}
+it begins to shimmer with golden flecks, and four rounds later a portal opens to another realm.
+
 \goblinnuramancer[\npc{\F}{Screamer the Nuramancer}]
 
 \goblinnuramancer[\npc{\M}{Brock the Nuramancer}]
 
 \iftoggle{hardcore}{
-\goblin[\npc{\T}{3 Goblins}]
+  \goblin[\npc{\T}{3 Goblins}]
 }{}
+
+\iftoggle{oneshot}{
+  \paragraph{If the PCs try to examine a scroll,}
+  ask if they think their character should speak Gnomish.
+  If any say `yes', have them mark off a Story Point (on the back of their character sheet) and explain where they learnt the language.
+
+  \paragraph{Every time players spend a Story Point,}%
+  \iftoggle{core}{\footnote{See the core rules, \autoref{stories} for more on Story Points.}}{}%
+  the character gains 1 XP for every Story Point marked off so far (so the second gives 2 XP, the third gives 3, and so on).
+
+}{}
+
+\paragraph{When leaving this alcove,}
+the PCs head towards the blinding light.
+
+\begin{boxtext}
+
+  Turning away from the table in the little alcove, the hallway ahead drops into two shadowy openings, and on the right daylight floods in through a passage, almost blinding you.
+
+\end{boxtext}
 
 \mapentry[desertPortal]{Magic Portal}
 
 \begin{boxtext}
+  Shielding your eyes, you turn right and head towards the light.
 
-  In this room there stands before you a Magical portal 8' high and 4' wide.
+  Just four steps down the passage, you find the Sunlight coming from a massive opening on the right.
   A warm wind blows through the portal and on the other side you can see an endless desert of bright, yellow rocks.
-  Runic writing sits above the portal.
-  The room seems empty except for the scuff marks leading to and from the portal, and the massive double-doorway behind you. 
+  Strange symbols and gemstones sit around the opening's perimeter.
 
-  The passageway continues, but becomes quickly lost in darkness as it loses the Sunlight through the portal.
+  On the left, double doors made of wood stare into the light.
+  Then passageway continues, but becomes quickly lost in darkness.
 
 \end{boxtext}
 
 \iftoggle{oneshot}{
-  \paragraph{Ask the players if they think their characters should be able to speak Gnomish.}
-  If any say `yes', ask them to mark off a Story Point, and then explain why they can speak Gnomish, and record that reason on the back of the character sheet.
+  \paragraph{Ask the players if they can speak Gnomish,}
+  if none got an opportunity to spend Story Points on the scrolls (above, in room \ref{spellCasters}).
+}{}
 
-  Every time players spend a Story Point,%
-  \iftoggle{core}{\footnote{See the core rules, \autoref{stories} for more on Story Points.}}{}%
-  the character gains 1 XP for every Story Point marked off so far (so the second gives 2 XP, the third gives 3, and so on\ldots)
-  
-  If anyone can read the runes, they say ``Realm of Bright Rocks''.
-}{
-  \paragraph{If any of the PCs are literate and speak the Gnomish tongue,}
-  they can read the runes above the magical portal; they read ``Realm of Bright Rocks''.
-}
+\paragraph{If any of the PCs are literate and speak the Gnomish tongue,}
+they can read the runes above the magical portal; they read ``Realm of Bright Rocks''.
 
 \paragraph{If the PCs enter the portal and journey through the Realm of Bright Rocks,}
 they won't find much -- not even a place to hide, given the desert is expansive and flat.
@@ -348,12 +365,16 @@ all goblins wake up
   Make a Group Roll for all the goblins (one roll, but each goblins adds their own Combat Skill to get a new result).
   \paragraph{If the goblins fail the Morale Check,}
   they attempt to flee into the prison cell the PCs just came from.
+
+  Their Morale check remains throughout the combat, without needing to re-roll it.
+  If they roll a `7' from the start, then a Goblin with Combat +1 will have a total of `8', and one with Combat +2 would have `9'.
+  If the PCs outnumber the goblins, and one is stronger than them, then their total would become `5' and `6'.
+  If a goblin became wounded, they would flee, but the others might stay.
 }{
   and take a morale check.
 
   Two more goblins are sleeping in a corner, making five in total.
 }
-
 
 \noindent
 \paragraph{If the players try to find weapons,}%
@@ -387,7 +408,6 @@ all goblins wake up
   they can use either of the two cast iron skillets.
 }
 
-
 \paragraph{On the second round of combat,}
 roll a Morale check for the goblins.%
 \iftoggle{core}{%
@@ -412,7 +432,8 @@ The players can unlock the cold store%
   with a Dexterity + Larceny roll at TN 10 to pick the lock, at which point they discover that the larder is still full of food.
 
 \iftoggle{oneshot}{
-  Resting a while in the kitchen regenerates a number of Fatigue Points equal to half the player's current HP (rounded up).
+  \paragraph{Resting a while}
+  in the kitchen regenerates a number of Fatigue Points equal to half the player's current HP (rounded up).
   And of course, at the end of the scene each character also regenerates 40\% of their FP.
 }{}
 
@@ -458,7 +479,7 @@ they will find less purchase than a Sun-screen salesman in a Scotland.
   He managed to pull a chest full of copper coinage through the door, but could not get anything else as he could not reach.
 
   The nura wandered up the stairs, and found out too late they could not get any treasure.
-  The dragon wanted to barter with them, and make a full army, but found that all the goblins and ogres responded to him either by trying to fight him, or by running away, and none spoke elvish.
+  The dragon wanted to barter with them, but found that all the goblins and ogres responded to him either by trying to fight him, or by running away, and none spoke elvish.
 
   The cautious beast won't approach the nura to attach when he has no idea how many there are around him.
   He may be powerful, but a room full of ogres alongside a spell caster could seriously injure or kill him, and he doesn't want to take the chance.
@@ -475,14 +496,14 @@ they will find less purchase than a Sun-screen salesman in a Scotland.
 
 \end{boxtext}
 
-\paragraph{If the party loot the bodies}
+\paragraph{If the PCs loot the bodies}
 they find a portal scroll wrapped safely in a scroll case.
 
 \mapentry[dragon]{The Dragon's Lair}
 
 The dragon will happily talk with anyone who approaches, but only understands Quenya (the Elvish language).
 \iftoggle{hardcore}{}{%
-Remind the players that they can spend a Story Point to say that they know another language, as long as they say when they learnt the language.
+  Remind the players that they can spend a Story Point to say that they know another language, as long as they say when they learnt the language.
 }
 Despite his linguistic deficits, he can communicate using the Enchantment sphere to send ideas to characters.
 

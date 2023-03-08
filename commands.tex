@@ -25,6 +25,11 @@
   \settoggle{oneshot}{false}
 }
 
+% When 'examplecharacter' = true, some stats show more information about how they work.
+\iftoggle{oneshot}{
+  \settoggle{examplecharacter}{true}{}
+}
+
 \newcounter{enemyNo}
 
 \iftoggle{hardcore}{

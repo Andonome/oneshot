@@ -82,22 +82,48 @@ all rolls can be dispensed with, and the PCs can ascend to room \ref{laddertop} 
 
 \begin{boxtext}
 
-  As you climb the stairs away from your cell you enter a room full of benches and tables, all overturned and broken. 
-  The floor is strewn with pots and plates, knives, forks and candlesticks, but no candles and not a scrap of food remains.
+  As you climb the dark stairway, you see a tiny candle's light above, and hear shouting and thrashing.
+  The floor at the top is strewn with pots and plates, knives, forks and candlesticks.
   It looks like a pack of ravenous dogs swept through here and licked ever morsel from every surface.
-
-  In the middle of the room you can see two creatures wrestling on a table -- a goblin and the other you would call a rat, but only if the rat had been mated with a Great Dane.
-  The two creatures seem to be fighting over something and as you focus on the scene before you it becomes clear that what they are fighting over is a human leg.
 
 \end{boxtext}
 
-\paragraph{If the players make a sound}
-the goblin will stop fighting with the rat for the ownership of the bone and run out of the room shouting for the shaman who had left them in the cell previously.
-There are two knives in this room that can be wielded as daggers.
+\paragraph{If a PC sneaks up quietly,}
+have them roll Dexterity + Stealth, at a TN of 7 plus the rat's Wits + Vigilance.
 
-\paragraph{If the party have crept in quietly, then leave}
+They should get a +2 bonus for leaving any lights behind.
+
+\begin{boxtext}
+
+  In the middle of the room you can see two creatures wrestling on a table -- a goblin and the other you would call a rat, but only if the rat had been mated with a Great Dane.
+  The two creatures are fighting over a human leg.
+
+\end{boxtext}
+
+\paragraph{If the PCs wait patiently and silently,}
 the nura rat and goblin will leave.
-The goblin will go up the lift, and the rat will leave to wander the hall, searching for more food.
+The goblin will go up the lift, and the rat will wander the hall, searching for more food.
+
+\paragraph{If the PCs make a sound},
+
+\begin{itemize}
+
+  \item
+  the goblin grabs the candle on the table (which puts it out),
+  \item
+  then he runs out of the room, shouting for a shaman in room \ref{spellCasters}.
+  \item
+  The rat attacks the PCs immediately.
+  \item
+  The goblin shamans observe for a moment, then flee to the life (room \ref{lift}). 
+
+\end{itemize}
+
+\paragraph{Searching the room}
+reveals two large knives which can be used as \emph{daggers}.
+\iftoggle{oneshot}{%
+  Daggers grant +1 Damage in combat.
+}{}
 
 \mapPic{b}{Dyson_Logos/lower}{
   \ref{entrycell}/81/04,
@@ -142,13 +168,40 @@ The goblin will go up the lift, and the rat will leave to wander the hall, searc
 
 The two spell casters cannot figure out what the scrolls on the table do, despite the fact that one is a Scroll of uprising, brought here by the nura.
 
-\paragraph{If the players try to sneak past,}
+\paragraph{If the PCs try to sneak past,}
 they make a Group Roll with Dexterity + Stealth, TN 10.
+\iftoggle{oneshot}{As before, one player rolls 2D6, and everyone adds their own Dexterity + Stealth.
+If a single PC fails, everyone fails.}{}%
 \iftoggle{core}{%
   \footnote{See the core book, page \pageref{grouproll} for Group rolls.}}%
 {}
-If they fall, they receive $1D6-2$ Damage.
-They will also have to put out their torch, if they have one.
+
+\paragraph{If the goblins spot the party,}
+they attempt to flee, gather the other goblins in the kitchen.
+They cannot call the lift quickly enough to escape.
+
+\paragraph{If the PCs corner the goblins,}
+they respond with aggressive spells.
+
+\iftoggle{oneshot}{
+\begin{itemize}
+
+  \item
+  Anyone with Invocation 2 or more can spend 2 MP to cast a fireball.
+\begin{itemize}
+
+  \item
+  Players must roll to avoid the magical flames at TN 7 plus the caster's Intelligence + Projectiles.
+  \item
+  If the caster hits, they deal $1D6 + 1 + Int$ Damage (so casters with Intelligence +2 deal $1D6+3$ Damage).
+  \item
+  Players can spend 1 AP to \textit{Keep Edgy} against missile attacks such as fireballs.
+  This allows them to add their Speed + Vigilance Bonus to the roll.
+
+\end{itemize}
+
+\end{itemize}
+}{}
 
 \paragraph{If the characters investigate the table,}
 they find a Portal Scroll, and a Scroll of Uprising.

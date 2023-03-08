@@ -22,6 +22,7 @@ svg-inkscape/lower_svg-tex.pdf: $(wildcard config/*) images
 	pdflatex oneshot_horde_escape.tex
 
 handouts_oneshot.pdf: images handouts.tex $(wildcard ex_cs/*)
+	touch .oneshot
 	pdflatex -shell-escape -jobname handouts_oneshot handouts.tex
 	rm -f .oneshot
 
@@ -34,6 +35,7 @@ svg-inkscape/black_tower_f5_svg-tex.pdf: $(wildcard config/*) images
 	pdflatex hardcore_horde_escape.tex
 
 handouts_hardcore.pdf: images handouts.tex $(wildcard ex_cs/*)
+	touch .hardcore
 	pdflatex -shell-escape -jobname handouts_hardcore handouts.tex
 	rm -f .hardcore
 

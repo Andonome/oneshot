@@ -9,6 +9,7 @@ svg-inkscape/upper_svg-tex.pdf: $(wildcard config/*) images
 	pdflatex horde_escape.tex
 
 handouts.pdf: images handouts.tex $(wildcard ex_cs/*)
+	rm -f .oneshot .hardcore
 	pdflatex -shell-escape handouts.tex
 
 oneshot: oneshot_horde_escape.pdf handouts_oneshot.pdf

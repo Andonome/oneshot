@@ -203,10 +203,21 @@ He knows what will happen to him, but he cannot stand to wait, starving in a cel
 \ogre[\npc{\N\M}{Alf the Ogre}]
 \label{alf}
 
-\goblin[\npc{\N\F}{Blara the Goblin}]
+\npc{\N\F}{Blara the Goblin}
+\person{-1}% STRENGTH
+{2}% DEXTERITY 
+{3}% SPEED
+{{0}% INTELLIGENCE
+{0}% WITS
+{-4}}% CHARISMA
+{0}% DR
+{1}% COMBAT
+{Athletics 1, Deceit 1, Stealth 2, Tactics 1}% SKILLS
+{Torch}% EQUIPMENT
+{}
 
-\paragraph{If anyone tries to kill Alf and Blara,}
-Blara runs away, but Alf fights immediately.
+\paragraph{If anyone tries to fight Alf,}
+he attacks them.
 
 \iftoggle{oneshot}{
   \begin{itemize}
@@ -226,6 +237,9 @@ Blara runs away, but Alf fights immediately.
   \end{itemize}
 
 }{}
+
+\paragraph{If anyone tries to fight Blara,}
+she runs away with her torch (the room's only light source), leaving the party stranded in darkness.
 
 \paragraph{If the PCs kill Chris immediately,}
 he will be vulnerable, so they can make a sneak attack.

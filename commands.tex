@@ -32,3 +32,45 @@
 }{
   \setcounter{enemyNo}{4}
 }
+
+% Goblins should have torches.
+
+\renewcommand{\goblin}[1][\npc{\T\N}{\arabic{r12} Goblins}]{
+	#1
+	\randomtwo
+	\randomtwoB
+	\addtocounter{r2b}{-2}
+	\addtocounter{enc}{1}
+  \randomthree
+  \randomthreeC
+    \setcounter{gold}{\value{r3c}}
+    \addtocounter{gold}{-2}
+	\randomdozen
+	\randomfourB
+\person{\arabic{r2b}}% STRENGTH
+{\arabic{r2}}% DEXTERITY 
+{\arabic{enc}}% SPEED
+{{\arabic{gold}}% INTELLIGENCE
+{0}% WITS
+{-4}}% CHARISMA
+{0}% DR
+{\arabic{r2}}% COMBAT
+{\iftoggle{hardcore}{Projectiles~\arabic{r2},}{} Athletics~1, Deceit~1, Stealth~\arabic{r3}, \ifodd\value{r4}Tactics~\arabic{r2}\fi%
+}% SKILLS
+{\ifodd\value{r2}%
+	Candle%
+\else%
+	\ifodd\value{r12}%
+		\javelin, dagger%
+	\else%
+		\Dagger%
+	\fi%
+\fi%
+\ifodd\value{r3b}%
+	\iftoggle{team}{}{%
+		, lock picking set%
+	}%
+\fi%
+.}% EQUIPMENT
+{}
+}

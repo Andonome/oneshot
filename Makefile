@@ -21,7 +21,7 @@ svg-inkscape/lower_svg-tex.pdf: $(wildcard config/*) images
 
 handouts_oneshot.pdf: images handouts.tex $(wildcard ex_cs/*)
 	pdflatex -shell-escape -jobname handouts_oneshot handouts.tex
-	rm .oneshot
+	rm -f .oneshot
 
 hardcore: hardcore_horde_escape.pdf handouts_hardcore.pdf
 hardcore_horde_escape.pdf: hardcore_horde_escape.tex intro.tex warren.tex top.tex siege.tex svg-inkscape/black_tower_f5_svg-tex.pdf
@@ -33,7 +33,7 @@ svg-inkscape/black_tower_f5_svg-tex.pdf: $(wildcard config/*) images
 
 handouts_hardcore.pdf: images handouts.tex $(wildcard ex_cs/*)
 	pdflatex -shell-escape -jobname handouts_hardcore handouts.tex
-	rm .hardcore
+	rm -f .hardcore
 
 config/bind.sty:
 	git submodule update --init

@@ -80,6 +80,10 @@
 \iftoggle{oneshot}{
   \iftoggle{core}{
   \input{../core/CS/overview.tex}
+  \clearpage
+  \shipout\null
+  \settoggle{examplecharacter}{false}
+  \input{../core/CS/GS.tex}
   }{}
 }{
   \pic{Dyson_Logos/upper-handout}

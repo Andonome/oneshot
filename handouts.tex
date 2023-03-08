@@ -38,10 +38,7 @@
     \ifnum\value{r4}>2
       \printCharacter{Merlin}
     \else
-      \ifnum\value{r4}=1
-        \printCharacter{Hugi}
-      \else
-        \printCharacter{Lod}
+      \printCharacter{Hugi}
     \fi
 
     \ifnum\value{r3}>2
@@ -57,6 +54,12 @@
       \printCharacter{Aeglir}
     \else
       \printCharacter{Archer}
+    \fi
+
+    \ifodd\day
+      \printCharacter{Lod}
+    \else
+      \printCharacter{Advir}
     \fi
 
     \ifodd\month

@@ -77,7 +77,11 @@
   }{}
 }
 
-\iftoggle{oneshot}{}{
+\iftoggle{oneshot}{
+  \iftoggle{core}{
+  \input{../core/CS/overview.tex}
+  }{}
+}{
   \pic{Dyson_Logos/upper-handout}
 }
 

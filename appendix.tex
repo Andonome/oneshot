@@ -18,9 +18,35 @@
 \chapter{Creatures \& Items}
 \label{creaturesAndItems}
 
+
 \section{Portal Scrolls}
 
 \begin{multicols}{2}
+
+\iftoggle{oneshot}{
+  \begin{figure*}[t!]
+  \section{Weapons}
+
+  \begin{nametable}[XYYYY]{Weapons}
+
+  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{AP Cost} & \textbf{Weight Rating} \\\hline
+
+  \greatsword
+
+  \greatclub
+
+  \javelin
+
+  \maul
+
+  \spear
+
+  \woodaxe
+
+  \end{nametable}
+  \end{figure*}
+}{}
+
 
 \noindent
 The gnomes did not want anyone to be able to operate the items, except other gnomes, so they wrote riddles on the scrolls, and made the activation word the answer to the riddle.
@@ -78,18 +104,18 @@ Here are some pre-rolled encounters from that distant realm:
   \end{itemize}
 \end{itemize}
 
-\dwarvensoldier[\npc{\M\T}{Maze Dwarves}]
-
-\umberhulk
-
-\iftoggle{core}{%
-  For rules on large battles between NPCs, see the core book, page \pageref{npcfights}.}{}
-
 \end{multicols}
 
 \section{Potential Creatures}
 
 \begin{multicols}{2}
+
+\iftoggle{core}{%
+  For rules on large battles between NPCs, see the core book, page \pageref{npcfights}.}{}
+
+\dwarvensoldier[\npc{\M\T}{Maze Dwarves}]
+
+\umberhulk
 
 \label{undeadstats}
 

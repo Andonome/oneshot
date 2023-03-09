@@ -1,7 +1,7 @@
 output=normal
 
 normal: horde_escape.pdf handouts.pdf
-horde_escape.pdf: horde_escape.tex intro.tex warren.tex top.tex svg-inkscape/upper_svg-tex.pdf
+horde_escape.pdf: horde_escape.tex intro.tex warren.tex top.tex appendix.tex svg-inkscape/upper_svg-tex.pdf
 	touch .hardcore
 	pdflatex horde_escape.tex
 svg-inkscape/upper_svg-tex.pdf: $(wildcard config/*) images
@@ -14,7 +14,7 @@ handouts.pdf: images handouts.tex $(wildcard ex_cs/*)
 	pdflatex -shell-escape handouts.tex
 
 oneshot: oneshot_horde_escape.pdf handouts_oneshot.pdf
-oneshot_horde_escape.pdf: oneshot_horde_escape.tex intro.tex warren.tex svg-inkscape/lower_svg-tex.pdf
+oneshot_horde_escape.pdf: oneshot_horde_escape.tex intro.tex warren.tex appendix.tex svg-inkscape/lower_svg-tex.pdf
 	touch .oneshot
 	pdflatex oneshot_horde_escape.tex
 svg-inkscape/lower_svg-tex.pdf: $(wildcard config/*) images
@@ -29,7 +29,7 @@ handouts_oneshot.pdf: images handouts.tex $(wildcard ex_cs/*)
 	rm -f .oneshot
 
 hardcore: hardcore_horde_escape.pdf handouts_hardcore.pdf
-hardcore_horde_escape.pdf: hardcore_horde_escape.tex intro.tex warren.tex top.tex siege.tex svg-inkscape/black_tower_f5_svg-tex.pdf
+hardcore_horde_escape.pdf: hardcore_horde_escape.tex intro.tex warren.tex top.tex siege.tex appendix.tex svg-inkscape/black_tower_f5_svg-tex.pdf
 	pdflatex hardcore_horde_escape.tex
 svg-inkscape/black_tower_f5_svg-tex.pdf: $(wildcard config/*) images
 	touch .hardcore

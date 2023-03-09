@@ -110,16 +110,7 @@ They are based more on time and circumstance than location.
 The first introduces the characters, and the next introduces the adventure.
 The third means their death approaches, and the fourth may be their salvation.
 
-\widePic{Roch_Hercka/waking}
-
 \subsection{Creation}
-
-\begin{boxtext}
-
-  You awake in darkness with ropes binding your hands behind your back.
-  From the shifting and murmuring sounds around, you know others rest in the same room.
-
-\end{boxtext}
 
 \iftoggle{hardcore}{
   \sidebox{
@@ -138,123 +129,6 @@ The third means their death approaches, and the fourth may be their salvation.
   Turn the character sheets from the handouts upside-down, then have players take one in any order.
   Give them a moment to study their characters while you hide the rest of the character sheets -- you will need them later.
 }
-
-\subsection{The Escape}
-\label{escape}
-
-Here the PCs awaken to their hopeless situation.
-The players may make their characters at this juncture -- everyone's in the dark, so nobody knows who anyone is at this point.
-
-Give the players a moment to get to know each other and their surroundings.
-Remember, that everything is pitch black -- at best they can feel out the room a little, but they don't have long.
-
-\paragraph{If anyone tries to wriggle free of their ropes,}
-have them roll Dexterity + Larceny,
-\iftoggle{hardcore}{%
-  TN 11.
-  Freeing another character requires a Dexterity + Crafts roll, TN 7, over the space of a round.
-}{%
-  TN 9.
-  Freeing another character requires a full round.
-Remember that if a player cannot succeed in a roll, it's possible for them to take a resting action (one die turns to 6 automatically\iftoggle{core}{, see the core rules, \autopageref{restingactions} for more}{}).
-}
-
-\paragraph{After a moment,}
-a small voice emerges from the corner of the room.
-`Chris', the seneschal (`accountant')
-He explains to them that many prisoners waited here, until the nuramancers%
-\iftoggle{hardcore}{}{\footnote{A `nuramancer' is a goblin spellcaster, who uses nuramancy magic.}}
-came to turn one into an ogre, who then ate the others, except for Chris, who hid under the debris.
-
-\begin{boxtext}
-
-  Heavy footsteps pad down the hall, you hear the door's bar being lifted, and a little goblinoid face peeps in with a torch and a massive sack over her shoulder.
-  Behind her, an ogre stoops to the height of a man to avoid the low ceiling while she unties the sack.
-  The contents are chucked into the room -- apples, pies, raw potatoes, and lettuce, all in a pile on the filthy floor.
-  Chris shouts to the ogre `Alf -- don't do this! Help me!', but the ogre only stares back at him before the little goblin retreats, taking the massive, deformed man with him.
-
-\end{boxtext}
-
-Chris bleats for a moment before he crawls over and begins eating the food.
-He knows what will happen to him, but he cannot stand to wait, starving in a cell, any more.
-
-\ogre[\npc{\N\M}{Alf the Ogre}]
-\label{alf}
-
-\npc{\N\F}{Blara the Goblin}
-\person{-1}% STRENGTH
-{2}% DEXTERITY 
-{2}% SPEED
-{{0}% INTELLIGENCE
-{0}% WITS
-{-4}}% CHARISMA
-{0}% DR
-{1}% COMBAT
-{Athletics 1, Deceit 1, Stealth 2, Tactics 1}% SKILLS
-{Torch}% EQUIPMENT
-{}
-
-\paragraph{If anyone tries to fight Alf,}
-he attacks them.
-
-\iftoggle{oneshot}{
-  \begin{itemize}
-
-    \item
-    \textit{To make an attack,} players roll 2D6 + Dexterity + Combat at a TN equal to the monster's `{\scshape Att}ack'.
-    \item
-    If they hit the monster, then they Damage the monster for 1D6 HP, plus their Strength Bonus (mark off the HP boxes with a pencil).
-    \item
-    \emph{However}, if the player does not succeed in the roll, the enemy deals Damage to the character (note the {\scshape Dam} on the statblock).
-  \begin{itemize}
-    \item
-    PCs can mark off Fate Points (FP) instead of HP to avoid Damage.
-  \end{itemize}
-    \item
-    If an enemy attacks a PC, the players makes the same roll, but at +1 to the TN.
-    \item
-    Everyone starts combat with some AP (action points) shown on their sheet and spend 1 AP each time they move, each time they attack, or are attacked.
-    \arabic{spd}
-
-  \end{itemize}
-
-}{}
-
-\paragraph{If anyone tries to fight Blara,}
-she runs away with her torch (the room's only light source), leaving the party stranded in darkness.
-
-Chasing after Blara requires a resisted roll of Speed + Athletics
-\iftoggle{oneshot}{%
-  (the player rolls 2D6 plus their Speed + Athletics against a TN of 7 + Blara's Speed (2) + Athletics (1) = 10)%
-}{}.%
-\iftoggle{core}{\footnote{See the core rules, \autopageref{resistedactions}.}}{}
-
-\paragraph{If the PCs kill Chris immediately,}
-he will be vulnerable, so they can make a sneak attack.
-\iftoggle{core}{\footnote{\nameref{sneakattack}}}{}
-
-\paragraph{If the party take time to escape,}
-Chris has already reached his ogre form.
-
-Remember also that if the party get a Vitals Shot in, they can deal Damage, rather than just inflicting Fatigue.
-
-Once you resolve the scene, then check out the cell's description on page \pageref{entrycell}.
-
-\npc{\N\M}{Chris (as an Ogre)}
-\person{4}% STRENGTH
-{0}% DEXTERITY 
-{3}% SPEED
-{{-3}% INTELLIGENCE
-{-1}% WITS
-{-3}}% CHARISMA
-{0}% DR
-{0}% COMBAT
-{Academics 2, Empathy 1}% SKILLS
-{Nothing}% EQUIPMENT
-{}
-
-\paragraph{If the party somehow stop Chris eating the tainted nura-food,}
-he will accompany them out, but his nerves are too shot to be of any use.
 
 \subsection{The Raiding Party Return}
 \label{raidingParty}

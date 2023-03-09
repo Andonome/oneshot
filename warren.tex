@@ -352,6 +352,8 @@ At the end of the kitchen you can see a large door to a cold store with a lock o
 
 \end{boxtext}
 
+\pic{Decky/screech}
+
 \paragraph{If the PCs try to sneak in,}
 have them make a Group Roll of Dexterity + Stealth, TN 8.
 \iftoggle{oneshot}{%
@@ -386,7 +388,7 @@ all goblins wake up
 }{
   and take a morale check.
 
-  Two more goblins are sleeping in a corner, making five in total.
+  Two more goblins are sleeping in a corner, making six in total.
 }
 
 \goblin[\npc{\T\N}{2 Goblins on the table}]
@@ -645,14 +647,20 @@ If the PCs enter the room, they may think these little gnomes are little goblins
 If any of them try to do so, have them roll a Wits + Medicine check to realize their mistake, TN 8.
 Any gnomes in the party will automatically pass this check.
 
-\iftoggle{hardcore}{}{
-  Anyone following Laiqu\"e who saves a child can gain 3 XP.
-}
+\iftoggle{oneshot}{
+  Anyone following Laiqu\"e who successfully rescues a child from the warren gains 3 XP at the end of the session.
+}{}
 
 \paragraph{If the party save the children,}
 the children know to know to keep quiet and to follow, but they will be at the back of the party when moving alone.
 
 There are six children in total, and they each have a Weight Rating between 1 and 2.
+\iftoggle{oneshot}{
+  Characters can only carry a Weight Rating equal or less than their Strength Bonus, or they will take penalties to their AP, and gain Fatigue Points at the end of each scene of activity.
+
+  \paragraph{If the PCs rest,}
+  Remember to have them heal Fatigue Points equal to half their HP.
+}{}
 
 \mapentry[slugHall]{Slug Hall}
 
@@ -759,6 +767,8 @@ If they investigate the area at all, the illusion fades, revealing the sleeping 
 each attempt requires a Dexterity + Stealth roll, TN 7.
 Failure will awaken the entire horde.
 
+\pic{Decky/armoury}
+
 \goblin[\npc{\N\T}{\arabic{enemyNo} Goblins}]
 
 \addtocounter{enemyNo}{-2}
@@ -802,6 +812,10 @@ This ring is actually three pocket spells -- each ruby in the ring is a separate
 The caster can summon anything available for Conjuration level 4.
 With 7 MP, the ring has a Metamagic score of 7, allowing it to cast \textit{Wide} spells, and other Metamagic enhancements.
 
+\iftoggle{oneshot}{%
+  The spell can broadly summon any item up to the size of a person.
+}{}
+
 \magicitem{Scroll of Insight}%
 {Massive Mage Sight}%
 {Alchemy}%
@@ -811,6 +825,7 @@ With 7 MP, the ring has a Metamagic score of 7, allowing it to cast \textit{Wide
 {3}
 
 The spell allows the user to feel 4 areas around (meaning `rooms'), though not with much detail.
+The effect feels very disorienting at first, as most people are not used to having their consciousness spread apart so far.
 
 \magicitem{Staff of Light}%
 {Wide Light}%
@@ -829,14 +844,26 @@ If wrapped up in heavy sheets and suddenly displayed, the light can blind oppone
 \goblinnuramancer
 
 \iftoggle{hardcore}{
-  \ogre[\npc{\N\T}{2 Ogres}]
+  \ogre[\npc{\N\T}{2 Docile Ogres}]
 }{
   \ogre[\npc{\N\T}{Sleeping Ogre}]
 }
 
+\paragraph{If any of the PCs attempt to sneak in,}
+have them roll Dexterity + Stealth, TN 8.
+
+Failure will, of course, spell disaster, but success will allow them to steal a magical item.
+If the player wants to steal multiple magical items, describe them and see how many they decide to take.
+Each item taken increases the roll's TN by 1, so taking 3 items would mean a TN of 11.
+The player should not roll again -- the original roll remains, but increasing the TN may well turn success into awful failure.
+
 \end{multicols}
 
-\section{Upper Levels}
+\iftoggle{oneshot}{%
+  \section{Last Level}
+}{
+  \section{Upper Warren}
+}
 
 \begin{multicols}{2}
 
@@ -880,7 +907,12 @@ the moment the party enter battle with other nura his instincts will kick in, an
 The prisoners require no locks or handcuffs -- the ogre waiting outside suffices to terrify them into staying put.
 
 \paragraph{If any of the PCs have died,}
-a new PC can be found here once another has spent the requisite Story Points to bring someone back.
+another player should spend 2 Story Points to introduce an old friend.
+\iftoggle{hardcore}{}%
+  \iftoggle{core}{%
+    Pick another pre-made character sheet from the pile and hand it to any players without characters.
+  }{}%
+The players should agree on how they know each other.
 
 \iftoggle{hardcore}{%
   \paragraph{If the party get a moment to ask about the outside world,}
@@ -930,7 +962,6 @@ a new PC can be found here once another has spent the requisite Story Points to 
 {Nothing}% EQUIPMENT
 {}
 
-\pic{Decky/armoury}
 
 \mapentry[armoury]{Armoury}
 
@@ -966,6 +997,19 @@ a new PC can be found here once another has spent the requisite Story Points to 
 
 \end{itemize}
 
+\iftoggle{oneshot}{
+  \paragraph{Bucklar Shields}
+  These shields work like a weapon, except that they deal no damage.
+  They require only 2 AP to use in combat, but add a +2 Bonus.
+
+  \paragraph{The crossbow}
+  (if repaired) deals $1D6+3$ Damage, but requires at least 4 rounds to reload.
+
+  \paragraph{Shortbows}
+  Require 1 AP to loose an arrow, and 1 AP to reload.
+  However, they deal only $1D6-1$ Damage.
+}{}
+
 \mapentry[trappedHall]{Trapped Hallway}
 
 \begin{boxtext}
@@ -976,11 +1020,11 @@ a new PC can be found here once another has spent the requisite Story Points to 
 
 \end{boxtext}
 
-\sidepic{Decky/examine}
-
 The squares between the exit door and the party's path can turn anyone stepping upon them into stone.
 One goblin was unfortunate enough to trigger the trap.
 The second goblin did not believe the original goblins about why the first was there, and ignored the statue, so he was turned to stone too.
+
+\sidepic{Decky/examine}
 
 This magical trap didn't look quite right when the flagstones had to be inlaid with gems in order to complete the alchemical spell -- that kind of shine gives the game away.
 The gnomes' solution was to make sure \textit{all} flagstones had a magical amulet in them, so nobody could tell which might hold a deadly spell.
@@ -994,6 +1038,9 @@ The gnomes' solution was to make sure \textit{all} flagstones had a magical amul
   {7}% MP
 
 Anyone standing on the stone rolls their Weight Rating at TN 15 to avoid being turned to stone.
+\iftoggle{oneshot}{%
+  Each character's Weight Rating is equal to their HP.
+}{}
 
 \paragraph{If anyone steps into the trap,}
 they must roll their Weight Rating at TN 15, but anyone failing may spend 5 FP to ignore the effects of the trap.
@@ -1002,6 +1049,8 @@ If this happens, explain that their foot or hand begins to harden, then turn to 
 \paragraph{If the players figure out that the area is trapped and try to jump over it,}
 remind them that they cannot see where the trap starts and where it ends.
 If they avoid stepping into the trap, they can make a Speed + Athletics roll, TN 9, to jump over the afflicted area.
+
+\widePic{Roch_Hercka/garden}
 
 \mapentry[topShaft]{The Top of the Shaft}
 
@@ -1032,8 +1081,6 @@ Have them make a Wits + Athletics check (TN 7) to back off before they fall.
 
 \paragraph{If the party fall into the lift,}
 they end up in the mid-section of the warren.
-
-\widePic{Roch_Hercka/garden}
 
 \mapentry[fungusGarden]{Fungal Gardens}
 
@@ -1125,8 +1172,7 @@ See page \pageref{raidingParty} for the returning raiding party.
 
 \mapentry[lowerExit]{The Exit}
 
-\iftoggle{oneshot}{%
-
+\iftoggle{oneshot}{
   \begin{boxtext}
 
     As the key turns, the door swings open, and daylight floods in.
@@ -1135,26 +1181,6 @@ See page \pageref{raidingParty} for the returning raiding party.
     You have finally escaped from the warren.
 
   \end{boxtext}
-
-  Whatever the party attempt now, the nura will notice their absence, and start chasing after them, down the hillside, and perhaps into the hamlets.
-  \iftoggle{core}{See the core book, page \pageref{chases} for specifics on chase scenes.}{}
-
-  The party have eight areas to run through before getting to civilization, so this will be a long chase if they decide to run the entire way.
-
-  \paragraph{If the party hide,}
-  have them roll Intelligence + Stealth to find the best spot and best time to hide, TN 8.
-
-  \paragraph{If the party fight,}
-  have them roll Intelligence + Tactics, TN 8, to ambush the nura.
-  A successful roll means the entire party gain an Initiative Bonus equal to the Tactics Skill being used.
-
-  \paragraph{If the nura wolves from before lived,}
-  then goblins will mount them, and use them to chase after the party, then alert other nura about where they are.
-  Hiding moves from TN 8 to TN 11 for as long as those wolves live.
-
-  \goblin[\npc{\N\T}{12 Scout Goblins}]
-
-
 }{
   This is where the party exit the lower portion of the warren, and enter the upper part.
 
@@ -1165,8 +1191,6 @@ See page \pageref{raidingParty} for the returning raiding party.
   \paragraph{If the PCs examine the door,}
   they can see the goblin in the next area by a glimmer of candle-light.
 }
-
-\pic{Decky/screech}
 
 \end{multicols}
 

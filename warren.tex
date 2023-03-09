@@ -890,6 +890,20 @@ a new PC can be found here once another has spent the requisite Story Points to 
   Otherwise, only a farmer and a wandering noble who was unlucky enough to be journeying on horseback at the wrong time, lie in the cells.
 }
 
+\iftoggle{oneshot}{% This weapon chart goes next to the armoury
+  \begin{figure*}[t!]
+  \begin{nametable}[YXYYYY]{Armoury Weapons}
+
+  \textbf{Quantity} & \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{AP Cost} & \textbf{Weight Rating} \\\hline
+
+  3 & Bucklar Shield & +2 & None & 1 & 0 \\
+  3 & \shortsword
+  7 & \woodaxe
+
+  \end{nametable}
+  \end{figure*}
+}{}
+
 \npc{\F}{Annie of the Twisted Glen}
 \person{0}% STRENGTH
 {-1}% DEXTERITY 

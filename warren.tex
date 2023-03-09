@@ -184,39 +184,49 @@ If a single PC fails, everyone fails.}{}%
 {}
 
 \paragraph{If the goblins spot the party,}
-they attempt to flee, gather the other goblins in the kitchen.
+they attempt to flee.
 They cannot call the lift quickly enough to escape.
+
+Two rounds later, the goblins in the kitchen join the attack.
 
 \paragraph{If the PCs corner the goblins,}
 they respond with aggressive spells.
 
 \iftoggle{oneshot}{
-\begin{itemize}
-
-  \item
-  Anyone with Invocation 2 or more can spend 2 MP to cast a fireball.
   \begin{itemize}
-    \item
-    Players must roll to avoid the magical flames at TN 7 plus the caster's Intelligence + Projectiles.
-    \item
-    Players can spend 1 AP to \textit{Keep Edgy} against missile attacks such as fireballs, for the rest of combat.
-    This allows them to add their Speed + Vigilance Bonus to the roll, but without Keeping Edgy, they gain no bonus to the roll.
-  \end{itemize}
-  \item
-  If the caster hits, they deal $1D6 + 1 + Int$ Damage (so casters with Intelligence +2 deal $1D6+3$ Damage).
 
-\end{itemize}
+    \item
+    Anyone with Invocation 2 or more can cast a fireball by spending 3 AP and 2 AP.
+    \begin{itemize}
+      \item
+      Players must roll to avoid the magical flames at TN 7 plus the caster's Intelligence + Projectiles.
+      \item
+      Players can spend 1 AP to \textit{Keep Edgy} against missile attacks such as fireballs, for the rest of combat.
+      This allows them to add their Speed + Vigilance Bonus to the roll, but without Keeping Edgy, they gain no bonus to the roll.
+    \end{itemize}
+    \item
+    If the caster hits, they deal $1D6 + 1 + Int$ Damage (so casters with Intelligence +2 deal $1D6+3$ Damage).
+
+  \end{itemize}
+}{}
+
+\goblinnuramancer[\npc{\F}{Screamer the Nuramancer}]
+
+\goblinnuramancer[\npc{\M}{Brock the Nuramancer}]
+
+\iftoggle{hardcore}{
+  \goblin[\npc{\T}{3 Goblins}]
 }{}
 
 \paragraph{If the characters investigate the table,}
 they find a Portal Scroll, and a Scroll of Uprising.
 
-\magicitem{Scroll of Uprising}{Ghoul Calling}{Saurecanta}{Instant}{Pocket Spell}{3}{7}
+\magicitem{Scroll of Uprising}{Fast Ghoul Calling}{Saurecanta}{Instant}{Pocket Spell}{3}{7}
 
-Once the spell is cast, all creatures with 11 HP or fewer in the surrounding 3 areas, raise from the dead as ghouls.
-See Appendix \ref{undeadstats} for stats on the various ghouls.
+Once the spell is cast, all creatures with 11 HP or fewer in the surrounding 3 areas, instantly raise from the dead as ghouls.
+See \autoref{creaturesAndItems} for stats on the various ghouls.
 
-Unlike other magical items in this area, this scroll was made by a nuramancer (not a gnome), so the command word is written plainly in Trade Tongue.
+Unlike other magical items in this area, this scroll was made by a nuramancer (not a gnome), so the command word is written plainly in the Trade Tongue (which many nura speak).
 The scroll contains the epic of Logan, an Elvish poem.
 Once the last line is spoken, the scroll activates (the rest does not need to be spoken).
 
@@ -228,27 +238,29 @@ Once the last line is spoken, the scroll activates (the rest does not need to be
   {2}% Potency
   {3}% MP
 
-\paragraph{Once the Portal Scroll is activated,}
-it begins to shimmer with golden flecks, and four rounds later a portal opens to another realm.
-
-\goblinnuramancer[\npc{\F}{Screamer the Nuramancer}]
-
-\goblinnuramancer[\npc{\M}{Brock the Nuramancer}]
-
-\iftoggle{hardcore}{
-  \goblin[\npc{\T}{3 Goblins}]
-}{}
-
 \iftoggle{oneshot}{
   \paragraph{If the PCs try to examine a scroll,}
   ask if they think their character should speak Gnomish.
   If any say `yes', have them mark off a Story Point (on the back of their character sheet) and explain where they learnt the language.
 
-  \paragraph{Every time players spend a Story Point,}%
-  \iftoggle{core}{\footnote{See the core rules, \autoref{stories} for more on Story Points.}}{}%
-  the character gains 1 XP for every Story Point marked off so far (so the second gives 2 XP, the third gives 3, and so on).
+  Every time players spend a Story Point, the character gains 1 XP for every Story Point marked off so far (so the second gives 2 XP, the third gives 3, and so on).%
+  \exRef{core}{core rules}{stories}
 
+  \paragraph{Understanding the scrolls}
+  requires more than being literate.
+  They will have to roll 
 }{}
+
+\paragraph{If the PCs want to identify what a scroll does,}
+have them roll Intelligence + Academics, TN 12.
+
+\paragraph{If the PCs want to activate a Portal Scroll,}
+they will have to answer its riddle.
+Go to \autoref{riddles} and select any riddle to activate the scroll.
+
+\paragraph{Once the Portal Scroll is activated,}
+it begins to shimmer with golden flecks, and four rounds later the portal destroys itself, creating a magical portal to another realm.
+See \autoref{creaturesAndItems}: \nameref{creaturesAndItems} for details on the calamities which ensue after reading a Portal Scroll.
 
 \paragraph{When leaving this alcove,}
 the PCs head towards the blinding light.
@@ -295,7 +307,7 @@ If they stay there long, give them 4 Fatigue Points (due to the heat) and roll a
   If they run through 3 or more areas, the nura must turn back due to exhaustion.
 }{%
   the nura leave them alone -- their hyperactive metabolism tires too quickly without food.
-  They can only journey through that realm with a well-stocked supply line.
+  They can only journey through that realm with a well-stocked supply line and heavy Sun-proof cloaks.
 }
 
 \iftoggle{oneshot}{
@@ -311,19 +323,20 @@ If they stay there long, give them 4 Fatigue Points (due to the heat) and roll a
 
 \iftoggle{oneshot}{% This weapon chart goes next to the kitchen room below.
   \begin{figure*}[t!]
-  \begin{nametable}[p{0.2\textwidth}YYYY]{Kitchen Weapons}
+  \begin{nametable}[YXYYYY]{Kitchen Weapons}
 
-  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{AP Cost} & \textbf{Weight Rating} \\\hline
+  \textbf{Quantity} & \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{AP Cost} & \textbf{Weight Rating} \\\hline
 
-  2 x \Dagger 
-  2 x \skillet
-  1 x \woodaxe
-  4 x \chair
+  1 & Broom & 1 & 0 & 2 & -1 \\
+  4 & Small\chair
+  2 & \Dagger 
+  4 & \Log
+  2 & \skillet
+  1 & \woodaxe
 
   \end{nametable}
   \end{figure*}
 }{}
-
 
 \mapentry[kitchen]{Kitchen}
 
@@ -376,22 +389,28 @@ all goblins wake up
   Two more goblins are sleeping in a corner, making five in total.
 }
 
-\noindent
+\goblin[\npc{\T\N}{2 Goblins on the table}]
+
+\goblin[\npc{\T\N}{2 Goblins on the oven}]
+
+\iftoggle{hardcore}{
+  \goblin[\npc{\T\N}{2 Goblins on the floor}]
+}{}
+
 \paragraph{If the players try to find weapons,}%
 \iftoggle{oneshot}{
   They can find plenty of make-shift weapons around the kitchen.
 
   These weapons may not be good quality, but they can still improve the PCs' situation immensely.
 
-  \paragraph{As the players select a weapon for their characters,}
-  have them write down the stats one at a time.
+  \paragraph{If the players select weapons for their characters,}
+  check out the Kitchen Weapons table and have them write down the stats on their character sheet one at a time.
   \begin{itemize}
-
     \item
-    The \textit{Attack Bonus} adds to their Dexterity + Combat roll in combat.
+    The \textit{Attack Bonus} adds to their Dexterity + Combat roll when fighting.
     \item
     The \textit{Damage Bonus} adds to their Damage.
-    Anyone with +4 Damage replaces their Damage Bonus with a $D6$, so $1D6+4$ Damage becomes $2D6$, and $1D6+5$ Damage becomes $2D6+1$.
+    Anyone with +4 Damage replaces their Damage Bonus with a $D6$, so $1D6+4 = 2D6$ Damage, and $1D6+5 = 2D6+1$ Damage.
     \item
     The \textit{AP Cost} shows how many AP the character must spend to use the weapon (no matter who instigated the attack).
     \begin{itemize}
@@ -402,27 +421,11 @@ all goblins wake up
     \end{itemize}
     \item
     The \textit{Weight Rating} tells you what level of Strength Bonus you need to use the weapon unencumbered.
-    If a weapon's Weight Rating is higher than the character's Strength penalty, then every point over gives them -1 AP at the start of Combat, and +1 Fatigue Points at the end of Combat.
+    If a weapon's Weight Rating is higher than the character's Strength penalty, then every additional point gives them -1 AP at the start of each combat round, and +1 Fatigue Points at the end of combat.
   \end{itemize}
 }{
   they can use either of the two cast iron skillets.
 }
-
-\paragraph{On the second round of combat,}
-roll a Morale check for the goblins.%
-\iftoggle{core}{%
-  \footnote{See the core book, page \pageref{morale}.}
-}{}
-
-\goblin[\npc{\T\N}{2 Goblins on the table}]
-
-\goblin[\npc{\T\N}{2 Goblins on the oven}]
-
-\iftoggle{hardcore}{
-  \goblin[\npc{\T\N}{2 Goblins on the floor}]
-}{}
-
-\widePic{Roch_Hercka/dragon}
 
 \paragraph{If the party raid the room for food,}
 they'll find a few canteens of water, one of wine, and some spare sacks of vegetables.
@@ -469,6 +472,16 @@ they will find less purchase than a Sun-screen salesman in a Scotland.
 {Talisman}%
 {5}%
 {7}
+
+\paragraph{Understanding this talisman}
+requires the usual Intelligence + Academics roll at TN 12.
+However, a successful roll will only allow them to understand the word to take them to where they are, not the word to take them to another floor.
+
+\paragraph{If the PCs dawdle too long here,}
+a Raiding party return with more prisoners to place in the cell (room \ref{entrycell}).
+See \autopageref{raidingParty} for details.
+
+\widePic[t]{Roch_Hercka/dragon}
 
 \mapentry[dragonApproach]{Dragon's Approach}
 
@@ -535,11 +548,11 @@ He will then decorate the statue with magical items.
 Dragon's think the answer is obvious.}
 
 \paragraph{If the dragon parts on good terms,}
-he blesses them all with \textit{Fortune}, allowing them to receive +1 to their Combat Skill for the remainder of the
+he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ FP, and casts a \textit{Fortune} spell on the weakest member, allowing them to receive +1 to their Combat Skill for
 \iftoggle{hardcore}{%
-  chapter.
+  three scenes.
 }{
-  adventure.
+  the rest of the adventure.
 }
 
 \NPC{\M}{Makil the Dragon}{Inquisitive}{Drums Fingers}{Acquisition}
@@ -580,22 +593,28 @@ he blesses them all with \textit{Fortune}, allowing them to receive +1 to their 
   \item{A Scroll of Stone}
   \item{Lock Scroll}
   \iftoggle{hardcore}{}{
-    \item{Portal Scroll}
+    \item
+    Portal Scroll
+    \footnote{See \autoref{creaturesAndItems} for these scrolls.}
   }
 
 \end{itemize}
 
-\magicitem{Scroll of Stone}{Transmutation}{Alchemy}{1 Scene}{Pocket Spell}{6}{1}
-The spell rolls at a TN of 7 plus the target's Weight Rating.
-If the spell succeeds, the reader turns to stone.
+\magicitem{Scroll of Stone}{Fast Transmutation}{Alchemy}{1 Scene}{Pocket Spell}{6}{1}
+One spoken, the scroll rolls $2D6+6$ at a TN of 7 plus the target's Weight Rating.
+If the spell succeeds, the target turns to stone.
 
 This spell was designed to be used on the caster; the gnome would turn themself to stone in order to become uninteresting to oozes and such for a short while.
 However, people can try to use it against other targets.
 
-\magicitem{Lock Scroll}{Lock}{Alchemy}{2 Scenes}{Pocket Spell}{4}{3}
+Like any other scroll, the activation word is a riddle.
+Unlike some of the others, it works \emph{instantly}.
+
+\magicitem{Lock Scroll}{Fast Lock}{Alchemy}{2 Scenes}{Pocket Spell}{4}{3}
 
 This scroll locks a door, which increases the TN to open it by 4.
-It can also be cast on a passageway, which obstructs it by adding a magical barrier with 9 SP.
+It can also be cast on a passageway, which obstructs it by adding a magical barrier with 9 Shield Points (`SP' work roughly the same as HP for magical fields).
+\exRef{core}{core rules}{lockSpell}
 
 \end{multicols}
 
@@ -670,6 +689,9 @@ the nura slugs chase it rather than them.
 
 \paragraph{If the PCs manage to investigate the corpses somehow,}
 they find two dead gnomes, one with a torch, the other with a Portal Scroll.
+\iftoggle{oneshot}{%
+  As with the others, the Portal Scroll requires a riddle to be answered, takes four rounds before it activates, and vanishes once used.
+}{}
 
 \nuraslug[\npc{\T\N}{20 Nura Slugs}]
 
@@ -765,10 +787,7 @@ If it empties, then the air around it quickly forms into more water.
 
 This lock scroll will lock any door, increasing the TN to break through it by 4.
 
-\magicitem{Portal Scroll}{Unrestrained, Open Teleport}{Alchemy}{2 Scenes}{Pocket Spell}{4}{5}
-
 As with any Portal Scroll, it leads to the Realm of Shifting Corridors.
-Once activated, you should roll three encounters for that area, as usual, and see if anything comes out.
 
 \magicitem{Ring of Wishes}%
 {Conjuration 4}%

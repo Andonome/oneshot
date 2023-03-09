@@ -397,37 +397,46 @@ the PCs head towards the blinding light.
 
 \begin{multicols}{2}
 \setlength\parindent{24pt}
-This scene can take place at any point.
-Any time the party decides to rest is a good time to liven things up with a returning party.
 
-A band of nura have departed to grab prisoners from nearby villages.
-Many died, but the remaining ogres have returned with 3 prisoners.
-\iftoggle{hardcore}{
-  5 goblins are at their side, ensuring the ogres don't do anything stupid.
-}{}
-
-They enter the warren and make their way down slowly.
-These ogres have shed human blood, and have already forgotten about most of their original lives.
-As they return and talk about how much they ate, the other ogres begin to accept their new lives, and accept that they must kill humans to live.
+\paragraph{If the PCs decide to stop and rest,}
 \iftoggle{hardcore}{%
-From this point onwards, ogres will not hesitate to enter battle.
-}{}
+  they are immediately interrupted by a returning raiding party of nura, with fresh prisoners.
+}{
+  they will be able to recovery for a while, before a raiding party descends with freshly captured prisoners.
+}
 
-Since the PCs are outnumbered, they will most likely attempt to hide from the raiding party.
+The lift (room \ref{lift}) cannot take the full weight of an ogre plus the prisoners, so one goblin nuramancer and an ogre go to the bottom, then the prisoners get shoved in the lift by ogres at the top.
 
-\ogre[\npc{\N}{2 ogres handling prisoners}]
+\begin{boxtext}
+  A creaking noise comes from the two wooden doors, then you hear loud voices from inside.
 
-\iftoggle{hardcore}{
-  \ogre[\npc{\T\N}{2 Ogres}]
+  ``\textit{My guts! That old lady didn't agree with me}'',
+  you hear a deep voice saying.
 
-  \goblin[\npc{\T\N}{5 Goblins}]
-}{}
+  ``\textit{Did you do an argument?}'', a shrill voice replies.
+  
+  You hear a loud `\textbf{bang!}', then the wooden doors open.
 
-\paragraph{If the PCs encounter the raiding party by the lift}
-(room \ref{lift}), remember that the raiding party can only go down a couple of ogres at a time, due to the weight limit.%
-\footnote{See page \pageref{lift}.}
+\end{boxtext}
 
-The ten prisoners do not have the strength to fight, but will flee if pushed.
+  \paragraph{If any PCs have died,}
+  this is a good time to give out new characters from the recently captured prisoners.
+
+\iftoggle{hardcore}{%
+  \goblinnuramancer[\npc{\M\N}{Goblin Nuramancer}]
+}{
+  \goblin[\npc{\T\N}{2 Goblins}]
+}
+
+\ogre[\npc{\T\N\Hu}{Ogre}]
+
+\paragraph{If the PCs try to hide,}
+they will find it easy.
+
+\paragraph{If they try to ambush the nura,}
+give them a Wits + Stealth (TN 8) roll to determine the best location to stand.
+
+\humanfarmer[\npc{\T\Hu}{4 Farmers}]
 
 \end{multicols}
 

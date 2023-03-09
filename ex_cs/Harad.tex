@@ -35,17 +35,7 @@
 
 \renewcommand\characterWeapons{}
 \renewcommand\characterArmour{}
-\renewcommand\characterEquipment{Flute
-
-\vspace{2em}
-\tcblower
-\paragraph{Spells:}
-(Time: 1 round, Cost: 1 MP)
-
-\nameref{cloakSpell}
-
-\nameref{aparitionSpell}
-}
+\renewcommand\characterEquipment{Flute}
 
 \renewcommand\sphereOne{
   \sphereSkill{Aldaron}{1}
@@ -55,3 +45,20 @@
   \sphereSkill{Illusion}{1}
 }
 
+\renewcommand\charSpellList{
+  \vspace{3em}
+  \paragraph{Level 1:}
+  \textit{(Casting Time: 1 round, Cost: 1 MP)}
+
+  -- \nameref{cloakSpell}
+
+  -- \nameref{spellMuffle}
+
+  -- \nameref{aparitionSpell}
+
+  -- \nameref{spellSilence}
+
+  -- \nameref{spellWind}
+
+  \nameref{spellFreeze}
+}

@@ -2,7 +2,6 @@ output=normal
 
 normal: horde_escape.pdf handouts.pdf
 horde_escape.pdf: horde_escape.tex intro.tex warren.tex top.tex appendix.tex svg-inkscape/upper_svg-tex.pdf
-	touch .hardcore
 	pdflatex horde_escape.tex
 svg-inkscape/upper_svg-tex.pdf: $(wildcard config/*) images
 	pdflatex -shell-escape horde_escape.tex

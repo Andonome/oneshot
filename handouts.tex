@@ -53,7 +53,14 @@
     \ifnum\day>14
       \printCharacter{Aeglir}
     \else
-      \printCharacter{Archer}
+      \ifnum\day>25
+          \printCharacter{Sam}
+        \ifnum\day>18
+        \else
+          \printCharacter{Archer}
+        \fi
+      \else
+        \printCharacter{Tatum}
     \fi
 
     \ifodd\day

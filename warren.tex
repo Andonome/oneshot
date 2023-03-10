@@ -447,10 +447,10 @@ give them a Wits + Stealth (TN 8) roll to determine the best location to stand.
 
 Success means they can each make one attack roll at TN 7 (not the creature's usual attack score) with +2 Damage.
 
-\humanfarmer[\npc{\T\Hu}{\iftoggle{hardcore}{2}{3} Farmers}]
-
 \paragraph{Once the farmers come down,}
 they are tired, and have 8 Fatigue Points each, so any Damage they receive will quickly rack up penalties.
+
+Take the farmer statblocks from the handout, cut them apart from each other, and hand \iftoggle{hardcore}{2}{3} to the players to keep track of.
 
 Shortly after, two more ogres come down to find out where the last people went.
 
@@ -1102,13 +1102,13 @@ another player should spend 2 Story Points to introduce an old friend.
   }{}%
 The players should agree on how they know each other.
 
+Take the last two farmers from the handout to join the troupe.
+
 \iftoggle{hardcore}{%
   \paragraph{If the party get a moment to ask about the outside world,}
-  Annie tells them that she last saw hundreds of nura swarming around town, and she was on her horse to get away.
-  She suspects that the entire place will have been overrun.
-}{%
-  Otherwise, only a farmer and a wandering noble who was unlucky enough to be journeying on horseback at the wrong time, lie in the cells.
-}
+  the villagers tell them that they last saw hundreds of nura swarming around town, and she was on her horse to get away.
+  They suspect that the entire place will have been overrun.
+}{}
 
 \iftoggle{oneshot}{% This weapon chart goes next to the armoury
   \begin{figure*}[t!]
@@ -1123,33 +1123,6 @@ The players should agree on how they know each other.
   \end{nametable}
   \end{figure*}
 }{}
-
-\npc{\F}{Annie of the Twisted Glen}
-\person{0}% STRENGTH
-{-1}% DEXTERITY 
-{0}% SPEED
-{{2}% INTELLIGENCE
-{0}% WITS
-{-1}}% CHARISMA
-{0}% DR
-{1}% COMBAT
-{Academics~2, Deceit~3, Empathy~1, Vigilance~2}% SKILLS
-{Nothing}% EQUIPMENT
-{}
-
-\npc{\M}{Justin Glen}
-\person{2}% STRENGTH
-{0}% DEXTERITY 
-{0}% SPEED
-{{0}% INTELLIGENCE
-{-1}% WITS
-{1}}% CHARISMA
-{0}% DR
-{0}% COMBAT
-{Beast~Ken~1, Crafts~1, Empathy~1}% SKILLS
-{Nothing}% EQUIPMENT
-{}
-
 
 \mapentry[armoury]{Armoury}
 

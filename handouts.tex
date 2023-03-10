@@ -77,6 +77,36 @@
   }{}
 }
 
+\begin{multicols}{2}
+
+\prisoner[\NPC{\Hu\F}{Jane}{Warm}{Humms}{Tribe}]
+\vspace{6em}
+
+\prisoner[\NPC{\Hu\M}{Aiden}{Calm}{Um\ldots}{Tribe}]
+\vspace{6em}
+
+\prisoner[\NPC{\Hu\F}{July}{Reasonable}{Folds arms}{Laiqu\"e}]
+
+\vspace{6em}
+
+\iftoggle{hardcore}{}{
+  \prisoner[\NPC{\Hu\M}{Zack}{Fierce}{Points Fingers}{V\'er\"e}]
+  \vspace{6em}
+}
+
+\prisoner[\NPC{\Hu\F}{Annie}{Demanding}{Wrinkles nose}{Acquisition}]
+
+\vspace{6em}
+
+\prisoner[\NPC{\Hu\M}{Glynn}{Jovial}{Looks up}{Tribe}]
+
+\vspace{6em}
+
+\end{multicols}
+
+\cleardoublepage
+\shipout\null
+
 \iftoggle{oneshot}{
   \iftoggle{core}{
   \input{../core/CS/overview.tex}

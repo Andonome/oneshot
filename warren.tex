@@ -66,7 +66,7 @@ He knows what will happen to him, but he cannot stand to wait, starving in a cel
 {0}% DR
 {1}% COMBAT
 {Athletics 1, Deceit 1, Stealth 2, Tactics 1}% SKILLS
-{Torch}% EQUIPMENT
+{\Dagger, torch\iftoggle{oneshot}{}{, map}}% EQUIPMENT
 {}
 
 \widePic{Roch_Hercka/waking}
@@ -113,7 +113,9 @@ he will be vulnerable, so they can make a sneak attack.
 \paragraph{If the party take time to escape,}
 Chris has already reached his ogre form.
 
-Remember also that if the party get a Vitals Shot in, they can deal Damage, rather than just inflicting Fatigue.
+\iftoggle{oneshot}{}{
+  Remember also that if the party get a Vitals Shot in, they can deal Damage, rather than just inflicting Fatigue.
+}
 
 Once you resolve the scene, then check out the cell's description on page \pageref{entrycell}.
 
@@ -133,10 +135,10 @@ Once you resolve the scene, then check out the cell's description on page \pager
 \paragraph{If the party somehow stop Chris eating the tainted nura-food,}
 he will accompany them out, but his nerves are too shot to be of any use.
 
-
-
-\paragraph{If the PCs exit quietly,}
-they will likely be spotted in the next room.
+\iftoggle{oneshot}{}{
+  \paragraph{If the PCs search Blara's body,}
+  they find a map of the upper level (see the handouts).
+}
 
 \paragraph{If the party do not manage to escape}
 then add 3 Fatigue Points for their time starving in prison, run `\nameref{raidingParty}' (\autopageref{raidingParty}) and throw in some new prisoners.

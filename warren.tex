@@ -391,7 +391,9 @@ the PCs head towards the blinding light.
 
 \begin{figure*}[b!]
 
+\setcounter{enc}{\value{list}}
 \subsection{The Raiding Party Return}
+\setcounter{list}{\value{enc}}
 \label{raidingParty}
 
 \begin{multicols}{2}
@@ -418,16 +420,24 @@ The lift (room \ref{lift}) cannot take the full weight of an ogre plus the priso
 
 \end{boxtext}
 
-  \paragraph{If any PCs have died,}
-  this is a good time to give out new characters from the recently captured prisoners.
-
 \iftoggle{hardcore}{%
   \goblinnuramancer[\npc{\M\N}{Goblin Nuramancer}]
 }{
-  \goblin[\npc{\T\N}{2 Goblins}]
+  \iftoggle{oneshot}{
+    \goblin[\npc{\T\F}{Goblin}]
+  }{
+    \goblin[\npc{\T\N}{2 Goblins}]
+  }
 }
 
-\ogre[\npc{\T\N\Hu}{Ogre}]
+\iftoggle{oneshot}{
+  \ogre[\npc{\T\N\Hu}{Ogre}]
+}{
+  \armouredOgre
+}
+
+\paragraph{If any PCs have died,}
+this is a good time to give out new characters from the recently captured prisoners.
 
 \paragraph{If the PCs try to hide,}
 they will find it easy.

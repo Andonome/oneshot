@@ -275,8 +275,14 @@ reveals two large knives which can be used as \emph{daggers}.
 \nurarat[\npc{\N\A}{Nura Rat}]
 
 \iftoggle{oneshot}{%
+  \paragraph{If the party fight the giant rat,}
+  reduce any Damage it takes by 1, because it has {\scshape DR 1}, meaning `Damage Resistance 1'.
+  If anyone hits 5 points over what they need to hit the rat, they can get a `Vitals Shot', and ignore the rat's DR (by hitting the throat, eyeball, or other weak area).
+
+  Once combat ends, the PCs take 1 Fatigue Point for each round of combat they were in.
+
   \paragraph{Once the players leave the room,}
-  give them 1 Fatigue for each round of combat they were in (if any), and let them regenerate 40\% of their Fate Points, because a new scene has ended.
+  let the PCs regenerate 40\% of their Fate Points, because a new scene has ended.
 }{}
 
 \mapentry[spellCasters]{Spellcaster Arguments}
@@ -767,6 +773,13 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ FP), and ca
 \Path{\enchantment~2, \fate~3, \invocation~4}}% SKILLS
 {Nothing}% EQUIPMENT
 {}
+
+\iftoggle{oneshot}{
+  \paragraph{If the PCs attack the dragon,}
+  he kills the first to attack.
+
+  His {\scshape DR 5} means he reduces all Damage by 5, unless the attacker hits 5 over the TN to attack him (a total of 15), achieving a `Vitals Shot'.
+}{}
 
 \mapentry[treasureRoom]{The Treasure Room}
 

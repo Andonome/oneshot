@@ -53,7 +53,22 @@ came to turn one into an ogre, who then ate the others, except for Chris, who hi
 Chris bleats for a moment before he crawls over and begins eating the food.
 He knows what will happen to him, but he cannot stand to wait, starving in a cell, any more.
 
-\ogre[\npc{\N\M}{Alf the Ogre}]
+\iftoggle{oneshot}{
+  \npc{\N\M}{Alf the Ogre}
+  \person{4}% STRENGTH
+  {0}% DEXTERITY 
+  {2}% SPEED
+  {{-2}% INTELLIGENCE
+  {-3}% WITS
+  {-5}}% CHARISMA
+  {0}% DR
+  {1}% COMBAT
+  {Crafts 1, Wyldcrafting 1}% SKILLS
+  {Nothing}% EQUIPMENT
+  {}
+}{
+  \ogre[\npc{\N\M}{Alf the Ogre}]
+}
 \label{alf}
 
 \npc{\N\F}{Blara the Goblin}
@@ -71,31 +86,14 @@ He knows what will happen to him, but he cannot stand to wait, starving in a cel
 
 \widePic{Roch_Hercka/waking}
 
-\paragraph{If anyone tries to fight Alf,}
-he attacks them.
+\iftoggle{hardcore}{
+  Alf attacks immediately.
+}{
+  \paragraph{If anyone tries to fight Alf,}
+  he fights!
 
-\iftoggle{oneshot}{
-  \begin{itemize}
-
-    \item
-    \textit{To make an attack,} players roll 2D6 + Dexterity + Combat at a TN equal to the enemy's `{\scshape Att}'ack.
-    \item
-    If they hit the enemy, then they deal $1D6$ Damage, plus their Strength Bonus (mark off the enemy's HP boxes with a pencil).
-    \item
-    \emph{However}, if the player does not succeed in the roll, the enemy deals Damage to the character (note the `{\scshape Dam}' on the statblock).
-  \begin{itemize}
-    \item
-    PCs can mark off Fate Points (FP) instead of HP to avoid Damage.
-  \end{itemize}
-    \item
-    If an enemy attacks a PC, the players makes the same roll, but at +1 to the TN.
-    \item
-    Everyone starts combat with some AP (action points) shown on their sheet and spend 1 AP each time they move, each time they attack, or are attacked.
-    \arabic{spd}
-
-  \end{itemize}
-
-}{}
+  \ldots otherwise he sits there looking stupid for a second, but attacks the next round.
+}
 
 \paragraph{If anyone tries to fight Blara,}
 she runs away with her torch (the room's only light source), leaving the party stranded in darkness.

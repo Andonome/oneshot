@@ -134,6 +134,52 @@ The gnomes have turned into goblins some time ago, and are quite beyond help.
   Give them a moment to study their characters while you hide the rest of the character sheets -- you will need them later.
 }
 
+\iftoggle{oneshot}{
+  \subsection{Combat}
+  Monster statblocks look like this:
+
+  \person{4}% STRENGTH
+  {0}% DEXTERITY 
+  {2}% SPEED
+  {{-2}% INTELLIGENCE
+  {-3}% WITS
+  {-5}}% CHARISMA
+  {0}% DR
+  {1}% COMBAT
+  {Crafts 1, Stealth 2, Tactics 1}% SKILLS
+  {\Dagger}% EQUIPMENT
+  {}
+
+  When combat starts, look at the lower half of the statblock:
+
+  \hrulefill
+
+  {\scshape Att 10, AP 5, Dam $2D6+1$}
+
+  10 HP {\large\Repeat{5}{\sqn}\Repeat{5}{\sqr}}
+
+  \begin{itemize}
+
+    \item
+    \textit{To make an attack,} players roll 2D6 + Dexterity + Combat at a TN equal to the enemy's `{\scshape Att}'ack.
+    \item
+    If they hit the enemy, then they deal $1D6$ Damage, plus their Strength Bonus (mark off the enemy's HP boxes with a pencil).
+    \item
+    \emph{However}, if the player does not succeed in the roll, the enemy deals Damage to the character ($2D6+1$ in this case).
+  \begin{itemize}
+    \item
+    PCs can mark off Fate Points (FP) instead of HP to avoid Damage.
+  \end{itemize}
+    \item
+    If an enemy attacks a PC, the players makes the same roll, but at +1 to the TN.
+    \item
+    Everyone starts combat with some AP (action points) shown on their sheet and spend 1 AP each time they move, each time they attack, or are attacked.
+    \arabic{spd}
+
+  \end{itemize}
+
+}{}
+
 \iftoggle{hardcore}{
   \subsection{Light}
 

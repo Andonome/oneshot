@@ -235,8 +235,10 @@ The goblin will go up the lift, and the rat will wander the hall, searching for 
   \iftoggle{oneshot}{(As before, players roll 2D6 + Dexterity + Combat roll, at TN equal to the creature's `{\scshape Att}', and the winner deals Damage)}{}
   \item
   The goblin nuramancers observe them for a moment, then flee to the life (room \ref{lift}). 
-
 \end{itemize}
+
+\paragraph{If the PCs enter combat,}
+they take 1 Fatigue Point for each round of combat they were in.
 
 \paragraph{Searching the room}
 reveals two large knives which can be used as \emph{daggers}.
@@ -274,16 +276,18 @@ reveals two large knives which can be used as \emph{daggers}.
 
 \nurarat[\npc{\N\A}{Nura Rat}]
 
-\iftoggle{oneshot}{%
-  \paragraph{If the party fight the giant rat,}
-  reduce any Damage it takes by 1, because it has {\scshape DR 1}, meaning `Damage Resistance 1'.
-  If anyone hits 5 points over what they need to hit the rat, they can get a `Vitals Shot', and ignore the rat's DR (by hitting the throat, eyeball, or other weak area).
+  \paragraph{Once the PCs leave the room,}
+  let them regenerate 40\% of their Fate Points, because a new scene has ended.
 
-  Once combat ends, the PCs take 1 Fatigue Point for each round of combat they were in.
+\newRule{Damage Resistance}{
 
-  \paragraph{Once the players leave the room,}
-  let the PCs regenerate 40\% of their Fate Points, because a new scene has ended.
-}{}
+  Damage Resistance (DR) reduce Damage taken due to armour, or just a creature's thick hide.
+  The nura rat has `{\scshape DR 1}', so it removes 1 from any Damage Taken.
+
+  We assume everyone is trying to target sensitive areas, like the throat, groin, and eyes, whenever they can, to hit more exposed areas.
+  If anyone hits 5 points over what they need to hit the rat, they get a `\textit{Vitals Shot}', which ignores the DR entirely, as the attack hits a sensitive area.
+}
+
 
 \mapentry[spellCasters]{Spellcaster Arguments}
 
@@ -400,15 +404,8 @@ the PCs head towards the blinding light.
 
 \end{boxtext}
 
-\begin{figure*}[b!]
-
-\setcounter{enc}{\value{list}}
-\subsection{The Raiding Party Return}
-\setcounter{list}{\value{enc}}
+\begin{baseNote}{The Raiding Party}
 \label{raidingParty}
-
-\begin{multicols}{2}
-\setlength\parindent{24pt}
 
 \paragraph{If the PCs decide to stop and rest,}
 \iftoggle{hardcore}{%
@@ -468,9 +465,7 @@ Take the farmer statblocks from the handout, cut them apart from each other, and
 
 Shortly after, two more ogres come down to find out where the last people went.
 
-\end{multicols}
-
-\end{figure*}
+\end{baseNote}
 
 \mapentry[desertPortal]{Magic Portal}
 
@@ -524,23 +519,6 @@ Success indicates that they can activate and deactivate the portal.
 \iftoggle{oneshot}{
   \paragraph{Staying to stare at the portal}
   counts as a new area, and therefore a new scene, so the PCs can regenerate 40\% of their FP and some MP again.
-}{}
-
-\iftoggle{oneshot}{% This weapon chart goes next to the kitchen room below.
-  \begin{figure*}[t!]
-  \begin{nametable}[YXYYYY]{Kitchen Weapons}
-
-  \textbf{Quantity} & \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{AP Cost} & \textbf{Weight Rating} \\\hline
-
-  1 & Broom & 1 & 0 & 2 & -1 \\
-  4 & Small\chair
-  2 & \Dagger 
-  4 & \Log
-  2 & \skillet
-  1 & \woodaxe
-
-  \end{nametable}
-  \end{figure*}
 }{}
 
 \mapentry[kitchen]{Kitchen}
@@ -605,15 +583,8 @@ all goblins wake up
   \goblin[\npc{\T\N}{2 Goblins on the floor}]
 }{}
 
-\paragraph{If the players try to find weapons,}%
-\iftoggle{oneshot}{
-  They can find plenty of make-shift weapons around the kitchen.
-
-  These weapons may not be good quality, but they can still improve the PCs' situation immensely.
-
-  \paragraph{If the players select weapons for their characters,}
-  check out the Kitchen Weapons table and have them write down the stats on their character sheet one at a time.
-  \begin{itemize}
+\newRule{Weapons}{
+ \begin{itemize}
     \item
     The \textit{Attack Bonus} adds to their Dexterity + Combat roll when fighting.
     \item
@@ -631,7 +602,34 @@ all goblins wake up
     The \textit{Weight Rating} tells you what level of Strength Bonus you need to use the weapon unencumbered.
     If a weapon's Weight Rating is higher than the character's Strength penalty, then every additional point gives them -1 AP at the start of each combat round, and +1 Fatigue Points at the end of combat.
   \end{itemize}
-}{
+
+\end{multicols}
+
+\begin{nametable}[YXYYYY]{Kitchen Weapons}
+
+  \textbf{No.} & \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{AP Cost} & \textbf{Weight Rating} \\\hline
+
+  1 & Broom & 1 & 0 & 2 & -1 \\
+  4 & Small\chair
+  2 & \Dagger 
+  2 & \skillet
+  4 & \Log
+  1 & \woodaxe
+
+  \end{nametable}
+\begin{multicols}{2}
+
+}
+
+\paragraph{If the players try to find weapons,}%
+\iftoggle{oneshot}{
+  they can find plenty of make-shift weapons around the kitchen.
+
+  These weapons may not be good quality, but they can still improve the PCs' situation immensely.
+
+  \paragraph{If the players select weapons for their characters,}
+  check out the Kitchen Weapons table and have them write down the stats on their character sheet one at a time.
+ }{
   they can use either of the two cast iron skillets.
 }
 

@@ -38,6 +38,38 @@
   \setcounter{enemyNo}{4}
 }
 
+\newenvironment{baseNote}[1]{
+
+  \begin{figure*}[b!]
+
+  \setcounter{enc}{\value{list}}
+  \subsection{#1}
+  \setcounter{list}{\value{enc}}
+
+  \begin{multicols}{2}
+  \setlength\parindent{24pt}
+
+}{
+
+  \end{multicols}
+
+  \end{figure*}
+
+}
+
+
+\newcommand{\newRule}[2]{
+
+  \iftoggle{oneshot}{
+    \begin{baseNote}{New Rule: #1}
+
+    #2
+    \end{baseNote}
+  }{}
+
+}
+
+
 % Goblins should have torches.
 
 \renewcommand{\goblin}[1][\npc{\T\N}{\arabic{r12} Goblins}]{

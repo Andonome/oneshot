@@ -502,6 +502,10 @@ If they stay there long, give them 4 Fatigue Points (due to the heat) and roll a
   {}%
 .}
 
+\paragraph{If anyone tries to work out the portal's activation words,}
+the player can roll Intelligence + Academics, TN 12, as long as they speak Gnomish.
+Success indicates that they can activate and deactivate the portal.
+
 \paragraph{If they enter the portal to flee from the nura,}
 \iftoggle{hardcore}{%
   the nura give chase\ldots for a while, however nura without food tire very quickly.
@@ -691,18 +695,17 @@ See \autopageref{raidingParty} for details.
 
 \begin{exampletext}
 
-  Shortly after the nura arrived from the Realm of Bright Rocks, a dragon followed.
-  He wandered up the stairs towards the treasure room, but could not fit through the little gnomish door.
+  Once the gnomes turned into nura, they neglected to de-activate the portal, as it's easier to see when it's open.
+  A couple of hours ago, a dragon named `Makil' wandered in, and went up the stairs towards the treasure room, but could not fit through the little gnomish door.
   He managed to pull a chest full of copper coinage through the door, but could not get anything else as he could not reach.
 
-  The nura wandered up the stairs, and found out too late they could not get any treasure.
-  The dragon wanted to barter with them, but found that all the goblins and ogres responded to him either by trying to fight him, or by running away, and none spoke elvish.
+  The Makil wanted to barter with the goblins, but found that they responded to him either by trying to fight him, or by running away, and none spoke elvish (the only language he knows spoken in these parts).
 
-  The cautious beast won't approach the nura to attach when he has no idea how many there are around him.
+  The cautious beast won't approach the nura to attack when he has no idea how many there are around him.
   He may be powerful, but a room full of ogres alongside a spell caster could seriously injure or kill him, and he doesn't want to take the chance.
   Similarly, the nura don't want to take any chances, so they've decided to just leave him where he is.
 
-  The nura and dragon have ended with a stalemate.
+  The nura and dragon have ended with a stalemate, so he has taken a nap.
 
 \end{exampletext}
 
@@ -718,7 +721,7 @@ they find a portal scroll wrapped safely in a scroll case.
 
 \mapentry[dragon]{The Dragon's Lair}
 
-The dragon will happily talk with anyone who approaches, but only understands Quenya (the Elvish language).
+The dragon will happily talk with anyone who approaches, but only understands Elvish.
 \iftoggle{hardcore}{}{%
   Remind the players that they can spend a Story Point to say that they know another language, as long as they say when they learnt the language.
 }
@@ -727,9 +730,11 @@ Despite his linguistic deficits, he can communicate using the Enchantment sphere
 The dragon's eventual goal is to obtain the rest of the treasure, then return through the portal to the Realm of Bright Rocks.
 
 \paragraph{If the party request he kill nura for them}
-then he obliges, in return for getting all treasure out of the treasure room, and leaving it with him.
+then he agrees to kill any in the current area, but will not journey to another floor.
+In return, he wants all the treasure out of the treasure room.
+
 \paragraph{If the party offer to split the treasure,}
-he agrees to letting them take half the coinage, while he takes the other half and all other items.
+he refuses, unless they give him a good reason.
 
 \iftoggle{hardcore}{
   The treasure chinks noisily of course, so the party will then receive a -1 penalty to all Stealth checks.}{}
@@ -743,12 +748,12 @@ If they say `yes', then he accepts their challenge, and asks what their riddle i
 If they can think of none,
 then the dragon declares that he has won the first round.
 
-See Appendix \ref{riddles} for riddles.
+See \autoref{riddles} for riddles.
 
 \paragraph{If the players ask why he wants treasure,}
 he explains that he wants to attract a mate; when his flame becomes hot enough to melt the gold, he will carve a golden statue of the most deadly dragon in his area in order to attract her attention.
 He will then decorate the statue with magical items.
-\footnote{Would you prefer a mate that people stare at, or one that can kill anything in an instant?
+\footnote{Would you prefer a mate is beautiful, or one that can kill anything in an instant?
 Dragons think the answer is obvious.}
 
 \paragraph{If the dragon parts on good terms,}
@@ -1335,11 +1340,13 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
 {Seeing Stone}% EQUIPMENT
 {}
 
-\magicitem{Seeing Stone}{Clairvoyance}{Alchemy}{Continuous}{Talisman}{3}{1}
+\iftoggle{hardcore}{
+  \magicitem{Seeing Stone}{Clairvoyance}{Alchemy}{Continuous}{Talisman}{3}{1}
 
-The Seeing Stone is a simple stone with a hole.
-Staring into the hole allows one to watch the Realm of Bright Rocks.
-Particularly perceptive watchers will notice that those watching in the stone can see exactly the spot where the portal on the bottom level of the warren opens.
+  The Seeing Stone is a simple stone with a hole.
+  Staring into the hole allows one to watch the Realm of Bright Rocks.
+  Particularly perceptive watchers will notice that those watching in the stone can see exactly the spot where the portal on the bottom level of the warren opens.
+}{}
 
 \mapentry[lockedDoor]{The Locked Door}
 
@@ -1372,4 +1379,3 @@ See page \pageref{raidingParty} for the returning raiding party.
 }
 
 \end{multicols}
-

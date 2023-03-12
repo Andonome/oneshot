@@ -19,14 +19,23 @@
 \begin{multicols}{2}
 
 \noindent
-This short story servers as an introduction to Fenestra.
 \iftoggle{hardcore}{%
   It takes 2-3 sessions to play through, and should provide a real challenge even to seasoned tabletop gamers.
   The GM is assumed to be familiar with Fenestra's main elements, such as the nura, and the night guard.
-}{
-  \iftoggle{oneshot}{
-    Players will guide their characters to freedom or death within a single session (and, if death, will have to take a new character to guide out).
-  }{
+}{%
+  \iftoggle{oneshot}{%
+    This RPG story is a `stand-alone' module with the rules introduce along the way.
+    You will be the GM (Games Master) for a group of 3-5 players who find themselves trapped in the bowels of a goblin warren, and must fight until they are free, or dead.
+
+  You can pick up the basic rules in the introduction, and a few new rules lie scattered throughout the module, introduced with the `New Rule' header.
+
+  \iftoggle{core}{
+    Links to the complete rules are included in footnotes%
+    \iftoggle{aif}{ along with a few footnotes for the campaign book, \textit{Adventures in Fenestra}.
+    These are entirely optional reading.}{.}%.
+  }{}
+  }{%
+    This short story servers as an introduction to Fenestra.
     It takes 1-2 sessions to play through, and shouldn't be too challenging for new people.
 
     The rules are given throughout the module -- a little here in the introduction, and a few scattered throughout the module as they come up.
@@ -54,7 +63,7 @@ They will meet other prisoners, and hear how the goblins destroyed all the villa
 \subsection{History}
 \label{invasionHistory}
 
-\begin{exampletext}
+\begin{exampletext}[ ]
 
 \noindent
 Ten years ago, the gnomes of the Whittling Warren made a magical portal to the Realm of Bright Rocks in order to start making excursions there, and steal the precious flowers which produce excellent magical items.
@@ -157,18 +166,26 @@ The gnomes have turned into goblins some time ago, and are quite beyond help.
 \iftoggle{oneshot}{
   \subsection{Quick Rules}
 
+  These rules will provide enough for basic actions.
+  For anything else, just go with what seems appropriate and keep the ruling consistent.
+
+  \subsubsection{Basic Actions}
+
   When the players want to do something, tell them the TN (`Target Number')%
   \footnote{A TN of 6 = easy, 10 = professional, and 14 = extreme}
   and have them roll 2D6 + some \textit{Attribute + Skill}.
 
   If they need to hide quickly, they might roll Wits + Stealth (TN 8).
   If they need to bust open a door, they might roll Strength + Crafts (TN 10).
+  When fleeing from the enemy, they might roll Speed + Athletics (TN 7 plus the enemy's Speed + Athletics).
 
   In all cases, you can make the number up depending on what seems right, but you should tell the players the TN before the roll.
+  If the nura are acting against them, you don't need to make another roll for the nura -- simply add the nura's Attribute + Skill pair to the roll.
 
-  \subsection{Combat}
+  \subsubsection{Statblocks}
   Monster statblocks look like this:
 
+  \npc{\N\M}{Ogre}
   \person{4}% STRENGTH
   {0}% DEXTERITY 
   {2}% SPEED
@@ -180,6 +197,11 @@ The gnomes have turned into goblins some time ago, and are quite beyond help.
   {Crafts 1, Stealth 2, Tactics 1}% SKILLS
   {\Dagger}% EQUIPMENT
   {}
+
+  The top rows are the \textit{Attributes}, and the Skills are marked below.
+  Almost all rolls involve adding some Attribute + Skill pairing, and many gain an advantage for having a tool, such as a weapon.
+
+  \subsubsection{Combat}
 
   When combat starts, look at the lower half of the statblock:
 
@@ -202,10 +224,17 @@ The gnomes have turned into goblins some time ago, and are quite beyond help.
     PCs can mark off Fate Points (FP) instead of HP to avoid Damage.
   \end{itemize}
     \item
-    If an enemy attacks a PC, the players makes the same roll, but at +1 to the TN.
+    The aggressor always has the upper hand, so if the enemy attacks a PC (instead of a PC attacking the enemy) then the enemy gains +1 to their {\scshape Att}.
+  \begin{itemize}
+    \item
+    There is no difference between `attack' and `defence' -- the aggressor simply gains an advantage.
+  \end{itemize}
     \item
     Everyone starts combat with some AP (action points) shown on their sheet and spend 1 AP each time they move, each time they attack, or are attacked.
-    \arabic{spd}
+  \begin{itemize}
+    \item
+    If there is any disagreement about who goes first, then whoever has the most AP goes first.
+  \end{itemize}
 
   \end{itemize}
 
@@ -234,26 +263,6 @@ The gnomes have turned into goblins some time ago, and are quite beyond help.
   Anyone with a torch can light up the entire room.
 }{}
 
-\iftoggle{oneshot}{
-  \subsection{Narrow Passages}
-
-  Ogres cannot swing their big clubs indoors very easily, but they keep forgetting.
-  Any time someone attempts to use a long weapon in one of the passageways (which were designed for gnomes) they suffer a penalty equal to the weapon's AP.
-
-  Anything with a Weight Rating above 0 counts as a `long weapon'.
-}
-
-\iftoggle{oneshot}{}{
-  \subsection{Sanctuaries}
-
-  Throughout the warren, a number of rooms are out of bounds to the nura.
-  These are \nameref{dragon} (page \pageref{dragon}), \nameref{fungusGarden} (page \pageref{fungusGarden}), and \nameref{lounge} (page \pageref{lounge}).
-  The party can rest in these sanctuaries, but they may face ambushes later.
-
-  Many nura will leave their prey alone once they cannot see them any more, but nuramancer goblins tend to be a little more cunning, and will organize other nura to wait for the party's return if they ever come back.
-
-}
-
 \subsection{Captured}
 
 If the party ever lose a fight, do not push this until each lie dead.
@@ -264,7 +273,7 @@ Once this is done, the party can attempt to flee again.
 
 \subsection{Death}
 
-If any character dies, another can be introduced once the party find any prison.
+If any character dies, another can be introduced once the troupe reaches any prison.
 The nura regularly send out raiding parties to capture people, and those people get dumped back into the prisons, so even if the PCs have fled the prisons, any time they return, more prisoners can be found and liberated.
 
 \iftoggle{hardcore}{

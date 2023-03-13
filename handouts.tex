@@ -7,6 +7,8 @@
 
 \input{commands.tex}
 
+\input{cs/commands.tex}
+
 \begin{document}
 
 \pagestyle{empty}
@@ -18,11 +20,10 @@
   \clearpage
   \shipout\null
 }{
-  \iftoggle{core}{
     \newcommand\printCharacter[1]{
       \input{ex_cs/#1.tex}
-      \input{../core/CS/CS.tex}
-      \input{../core/CS/backpage.tex}
+      \input{cs/CS.tex}
+      \input{cs/backpage.tex}
     }
     \cleardoublepage
 
@@ -84,7 +85,6 @@
       \printCharacter{Alex}
     \fi
 
-  }{}
 }
 
 \setlength{\columnsep}{20pt}
@@ -120,12 +120,12 @@
 
 \iftoggle{oneshot}{
   \iftoggle{core}{
-  \input{../core/CS/overview.tex}
-  \clearpage
-  \shipout\null
-  \settoggle{examplecharacter}{false}
-  \input{../core/CS/GS.tex}
+    \input{../core/overview.tex}
+    \clearpage
+    \shipout\null
+    \settoggle{examplecharacter}{false}
   }{}
+  \input{cs/GS.tex}
 }{
   \pic{Dyson_Logos/upper-handout}
 }

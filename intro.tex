@@ -46,7 +46,7 @@
 \widePic{Roch_Hercka/transformation}
 
 The PCs awaken to find themselves in a cell, deep underground.
-Their last memories surface slowly as the players \iftoggle{hardcore}{themselves start to make their characters}{\iftoggle{core}{get to know their character}{themselves start to make their characters}}.
+Their last memories surface slowly as the players \iftoggle{hardcore}{themselves start to make their characters}{get to know their character}.
 Over the course of the adventure, they find out that the gnomes opened a portal to a distant land where the goblins invaded, transforming the gnomes into more goblins.
 
 Once out into the warren, the party may speak to a dragon who guards a hidden passage, grab magical scrolls made by the gnomes before they became so deformed, and avoid the traps, guards, and aberrations of the goblin lair.
@@ -111,13 +111,11 @@ But they continued raiding, filling the areas with people to eat or transform in
 
   The handouts contain a map which the PCs might be able to access, and an overview of the local city, which they can use for planning the final scene.
 }{
-  \iftoggle{core}{
-    \subsection{Handouts}
-    The handouts contain example characters which you can hand out to players.
-    There should be more than enough, so if a player's character dies, they can get another one.
+  \subsection{Handouts}
+  The handouts contain example characters which you can hand out to players.
+  There should be more than enough, so if a player's character dies, they can get another one.
 
-    You will also find a few statblocks for villagers who will later become captured and brought to the warren.
-  }{}
+  You will also find a few statblocks for villagers who will later become captured and brought to the warren.
 }
 
 \subsection{Understanding Boxtext}
@@ -247,11 +245,7 @@ The gnomes have turned into goblins some time ago, and are quite beyond help.
 
   Keep careful track of the light sources -- they are rare and exceedingly valuable.
   If only a single PC has a light source, switch all narrative to that person's perspective -- after all, everyone else will be in the dark, so they can only focus on the light-bearer.
-
-  Also, review the core book rules on fighting in the dark.%
-  \iftoggle{core}{%
-    \footnote{\nameref{darkness}, page \pageref{darkness}.}
-  }{}
+  \exRef{core}{core rules}{darkness}
 
   \subsubsection{Candles}
 

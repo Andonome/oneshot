@@ -21,6 +21,7 @@ svg-inkscape/lower_svg-tex.pdf: $(wildcard config/*) images
 	pdflatex -shell-escape oneshot_horde_escape.tex
 	pdflatex oneshot_horde_escape.tex
 	pdflatex oneshot_horde_escape.tex
+	makeglossaries oneshot_horde_escape
 
 handouts_oneshot.pdf: images handouts.tex $(wildcard ex_cs/*)
 	touch .oneshot

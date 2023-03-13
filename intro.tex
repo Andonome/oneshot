@@ -21,11 +21,11 @@
 \noindent
 \iftoggle{hardcore}{%
   It takes 2-3 sessions to play through, and should provide a real challenge even to seasoned tabletop gamers.
-  The GM is assumed to be familiar with Fenestra's main elements, such as the nura, and the night guard.
+  The \gls{gm} is assumed to be familiar with Fenestra's main elements, such as the nura, and the night guard.
 }{%
   \iftoggle{oneshot}{%
     This RPG story is a `stand-alone' module with the rules introduce along the way.
-    You will be the GM (Games Master) for a group of 3-5 players who find themselves trapped in the bowels of a goblin warren, and must fight until they are free, or dead.
+    You will be the \gls{gm} for a group of 3-5 players who find themselves trapped in the bowels of a goblin warren, and must fight until they are free, or dead.
 
   You can pick up the basic rules in the introduction, and a few new rules lie scattered throughout the module, introduced with the `New Rule' header.
 
@@ -45,7 +45,7 @@
 
 \widePic{Roch_Hercka/transformation}
 
-The PCs awaken to find themselves in a cell, deep underground.
+The \glspl{pc} awaken to find themselves in a cell, deep underground.
 Their last memories surface slowly as the players \iftoggle{hardcore}{themselves start to make their characters}{get to know their character}.
 Over the course of the adventure, they find out that the gnomes opened a portal to a distant land where the goblins invaded, transforming the gnomes into more goblins.
 
@@ -56,7 +56,7 @@ They will meet other prisoners, and hear how the goblins destroyed all the villa
   Once out, they find Darton town lies under siege, and the surrounding villages have been eaten.
   They will then need to journey out to find the Black Baron, deliver him a pardon for his criminal behaviour, and escort him safely back to town.
 }{
-  The PCs' mission is simple -- to escape through the exit at the top, and return to civilization.
+  The \glspl{pc}' mission is simple -- to escape through the exit at the top, and return to civilization.
 }
 
 
@@ -102,14 +102,14 @@ But they continued raiding, filling the areas with people to eat or transform in
 
 \end{multicols}
 
-\section{GM Considerations}
+\section{\Glsfmttext{gm} Considerations}
 
 \begin{multicols}{2}
 
 \iftoggle{hardcore}{
   \subsection{Handouts}
 
-  The handouts contain a map which the PCs might be able to access, and an overview of the local city, which they can use for planning the final scene.
+  The handouts contain a map which the \glspl{pc} might be able to access, and an overview of the local city, which they can use for planning the final scene.
 }{
   \subsection{Handouts}
   The handouts contain example characters which you can hand out to players.
@@ -127,19 +127,8 @@ It show you how a room might appear, but it might not appear this way to your pl
   You enter a room, candlelight flickers off the tiny, broken, beds.
 \end{boxtext}
 
-When you see this description of a room, your PCs might not have a single candle, or might have three torches.
+When you see this description of a room, your \glspl{pc} might not have a single candle, or might have three torches.
 It lays out a picture while reading this module for the first time, but should be modified or forgotten when running it live.
-
-\subsection{Newly Fledged Nura}
-
-The ogres here remember being human only hours or days ago.
-They still haven't accepted their transformation fully, so many will not want to kill or eat humans unless they feel really hungry.
-
-If the party encounter ogres, but have not yet attacked them, they can make a Charisma + Empathy roll (TN 10), to convince the ogres to not attack for a round.
-The check has to be made each round if the players are in sight.
-This trick can't last forever, but it \emph{can} buy them time to flee.
-
-The gnomes have turned into goblins some time ago, and are quite beyond help.
 
 \subsection{Creation}
 
@@ -169,21 +158,21 @@ The gnomes have turned into goblins some time ago, and are quite beyond help.
 
   \subsubsection{Basic Actions}
 
-  When the players want to do something, tell them the TN (`Target Number')%
-  \footnote{A TN of 6 = easy, 10 = professional, and 14 = extreme}
+  When the players want to do something, tell them the \gls{tn}%
+  \footnote{A \glsentrytext{tn} of 6 = easy, 10 = professional, and 14 = extreme}
   and have them roll 2D6 + some \textit{Attribute + Skill}.
 
-  If they need to hide quickly, they might roll Wits + Stealth (TN 8).
-  If they need to bust open a door, they might roll Strength + Crafts (TN 10).
-  When fleeing from the enemy, they might roll Speed + Athletics (TN 7 plus the enemy's Speed + Athletics).
+  If they need to hide quickly, they might roll Wits + Stealth (\gls{tn} 8).
+  If they need to bust open a door, they might roll Strength + Crafts (\gls{tn} 10).
+  When fleeing from the enemy, they might roll Speed + Athletics (\gls{tn} 7 plus the enemy's Speed + Athletics).
 
-  In all cases, you can make the number up depending on what seems right, but you should tell the players the TN before the roll.
+  In all cases, you can make the number up depending on what seems right, but you should tell the players the \gls{tn} before the roll.
   If the nura are acting against them, you don't need to make another roll for the nura -- simply add the nura's Attribute + Skill pair to the roll.
 
   \subsubsection{Statblocks}
   Monster statblocks look like this:
 
-  \npc{\N\M}{Ogre}
+  \npc{\N\F}{Ogre}
   \person{4}% STRENGTH
   {0}% DEXTERITY 
   {2}% SPEED
@@ -201,50 +190,66 @@ The gnomes have turned into goblins some time ago, and are quite beyond help.
 
   \subsubsection{Combat}
 
-  When combat starts, look at the lower half of the statblock:
-
-  \hrulefill
-
-  {\scshape Att 10, AP 5, Dam $2D6+1$}
-
-  10 HP {\large\Repeat{5}{\sqn}\Repeat{5}{\sqr}}
-
   \begin{itemize}
 
     \item
-    \textit{To make an attack,} players roll 2D6 + Dexterity + Combat at a TN equal to the enemy's `{\scshape Att}'ack.
+    \textit{To make an attack,} players roll 2D6 + Dexterity + Combat at a \gls{tn} equal to the \gls{npc}'s `{\scshape Att}'ack.
     \item
-    If they hit the enemy, then they deal $1D6$ Damage, plus their Strength Bonus (mark off the enemy's HP boxes with a pencil).
+    If they hit the \gls{npc}, then they deal $1D6$ Damage, plus their Strength Bonus (mark off the \gls{npc}'s \glspl{hp} boxes with a pencil).
     \item
-    \emph{However}, if the player does not succeed in the roll, the enemy deals Damage to the character ($2D6+1$ in this case).
+    \emph{However}, if the player does not succeed in the roll, the \gls{npc} removes the \gls{pc}'s \glspl{fp}.
   \begin{itemize}
     \item
-    PCs can mark off Fate Points (FP) instead of HP to avoid Damage.
+    \Glspl{fp} represent a limited store of luck each character has.
+    \item
+    When a character has no more \glspl{fp}, they must mark off \glspl{hp}.
+    \item
+    For example, the ogre above deals $2D6+1$ damage.
+    If she attacked a \gls{pc} and rolled a `9' for Damage, the player might mark off 5 \glspl{fp} then 4 \glspl{hp}.
   \end{itemize}
     \item
-    The aggressor always has the upper hand, so if the enemy attacks a PC (instead of a PC attacking the enemy) then the enemy gains +1 to their {\scshape Att}.
+    The aggressor always has the upper hand, so if the \gls{npc} attacks a \gls{pc} (instead of a \gls{pc} attacking the \gls{npc}) then the \gls{npc} gains +1 to their {\scshape Att}.
   \begin{itemize}
     \item
     There is no difference between `attack' and `defence' -- the aggressor simply gains an advantage.
   \end{itemize}
     \item
-    Everyone starts combat with some AP (action points) shown on their sheet and spend 1 AP each time they move, each time they attack, or are attacked.
+    Everyone starts combat with some \glspl{ap} shown on their sheet and spends 1 \glspl{ap} each time they move, each time they attack, or are attacked.
   \begin{itemize}
     \item
-    If there is any disagreement about who goes first, then whoever has the most AP goes first.
+    If there is any disagreement about who goes first, then whoever has the most \glspl{ap} goes first.
   \end{itemize}
 
   \end{itemize}
 
-  Once all AP have been spent, the round ends, and everyone refreshes their AP.
+  When combat starts, look at the lower half of the statblock:
+
+  \hrulefill
+
+  {\scshape Att 10, \glspl{ap} 5, Dam $2D6+1$}
+
+  10 \glspl{hp} {\large\Repeat{5}{\sqn}\Repeat{5}{\sqr}}
+
+  Once all \glspl{ap} have been spent, the round ends, and everyone refreshes their \glspl{ap}.
 
 }{}
+
+\subsection{Newly Fledged Nura}
+
+The ogres here remember being human only hours or days ago.
+They still haven't accepted their transformation fully, so many will not want to kill or eat humans unless they feel really hungry.
+
+If the party encounter ogres, but have not yet attacked them, they can make a Charisma + Empathy roll with a \gls{tn} of 10, to convince the ogres to not attack for a round.
+The check has to be made each round if the players are in sight.
+This trick can't last forever, but it \emph{can} buy them time to flee.
+
+The gnomes have turned into goblins some time ago, and are quite beyond help.
 
 \iftoggle{hardcore}{
   \subsection{Light}
 
   Keep careful track of the light sources -- they are rare and exceedingly valuable.
-  If only a single PC has a light source, switch all narrative to that person's perspective -- after all, everyone else will be in the dark, so they can only focus on the light-bearer.
+  If only a single \gls{pc} has a light source, switch all narrative to that person's perspective -- after all, everyone else will be in the dark, so they can only focus on the light-bearer.
   \exRef{core}{core rules}{darkness}
 
   \subsubsection{Candles}
@@ -270,11 +275,11 @@ Once this is done, the party can attempt to flee again.
 \subsection{Death}
 
 If any character dies, another can be introduced once the troupe reaches any prison.
-The nura regularly send out raiding parties to capture people, and those people get dumped back into the prisons, so even if the PCs have fled the prisons, any time they return, more prisoners can be found and liberated.
+The nura regularly send out raiding parties to capture people, and those people get dumped back into the prisons, so even if the \glspl{pc} have fled the prisons, any time they return, more prisoners can be found and liberated.
 
 \iftoggle{hardcore}{
-  Returning characters should start with the same XP total they have accumulated, rather than the usual, lower totals.
-  If a player earns 10 XP during the mission and then dies, they return with 60 XP.
+  Returning characters should start with the same \glspl{xp} total they have accumulated, rather than the usual, lower totals.
+  If a player earns 10 \glspl{xp} during the mission and then dies, they return with 60 \glspl{xp}.
 }{}
 
 \end{multicols}

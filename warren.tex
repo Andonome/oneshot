@@ -4,6 +4,25 @@
 
 \begin{multicols}{2}
 
+\newRule{Re-Rolls \& Group Rolls}{
+  When players roll $2D6$ to perform an action, the dice tell you if the situation is favourable or not.
+  Players do not re-roll dice unless the situation has changed.
+
+  When a group of people want to do the same thing (sneaking, speaking, running), they don't all roll to check the situation -- only one player rolls dice, and all the players use the same result for their characters.
+
+  \paragraph{Example 1:}
+  the troupe are sneaking down a hallway, and have to roll Stealth + Dexterity (TN 9).
+  One player rolls $2D6$, and gets a `7'.
+  Characters with a total bonus of +2 were walking quietly, but if even a single PC had a bonus of +1 or less, they made a noise, and the entire group is given away.
+
+  \paragraph{Example 2:}
+  The characters try to persuade Chris to help them, and one player rolls the dice, getting a `7'.
+  Their Charisma + Empathy total is -1, so they fail, but another character tries to speak with him and has a +3 total, so they succeed (without rolling the dice again).
+
+}
+
+\widePic[t]{Roch_Hercka/waking}
+
 \mapentry[entrycell]{Cells}
 
 \begin{exampletext}
@@ -14,13 +33,10 @@
 \end{exampletext}
 
 Here the PCs awaken to their hopeless situation.
-The players may make their characters at this juncture -- everyone's in the dark, so nobody knows who anyone is at this point.
-
 \iftoggle{hardcore}{%
   Ask the players to mark down $1D6$ Fatigue Points on their character sheets from the trials they've experience getting here, and of course from their hunger.
-}{}
-
-Give the players a moment to get to know each other and their surroundings.
+}{}%
+Give the players a moment to get to know each others' characters and their surroundings.
 Remember, that everything is pitch black -- at best they can feel out the room a little, but they don't have long.
 
 \paragraph{If anyone tries to wriggle free of their ropes,}
@@ -31,33 +47,85 @@ have them roll Dexterity + Larceny,
 }{%
   TN 9.
   Freeing another character requires a full round.
-Remember that if a player cannot succeed in a roll, it's possible for them to take a resting action (one die turns to 6 automatically\iftoggle{core}{, see the core rules, \autopageref{restingactions} for more}{}).
 }
 
 \paragraph{After a moment,}
-a small voice emerges from the corner of the room.
-`Chris', the seneschal (`accountant')
-He explains to them that many prisoners waited here, until the nuramancers%
-\iftoggle{hardcore}{}{\footnote{A `nuramancer' is a goblin spellcaster, who uses nuramancy magic.}}
-came to turn one into an ogre, who then ate the others, except for Chris, who hid under the debris.
+a small voice from the corner of the room says
+`\begin{textit} it's all useless, we're all going to eat each other\end{textit}'.
+Chris was captured from a village along with another batch of prisoners.
+
+\NPC{\Hu\M}{Chris}{Despondent}{Sighs}{Tribe}
+\person{1}% STRENGTH
+{0}% DEXTERITY 
+{1}% SPEED
+{{0}% INTELLIGENCE
+{-1}% WITS
+{0}}% CHARISMA
+{0}% DR
+{0}% COMBAT
+{Academics 2, Empathy 1}% SKILLS
+{Nothing}% EQUIPMENT
+{}
+
+\begin{exampletext}
+  Blara the gnome accepted her fate, and her hunger, then began to learn nuramancy -- the sphere of magic which transforms gnomes into goblins and humans into ogres.
+
+  Since then, she routinely enters the make-shift prison cell, and casts a spell on one of the prisoners to turn them into an ogre.
+  The target of the spell becomes ravenous, and eventually eats another prisoner (they have no desire to eat other nura).
+
+  She has made a dozen new ogres this way, but the last time one person was left on his own -- Chris.
+  Since then, he has sat in the darkness, waiting to be eaten.
+  Now the PCs have been shunted into the cell with him, he knows his time is short.
+
+\end{exampletext}
+
+Chris explains the situation to the PCs (whether or not anyone asks him).
+
+\paragraph{Trying to plea with Alf}
+won't prove easy.
+The player can attempt a Charisma + Empathy roll (TN 12), to have him leave the room out of shame and guilt, but he won't help anyone.
+
+\paragraph{If anyone asks Chris for help,}
+he tells that that he already managed to wriggle out of the ropes binding him, but that it's all useless, because you can't fight against a monster.
+
+Convincing Chris to help someone requires a Charisma + Empathy roll (TN 9).
+
+\paragraph{Shortly after,}
+Blara the goblin nuramancer, and Alf (the last man to transform into an ogre) walk towards the cell.
 
 \begin{boxtext}
 
-  Heavy footsteps pad down the hall, you hear the door's bar being lifted, and a little goblinoid face peeps in with a torch and a massive sack over her shoulder.
-  Behind her, an ogre stoops to the height of a man to avoid the low ceiling while she unties the sack.
-  The contents are chucked into the room -- apples, pies, raw potatoes, and lettuce, all in a pile on the filthy floor.
-  Chris shouts to the ogre `Alf -- don't do this! Help me!', but the ogre only stares back at him before the little goblin retreats, taking the massive, deformed man with him.
+  Heavy footsteps pad down the hall, you hear the door's bar being lifted, and a little goblinoid face peeps in with a torch.
+  Behind her, an ogre stoops to the height of a man to avoid the low ceiling.
+
+  The little goblin then begins chanting while staring intently at Chris.
 
 \end{boxtext}
 
-Chris bleats for a moment before he crawls over and begins eating the food.
-He knows what will happen to him, but he cannot stand to wait, starving in a cell, any more.
+\paragraph{If anyone wants to fight while still tied up,}
+they can do so with a -4 penalty to the roll.
+
+\paragraph{Anyone attacking Blara}
+immediately annoys Alf, the ogre, who then attacks.
+
+Blara will attempt to run away, but must wait for Alf to move out of the doorway.
+
+\iftoggle{oneshot}{
+  Chasing after Blara requires a resisted roll of Speed + Athletics
+  (the player rolls 2D6 plus their Speed + Athletics against a TN of 7 + Blara's Speed (2) + Athletics (1) = 10)%
+}{}.%
+
+\paragraph{If Blara flees,}
+she takes the only light out of the room.
+\iftoggle{oneshot}{%
+  This gives the PCs a bonus to any attack roll equal to their Wits + Vigilance +3 (Alf cannot coordinate well in the dark).
+}{}
 
 \iftoggle{oneshot}{
   \npc{\N\M}{Alf the Ogre}
-  \person{4}% STRENGTH
+  \person{6}% STRENGTH
   {0}% DEXTERITY 
-  {2}% SPEED
+  {1}% SPEED
   {{-2}% INTELLIGENCE
   {-3}% WITS
   {-5}}% CHARISMA
@@ -71,8 +139,9 @@ He knows what will happen to him, but he cannot stand to wait, starving in a cel
 }
 \label{alf}
 
-\npc{\N\F}{Blara the Goblin}
-\person{-1}% STRENGTH
+\npc{\N\F}{Blara the Goblin Nuramancer}
+
+\person{-2}% STRENGTH
 {2}% DEXTERITY 
 {2}% SPEED
 {{0}% INTELLIGENCE
@@ -80,67 +149,67 @@ He knows what will happen to him, but he cannot stand to wait, starving in a cel
 {-4}}% CHARISMA
 {0}% DR
 {1}% COMBAT
-{Athletics 1, Deceit 1, Stealth 2, Tactics 1}% SKILLS
-{\Dagger, torch\iftoggle{oneshot}{}{, map}}% EQUIPMENT
+{Athletics 1, Deceit 1, Stealth 2, Tactics 1
+\knacks{\alchemist, \nuraCaster}
+\Path{\illusion~1, \conjuration~2,\saurecanta~2}
+}% SKILLS
+{\Dagger, torch, human foot\iftoggle{oneshot}{}{, map}}% EQUIPMENT
 {}
 
-\widePic{Roch_Hercka/waking}
+\paragraph{If Blara's spell is interrupted,}
+she has to start again.
 
-\iftoggle{hardcore}{
-  Alf attacks immediately.
-}{
-  \paragraph{If anyone tries to fight Alf,}
-  he fights!
+\paragraph{After 2 rounds,}
+\iftoggle{oneshot}{the spell begins to take hold,}{Blara's Brawn-Form spell finishes, and Chris is stricken with the \textit{Hunger Pains} spell,%
+\exRef{aif}{Adventures in Fenestra}{saurecanta}}
+and Chris starts trying to eat people.
 
-  \ldots otherwise he sits there looking stupid for a second, but attacks the next round.
-}
+If he has any trouble attacking people, Blara reaches into her bag and pulls out a human foot, then throws it on the ground in front of Chris.
+Once he eats it, he gains +1 Strength%
+\iftoggle{oneshot}{ and deals +1 Damage}{.}
 
-\paragraph{If anyone tries to fight Blara,}
-she runs away with her torch (the room's only light source), leaving the party stranded in darkness.
+If he successfully kills someone, he eats them, becomes an ogre, and leaves with Blara (she needs to wait for her mana to recharge).
 
-Chasing after Blara requires a resisted roll of Speed + Athletics
-\iftoggle{oneshot}{%
-  (the player rolls 2D6 plus their Speed + Athletics against a TN of 7 + Blara's Speed (2) + Athletics (1) = 10)%
-}{}.%
-\iftoggle{core}{\footnote{See the core rules, \autopageref{resistedactions}.}}{}
+\paragraph{If the PCs manage to throw the human foot towards Alf,}
+he stops to eat it for 2 rounds, doing nothing, else unless attacked.
 
-\paragraph{If the PCs kill Chris immediately,}
-he will be vulnerable, so they can make a sneak attack.
-\iftoggle{core}{\footnote{\nameref{sneakattack}}}{}
-
-\paragraph{If the party take time to escape,}
-Chris has already reached his ogre form.
-
-\iftoggle{oneshot}{}{
-  Remember also that if the party get a Vitals Shot in, they can deal Damage, rather than just inflicting Fatigue.
-}
-
-Once you resolve the scene, then check out the cell's description on page \pageref{entrycell}.
+\paragraph{If the PCs try to kill Chris immediately,}
+\iftoggle{oneshot}{they gain a +2 Attack Bonus and +2 Damage for the `Sneak Attack'.}{he will be vulnerable, so they can make a sneak attack.}
 
 \npc{\N\M}{Chris (as an Ogre)}
 \person{4}% STRENGTH
 {0}% DEXTERITY 
-{3}% SPEED
-{{-3}% INTELLIGENCE
+{1}% SPEED
+{{-2}% INTELLIGENCE
 {-1}% WITS
-{-3}}% CHARISMA
+{-2}}% CHARISMA
 {0}% DR
-{0}% COMBAT
+{1}% COMBAT
 {Academics 2, Empathy 1}% SKILLS
 {Nothing}% EQUIPMENT
 {}
 
-\paragraph{If the party somehow stop Chris eating the tainted nura-food,}
-he will accompany them out, but his nerves are too shot to be of any use.
+\paragraph{If the party save Chris,}
+he will accompany them out, but his nerves are too shot to be of much use.
+He will not join any fights, but can hold a torch.
 
 \iftoggle{oneshot}{}{
   \paragraph{If the PCs search Blara's body,}
   they find a map of the upper level (see the handouts).
 }
 
-\paragraph{If the party do not manage to escape}
-then add 3 Fatigue Points for their time starving in prison, run `\nameref{raidingParty}' (\autopageref{raidingParty}) and throw in some new prisoners.
-The players can then spend Story Points to introduce old friends, and try to escape again, with increased numbers.
+\paragraph{If the party do not manage to escape or save Chris,}
+then he eats one of them, and joins Blara into the door, leaving the rest in the dark.
+
+She returns some hours later, throws in a new prisoner (a new PC!), and the encounter begins again with a new victim.
+
+\newRule{End of Scene Regeneration}{
+  Each time the party enter a new situation (often when they simply enter a new room), they regain 40\% of their base Fate Points (FP).
+  Those with a base of 5 FP regain 2, and those with a base of 10 regain 4.
+
+  Those with Mana Points (MP) can also regain 2 MP plus their Wits Bonus.
+
+}
 
 \mapentry[escapeShaft]{Exit Shaft}
 
@@ -170,11 +239,6 @@ The nura have since abandoned this path, and have forgotten the door at the top.
 
 \paragraph{If the players climb up the staircase without understanding the trap,}
 have them make a Group roll of Dexterity + Athletics, TN 10.%
-\iftoggle{core}{%
-  \footnote{One player rolls 2D6 for the entire group, but each character can add their own bonuses to get a different result.
-  See the core rules, page \pageref{grouproll} for more.}
-}%
-{}
 If they fall, they receive $1D6-2$ Damage.
 
 \paragraph{If they continue climbing,}
@@ -195,6 +259,15 @@ They cannot re-roll this result, but they can try to climb again, in which case:
 
 \paragraph{If a \emph{player} figures out the trap,}
 all rolls can be dispensed with, and the PCs can ascend to room \ref{laddertop} at the top.
+
+\newRule{Damage Resistance \& Vitals Shots}{
+
+  Damage Resistance (DR) reduce Damage taken due to armour, or just a creature's thick hide.
+  The nura rat has `{\scshape DR 2}', so it removes 2 from any Damage Taken.
+
+  We assume everyone is trying to target sensitive areas, like the throat, groin, and eyes, whenever they can, to hit more exposed areas.
+  If anyone hits 5 points over what they need to hit the rat, they get a `\textit{Vitals Shot}', which ignores the DR entirely, as the attack hits a sensitive area.
+}
 
 \mapentry[diningRoom]{Dining Room}
 
@@ -278,15 +351,6 @@ reveals two large knives which can be used as \emph{daggers}.
 
   \paragraph{Once the PCs leave the room,}
   let them regenerate 40\% of their Fate Points, because a new scene has ended.
-
-\newRule{Damage Resistance}{
-
-  Damage Resistance (DR) reduce Damage taken due to armour, or just a creature's thick hide.
-  The nura rat has `{\scshape DR 1}', so it removes 1 from any Damage Taken.
-
-  We assume everyone is trying to target sensitive areas, like the throat, groin, and eyes, whenever they can, to hit more exposed areas.
-  If anyone hits 5 points over what they need to hit the rat, they get a `\textit{Vitals Shot}', which ignores the DR entirely, as the attack hits a sensitive area.
-}
 
 
 \mapentry[spellCasters]{Spellcaster Arguments}

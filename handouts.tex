@@ -6,9 +6,11 @@
 \settoggle{allyCharacter}{true}
 
 \input{commands.tex}
-
 \input{cs/commands.tex}
-
+% We'll need the core glossaries to compile overview.tex later.
+\iftoggle{core}{
+  \input{../core/glossary.tex}
+}{}
 \begin{document}
 
 \pagestyle{empty}

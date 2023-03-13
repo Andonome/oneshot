@@ -6,14 +6,15 @@ compile_pdf:
     - git submodule update --init
     - git submodule foreach git lfs pull
     - make all
+    - mv horde_escape.pdf 'Escape_from_the_Horde.pdf'
+    - zip Escape_from_the_Horde_full.zip Escape_from_the_Horde.pdf handouts.pdf
+    - mv handouts_oneshot.pdf handouts.pdf
+    - mv oneshot_horde_escape.pdf Escape_from_the_Horde.pdf
+    - zip Escape_from_the_Horde.zip handouts.pdf Escape_from_the_Horde.pdf
   only:
     - master
     - run
   artifacts:
     paths:
-      - handouts_hardcore.pdf
-      - hardcore_horde_escape.pdf
-      - handouts_oneshot.pdf
-      - oneshot_horde_escape.pdf
-      - handouts.pdf
-      - std_horde_escape.pdf
+      - Escape_from_the_Horde.zip
+      - Escape_from_the_Horde_full.zip

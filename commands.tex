@@ -5,15 +5,18 @@
 \externalReferent{aif}
 \externalReferent{core}
 
-\settoggle{verbose}{true}
 \newtoggle{hardcore}
-
 \newtoggle{oneshot}
-\IfFileExists{.oneshot}{
-  \settoggle{oneshot}{true}
-}{
-  \settoggle{oneshot}{false}
-}
+
+\ifStrSame{\jobname}{hardcore_horde_escape}%
+  {\settoggle{hardcore}{true}}%
+  {\ifStrSame{\jobname}{oneshot_horde_escape}%
+    {\settoggle{oneshot}{true}}{}}
+
+\ifStrSame{\jobname}{handouts_hardcore}%
+  {\settoggle{hardcore}{true}}%
+  {\ifStrSame{\jobname}{handouts_oneshot}%
+    {\settoggle{oneshot}{true}}{}}
 
 % When 'examplecharacter' = true, some stats show more information about how they work.
 \iftoggle{oneshot}{

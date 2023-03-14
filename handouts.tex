@@ -12,11 +12,6 @@
   \input{../core/glossary.tex}
 }{}
 
-\ifStrSame{\jobname}{handouts_hardcore}%
-  {\settoggle{hardcore}{true}}%
-  {\ifStrSame{\jobname}{handouts_oneshot}%
-    {\settoggle{oneshot}{true}}{}}
-
 \begin{document}
 
 \pagestyle{empty}

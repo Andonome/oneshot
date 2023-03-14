@@ -335,4 +335,12 @@ Tell me what I am and what I am not.
   \textbf{Answer: A skeleton.}
 \fi
 
+\iftoggle{oneshot}{
+  \printglossary[
+    type=\acronymtype,
+    style=mcolindex,
+    title=Abbreviations,
+    ]
+}{}
+
 \end{multicols}

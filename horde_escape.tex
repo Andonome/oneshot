@@ -17,7 +17,13 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \frontmatter
 
-\frontpage{Escape from the Goblin Horde}{An introductory adventure for BIND}{images/Brian_Garabrant/goblin_tongue.jpg}
+\frontpage{Escape from the Goblin Horde}{%
+  \iftoggle{oneshot}{A oneshot adventure for BIND}{%
+    \iftoggle{hardcore}%
+    {A meat-grinder for foolish adventurers}%
+    {An introductory adventure for BIND}%
+  }%
+}{images/Brian_Garabrant/goblin_tongue.jpg}
 
 \cleardoublepage
 
@@ -33,7 +39,13 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \include{warren.tex}
 
-\include{top.tex}
+\iftoggle{oneshot}{}{
+  \include{top.tex}
+  \iftoggle{hardcore}{
+  }{
+    \include{siege.tex}
+  }
+}
 
 \include{appendix.tex}
 

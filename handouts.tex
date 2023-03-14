@@ -12,11 +12,10 @@
   \input{../core/glossary.tex}
 }{}
 
-\IfFileExists{.hardcore}{
-  \settoggle{hardcore}{true}
-}{
-  \settoggle{hardcore}{false}
-}
+\ifStrSame{\jobname}{handouts_hardcore}%
+  {\settoggle{hardcore}{true}}%
+  {\ifStrSame{\jobname}{handouts_oneshot}%
+    {\settoggle{oneshot}{true}}{}}
 
 \begin{document}
 

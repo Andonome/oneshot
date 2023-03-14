@@ -7,11 +7,6 @@
 
 \settoggle{verbose}{true}
 \newtoggle{hardcore}
-\IfFileExists{.hardcore}{
-  \settoggle{hardcore}{true}
-}{
-  \settoggle{hardcore}{false}
-}
 
 \newtoggle{oneshot}
 \IfFileExists{.oneshot}{

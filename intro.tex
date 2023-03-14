@@ -106,29 +106,40 @@ But they continued raiding, filling the areas with people to eat or transform in
 
 \begin{multicols}{2}
 
-\iftoggle{hardcore}{
-  \subsection{Handouts}
+\subsection{Handouts}
 
-  The handouts contain a map which the \glspl{pc} might be able to access, and an overview of the local city, which they can use for planning the final scene.
+Have a look through the handouts.
+The first page is
+\iftoggle{oneshot}{
+  \iftoggle{core}{a quick summary of the rules (you can ignore Character Creation), and the next is
+  }{}
+  a \gls{gm} sheet, for recording a few notes about the \glspl{pc} and taking general notes on upcoming encounters, or \glspl{npc} with the group.
 }{
-  \subsection{Handouts}
-  The handouts contain example characters which you can hand out to players.
-  There should be more than enough, so if a player's character dies, they can get another one.
-
-  You will also find a few statblocks for villagers who will later become captured and brought to the warren.
+  a map of the upper dungeon level (which the \glspl{pc} may find inside the dungeon)%
+  \iftoggle{hardcore}{%
+    , followed by a map of Dayton town, the last surviving remnants of civilization in the area.
+  }{.}
 }
 
-\subsection{Understanding Boxtext}
+Next, six villagers are given as statblocks.
+You should cut (or tear) these apart, so you can hand them to players to individually keep track of, in case those villagers join the troupe's fight for freedom.
 
-The boxtext is given as an example to jump-off.
-It show you how a room might appear, but it might not appear this way to your players.
+\iftoggle{hardcore}{}{
+  Lastly, you will find a slew of pre-made character sheets.
 
-\begin{boxtext}
-  You enter a room, candlelight flickers off the tiny, broken, beds.
-\end{boxtext}
+  \subsection{Understanding Boxtext}
 
-When you see this description of a room, your \glspl{pc} might not have a single candle, or might have three torches.
-It lays out a picture while reading this module for the first time, but should be modified or forgotten when running it live.
+  The boxtext is given as an example to jump-off.
+  It show you how a room might appear, but it might not appear this way to your players.
+
+  \begin{boxtext}
+    You enter a room, candlelight flickers off the tiny, broken, beds.
+  \end{boxtext}
+
+  When you see this description of a room, your \glspl{pc} might not have a single candle, or might have three torches.
+  It lays out a picture while reading this module for the first time, but should be modified or forgotten when running it live.
+
+}
 
 \subsection{Creation}
 
@@ -141,13 +152,16 @@ It lays out a picture while reading this module for the first time, but should b
       1   & Knife    \\
     \end{rollchart}
   }
-  Players should start the adventure first, and make characters second.
-  They will awaken in a dark room, and slowly pull together their identity while introducing themselves to each other.
-
-  Each character can also roll 1D6 to see if the goblins left them with any items.
+  Players should start the adventure first, and make characters while they (the characters) sit in the dark, getting to know each other.
+  They can decide who they are through introductions.
+  Go through normal character creation,
+  \exRef{core}{core rules}{character_rolls}
+  but ignore the section on giving \glspl{pc} items, as the nura have taken most of their items already.
+  Instead, each player should roll $1D6$ to see if the goblins left them with something by accident.
 }{
-  Turn the character sheets from the handouts upside-down, then have players take one in any order.
-  Give them a moment to study their characters while you hide the rest of the character sheets -- you will need them later.
+  Shuffle the character sheets and hand each player a random one.
+  Note any which have spells, and ask the players to put the right number of coins on the circles to keep track of their ability scores.
+  Give the players a moment to study their characters while you hide the rest of the character sheets -- you will need them later.
 }
 
 \iftoggle{oneshot}{
@@ -159,7 +173,7 @@ It lays out a picture while reading this module for the first time, but should b
   \subsubsection{Basic Actions}
 
   When the players want to do something, tell them the \gls{tn}%
-  \footnote{A \glsentrytext{tn} of 6 = easy, 10 = professional, and 14 = extreme}
+  \footnote{A \glsentrytext{tn} of 6 = easy, 10 = professional, and 14 = extreme.}
   and have them roll 2D6 + some \textit{Attribute + Skill}.
 
   If they need to hide quickly, they might roll Wits + Stealth (\gls{tn} 8).

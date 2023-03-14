@@ -11,16 +11,72 @@
 \iftoggle{core}{
   \input{../core/glossary.tex}
 }{}
+
+\IfFileExists{.hardcore}{
+  \settoggle{hardcore}{true}
+}{
+  \settoggle{hardcore}{false}
+}
+
 \begin{document}
 
 \pagestyle{empty}
 
-\iftoggle{hardcore}{
-  Darton Town Map
-
-  \includesvg{images/Dyson_Logos/town}
+\iftoggle{oneshot}{
+  \iftoggle{core}{
+    \input{../core/overview.tex}
+    \clearpage
+    \shipout\null
+  }{}
+  \settoggle{examplecharacter}{false}
+  \input{cs/GS.tex}
   \clearpage
   \shipout\null
+  \settoggle{examplecharacter}{true}
+}{
+  \pic{Dyson_Logos/upper-handout}
+  \iftoggle{hardcore}{
+    \subsubsection*{Dayton Town}
+    \includesvg{images/Dyson_Logos/town}
+  }{}
+  \clearpage
+  \shipout\null
+}
+
+\setlength{\columnsep}{20pt}
+\begin{multicols}{2}
+
+\prisoner[\NPC{\Hu\F}{Jane}{Warm}{Humms}{Tribe}]
+\vspace{6em}
+
+\prisoner[\NPC{\Hu\M}{Aiden}{Calm}{Um\ldots}{Tribe}]
+\vspace{6em}
+
+\prisoner[\NPC{\Hu\F}{July}{Reasonable}{Folds arms}{Laiqu\"e}]
+
+\vspace{6em}
+
+\prisoner[\NPC{\Hu\M}{Zack}{Fierce}{Points Fingers}{V\'er\"e}]
+\vspace{6em}
+
+\prisoner[\NPC{\Hu\F}{Annie}{Demanding}{Wrinkles nose}{Acquisition}]
+
+\vspace{6em}
+
+\prisoner[\NPC{\Hu\M}{Andrew}{Jovial}{Looks up}{Tribe}]
+
+\vspace{6em}
+
+\end{multicols}
+
+\clearpage
+\shipout\null
+
+\iftoggle{hardcore}{
+  \settoggle{examplecharacter}{false}
+  \input{cs/reset_cs.tex}
+  \input{cs/CS.tex}
+  \input{cs/backpage.tex}
 }{
     \newcommand\printCharacter[1]{
       \input{ex_cs/#1.tex}
@@ -87,49 +143,6 @@
       \printCharacter{Alex}
     \fi
 
-}
-
-\setlength{\columnsep}{20pt}
-\begin{multicols}{2}
-
-\prisoner[\NPC{\Hu\F}{Jane}{Warm}{Humms}{Tribe}]
-\vspace{6em}
-
-\prisoner[\NPC{\Hu\M}{Aiden}{Calm}{Um\ldots}{Tribe}]
-\vspace{6em}
-
-\prisoner[\NPC{\Hu\F}{July}{Reasonable}{Folds arms}{Laiqu\"e}]
-
-\vspace{6em}
-
-\iftoggle{hardcore}{}{
-  \prisoner[\NPC{\Hu\M}{Zack}{Fierce}{Points Fingers}{V\'er\"e}]
-  \vspace{6em}
-}
-
-\prisoner[\NPC{\Hu\F}{Annie}{Demanding}{Wrinkles nose}{Acquisition}]
-
-\vspace{6em}
-
-\prisoner[\NPC{\Hu\M}{Andrew}{Jovial}{Looks up}{Tribe}]
-
-\vspace{6em}
-
-\end{multicols}
-
-\cleardoublepage
-\shipout\null
-
-\iftoggle{oneshot}{
-  \iftoggle{core}{
-    \input{../core/overview.tex}
-    \clearpage
-    \shipout\null
-    \settoggle{examplecharacter}{false}
-  }{}
-  \input{cs/GS.tex}
-}{
-  \pic{Dyson_Logos/upper-handout}
 }
 
 \end{document}

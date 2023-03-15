@@ -54,7 +54,7 @@ a small voice from the corner of the room says
 `\begin{textit} it's all useless, we're all going to eat each other\end{textit}'.
 Chris was captured from a village along with another batch of prisoners.
 
-\N\gls{pc}{\Hu\M}{Chris}{Despondent}{Sighs}{Tribe}
+\NPC{\Hu\M}{Chris}{Despondent}{Sighs}{Tribe}
 \person{1}% STRENGTH
 {0}% DEXTERITY 
 {1}% SPEED
@@ -1333,14 +1333,14 @@ He knows he has the only key to the exit door, so he intends to loose the hell-h
   The party arrive to see him still sawing through the ropes, and have only a single round to stop him before he runs.
 }
 
-\nurawolf[\npc{\A\N\T}{4 Nura Wolves}]
-
 \paragraph{No matter what the party do,}
 the wolves go straight for the kill.
 
 \paragraph{If the party attempt to run through the double doors,}
 they will suddenly find an empty lift-shaft, unless they have taken the lift to the top themselves.
 Have them make a Wits + Athletics check (\gls{tn} 7) to back off before they fall.
+
+\nurawolf[\npc{\A\N\T}{4 Nura Wolves}]
 
 \paragraph{If the party fall into the lift,}
 they end up in the mid-section of the warren.
@@ -1393,15 +1393,6 @@ Anyone \textit{Keeping Edgy} can add their Speed + Combat to the roll, otherwise
 then he will taunt the \glspl{pc} with the key to the outside world he has in is position, and throw it into the nearest ooze.
 He then lets out a giggle and dashes off into the fungal undergrowth, leaving the players to face the hulking pulsating mass.
 
-\iftoggle{hardcore}{%
-  \jelly
-
-  \jelly
-
-}{}
-
-\jelly
-
 \label{grank}
 \npc{\M\N}{Grank}
 \person{-2}% STRENGTH
@@ -1415,8 +1406,17 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
 {Projectiles~1, Athletics~2, Medicine~1, Stealth~2, Tactics~2%
 \knacks{\nuraCaster}
 \Path{\invocation~2, \necromancy~3, \saurecanta~2}}% SKILLS
-{Seeing Stone}% EQUIPMENT
+{\iftoggle{hardcore}{Seeing Stone}{\Dagger}}% EQUIPMENT
 {}
+
+\iftoggle{hardcore}{%
+  \jelly
+
+  \jelly
+
+}{}
+
+\jelly
 
 \iftoggle{hardcore}{
   \magicitem{Seeing Stone}{Clairvoyance}{Alchemy}{Continuous}{Talisman}{3}{1}

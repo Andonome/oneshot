@@ -41,11 +41,11 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \iftoggle{oneshot}{}{
   \include{top.tex}
-  \iftoggle{hardcore}{
-  }{
-    \include{siege.tex}
-  }
 }
+
+\iftoggle{hardcore}{
+  \include{siege.tex}
+}{}
 
 \include{appendix.tex}
 

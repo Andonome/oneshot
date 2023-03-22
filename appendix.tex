@@ -155,6 +155,10 @@ Here are some pre-rolled encounters from that distant realm:
 
 \begin{multicols}{2}
 
+\pic{Decky/examine}
+
+\columnbreak
+
 The rules for riddles are simple -- any question which someone has the knowledge to answer is a fair riddle.
 Asking `how many letters in the Greek word for ``mushroom''?', is not a fair riddle, because someone may not know.
 
@@ -192,7 +196,25 @@ What kind of ball cannot bounce?
 
 \end{quotation}
 
+
 \textbf{Answer: A rider and their mount.}
+
+\iftoggle{oneshot}{
+
+  \begin{quotation}
+  I have township, yet no houses.
+  Forests, but no trees.
+  Rivers, but no water.
+  \end{quotation}
+
+  \textbf{Answer: A map.}
+}{
+  \begin{quotation}
+  What goes through a door but never goes in or comes out?
+  \end{quotation}
+  
+  \textbf{Answer: A keyhole.}
+}
 
 \iftoggle{hardcore}{
 
@@ -209,7 +231,25 @@ What kind of ball cannot bounce?
 
   \textbf{Answer: A cabbage.}
 
+  \begin{quotation}
+
+    There is something I seek.
+
+    While it is bound, it chooses kings and peasants.
+    When it is freed, it foretells war or woe.
+
+    While it bound, it propels men's lusts and furies.
+    When it is freed, it tumbles, falls, and fades.
+
+    While it is bound, life will often thrive.
+    When it is freed, death will often follow.
+
+  \end{quotation}
+
+  \textbf{Answer: Blood.}
+
 }{
+
 
   \begin{quotation}
   What comes once in a minute, twice in a moment, but never in a thousand years?
@@ -261,8 +301,6 @@ Tell me what I am and what I am not.
 \end{quotation}
 
 \textbf{Answer: Water}
-
-\pic{Decky/examine}
 
 \ifnum\month<5
   \ifnum\month>3

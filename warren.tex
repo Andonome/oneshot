@@ -71,6 +71,18 @@ a small voice from the corner of the room says
 `\begin{textit} it's all useless, we're all going to eat each other\end{textit}'.
 Chris was captured from a village along with another batch of prisoners.
 
+\begin{exampletext}
+  Blara the gnome accepted her fate, and her hunger, then began to learn nuramancy -- the sphere of magic which transforms gnomes into goblins and humans into ogres.
+
+  Since then, she routinely enters the make-shift prison cell, and casts a spell on one of the prisoners to turn them into an ogre.
+  The target of the spell becomes ravenous, and eventually eats another prisoner (they have no desire to eat other nura).
+
+  She has made a dozen new ogres this way, but the last time one person was left on his own -- Chris.
+  Since then, he has sat in the darkness, waiting to be eaten.
+  Now the \glspl{pc} have been shunted into the cell with him, he knows his time is short.
+
+\end{exampletext}
+
 \NPC{\Hu\M}{Chris}{Despondent}{Sighs}{Tribe}
 \person{1}% STRENGTH
 {0}% DEXTERITY 
@@ -83,18 +95,6 @@ Chris was captured from a village along with another batch of prisoners.
 {Academics 2, Empathy 1}% SKILLS
 {Nothing}% EQUIPMENT
 {}
-
-\begin{exampletext}
-  Blara the gnome accepted her fate, and her hunger, then began to learn nuramancy -- the sphere of magic which transforms gnomes into goblins and humans into ogres.
-
-  Since then, she routinely enters the make-shift prison cell, and casts a spell on one of the prisoners to turn them into an ogre.
-  The target of the spell becomes ravenous, and eventually eats another prisoner (they have no desire to eat other nura).
-
-  She has made a dozen new ogres this way, but the last time one person was left on his own -- Chris.
-  Since then, he has sat in the darkness, waiting to be eaten.
-  Now the \glspl{pc} have been shunted into the cell with him, he knows his time is short.
-
-\end{exampletext}
 
 Chris explains the situation to the \glspl{pc} (whether or not anyone asks him).
 
@@ -842,6 +842,21 @@ If they say `yes', then he accepts their challenge, and asks what their riddle i
 If they can think of none,
 then the dragon declares that he has won the first round.
 
+\N\gls{pc}{\M}{Makil the Dragon}{Inquisitive}{Drums Fingers}{Acquisition}
+\person{7}% STRENGTH
+{2}% DEXTERITY 
+{5}% SPEED
+{{4}% INTELLIGENCE
+{3}% WITS
+{-2}}% CHARISMA
+{5}% DR
+{1}% COMBAT
+{Aggression~2, Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4
+\knacks{\bloodCaster}
+\Path{\enchantment~2, \fate~3, \invocation~4}}% SKILLS
+{Nothing}% EQUIPMENT
+{}
+
 \paragraph{The rules for riddles}
 are simple -- any question which someone has the knowledge to answer is a fair riddle.
 Asking `how many letters in the Greek word for ``mushroom''?', is not a fair riddle, because someone may not know.
@@ -864,21 +879,6 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
 }{
   the rest of the adventure.
 }
-
-\N\gls{pc}{\M}{Makil the Dragon}{Inquisitive}{Drums Fingers}{Acquisition}
-\person{7}% STRENGTH
-{2}% DEXTERITY 
-{5}% SPEED
-{{4}% INTELLIGENCE
-{3}% WITS
-{-2}}% CHARISMA
-{5}% DR
-{1}% COMBAT
-{Aggression~2, Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4
-\knacks{\bloodCaster}
-\Path{\enchantment~2, \fate~3, \invocation~4}}% SKILLS
-{Nothing}% EQUIPMENT
-{}
 
 \iftoggle{oneshot}{
   \paragraph{If the \glspl{pc} attack the dragon,}
@@ -1077,6 +1077,8 @@ Each margin on the roll allows them an additional round before the horde wakes.
 
 \end{exampletext}
 
+\pic{Decky/armoury}
+
 \begin{boxtext}
 
   Some goblins and three ogres lie sleeping on the floor between workbenches.
@@ -1099,8 +1101,6 @@ Failure will awaken the entire horde.
 \iftoggle{oneshot}{
   You can find stats for the weapons in \autoref{creaturesAndItems}.
 }{}
-
-\pic{Decky/armoury}
 
 \goblin[\npc{\N\T}{\arabic{enemyNo} Goblins}]
 
@@ -1149,6 +1149,8 @@ With 7 \glspl{mp}, the ring has a Metamagic score of 7, allowing it to cast \tex
   The spell can broadly summon any item up to the size of a person.
 }{}
 
+\goblinnuramancer
+
 \magicitem{Scroll of Insight}%
 {Massive Mage Sight}%
 {Alchemy}%
@@ -1173,8 +1175,6 @@ The gnomish word for `morning', activates the light, while the gnomish word for 
 The nura do not know, or have forgotten, these activation words, so they simply keep it under blankets as they find the light irritating.
 
 If wrapped up in heavy sheets and suddenly displayed, the light can blind opponents, as usual.
-
-\goblinnuramancer
 
 \iftoggle{hardcore}{
   \ogre[\npc{\N\T}{2 Docile Ogres}]

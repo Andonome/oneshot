@@ -35,5 +35,4 @@ old
 *.slg
 *.slo
 *.sls
-.oneshot
-.hardcore
+.switch-gls

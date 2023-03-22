@@ -69,8 +69,10 @@
 \iftoggle{hardcore}{
   \settoggle{examplecharacter}{false}
   \input{cs/reset_cs.tex}
-  \input{cs/CS.tex}
-  \input{cs/backpage.tex}
+  \Repeat{8}{
+    \input{cs/CS.tex}
+    \input{cs/backpage.tex}
+  }
 }{
     \newcommand\printCharacter[1]{
       \input{ex_cs/#1.tex}

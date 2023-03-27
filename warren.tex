@@ -645,7 +645,7 @@ all goblins wake up
 
   \begin{itemize}
     \item
-    -2 if any \gls{pc} is larger has a higher Strength than the goblin.
+    -2 if any \gls{pc} has a higher Strength than the goblin.
     \item
     -2 if there are more \glspl{pc} \emph{in the room} than goblins.
     \item
@@ -696,7 +696,7 @@ all goblins wake up
     \end{itemize}
     \item
     The \textit{Weight Rating} tells you what level of Strength Bonus you need to use the weapon unencumbered.
-    If a weapon's Weight Rating is higher than the character's Strength penalty, then every additional point gives them -1 \glspl{ap} at the start of each combat round, and +1 Fatigue Points at the end of combat.
+    If a weapon's Weight Rating is higher than the character's Strength Bonus, then every additional point gives them -1 \glspl{ap} at the start of each combat round, and +1 Fatigue Points at the end of combat.
   \end{itemize}
 
 \end{multicols}
@@ -767,17 +767,19 @@ The lift responds to any password within earshot.
 \paragraph{If anyone tries to cling onto the walls,}
 they will find less purchase than a Sun-screen salesman in a Scotland.
 
-\magicitem{Gnomish Lift}%
-{Wide, Sentient, Levitation}%
-{Alchemy}%
-{5 scenes}%
-{Talisman}%
-{5}%
-{7}
+\iftoggle{oneshot}{}{
+  \magicitem{Gnomish Lift}%
+  {Wide, Sentient, Levitation}%
+  {Alchemy}%
+  {5 scenes}%
+  {Talisman}%
+  {5}%
+  {7}
 
-\paragraph{Understanding this talisman}
-requires the usual Intelligence + Academics roll at \gls{tn} 12.
-However, a successful roll will only allow them to understand the word to take them to where they are, not the word to take them to another floor.
+  \paragraph{Understanding this talisman}
+  requires the usual Intelligence + Academics roll at \gls{tn} 12.
+  However, a successful roll will only allow them to understand the word to take them to where they are, not the word to take them to another floor.
+}
 
 \paragraph{If the \glspl{pc} dawdle too long here,}
 a Raiding party return with more prisoners to place in the cell (room \ref{entrycell}).
@@ -1144,7 +1146,6 @@ This ring is actually three pocket spells -- each ruby in the ring is a separate
 
 The caster can summon anything available for Conjuration level 4.
 With 7 \glspl{mp}, the ring has a Metamagic score of 7, allowing it to cast \textit{Wide} spells, and other Metamagic enhancements.
-
 \iftoggle{oneshot}{%
   The spell can broadly summon any item up to the size of a person.
 }{}
@@ -1421,14 +1422,9 @@ While the place looks serene, it is inhabited by
 }
 
 \paragraph{If the \glspl{pc} approach Grank,}
-he will hide while casting a \textit{Wide, Raging Fireball}.
+he will hide while casting a \textit{Wide, Fireball} (requires 2 rounds to cast, covers 4 squares, and deals $2D6+2$ Damage).
 Finding him in the darkness before he finishes his spell requires a Wits + Vigilance roll, \gls{tn} 10.
 If he is successful, the party make a group roll against \gls{tn} 9 to avoid the fireball ($1D6+3$ Damage).
-\iftoggle{core}{%
-See the core book, page \pageref{edgy} for more on Keeping Edgy to avoid missile attacks.}%
-{
-Anyone \textit{Keeping Edgy} can add their Speed + Combat to the roll, otherwise, they gain no bonus.
-}
 
 \paragraph{If Grank ever feels like his life is under threat,}
 then he will taunt the \glspl{pc} with the key to the outside world he has in is position, and throw it into the nearest ooze.
@@ -1450,11 +1446,12 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
 {\iftoggle{hardcore}{Seeing Stone}{\Dagger}}% EQUIPMENT
 {}
 
-\iftoggle{hardcore}{%
+\iftoggle{oneshot}{}{
   \jelly
+}
 
+\iftoggle{hardcore}{
   \jelly
-
 }{}
 
 \jelly

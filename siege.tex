@@ -82,7 +82,7 @@ They will find the entire situation hopeless, and will not survive without a lot
 Make sure to impress upon them just how many nura wander around the outskirts freely.
 
 \iftoggle{hardcore}{%
-  \deepogre[\npc{\N\T}{2 Ogres}]
+  \deepogre[\npc{\N\T[2]}{2 Ogres}]
 }{
   \deepogre[\npc{\N\M}{Ogre}]
 }
@@ -90,7 +90,7 @@ Make sure to impress upon them just how many nura wander around the outskirts fr
 \iftoggle{hardcore}{%
   \goblin
 }{
-  \goblin[\npc{\N\T}{6 Goblins}]
+  \goblin[\npc{\N\T[1]}{6 Goblins}]
 }
 
 \subsection{Finding the Tower}
@@ -200,7 +200,7 @@ Failure indicates they have been washed downstream, and must take a scene trudgi
 \footnote{Larger party members carrying small ones will gain the standard penalties for carrying a heavy item (or in this case, `party member').  See the core book, page \pageref{weightrating}.}
 }{}
 
-\ogre[\npc{\N\T}{2 Ogres}]
+\ogre[\npc{\N\T[2]}{2 Ogres}]
 
 \smolMapPic{Dyson_Logos/black_tower_f1}{
   \ref{towerPortcullis}/23/44,
@@ -291,7 +291,7 @@ If the roll succeeds, tell the players that the Black Alchemist is hiding on the
 
 \goblinnuramancer
 
-\goblin[\npc{\N\T}{6 Goblins}]
+\goblin[\npc{\N\T[6]}{6 Goblins}]
 
 \mapentry[towerStorage]{Storage Room}
 
@@ -435,9 +435,9 @@ However, the party will still have to decide during each slice of the day if the
 \paragraph{If they decide to recover Fatigue Points by resting,}
 they will need to put up with the additional encounter of goblins riding nura wolves.
 
-\goblin[\npc{\N\T}{7 Goblin Riders}]
+\goblin[\npc{\N\T[7]}{7 Goblin Riders}]
 
-\nurawolf[\npc{\N\A\T}{Nura Wolves}]
+\nurawolf[\npc{\N\A\T[7]}{7 Nura Wolves}]
 
 If, on the other hand, they do not rest, they will not recover Fatigue Points from the journey.
 

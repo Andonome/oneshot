@@ -24,17 +24,17 @@
 
 \widePic{Roch_Hercka/spiral_staircase}
 
-At the other side of this door sits the lonely guard, Bobble.
+At the other side of this door sits the lonely guard, Rubble.
 He only turned into a goblin recently, and he doesn't like it.
 He is also extremely hungry.
 
-\paragraph{If the party attempt to trick Bobble,}
+\paragraph{If the party attempt to trick Rubble,}
 it's not terribly difficult.
 
 \paragraph{If the party simple enter,}
-then Bobble will run as fast as he can, away from the door, in order to alert the rest of the upper warren.
+then Rubble will run as fast as he can, away from the door, in order to alert the rest of the upper warren.
 
-\goblin[\npc{\N\M}{Bobble}]
+\goblin[\npc{\N\M}{Rubble}]
 
 \mapentry[banquet]{Banquet Hall}
 
@@ -81,7 +81,7 @@ Exactly what plans they come up with and how well they work depends entirely on 
 \paragraph{If the party attempt to get the ogres to chase them,}
 the armour-wearing ogres remain where they are, as they have strict orders not to leave the base of the staircase.
 
-\npc{\N\T}{2 Armoured Ogres}
+\npc{\T[2]\N}{2 Armoured Ogres}
 
 \person{6}% STRENGTH
 {0}% DEXTERITY 
@@ -201,7 +201,7 @@ With proper food, the party and the gnomes can rest, regain any Fatigue Points t
 
 \gnomishsoldier[\npc{\Gn\M}{Klaus}]
 
-\N\gls{pc}{\Gn\F}{Tar\'ik the Alchemist}{Nosey}{Picks nose}{Tribe}
+\NPC{\Gn\F}{Tar\'ik the Alchemist}{Nosey}{Picks nose}{Tribe}
 \person{-3}% STRENGTH
 {1}% DEXTERITY 
 {-2}% SPEED
@@ -339,7 +339,7 @@ Currently the room hosts a rabble of goblins, arguing over battle-plans in the c
 \iftoggle{hardcore}{%
   \goblin
 }{
-  \goblin[\npc{\N\T}{4 Bickering Goblins}]
+  \goblin[\npc{\N\T[4]}{4 Bickering Goblins}]
 }
 
 \goblinnuramancer

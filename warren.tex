@@ -511,7 +511,7 @@ The lift (room \ref{lift}) cannot take the full weight of an ogre plus the priso
   \goblinnuramancer[\npc{\M\N}{Goblin Nuramancer}]
 }{
   \iftoggle{oneshot}{
-    \goblin[\npc{\T\F}{Goblin}]
+    \goblin[\npc{\N\F}{Goblin}]
   }{
     \goblin[\npc{\T\N}{2 Goblins}]
   }
@@ -671,12 +671,12 @@ all goblins wake up
 
 \pic{Decky/screech}
 
-\goblin[\npc{\T\N}{2 Goblins on the table}]
+\goblin[\npc{\T[2]\N}{2 Goblins on the table}]
 
-\goblin[\npc{\T\N}{2 Goblins on the oven}]
+\goblin[\npc{\T[2]\N}{2 Goblins on the oven}]
 
 \iftoggle{hardcore}{
-  \goblin[\npc{\T\N}{2 Goblins on the floor}]
+  \goblin[\npc{\T[2]\N}{2 Goblins on the floor}]
 }{}
 
 \newRule{Weapons}{
@@ -1382,7 +1382,7 @@ the wolves go straight for the kill.
 they will suddenly find an empty lift-shaft, unless they have taken the lift to the top themselves.
 Have them make a Wits + Athletics check (\gls{tn} 7) to back off before they fall.
 
-\nurawolf[\npc{\A\N\T}{4 Nura Wolves}]
+\nurawolf[\npc{\A\N\T[4]}{4 Nura Wolves}]
 
 \paragraph{If the party fall into the lift,}
 they end up in the mid-section of the warren.

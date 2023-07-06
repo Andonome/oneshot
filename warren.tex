@@ -669,16 +669,6 @@ all goblins wake up
   Two more goblins are sleeping in a corner, making six in total.
 }
 
-\pic{Decky/screech}
-
-\goblin[\npc{\T[2]\N}{2 Goblins on the table}]
-
-\goblin[\npc{\T[2]\N}{2 Goblins on the oven}]
-
-\iftoggle{hardcore}{
-  \goblin[\npc{\T[2]\N}{2 Goblins on the floor}]
-}{}
-
 \newRule{Weapons}{
  \begin{itemize}
     \item
@@ -717,6 +707,16 @@ all goblins wake up
 
 }
 
+\pic{Decky/screech}
+
+\goblin[\npc{\T[2]\N}{2 Goblins on the table}]
+
+\iftoggle{hardcore}{
+  \goblin[\npc{\T[4]\N}{4 Goblins on the floor}]
+}{
+  \goblin[\npc{\T[2]\N}{2 Goblins on the oven}]
+}
+
 \paragraph{If the players try to find weapons,}%
 \iftoggle{oneshot}{
   they can find plenty of make-shift weapons around the kitchen.
@@ -728,6 +728,8 @@ all goblins wake up
  }{
   they can use either of the two cast iron skillets.
 }
+
+\widePic[t]{Roch_Hercka/dragon}
 
 \paragraph{If the party raid the room for food,}
 they'll find a few canteens of water, one of wine, and some spare sacks of vegetables.
@@ -785,8 +787,6 @@ they will find less purchase than a Sun-screen salesman in a Scotland.
 a Raiding party return with more prisoners to place in the cell (room \ref{entrycell}).
 See \autopageref{raidingParty} for details.
 
-\widePic[t]{Roch_Hercka/dragon}
-
 \mapentry[dragonApproach]{Dragon's Approach}
 
 \begin{exampletext}
@@ -829,21 +829,6 @@ The dragon's eventual goal is to obtain the rest of the treasure, then return th
 then he agrees to kill any in the current area, but will not journey to another floor.
 In return, he wants all the treasure out of the treasure room.
 
-\paragraph{If the party offer to split the treasure,}
-he refuses, unless they give him a good reason.
-
-\iftoggle{hardcore}{
-  The treasure chinks noisily of course, so the party will then receive a -1 penalty to all Stealth checks.}{}
-
-\paragraph{If the party push for more treasure,}
-the dragon asks if they would like to challenge him to a game of riddles.
-Each point anyone scores allows them to demand a single item, such as a chest, or quiver.
-
-If they say `yes', then he accepts their challenge, and asks what their riddle is.%
-\footnote{Use of the internet is prohibited by trans-dimensional law, common sense, basic decency, and the Geneva Convention.}
-If they can think of none,
-then the dragon declares that he has won the first round.
-
 \NPC{\E}{Makil the Dragon}{Inquisitive}{Drums Fingers}{Acquisition}
 \person{7}% STRENGTH
 {2}% DEXTERITY 
@@ -858,6 +843,21 @@ then the dragon declares that he has won the first round.
 \Path{\enchantment~2, \fate~3, \invocation~4}}% SKILLS
 {Nothing}% EQUIPMENT
 {}
+
+\paragraph{If the party offer to split the treasure,}
+he refuses, unless they give him a good reason.
+
+\iftoggle{hardcore}{
+  The treasure chinks noisily of course, so the party will then receive a -1 penalty to all Stealth checks.}{}
+
+\paragraph{If the party push for more treasure,}
+the dragon asks if they would like to challenge him to a game of riddles.
+Each point anyone scores allows them to demand a single item, such as a chest, or quiver.
+
+If they say `yes', then he accepts their challenge, and asks what their riddle is.%
+\footnote{Use of the internet is prohibited by trans-dimensional law, common sense, basic decency, and the Geneva Convention.}
+If they can think of none,
+then the dragon declares that he has won the first round.
 
 \paragraph{The rules for riddles}
 are simple -- any question which someone has the knowledge to answer is a fair riddle.
@@ -1021,6 +1021,8 @@ The fireflies have survived on the enlarged slug, which the nura keep alive with
 
 \end{exampletext}
 
+\nuraslug[\npc{\T[9]\N}{20 Nura Slugs}]
+
 \paragraph{If the \glspl{pc} run up the stairs,}
 have them roll initiative against the slugs.
 
@@ -1035,8 +1037,6 @@ they find two dead gnomes, one with a torch, the other with a Portal Scroll.
 \iftoggle{oneshot}{%
   As with the others, the Portal Scroll requires a riddle to be answered, takes four rounds before it activates, and vanishes once used.
 }{}
-
-\nuraslug[\npc{\T\N}{20 Nura Slugs}]
 
 \mapentry[greatHall]{The Great Hallway}
 
@@ -1071,16 +1071,6 @@ Each margin on the roll allows them an additional round before the horde wakes.
 
 \label{laddertop}
 
-\begin{exampletext}
-
-  Frightened gnomes fled their bedrooms from the nura who had rushed through the portal.
-  Most were caught, but some managed to run up the trapped ladders, having memorized the sequence perfectly.
-  As the last one got to the top of the ladders, he turned to cast an illusion of a solid wall in order to fool anyone coming up behind him.
-
-\end{exampletext}
-
-\pic{Decky/armoury}
-
 \begin{boxtext}
 
   Some goblins and three ogres lie sleeping on the floor between workbenches.
@@ -1089,6 +1079,14 @@ Each margin on the roll allows them an additional round before the horde wakes.
   On one table, you can see a pile of weapons -- short swords and spears -- piled on a table.
 
 \end{boxtext}
+
+\begin{exampletext}
+
+  Frightened gnomes fled their bedrooms from the nura who had rushed through the portal.
+  Most were caught, but some managed to run up the trapped ladders, having memorized the sequence perfectly.
+  As the last one got to the top of the ladders, he turned to cast an illusion of a solid wall in order to fool anyone coming up behind him.
+
+\end{exampletext}
 
 Picks, shovels, wood, short swords, shortbows, and all manner of crafting and mining equipment litter the room.
 
@@ -1104,11 +1102,13 @@ Failure will awaken the entire horde.
   You can find stats for the weapons in \autoref{creaturesAndItems}.
 }{}
 
-\goblin[\npc{\N\T}{\arabic{enemyNo} Goblins}]
+\pic{Decky/armoury}
+
+\goblin[\npc{\T[\arabic{enemyNo}]\N}{\arabic{enemyNo} Goblins}]
 
 \addtocounter{enemyNo}{-2}
 
-\ogre[\npc{\N\T}{\arabic{enemyNo} Ogres}]
+\ogre[\npc{\T[\arabic{enemyNo}]\N}{\arabic{enemyNo} Ogres}]
 
 \mapentry[grandLibrary]{The Grand Library}
 

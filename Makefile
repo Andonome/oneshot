@@ -3,7 +3,7 @@ output=normal
 normal: horde_escape.pdf handouts.pdf
 horde_escape.pdf: horde_escape.tex intro.tex warren.tex top.tex appendix.tex svg-inkscape/upper_svg-tex.pdf
 	pdflatex horde_escape.tex
-svg-inkscape/upper_svg-tex.pdf: config/ images/
+svg-inkscape/upper_svg-tex.pdf: config/bind.sty images/
 	pdflatex -shell-escape horde_escape.tex
 	pdflatex horde_escape.tex
 	pdflatex horde_escape.tex

@@ -11,7 +11,10 @@
 \ifStrSame{\jobname}{hardcore_horde_escape}%
   {\settoggle{hardcore}{true}}%
   {\ifStrSame{\jobname}{oneshot_horde_escape}%
-    {\settoggle{oneshot}{true}}{}}
+    {\settoggle{oneshot}{true}
+    \settoggle{verbose}{false}
+    }{}
+  }
 
 \ifStrSame{\jobname}{handouts_hardcore}%
   {\settoggle{hardcore}{true}}%

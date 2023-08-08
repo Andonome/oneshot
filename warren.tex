@@ -220,7 +220,7 @@ then he eats one of them, and joins Blara into the door, leaving the rest in the
 
 She returns some hours later, throws in a new prisoner (a new \gls{pc}!), and the encounter begins again with a new victim.
 
-\newRule{End of Scene Regeneration}{
+\newRule{End of \Glsentrytext{interval} Regeneration}{
   Each time the party enter a new situation (often when they simply enter a new room), they regain 40\% of their base Fate Points (\glspl{fp}).
   Those with a base of 5 \glspl{fp} regain 2, and those with a base of 10 regain 4.
 
@@ -230,7 +230,7 @@ She returns some hours later, throws in a new prisoner (a new \gls{pc}!), and th
 \mapentry[escapeShaft]{Exit Shaft}
 
 \iftoggle{oneshot}{%
-  \paragraph{New Scenes}
+  \paragraph{New \Glsentrytext{interval}}
   mean regeneration.
   As the \glspl{pc} enter this new room, they heal 40\% of their \textit{Base \glspl{fp}}, so characters with 5 \glspl{fp} regain 2, and characters with 10 \glspl{fp} regain 4.
   Any characters with Mana Points (\glspl{mp}) regain 2 + their Wits Bonus.
@@ -367,7 +367,7 @@ reveals two large knives which can be used as \emph{daggers}.
 \nurarat[\npc{\N\A}{Nura Rat}]
 
   \paragraph{Once the \glspl{pc} leave the room,}
-  let them regenerate 40\% of their Fate Points, because a new scene has ended.
+  let them regenerate $1D6$ of their Fate Points, because a new \gls{interval} has ended.
 
 
 \mapentry[spellCasters]{Spellcaster Arguments}
@@ -612,11 +612,6 @@ Counting from one to seven in Gnomish opens, or closes, the portal.
   So a character with 6 Fatigue Points who gets reduced to 3 \glspl{hp} would take a -3 penalty to all actions.
 }{}
 
-\iftoggle{oneshot}{
-  \paragraph{Staying to stare at the portal}
-  counts as a new area, and therefore a new scene, so the \glspl{pc} can regenerate 40\% of their \glspl{fp} and some \glspl{mp} again.
-}{}
-
 \mapentry[kitchen]{Kitchen}
 
 \paragraph{If the \glspl{pc} have avoided making a lot of noise nearby,}
@@ -738,12 +733,6 @@ they'll find a few canteens of water, one of wine, and some spare sacks of veget
 The players can unlock the cold store%
 \footnote{A cold store is an old fashioned fridge where people put ice to keep food from going bad.}
   with a Dexterity + Larceny roll at \gls{tn} 10 to pick the lock, at which point they discover that the larder is still full of food.
-
-\iftoggle{oneshot}{
-  \paragraph{Resting a while}
-  in the kitchen regenerates a number of Fatigue Points equal to half the player's current \glspl{hp} (rounded up).
-  And of course, at the end of the scene each character also regenerates 40\% of their \glspl{fp}.
-}{}
 
 \mapentry[lift]{The Gnomish Lift}
 
@@ -876,12 +865,7 @@ He will then decorate the statue with magical items.
 Dragons think the answer is obvious.}
 
 \paragraph{If the dragon parts on good terms,}
-he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp}), and casts a \textit{Fortune} spell on the weakest member, allowing them to receive +1 to their Combat Skill for
-\iftoggle{hardcore}{%
-  three scenes.
-}{
-  the rest of the adventure.
-}
+he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp}), and casts a \textit{Fortune} spell on the weakest member, allowing them to receive +1 to their Combat Skill for the rest of the adventure.
 
 \iftoggle{oneshot}{
   \paragraph{If the \glspl{pc} attack the dragon,}
@@ -1003,7 +987,7 @@ the children know to know to keep quiet and to follow, but they will be at the b
 
 There are six children in total, and they each have a Weight Rating between 1 and 2.
 \iftoggle{oneshot}{
-  Characters can only carry a Weight Rating equal or less than their Strength Bonus, or they will take penalties to their \glspl{ap}, and gain Fatigue Points at the end of each scene of activity.
+  Characters can only carry a Weight Rating equal or less than their Strength Bonus, or they will take penalties to their \glspl{ap}, and gain Fatigue Points at the end of each \gls{interval} of activity.
 
   \paragraph{If the \glspl{pc} rest,}
   Remember to have them heal Fatigue Points equal to half their \glspl{hp}.

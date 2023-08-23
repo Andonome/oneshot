@@ -21,11 +21,9 @@
 
 \begin{multicols}{2}
 
-\newRule{Re-Rolls \& Group Rolls}{
-  When players roll $2D6$ to perform an action, the dice tell you if the situation is favourable or not.
-  Players do not re-roll dice unless the situation has changed.
+\newRule{Team Rolls}{
 
-  When a group of people want to do the same thing (sneaking, speaking, running), they don't all roll to check the situation -- only one player rolls dice, and all the players use the same result for their characters.
+  \input{config/rules/actions_team.tex}
 
   \paragraph{Example 1:}
   the troupe are sneaking down a hallway, and have to roll Stealth + Dexterity (\gls{tn} 9).
@@ -220,10 +218,11 @@ then he eats one of them, and joins Blara into the door, leaving the rest in the
 She returns some hours later, throws in a new prisoner (a new \gls{pc}!), and the encounter begins again with a new victim.
 
 \newRule{End of \Glsentrytext{interval} Regeneration}{
-  Each time the party enter a new situation (often when they simply enter a new room), they regain 40\% of their base Fate Points (\glspl{fp}).
-  Those with a base of 5 \glspl{fp} regain 2, and those with a base of 10 regain 4.
+  \input{config/rules/interval.tex}
 
-  Those with \glspl{mp} can also regain 2 \glspl{mp} plus their Wits Bonus.
+  Being underground, the \glspl{pc} will only regenerate 1 \gls{mp} per interval, which goes to whichever \gls{pc} has the most \glspl{mp} lost.
+
+  Of course the \glspl{pc} won't know exactly how long they've spent underground, but they will at least be able to count the number of resting periods they take.
 }
 
 \mapentry[escapeShaft]{Exit Shaft}
@@ -274,15 +273,6 @@ They cannot re-roll this result, but they can try to climb again, in which case:
 
 \paragraph{If a \emph{player} figures out the trap,}
 all rolls can be dispensed with, and the \glspl{pc} can ascend to room \ref{laddertop} at the top.
-
-\newRule{\Glsfmtlong{dr} \& Vitals Shots}{
-
-  \Gls{dr} reduce Damage taken due to armour, or just a creature's thick hide.
-  The nura rat has `{\scshape \gls{dr} 2}', so it removes 2 from any Damage Taken.
-
-  We assume everyone is trying to target sensitive areas, like the throat, groin, and eyes, whenever they can, to hit more exposed areas.
-  If anyone hits 5 points over what they need to hit the rat, they get a `\textit{Vitals Shot}', which ignores the \gls{dr} entirely, as the attack hits a sensitive area.
-}
 
 \mapentry[diningRoom]{Dining Room}
 
@@ -665,40 +655,26 @@ all goblins wake up
 }
 
 \newRule{Weapons}{
- \begin{itemize}
-    \item
-    The \textit{Attack Bonus} adds to their Dexterity + Combat roll when fighting.
-    \item
-    The \textit{Damage Bonus} adds to their Damage.
-    Anyone with +4 Damage replaces their Damage Bonus with a $D6$, so $1D6+4 = 2D6$ Damage, and $1D6+5 = 2D6+1$ Damage.
-    \item
-    The \textit{\glspl{ap} Cost} shows how many \glspl{ap} the character must spend to use the weapon (no matter who instigated the attack).
-    \begin{itemize}
-      \item
-      Characters cannot declare actions when they have less than 1 \glspl{ap} left, but they can (and must) still spend \glspl{ap} to defend themselves.
-      \item
-      Characters can get pushed into negative \glspl{ap} when they are forced to Defend themselves, which then become a penalty (being on -2 \glspl{ap} means a -2 penalty to all actions).
-    \end{itemize}
-    \item
-    The \textit{Weight Rating} tells you what level of Strength Bonus you need to use the weapon unencumbered.
-    If a weapon's Weight Rating is higher than the character's Strength Bonus, then every additional point gives them -1 \glspl{ap} at the start of each combat round, and +1 Fatigue Points at the end of combat.
-  \end{itemize}
 
-\end{multicols}
+  \end{multicols}
 
-\begin{nametable}[YXYYYY]{Kitchen Weapons}
+  \input{config/rules/weight}
 
-  \textbf{No.} & \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\glspl{ap} Cost} & \textbf{Weight Rating} \\\hline
+  \input{config/rules/weapons.tex}
 
-  1 & Broom & 1 & 0 & 2 & -1 \\
-  4 & Small\chair \\
-  2 & \showWeapon{\Dagger}  \\
-  2 & \showWeapon{\skillet} \\
-  4 & \showWeapon{\Log} \\
-  1 & \showWeapon{\woodaxe} \\
+  \begin{nametable}[YXYYYY]{Kitchen Weapons}
 
-  \end{nametable}
-\begin{multicols}{2}
+    \textbf{No.} & \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\glspl{ap} Cost} & \textbf{Weight Rating} \\\hline
+
+    1 & Broom & 1 & 0 & 2 & -1 \\
+    4 & Small\showWeapon{\chair} \\
+    2 & \showWeapon{\Dagger}  \\
+    2 & \showWeapon{\skillet} \\
+    4 & \showWeapon{\Log} \\
+    1 & \showWeapon{\woodaxe} \\
+
+    \end{nametable}
+  \begin{multicols}{2}
 
 }
 
@@ -872,23 +848,6 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
   His {\scshape \gls{dr} 5} means he reduces all Damage by 5, unless the attacker hits 5 over the \gls{tn} to attack him (a total of 15), achieving a `Vitals Shot'.
 }{}
 
-\newRule{Projectiles}{
-  To use shortbows, crossbows, or just throwing a rock at someone, the player rolls $2D6$ plus their character's Dexterity + Projectiles.
-
-  The basic \gls{tn} is 7, but can go up for targets who are farther away.
-
-  If \glspl{npc} decide to \textit{Keep Edgy} (watching out for missile attacks), they can add their Speed + Vigilance to the \gls{tn}.
-  This costs 1 \glspl{ap}, as they need to spend time looking around the room to see where archers (or spellcasters) are.
-
-  So a goblin with Speed 2, Vigilance 1, would be \gls{tn} 7 to hit normally, but once they spend 1 \glspl{ap} to Keep Edgy, their \gls{tn} would be 10.
-
-  \begin{itemize}
-    \item
-    Shortbows deal $1D6-1$ Damage.
-    \item
-    Improvised projectiles take a -2 penalty to hit and -2 Damage.
-  \end{itemize}
-}
 
 \mapentry[treasureRoom]{The Treasure Room}
 
@@ -937,6 +896,19 @@ It can also be cast on a passageway, which obstructs it by adding a magical barr
 \exRef{core}{core rules}{spellLock}
 
 \end{multicols}
+
+\newRule{Projectiles}{
+  \begin{itemize}
+    \item
+    Players roll Dexterity + Projectiles against \tn{6} to hit targets.
+    \item
+    Every 5 steps adds +1 to the \gls{tn}.
+    \item
+    When a player hits the \gls{tn} precisely, they miss their first target, but hit any other target behind.
+    \item
+    Shortbows deal only $1D6-1$ Damage.
+  \end{itemize}
+}
 
 \section{Mid Levels}
 
@@ -1311,6 +1283,17 @@ Take the last two farmers from the handout to join the troupe.
   However, they deal only $1D6-1$ Damage.
 }{}
 
+\newRule{\Glsfmtlong{dr} \& Vitals Shots}{
+
+  \input{config/rules/armour.tex}
+
+  \Gls{dr} reduce Damage taken due to armour, or just a creature's thick hide.
+  The nura wolves have `{\scshape \gls{dr} 2}', so they remove 2 from any Damage Taken.
+
+  We assume everyone is trying to target sensitive areas, like the throat, groin, and eyes, whenever they can, to hit more exposed areas.
+  If anyone hits 5 points over what they need to hit the wolves, they get a `\textit{Vitals Shot}', which ignores the \gls{dr} entirely, as the attack hits a sensitive area.
+}
+
 \mapentry[trappedHall]{Trapped Hallway}
 
 \begin{boxtext}
@@ -1349,9 +1332,9 @@ If this happens, explain that their foot or hand begins to harden, then turn to 
 remind them that they cannot see where the trap starts and where it ends.
 If they avoid stepping into the trap, they can make a Speed + Athletics roll, \gls{tn} 9, to jump over the afflicted area.
 
-\widePic{Roch_Hercka/garden}
-
 \mapentry[topShaft]{The Top of the Shaft}
+
+\widePic{Roch_Hercka/garden}
 
 \begin{boxtext}
 
@@ -1422,7 +1405,7 @@ If he is successful, the party make a group roll against \gls{tn} 9 to avoid the
 
 \paragraph{If Grank ever feels like his life is under threat,}
 then he will taunt the \glspl{pc} with the key to the outside world he has in is position, and throw it into the nearest ooze.
-He then lets out a giggle and dashes off into the fungal undergrowth, leaving the players to face the hulking pulsating mass.
+He then lets out a giggle and dashes off into the fungal undergrowth, leaving the players to face the hulking, pulsating, mass.
 
 \label{grank}
 \npc{\M\N}{Grank}

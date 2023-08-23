@@ -99,7 +99,7 @@ But they continued raiding, filling the areas with people to eat or transform in
 
 \end{multicols}
 
-\section{\Glsfmttext{gm} Considerations}
+\section{Preparations}
 
 \begin{multicols}{2}
 
@@ -170,21 +170,27 @@ You should cut (or tear) these apart, so you can hand them to players to individ
   These rules will provide enough for basic actions.
   For anything else, just go with what seems appropriate and keep the ruling consistent.
 
-  \subsubsection{Basic Actions}
+  \input{config/rules/attributes.tex}
 
-  When the players want to do something, tell them the \gls{tn}%
-  \footnote{A \glsentrytext{tn} of 6 = easy, 10 = professional, and 14 = extreme.}
-  and have them roll 2D6 + some \textit{Attribute + Skill}.
+  \input{config/rules/skills.tex}
 
-  If they need to hide quickly, they might roll Wits + Stealth (\gls{tn} 8).
-  If they need to bust open a door, they might roll Strength + Crafts (\gls{tn} 10).
-  When fleeing from the enemy, they might roll Speed + Athletics (\gls{tn} 7 plus the enemy's Speed + Athletics).
+  \subsubsection*{Fate}
 
-  In all cases, you can make the number up depending on what seems right, but you should tell the players the \gls{tn} before the roll.
-  If the nura are acting against them, you don't need to make another roll for the nura -- simply add the nura's Attribute + Skill pair to the roll.
+  \input{config/rules/fate.tex}
 
-  \subsubsection{Statblocks}
-  Monster statblocks look like this:
+  \subsubsection*{\Glsfmtplural{fatigue}}
+  \input{config/rules/fatigue.tex}
+
+  \input{config/rules/actions_basic.tex}
+
+  \input{config/rules/actions_resisted.tex}
+
+  \subsection*{Combat}
+
+  \input{config/rules/hitting_things.tex}
+
+  \paragraph{Monster Statblocks}
+  look like this:
 
   \npc{\N\F}{Ogre}
   \person{4}% STRENGTH
@@ -199,52 +205,9 @@ You should cut (or tear) these apart, so you can hand them to players to individ
   {\Dagger}% EQUIPMENT
   {}
 
-  The top rows are the \textit{Attributes}, and the Skills are marked below.
-  Almost all rolls involve adding some Attribute + Skill pairing, and many gain an advantage for having a tool, such as a weapon.
-
-  \subsubsection{Combat}
-
-  \begin{itemize}
-
-    \item
-    \textit{To make an attack,} players roll 2D6 + Dexterity + Combat at a \gls{tn} equal to the \gls{npc}'s `{\scshape Att}'ack.
-    \item
-    If they hit the \gls{npc}, then they deal $1D6$ Damage, plus their Strength Bonus (mark off the \gls{npc}'s \glspl{hp} boxes with a pencil).
-    \item
-    \emph{However}, if the player does not succeed in the roll, the \gls{npc} removes the \gls{pc}'s \glspl{fp}.
-  \begin{itemize}
-    \item
-    \Glspl{fp} represent a limited store of luck each character has.
-    \item
-    When a character has no more \glspl{fp}, they must mark off \glspl{hp}.
-    \item
-    For example, the ogre above deals $2D6+1$ damage.
-    If she attacked a \gls{pc} and rolled a `9' for Damage, the player might mark off 5 \glspl{fp} then 4 \glspl{hp}.
-  \end{itemize}
-    \item
-    The aggressor always has the upper hand, so if the \gls{npc} attacks a \gls{pc} (instead of a \gls{pc} attacking the \gls{npc}) then the \gls{npc} gains +1 to their {\scshape Att}.
-  \begin{itemize}
-    \item
-    There is no difference between `attack' and `defence' -- the aggressor simply gains an advantage.
-  \end{itemize}
-    \item
-    Everyone starts combat with some \glspl{ap} shown on their sheet and spends 1 \glspl{ap} each time they move, each time they attack, or are attacked.
-  \begin{itemize}
-    \item
-    If there is any disagreement about who goes first, then whoever has the most \glspl{ap} goes first.
-  \end{itemize}
-
-  \end{itemize}
-
-  When combat starts, look at the lower half of the statblock:
-
-  \hrulefill
-
-  {\scshape Att 10, \glspl{ap} 5, Dam $2D6+1$}
-
-  10 \glspl{hp} {\large\Repeat{5}{\sqn}\Repeat{5}{\sqr}}
-
-  Once all \glspl{ap} have been spent, the round ends, and everyone refreshes their \glspl{ap}.
+  This ogre has \arabic{ap}~\glspl{ap}, and Attack \arabic{att}, so when she attacks, put a coin on your \gls{gm} sheet at `\arabic{ap}', and remove one for each attack.
+  If a \gls{pc} attacks her, they roll $2D6$ plus their Attack, and try to beat her \gls{tn} of \arabic{att}.
+  If the \gls{pc} rolls a tie, they can choose to both deal and take Damage,or neither.
 
 }{}
 

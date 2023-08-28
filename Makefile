@@ -14,7 +14,7 @@ handouts.pdf: images handouts.tex $(wildcard ex_cs/*)
 .switch-gls:
 	touch -r Makefile .switch-gls
 
-oneshot: oneshot_horde_escape.pdf handouts_oneshot.pdf .switch-gls
+oneshot: oneshot_horde_escape.pdf oneshot_handouts.pdf .switch-gls
 oneshot_horde_escape.pdf: main.tex intro.tex warren.tex appendix.tex svg-inkscape/lower_svg-tex.pdf
 	pdflatex -jobname oneshot_horde_escape main.tex
 	rm -f .switch-gls
@@ -24,11 +24,11 @@ svg-inkscape/lower_svg-tex.pdf: $(wildcard config/*) images .switch-gls
 	pdflatex -jobname oneshot_horde_escape main.tex
 	makeglossaries oneshot_horde_escape
 
-handouts_oneshot.pdf: images handouts.tex $(wildcard ex_cs/*) .switch-gls
-	pdflatex -shell-escape -jobname handouts_oneshot handouts.tex
+oneshot_handouts.pdf: images handouts.tex $(wildcard ex_cs/*) .switch-gls
+	pdflatex -shell-escape -jobname oneshot_handouts handouts.tex
 	rm -f .switch-gls
 
-hardcore: hardcore_horde_escape.pdf handouts_hardcore.pdf
+hardcore: hardcore_horde_escape.pdf hardcore_handouts.pdf
 hardcore_horde_escape.pdf: main.tex intro.tex warren.tex top.tex siege.tex appendix.tex svg-inkscape/black_tower_f5_svg-tex.pdf
 	pdflatex -jobname hardcore_horde_escape main.tex
 svg-inkscape/black_tower_f5_svg-tex.pdf: $(wildcard config/*) images
@@ -36,8 +36,8 @@ svg-inkscape/black_tower_f5_svg-tex.pdf: $(wildcard config/*) images
 	pdflatex -jobname hardcore_horde_escape main.tex
 	pdflatex -jobname hardcore_horde_escape main.tex
 
-handouts_hardcore.pdf: images handouts.tex
-	pdflatex -shell-escape -jobname handouts_hardcore handouts.tex
+hardcore_handouts.pdf: images handouts.tex
+	pdflatex -shell-escape -jobname hardcore_handouts handouts.tex
 
 config/bind.sty:
 	git submodule update --init

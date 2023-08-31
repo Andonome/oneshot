@@ -168,7 +168,10 @@ she takes the only light out of the room.
 \Path{\illusion~1, \conjuration~2,\saurecanta~2}
 }% SKILLS
 {\Dagger, torch, human foot\iftoggle{oneshot}{}{, map}}% EQUIPMENT
-{}
+{
+  \setcounter{Wyldcrafting}{2}
+  \knacks{\snapcaster}
+}
 
 \paragraph{If Blara's spell is interrupted,}
 she has to start again.
@@ -801,12 +804,12 @@ In return, he wants all the treasure out of the treasure room.
 {{4}% INTELLIGENCE
 {3}% WITS
 {-2}}% CHARISMA
-{5}% DR
+{}% DR
 {1}% COMBAT
 {Aggression~2, Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4
 \Path{\enchantment~2, \fate~3, \invocation~4}}% SKILLS
 {Nothing}% EQUIPMENT
-{}
+{\hide{5}}
 
 \paragraph{If the party offer to split the treasure,}
 he refuses, unless they give him a good reason.

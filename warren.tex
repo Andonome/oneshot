@@ -381,7 +381,7 @@ The two spell casters cannot figure out what the scrolls on the table do, despit
 they make a Group Roll with Dexterity + Stealth, \gls{tn} 10.
 \iftoggle{oneshot}{As before, one player rolls 2D6, and everyone adds their own Dexterity + Stealth.
 If a single \gls{pc} fails, everyone fails.}{}%
-\exRef{core}{core rules}{grouproll}
+\exRef{core}{core rules}{teamwork}
 
 \paragraph{If the goblins spot the party,}
 they attempt to flee.
@@ -449,7 +449,7 @@ Once the last line is spoken, the scroll activates (the rest does not need to be
   If any say `yes', have them mark off a Story Point (on the back of their character sheet) and explain where they learnt the language.
 
   Every time players spend a Story Point, the character gains 1 \glspl{xp} for every Story Point marked off so far (so the second gives 2 \glspl{xp}, the third gives 3, and so on).%
-  \exRef{core}{core rules}{stories}
+  \exRef{stories}{core rules}{stories}
 
   \paragraph{Understanding the scrolls}
   requires more than being literate.
@@ -653,6 +653,12 @@ The players can unlock the cold store%
 
 \mapentry[lift]{The Gnomish Lift}
 
+The gnomes created the lift with the Force sphere.
+It can lift a combined Weight Rating of 16, and safely descend with a total Weight Rating of 26 standing on it.%
+\footnote{A creature's Weight Rating is equal to its \glspl{hp}.
+Some items count towards this total, but items with a negative Weight Rating do not.}
+If the party step on it with a greater Weight Rating than this, each additional point inflicts 2 Fatigue Points on everyone in the lift upon impact with the ground.
+
 \begin{boxtext}
 
   The great double doors swing open, revealing a wide, empty room.
@@ -660,12 +666,6 @@ The players can unlock the cold store%
   The room appears otherwise empty.
 
 \end{boxtext}
-
-The gnomes created the lift with the Force sphere.
-It can lift a combined Weight Rating of 16, and safely descend with a total Weight Rating of 26 standing on it.%
-\footnote{A creature's Weight Rating is equal to its \glspl{hp}.
-Some items count towards this total, but items with a negative Weight Rating do not.}
-If the party step on it with a greater Weight Rating than this, each additional point inflicts 2 Fatigue Points on everyone in the lift upon impact with the ground.
 
 The lift responds to magical passwords -- the gnomish words for `farm' (for the top), `sleep' (for the middle), and `food' (for the bottom).
 The various ogres and goblins who use the lift only know the passwords for the bottom and middle section.
@@ -841,19 +841,6 @@ It can also be cast on a passageway, which obstructs it by adding a magical barr
 
 \end{multicols}
 
-\newRule{Projectiles}{
-  \begin{itemize}
-    \item
-    Players roll Dexterity + Projectiles against \tn{6} to hit targets.
-    \item
-    Every 5 steps adds +1 to the \gls{tn}.
-    \item
-    When a player hits the \gls{tn} precisely, they miss their first target, but hit any other target behind.
-    \item
-    Shortbows deal only $1D6-1$ Damage.
-  \end{itemize}
-}
-
 \section{Mid Levels}
 
 \begin{multicols}{2}
@@ -906,6 +893,19 @@ There are six children in total, and they each have a Weight Rating between 1 an
   \paragraph{If the \glspl{pc} rest,}
   Remember to have them heal Fatigue Points equal to half their \glspl{hp}.
 }{}
+
+\newRule{Projectiles}{
+  \begin{itemize}
+    \item
+    Players roll Dexterity + Projectiles against \tn{6} to hit targets.
+    \item
+    Every 5 steps adds +1 to the \gls{tn}.
+    \item
+    When a player hits the \gls{tn} precisely, they miss their first target, but hit any other target behind.
+    \item
+    Shortbows deal only $1D6-1$ Damage.
+  \end{itemize}
+}
 
 \mapentry[slugHall]{Slug Hall}
 

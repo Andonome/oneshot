@@ -476,69 +476,6 @@ the \glspl{pc} head towards the blinding light.
 
 \end{boxtext}
 
-\begin{baseNote}{The Raiding Party}
-\label{raidingParty}
-
-\paragraph{If the \glspl{pc} decide to stop and rest,}
-\iftoggle{hardcore}{%
-  they are immediately interrupted by a returning raiding party of nura, with fresh prisoners.
-}{
-  they will be able to recovery for a while,\footnote{As usual, they recover Fatigue Points equal to half their current \glspl{hp}, and 40\% of their base \glspl{fp}.} before a raiding party descends with freshly captured prisoners.
-}
-
-The lift (room \ref{lift}) cannot take the full weight of an ogre plus the prisoners, so one goblin nuramancer and an ogre go to the bottom, then the prisoners get shoved in the lift by ogres at the top.
-
-\begin{boxtext}
-  A creaking noise comes from the two wooden doors, then you hear loud voices from inside.
-
-  ``\textit{My guts! That old lady didn't agree with me}'',
-  you hear a deep voice saying.
-
-  ``\textit{Did you do an argument?}'', a shrill voice replies.
-  
-  You hear a loud `\textbf{bang!}', then the wooden doors open.
-
-\end{boxtext}
-
-\iftoggle{hardcore}{%
-  \goblinnuramancer[\npc{\M\N}{Goblin Nuramancer}]
-}{
-  \iftoggle{oneshot}{
-    \goblin[\npc{\N\F}{Goblin}]
-  }{
-    \goblin[\npc{\T\N}{2 Goblins}]
-  }
-}
-
-\iftoggle{oneshot}{
-  \ogre[\npc{\T\N\Hu}{Ogre}]
-}{
-  \armouredOgre
-}
-
-\paragraph{If any \glspl{pc} have died,}
-this is a good time to give out new characters from the recently captured prisoners.
-
-\paragraph{If the \glspl{pc} try to hide,}
-they will find it easy.
-
-\paragraph{If they try to ambush the nura,}
-give them a Wits + Stealth (\gls{tn} 8) roll to determine the best location to stand.
-
-Success means they can each make one attack roll at \gls{tn} 7 (not the creature's usual attack score) with +2 Damage.
-
-\paragraph{Once the farmers come down,}
-they are tired, and have 8 Fatigue Points each, so any Damage they receive will quickly rack up penalties.
-
-Take the farmer statblocks from the handout, cut them apart from each other, and hand \iftoggle{hardcore}{2}{3} to the players to keep track of.
-\iftoggle{oneshot}{
-  The farmers will refuse to go first into any combat situation, if the characters fight first then they can make a Morale Check to join.
-}{}
-
-Shortly after, two more ogres come down to find out where the last people went.
-
-\end{baseNote}
-
 \mapentry[desertPortal]{Magic Portal}
 
 \begin{boxtext}
@@ -660,12 +597,15 @@ all goblins wake up
 
 \newRule{Weapons}{
 
-  \end{multicols}
 
   \input{config/rules/weight}
 
   \input{config/rules/weapons.tex}
 
+  The \glspl{pc} can find all these items in the \nameref{kitchen}.
+  They don't make the best weapons, but the \glspl{pc} have little choice!
+
+  \end{multicols}
   \begin{nametable}[YXYYYY]{Kitchen Weapons}
 
     \textbf{No.} & \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\glspl{ap} Cost} & \textbf{Weight Rating} \\\hline
@@ -681,8 +621,6 @@ all goblins wake up
   \begin{multicols}{2}
 
 }
-
-\pic{Decky/screech}
 
 \goblin[\npc{\T[2]\N}{2 Goblins on the table}]
 
@@ -826,6 +764,8 @@ If they say `yes', then he accepts their challenge, and asks what their riddle i
 \footnote{Use of the internet is prohibited by trans-dimensional law, common sense, basic decency, and the Geneva Convention.}
 If they can think of none,
 then the dragon declares that he has won the first round.
+
+\noteRaidingParty
 
 \paragraph{The rules for riddles}
 are simple -- any question which someone has the knowledge to answer is a fair riddle.

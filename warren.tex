@@ -174,6 +174,10 @@ she takes the only light out of the room.
   \setcounter{Air}{2}
 }
 
+\creatureSpells{fire2}
+
+\creatureSpells{air2}
+
 \paragraph{If Blara's spell is interrupted,}
 she has to start again.
 
@@ -1367,10 +1371,12 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
 {-4}}% CHARISMA
 {0}% DR
 {1}% COMBAT
-{Projectiles~1, Athletics~2, Medicine~1, Stealth~2, Tactics~2%
-\Path{\invocation~2, \necromancy~3, \saurecanta~2}}% SKILLS
+{Projectiles~1, Athletics~2, Medicine~1, Stealth~2, Tactics~2}% SKILLS
 {\iftoggle{hardcore}{Seeing Stone}{\Dagger}}% EQUIPMENT
-{}
+{
+  \setcounter{Earth}{2}
+  \setcounter{Water}{2}
+}
 
 \iftoggle{oneshot}{}{
   \jelly

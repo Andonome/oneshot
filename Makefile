@@ -36,7 +36,7 @@ svg-inkscape/black_tower_f5_svg-tex.pdf: $(wildcard config/*) images
 	pdflatex -jobname hardcore_horde_escape main.tex
 	pdflatex -jobname hardcore_horde_escape main.tex
 
-hardcore_handouts.pdf: images handouts.tex
+hardcore_handouts.pdf: images handouts.tex ex_cs
 	pdflatex -shell-escape -jobname hardcore_handouts handouts.tex
 
 config/bind.sty:

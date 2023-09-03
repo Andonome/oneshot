@@ -736,6 +736,8 @@ The dragon's eventual goal is to obtain the rest of the treasure, then return th
 then he agrees to kill any in the current area, but will not journey to another floor.
 In return, he wants all the treasure out of the treasure room.
 
+\setcounter{noAppearing}{1}
+
 \NPC{\E}{Makil the Dragon}{Inquisitive}{Drums Fingers}{Acquisition}
 \person{7}% STRENGTH
 {2}% DEXTERITY 
@@ -745,10 +747,17 @@ In return, he wants all the treasure out of the treasure room.
 {-2}}% CHARISMA
 {}% DR
 {1}% COMBAT
-{Aggression~2, Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4
-\Path{\enchantment~2, \fate~3, \invocation~4}}% SKILLS
+{
+  Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4
+}% SKILLS
 {Nothing}% EQUIPMENT
-{\hide{5}}
+{
+  \hide{5}
+  \knacks{\snapcaster}
+  \addtocounter{Brawl}{3}
+  \addtocounter{Fate}{2}
+  \addtocounter{Fire}{2}
+}
 
 \paragraph{If the party offer to split the treasure,}
 he refuses, unless they give him a good reason.
@@ -764,8 +773,6 @@ If they say `yes', then he accepts their challenge, and asks what their riddle i
 \footnote{Use of the internet is prohibited by trans-dimensional law, common sense, basic decency, and the Geneva Convention.}
 If they can think of none,
 then the dragon declares that he has won the first round.
-
-\noteRaidingParty
 
 \paragraph{The rules for riddles}
 are simple -- any question which someone has the knowledge to answer is a fair riddle.
@@ -792,6 +799,8 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
   His {\scshape \gls{dr} 5} means he reduces all Damage by 5, unless the attacker hits 5 over the \gls{tn} to attack him (a total of 15), achieving a `Vitals Shot'.
 }{}
 
+
+\noteRaidingParty
 
 \mapentry[treasureRoom]{The Treasure Room}
 
@@ -973,9 +982,6 @@ they will not immediately see the staircase on their left, but will see it after
 have them make a Dexterity + Stealth check, \gls{tn} 6.
 They make this as a \textit{Group Roll}, so a single roll counts for the whole group.
 Each margin on the roll allows them an additional round before the horde wakes.
-\iftoggle{core}{%
-  \footnote{See the core book, page \pageref{grouproll} for group rolls and page \pageref{margin} for roll margins.}
-}{}
 
 \mapentry[workshop]{The Workshop}
 

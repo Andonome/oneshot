@@ -45,5 +45,14 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \include{appendix.tex}
 
+\iftoggle{oneshot}{
+  \printglossary[
+    type=\acronymtype,
+    title=Abbreviations,
+    style=mcoltree,
+    nonumberlist,
+    ]
+}{}
+
 \end{document}
 

@@ -45,6 +45,12 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \include{appendix.tex}
 
+\iftoggle{hardcore}{}{
+  \iftoggle{oneshot}{}{
+    \include{rules.tex}
+  }
+}
+
 \iftoggle{oneshot}{
   \printglossary[
     type=\acronymtype,

@@ -1,9 +1,9 @@
 output=normal
 
 normal: horde_escape.pdf handouts.pdf
-horde_escape.pdf: main.tex intro.tex warren.tex top.tex appendix.tex svg-inkscape/upper_svg-tex.pdf
+horde_escape.pdf: main.tex intro.tex warren.tex top.tex appendix.tex svg-inkscape/upper_svg-tex.pdf svg-inkscape/shaman_svg-tex.pdf
 	pdflatex -jobname horde_escape main.tex
-svg-inkscape/upper_svg-tex.pdf: config/bind.sty images/
+svg-inkscape/upper_svg-tex.pdf svg-inkscape/shaman_svg-tex.pdf: config/bind.sty images/
 	pdflatex -jobname horde_escape -shell-escape main.tex
 	pdflatex -jobname horde_escape main.tex
 	pdflatex -jobname horde_escape main.tex

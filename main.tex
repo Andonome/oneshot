@@ -43,6 +43,10 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \startappendix
 
+\iftoggle{hardcore}{
+  \include{background}
+}{}
+
 \include{appendix.tex}
 
 \iftoggle{hardcore}{}{

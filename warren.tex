@@ -26,13 +26,13 @@
   \input{config/rules/actions_team.tex}
 
   \paragraph{Example 1:}
-  the troupe are sneaking down a hallway, and have to roll Stealth + Dexterity (\gls{tn} 9).
+  the troupe are sneaking down a hallway, and have to roll \roll{Stealth}{Dexterity} (\tn[9]).
   One player rolls $2D6$, and gets a `7'.
   Characters with a total bonus of +2 were walking quietly, but if even a single \gls{pc} had a bonus of +1 or less, they made a noise, and the entire group is given away.
 
   \paragraph{Example 2:}
   The characters try to persuade Chris to help them, and one player rolls the dice, getting a `7'.
-  Their Charisma + Empathy total is -1, so they fail, but another character tries to speak with him and has a +3 total, so they succeed (without rolling the dice again).
+  Their \roll{Charisma}{Empathy} total is -1, so they fail, but another character tries to speak with him and has a +3 total, so they succeed (without rolling the dice again).
 
 }
 
@@ -49,18 +49,18 @@
 
 Here the \glspl{pc} awaken to their hopeless situation.
 \iftoggle{hardcore}{%
-  Ask the players to mark down $1D6$ Fatigue Points on their character sheets from the trials they've experience getting here, and of course from their hunger.
+  Ask the players to mark down $1D6$ \glspl{fatigue} on their character sheets from the trials they've experience getting here, and of course from their hunger.
 }{}%
 Give the players a moment to get to know each others' characters and their surroundings.
 Remember, that everything is pitch black -- at best they can feel out the room a little, but they don't have long.
 
 \paragraph{If anyone tries to wriggle free of their ropes,}
-have them roll Dexterity + Larceny,
+have them roll \roll{Dexterity}{Larceny},
 \iftoggle{hardcore}{%
   \gls{tn} 11.
-  Freeing another character requires a Dexterity + Crafts roll, \gls{tn} 7, over the space of a round.
+  Freeing another character requires a \roll{Dexterity}{Crafts} roll, \tn[7], over the space of a round.
 }{%
-  \gls{tn} 9.
+  \tn[9].
   Freeing another character requires a full round.
 }
 
@@ -98,12 +98,12 @@ Chris explains the situation to the \glspl{pc} (whether or not anyone asks him).
 
 \paragraph{Trying to plea with Alf}
 won't prove easy.
-The player can attempt a Charisma + Empathy roll (\gls{tn} 12), to have him leave the room out of shame and guilt, but he won't help anyone.
+The player can attempt a \roll{Charisma}{Empathy} roll (\tn[12]), to have him leave the room out of shame and guilt, but he won't help anyone.
 
 \paragraph{If anyone asks Chris for help,}
 he tells that that he already managed to wriggle out of the ropes binding him, but that it's all useless, because you can't fight against a monster.
 
-Convincing Chris to help someone requires a Charisma + Empathy roll (\gls{tn} 9).
+Convincing Chris to help someone requires a \roll{Charisma}{Empathy} roll (\tn[9]).
 
 \paragraph{Shortly after,}
 Blara the goblin nuramancer, and Alf (the last man to transform into an ogre) walk towards the cell.
@@ -119,22 +119,6 @@ Blara the goblin nuramancer, and Alf (the last man to transform into an ogre) wa
 
 \paragraph{If anyone wants to fight while still tied up,}
 they can do so with a -4 penalty to the roll.
-
-\paragraph{Anyone attacking Blara}
-immediately annoys Alf, the ogre, who then attacks.
-
-Blara will attempt to run away, but must wait for Alf to move out of the doorway.
-
-\iftoggle{oneshot}{
-  Chasing after Blara requires a resisted roll of Speed + Athletics
-  (the player rolls 2D6 plus their Speed + Athletics against a \gls{tn} of 7 + Blara's Speed (2) + Athletics (1) = 10).%
-}{}%
-
-\paragraph{If Blara flees,}
-she takes the only light out of the room.
-\iftoggle{oneshot}{%
-  This gives the \glspl{pc} a bonus to any attack roll equal to their Wits + Vigilance +3 (Alf cannot coordinate well in the dark).
-}{}
 
 \iftoggle{oneshot}{
   \npc{\N\M}{Alf the Ogre}
@@ -176,13 +160,21 @@ she takes the only light out of the room.
 
 \showStdSpells
 
-\paragraph{If Blara's spell is interrupted,}
-she has to start again.
+\paragraph{Anyone attacking Blara}
+immediately annoys Alf, the ogre, who then attacks.
 
-\paragraph{After 2 rounds,}
-\iftoggle{oneshot}{the spell begins to take hold,}{Blara's Brawn-Form spell finishes, and Chris is stricken with the \textit{Hunger Pains} spell,%
-\exRef{aif}{Adventures in Fenestra}{saurecanta}}
-and Chris starts trying to eat people.
+Blara will attempt to run away, but must wait for Alf to move out of the doorway.
+
+\iftoggle{oneshot}{
+  Chasing after Blara requires a resisted roll of \roll{Speed}{Athletics}
+  (the player rolls 2D6 plus their \roll{Speed}{Athletics} against Blara's \roll{Speed}{Athletics}, \tn[10]).%
+}{}%
+
+\paragraph{If Blara flees,}
+she takes the only light out of the room.
+\iftoggle{oneshot}{%
+  This gives the \glspl{pc} a bonus to any attack roll equal to their Wits + Vigilance +3 (Alf cannot coordinate well in the dark).
+}{}
 
 If he has any trouble attacking people, Blara reaches into her bag and pulls out a human foot, then throws it on the ground in front of Chris.
 Once he eats it, he gains +1 Strength%
@@ -258,14 +250,14 @@ Despite the ladder switching places, it appears to be one solid piece, reaching 
 The nura have since abandoned this path, and have forgotten the door at the top.
 
 \paragraph{If the players climb up the staircase without understanding the trap,}
-have them make a Group roll of Dexterity + Athletics, \gls{tn} 10.%
+have them make a Group roll of Dexterity + Athletics, \tn[10].%
 If they fall, they receive $1D6-2$ Damage.
 
 \paragraph{If they continue climbing,}
 give additional Dexterity rolls and explain what happens, but only give out specific rung-numbers if the player asks.
 
 \paragraph{If the players want to make a roll,}
-character can then make an Intelligence + Academics check to understand the trap, \gls{tn} 12.
+character can then make an Intelligence + Academics check to understand the trap, \tn[12].
 They cannot re-roll this result, but they can try to climb again, in which case:
 
 \begin{itemize}
@@ -322,7 +314,7 @@ The goblin will go up the lift, and the rat will wander the hall, searching for 
 \end{itemize}
 
 \paragraph{If the \glspl{pc} enter combat,}
-they take 1 Fatigue Point for each round of combat they were in.
+they take 1 \gls{fatigue} for each round of combat they were in.
 
 \paragraph{Searching the room}
 reveals two large knives which can be used as \emph{daggers}.
@@ -380,8 +372,8 @@ reveals two large knives which can be used as \emph{daggers}.
 The two spell casters cannot figure out what the scrolls on the table do, despite the fact that one is a Scroll of uprising, brought here by the nura.
 
 \paragraph{If the \glspl{pc} try to sneak past,}
-they make a Group Roll with Dexterity + Stealth, \gls{tn} 10.
-\iftoggle{oneshot}{As before, one player rolls 2D6, and everyone adds their own Dexterity + Stealth.
+they make a Group Roll with \roll{Dexterity}{Stealth}, \tn[10].
+\iftoggle{oneshot}{As before, one player rolls 2D6, and everyone adds their own \roll{Dexterity}{Stealth}.
 If a single \gls{pc} fails, everyone fails.}{}%
 \exRef{core}{core rules}{teamwork}
 
@@ -394,24 +386,6 @@ Two rounds later, the goblins in the kitchen join the attack.
 \paragraph{If the \glspl{pc} corner the goblins,}
 they respond with aggressive spells.
 
-\iftoggle{oneshot}{
-  \begin{itemize}
-
-    \item
-    Anyone with Invocation 2 or more can cast a fireball by spending 3 \glspl{ap} and 2 \glspl{ap}.
-    \begin{itemize}
-      \item
-      Players must roll to avoid the magical flames at \gls{tn} 7 plus the caster's Intelligence + Projectiles.
-      \item
-      Players can spend 1 \glspl{ap} to \textit{Keep Edgy} against missile attacks such as fireballs, for the rest of combat.
-      This allows them to add their Speed + Vigilance Bonus to the roll, but without Keeping Edgy, they gain no bonus to the roll.
-    \end{itemize}
-    \item
-    If the caster hits, they deal $1D6 + 1 + Int$ Damage (so casters with Intelligence +2 deal $1D6+3$ Damage).
-
-  \end{itemize}
-}{}
-
 \goblinnuramancer[\npc{\F}{Screamer the Nuramancer}]
 
 \goblinnuramancer[\npc{\M}{Brock the Nuramancer}]
@@ -422,7 +396,7 @@ they respond with aggressive spells.
 
 \iftoggle{oneshot}{
   \paragraph{After the fight,}
-  give each player 1 Fatigue Point for each round of combat.
+  give each player 1 \gls{fatigue} for each round of combat.
 }{}
 
 \paragraph{If the characters investigate the table,}
@@ -459,7 +433,7 @@ Once the last line is spoken, the scroll activates (the rest does not need to be
 }{}
 
 \paragraph{If the \glspl{pc} want to identify what a scroll does,}
-have them roll Intelligence + Academics, \gls{tn} 12.
+have them roll \roll{Intelligence}{Academics}, \tn[12].
 
 \paragraph{If the \glspl{pc} want to activate a Portal Scroll,}
 they will have to answer its riddle.
@@ -502,7 +476,7 @@ they can read the runes above the magical portal; they read ``Realm of Bright Ro
 
 \paragraph{If the \glspl{pc} enter the portal and journey through the Realm of Bright Rocks,}
 they won't find much -- not even a place to hide, given the desert is expansive and flat.
-If they stay there long, give them 4 Fatigue Points (due to the heat) and roll an encounter for that Realm.%
+If they stay there long, give them 4 \glspl{fatigue} (due to the heat) and roll an encounter for that Realm.%
 \footnote{See \textit{Adventures in Fenestra} for more on the Realm of Bright Rocks\iftoggle{aif}{%
   , page \pageref{brightrocks}}%
   {}%
@@ -524,9 +498,9 @@ Characters who understand Gnomish can tell that these function exactly as Roman 
 Counting from one to seven in Gnomish opens, or closes, the portal.
 
 \iftoggle{oneshot}{
-  Any player can roll Intelligence + Academics, \gls{tn} 12, as long as they speak Gnomish, to have their character solve the portal's enigma.
+  Any player can roll \roll{Intelligence}{Academics}, \tn[12], as long as they speak Gnomish, to have their character solve the portal's enigma.
 }{
-  Characters who don't know Gnomish can make an Intelligence + Academics roll (\gls{tn} 8) to recall the numbers (assuming the player figures out the riddle).
+  Characters who don't know Gnomish can make an Intelligence + Academics roll (\tn[8]) to recall the numbers (assuming the player figures out the riddle).
 }
 
 \paragraph{If they enter the portal to flee from the nura,}
@@ -539,9 +513,9 @@ Counting from one to seven in Gnomish opens, or closes, the portal.
 }
 
 \iftoggle{oneshot}{
-  \paragraph{Fatigue Points}
-  don't do much at first, but every Fatigue Point above the character's \emph{current} \glspl{hp} gives a -1 penalty.
-  So a character with 6 Fatigue Points who gets reduced to 3 \glspl{hp} would take a -3 penalty to all actions.
+  \paragraph{\glspl{fatigue}}
+  don't do much at first, but every \gls{fatigue} above the character's \emph{current} \glspl{hp} gives a -1 penalty.
+  So a character with 6 \glspl{fatigue} who gets reduced to 3 \glspl{hp} would take a -3 penalty to all actions.
 }{}
 
 \mapentry[kitchen]{Kitchen}
@@ -560,7 +534,7 @@ At the end of the kitchen you can see a large door to a cold store with a lock o
 \end{boxtext}
 
 \paragraph{If the \glspl{pc} try to sneak in,}
-have them make a Group Roll of Dexterity + Stealth, \gls{tn} 8.
+have them make a Group Roll of \roll{Dexterity}{Stealth}, \tn[8].
 \iftoggle{oneshot}{%
   As before, the Group Roll only requires one player to roll, and any character which enters the room produces a different result.
 }{}
@@ -569,7 +543,7 @@ have them make a Group Roll of Dexterity + Stealth, \gls{tn} 8.
 all goblins wake up
 \iftoggle{oneshot}{
   but must take a morale check before attacking.
-  The Morale check only uses the Combat Skill at \gls{tn} 5, with some modifiers.
+  The Morale check only uses the Combat Skill at \tn[5], with some modifiers.
 
   \begin{itemize}
     \item
@@ -651,7 +625,7 @@ they'll find a few canteens of water, one of wine, and some spare sacks of veget
 
 The players can unlock the cold store%
 \footnote{A cold store is an old fashioned fridge where people put ice to keep food from going bad.}
-  with a Dexterity + Larceny roll at \gls{tn} 10 to pick the lock, at which point they discover that the larder is still full of food.
+  with a Dexterity + Larceny roll at \tn[10] to pick the lock, at which point they discover that the larder is still full of food.
 
 \mapentry[lift]{The Gnomish Lift}
 
@@ -659,7 +633,7 @@ The gnomes created the lift with the Force sphere.
 It can lift a combined Weight Rating of 16, and safely descend with a total Weight Rating of 26 standing on it.%
 \footnote{A creature's Weight Rating is equal to its \glspl{hp}.
 Some items count towards this total, but items with a negative Weight Rating do not.}
-If the party step on it with a greater Weight Rating than this, each additional point inflicts 2 Fatigue Points on everyone in the lift upon impact with the ground.
+If the party step on it with a greater Weight Rating than this, each additional point inflicts 2 \glspl{fatigue} on everyone in the lift upon impact with the ground.
 
 \begin{boxtext}
 
@@ -688,7 +662,7 @@ they will find less purchase than a Sun-screen salesman in a Scotland.
   {7}
 
   \paragraph{Understanding this talisman}
-  requires the usual Intelligence + Academics roll at \gls{tn} 12.
+  requires the usual \roll{Intelligence}{Academics} roll at \tn[12].
   However, a successful roll will only allow them to understand the word to take them to where they are, not the word to take them to another floor.
 }
 
@@ -737,8 +711,6 @@ The dragon's eventual goal is to obtain the rest of the treasure, then return th
 \paragraph{If the party request he kill nura for them}
 then he agrees to kill any in the current area, but will not journey to another floor.
 In return, he wants all the treasure out of the treasure room.
-
-\setcounter{noAppearing}{1}
 
 \NPC{\E}{Makil the Dragon}{Inquisitive}{Drums Fingers}{Acquisition}
 \person{7}% STRENGTH
@@ -884,10 +856,10 @@ It can also be cast on a passageway, which obstructs it by adding a magical barr
 
 \end{exampletext}
 
-The door is locked, but can be picked with a Dexterity + Larceny check, \gls{tn} 9.
+The door is locked, but can be picked with a \roll{Dexterity}{Larceny} check, \tn[9].
 It's far too strong to be broken into by force.
 If the \glspl{pc} enter the room, they may think these little gnomes are little goblins and kill them.
-If any of them try to do so, have them roll a Wits + Medicine check to realize their mistake, \gls{tn} 8.
+If any of them try to do so, have them roll a Wits + Medicine check to realize their mistake, \tn[8].
 Any gnomes in the party will automatically pass this check.
 
 \iftoggle{oneshot}{
@@ -899,16 +871,16 @@ the children know to know to keep quiet and to follow, but they will be at the b
 
 There are six children in total, and they each have a Weight Rating between 1 and 2.
 \iftoggle{oneshot}{
-  Characters can only carry a Weight Rating equal or less than their Strength Bonus, or they will take penalties to their \glspl{ap}, and gain Fatigue Points at the end of each \gls{interval} of activity.
+  Characters can only carry a Weight Rating equal or less than their Strength Bonus, or they will take penalties to their \glspl{ap}, and gain \glspl{fatigue} at the end of each \gls{interval} of activity.
 
   \paragraph{If the \glspl{pc} rest,}
-  Remember to have them heal Fatigue Points equal to half their \glspl{hp}.
+  Remember to have them heal \glspl{fatigue} equal to half their \glspl{hp}.
 }{}
 
 \newRule{Projectiles}{
   \begin{itemize}
     \item
-    Players roll Dexterity + Projectiles against \tn{6} to hit targets.
+    Players \roll{Dexterity}{Projectiles} against \tn[6] to hit targets.
     \item
     Every 5 steps adds +1 to the \gls{tn}.
     \item
@@ -981,7 +953,7 @@ Anyone who can use Conjuration magic will be able to turn the offal on the floor
 they will not immediately see the staircase on their left, but will see it after doing literally anything (fighting, searching, et c.).
 
 \paragraph{If the \glspl{pc} tarry or talk,}
-have them make a Dexterity + Stealth check, \gls{tn} 6.
+have them make a \roll{Dexterity}{Stealth} check, \tn[6].
 They make this as a \textit{Group Roll}, so a single roll counts for the whole group.
 Each margin on the roll allows them an additional round before the horde wakes.
 
@@ -1013,7 +985,7 @@ they find the exit has been covered by an illusion of a wall.
 If they investigate the area at all, the illusion fades, revealing the sleeping nura.
 
 \paragraph{If the \glspl{pc} attempt to take either a short sword or a spear,}
-each attempt requires a Dexterity + Stealth roll, \gls{tn} 7.
+each attempt requires a \roll{Dexterity}{Stealth} roll, \tn[7].
 Failure will awaken the entire horde.
 
 \iftoggle{oneshot}{
@@ -1102,7 +1074,7 @@ If wrapped up in heavy sheets and suddenly displayed, the light can blind oppone
 }
 
 \paragraph{If any of the \glspl{pc} attempt to sneak in,}
-have them roll Dexterity + Stealth, \gls{tn} 8.
+have them roll \roll{Dexterity}{Stealth}, \tn[8].
 
 Failure will, of course, spell disaster, but success will allow them to steal a magical item.
 If the player wants to steal multiple magical items, describe them and see how many they decide to take.
@@ -1129,9 +1101,9 @@ The player should not roll again -- the original roll remains, but increasing th
 \end{boxtext}
 
 \paragraph{If the party have made a reasonable attempt at staying quiet,}
-they can avoid alerting this ogre with a Wits + Stealth roll, \gls{tn} 9.
+they can avoid alerting this ogre with a \roll{Wits}{Stealth} roll, \tn[9].
 Whoever is at the front makes the roll.
-If it's unclear who's at the front, the character with the highest Speed + Athletics is in the lead.
+If it's unclear who's at the front, the character with the highest \roll{Speed}{Athletics} is in the lead.
 With a successful roll,
 \iftoggle{hardcore}{
   the ogre is resting, and must take a round to gather what's left of his wits, but it will still wake if approached.
@@ -1142,7 +1114,7 @@ With a successful roll,
 \ogre[\npc{\N\M}{Rick, the Ogre Guard}]
 
 \paragraph{If the party try to talk with the ogre,}
-Rick has only recently been turned into an ogre, and he has eaten his fill of mushrooms, so a Wits + Empathy roll, \gls{tn} 10, will allow the party to convince him to let them go.
+Rick has only recently been turned into an ogre, and he has eaten his fill of mushrooms, so a \roll{Wits}{Empathy} roll, \tn[10], will allow the party to convince him to let them go.
 However, if Rick lets them go, he will insist on joining them so he can be free.
 While he genuinely wants to escape and become human again,%
 \footnote{Nura who have recently turned can change back to their original forms if they are starved for twice as long as they have been nura.}
@@ -1208,7 +1180,7 @@ Take the last two farmers from the handout to join the troupe.
 \begin{itemize}
 
   \item{3 buckler shields}
-  \item{1 crossbow (unstrung but usable with an Wits + Crafts roll, \gls{tn} 7)}
+  \item{1 crossbow (unstrung but usable with an \roll{Wits}{Crafts} roll, \tn[7])}
   \item{3 quivers, each with 20 arrows}
   \iftoggle{hardcore}{%
     \item{3 crossbow bolts}
@@ -1271,18 +1243,18 @@ The gnomes' solution was to make sure \textit{all} flagstones had a magical amul
   {8}% POTENCY
   {7}% MP
 
-Anyone standing on the stone rolls their Weight Rating at \gls{tn} 15 to avoid being turned to stone.
+Anyone standing on the stone rolls their Weight Rating at \tn[15] to avoid being turned to stone.
 \iftoggle{oneshot}{%
   Each character's Weight Rating is equal to their \glspl{hp}.
 }{}
 
 \paragraph{If anyone steps into the trap,}
-they must roll their Weight Rating at \gls{tn} 15, but anyone failing may spend 5 \glspl{fp} to ignore the effects of the trap.
+they must roll their Weight Rating at \tn[15], but anyone failing may spend 5 \glspl{fp} to ignore the effects of the trap.
 If this happens, explain that their foot or hand begins to harden, then turn to stone for half a second before they retract it.
 
 \paragraph{If the players figure out that the area is trapped and try to jump over it,}
 remind them that they cannot see where the trap starts and where it ends.
-If they avoid stepping into the trap, they can make a Speed + Athletics roll, \gls{tn} 9, to jump over the afflicted area.
+If they avoid stepping into the trap, they can make a \roll{Speed}{Athletics} roll, \tn[9], to jump over the afflicted area.
 
 \mapentry[topShaft]{The Top of the Shaft}
 
@@ -1309,7 +1281,7 @@ the wolves go straight for the kill.
 
 \paragraph{If the party attempt to run through the double doors,}
 they will suddenly find an empty lift-shaft, unless they have taken the lift to the top themselves.
-Have them make a Wits + Athletics check (\gls{tn} 7) to back off before they fall.
+Have them make a Wits + Athletics check (\tn[7]) to back off before they fall.
 
 \nurawolf[\npc{\A\N\T[4]}{4 Nura Wolves}]
 
@@ -1352,8 +1324,8 @@ While the place looks serene, it is inhabited by
 
 \paragraph{If the \glspl{pc} approach Grank,}
 he will hide while casting a \textit{Wide, Fireball} (requires 2 rounds to cast, covers 4 steps, and deals $2D6+2$ Damage).
-Finding him in the darkness before he finishes his spell requires a Wits + Vigilance roll, \gls{tn} 10.
-If he is successful, the party make a group roll against \gls{tn} 9 to avoid the fireball ($1D6+3$ Damage).
+Finding him in the darkness before he finishes his spell requires a Wits + Vigilance roll, \tn[10].
+If he is successful, the party make a group roll against \tn[9] to avoid the fireball ($1D6+3$ Damage).
 
 \paragraph{If Grank ever feels like his life is under threat,}
 then he will taunt the \glspl{pc} with the key to the outside world he has in is position, and throw it into the nearest ooze.
@@ -1396,7 +1368,7 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
 
 \mapentry[lockedDoor]{The Locked Door}
 
-The locked door has a bronze border and cannot be broken without a Strength + Crafts roll, \gls{tn} 18.
+The locked door has a bronze border and cannot be broken without a \roll{Strength}{Crafts} roll, \tn[18].
 The exit key, however, fits in nicely.
 
 If the party rest here long enough (perhaps because they have failed to get any key), a raiding party of nura return.

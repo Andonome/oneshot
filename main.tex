@@ -56,13 +56,20 @@ Keywords={TTRPG,RPG,roleplaying}
 }
 
 \iftoggle{oneshot}{
-  \printglossary[
-    type=\acronymtype,
-    title=Abbreviations,
-    style=mcoltree,
-    nonumberlist,
-    ]
+  \begin{minipage}{\linewidth}
+    \printglossary[
+      type=\acronymtype,
+      title=Abbreviations,
+      style=mcoltree,
+      nonumberlist,
+      ]
+
+    \printglossary
+
+  \end{minipage}
+
 }{}
+
 
 \end{document}
 

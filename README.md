@@ -1,7 +1,7 @@
-| Downloads                      | Related Books     |
-|:-------------------------------|:------------------|
-| [Download][oneshot]            | [Core Book][core] |
-| [Handouts][oneshot_handouts]   | [Fenestra][aif]   |
+| Downloads                      | Related Books            |
+|:-------------------------------|:-------------------------|
+| [Download][oneshot]            | [Core Book][core]        |
+| [Handouts][oneshot_handouts]   | [Players' Book][stories] |
 
 This is a one-shot adventure for the [BIND RPG][core].
 
@@ -22,9 +22,9 @@ As they travel upwards towards the sunlight, they learn about the rules and the 
 
 <img src="images/Dyson_Logos/lower.svg" width="500">
 
-[oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_horde_escape.pdf?job=compile_pdf
-[oneshot_handouts]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_handouts.pdf?job=compile_pdf
-[normal]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/horde_escape.pdf?job=compile_pdf
-[normal_handouts]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/handouts.pdf?job=compile_pdf
+[oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_horde_escape.pdf?job=build
+[oneshot_handouts]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_handouts.pdf?job=build
+[normal]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/horde_escape.pdf?job=build
+[normal_handouts]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/handouts.pdf?job=build
 [core]: https://gitlab.com/bindrpg/core
-[aif]: https://gitlab.com/bindrpg/aif
+[stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/stories.pdf?job=build

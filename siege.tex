@@ -296,7 +296,7 @@ If the roll succeeds, tell the players that the Black Alchemist is hiding on the
 This room contains spare clothing and all manner of long-life food.
 The nura have not managed to figure out the lock yet.
 It has no key -- instead, there is a hole with a series of ropes inside which one must lift in the correct way.
-An Intelligence + Larceny check (TN 10) is required to figure out how to open it.
+An \roll{Intelligence}{Larceny} check \tn[10] is required to figure out how to open it.
 
 \mapentry[towerLibrary]{Library}
 
@@ -381,7 +381,7 @@ He will require the party not only to guard him on the way back, but especially 
 {0}}% CHARISMA
 {0}% DR
 {1}% COMBAT
-{Projectiles~1, Academics~2, Crafts~1, Deceit~1, Medicine~2, Vigilance 1}% SKILLS
+{\setcounter{Projectiles}{1}\setcounter{Academics}{2}\setcounter{Crafts}{1}\setcounter{Deceit}{1}\setcounter{Medicine}{2}\setcounter{Vigilance}{1}}%SKILLS
 {\shortsword, 3 daggers, \partialleather}% EQUIPMENT
 {
   \addtocounter{fp}{10}
@@ -407,7 +407,7 @@ If they wish to rest and recover, throw in another encounter.
 \subsection{Discovering the Theft}
 
 If the players have stolen anything precious from Baron Quenn, he might notice if they do not hide it well enough.
-Have the player roll their Intelligence + Larceny, TN 9.
+Have the player roll their \roll{Intelligence}{Larceny} against the baron's \roll{Wits}{Vigilance} (so \tn).
 Failure indicates that while rummaging through a bag to take out food or equipment, they have revealed the stolen item for a moment.
 
 If the Baron sees a stolen item, he will remember, and attempt to kill the character later.

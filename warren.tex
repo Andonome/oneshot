@@ -411,13 +411,14 @@ Unlike other magical items in this area, this scroll was made by a nuramancer (n
 The scroll contains the epic of Logan, an Elvish poem.
 Once the last line is spoken, the scroll activates (the rest does not need to be spoken).
 
-\magicitem{Portal Scroll}% NAME
-  {Eternal, Ranged, Clairvoyance, Ranged Gate}% SPELL
-  {Alchemy}% PATH
-  {2 Scenes}% DURATION
-  {Pocket Spell \& Pocket Spell}% TYPE
-  {2}% Potency
-  {3}% MP
+\magicItem{Portal Scroll}%
+  {\mEarth, \mFire}
+  {Warp}
+  {\distant}
+  {air speed}
+  {the holder (or anyone in earshot) answers the riddle aloud}
+  {a magical portal opens to area \ref{slugHall}: \nameref{slugHall}.}
+  {A papyrus scroll, with a riddle written in dark-green ink.}
 
 \iftoggle{oneshot}{
   \paragraph{If the \glspl{pc} try to examine a scroll,}
@@ -477,10 +478,10 @@ they can read the runes above the magical portal; they read ``Realm of Bright Ro
 \paragraph{If the \glspl{pc} enter the portal and journey through the Realm of Bright Rocks,}
 they won't find much -- not even a place to hide, given the desert is expansive and flat.
 If they stay there long, give them 4 \glspl{fatigue} (due to the heat) and roll an encounter for that Realm.%
-\footnote{See \textit{Adventures in Fenestra} for more on the Realm of Bright Rocks\iftoggle{aif}{%
-  , page \pageref{brightrocks}}%
-  {}%
-.}
+%\footnote{See \textit{Adventures in Fenestra} for more on the Realm of Bright Rocks\iftoggle{aif}{%
+%  , page \pageref{brightrocks}}%
+%  {}%
+%.}
 
 \paragraph{If anyone tries to work out the portal's activation words,}
 they see symbols written above:
@@ -733,6 +734,8 @@ In return, he wants all the treasure out of the treasure room.
   \addtocounter{Fire}{2}
 }
 
+\showStdSpells
+
 \paragraph{If the party offer to split the treasure,}
 he refuses, unless they give him a good reason.
 
@@ -796,8 +799,7 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
   \item{Four magical arrows which explode, dealing $2D6$ damage upon striking}
   \item{A chest containing 432 \glspl{cp}}
   \item{A chest containing 300 \glspl{sp}}
-  \item{A Scroll of Stone}
-  \item{Lock Scroll}
+  \item{Portal Scroll to the Realm of Shifting Corridors}
   \iftoggle{hardcore}{}{
     \item
     Portal Scroll
@@ -806,21 +808,16 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
 
 \end{itemize}
 
-\magicitem{Scroll of Stone}{Fast Transmutation}{Alchemy}{1 Scene}{Pocket Spell}{6}{1}
-One spoken, the scroll rolls $2D6+6$ at a \gls{tn} of 7 plus the target's Weight Rating.
-If the spell succeeds, the target turns to stone.
+\magicItem{Portal Scroll}%
+  {\mEarth, \mFire}
+  {Warp}
+  {\distant}
+  {air speed}
+  {the holder (or anyone in earshot) answers the riddle aloud}
+  {a magical portal opens to the Realm of Shifting Corridors.
+  See \autopageref{portalScrollEncounters}, \autoref{portalScrollEncounters}.}
+  {A papyrus scroll, with a riddle written in dark-green ink.}
 
-This spell was designed to be used on the caster; the gnome would turn themself to stone in order to become uninteresting to oozes and such for a short while.
-However, people can try to use it against other targets.
-
-Like any other scroll, the activation word is a riddle.
-Unlike some of the others, it works \emph{instantly}.
-
-\magicitem{Lock Scroll}{Fast Lock}{Alchemy}{2 Scenes}{Pocket Spell}{4}{3}
-
-This scroll locks a door, which increases the \gls{tn} to open it by 4.
-It can also be cast on a passageway, which obstructs it by adding a magical barrier with 9 Shield Points (`SP' work roughly the same as \glspl{hp} for magical fields).
-\exRef{core}{core rules}{spellLock}
 
 \end{multicols}
 

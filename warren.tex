@@ -48,7 +48,6 @@
 
 Here the \glspl{pc} awaken to their hopeless situation.
 
-
 \begin{itemize}
   \iftoggle{hardcore}{%
     \item
@@ -56,8 +55,6 @@ Here the \glspl{pc} awaken to their hopeless situation.
   }{}%
   \item
   Give the players a moment to get to know each others' characters and their surroundings.
-  \item
-  Remember, that everything is pitch black -- at best they can feel out the room a little, but they don't have long.
 \end{itemize}
 
 \paragraph{If anyone tries to wriggle free of their ropes,}
@@ -180,9 +177,10 @@ Blara will attempt to run away, but must wait for Olf to move out of the doorway
 }{}%
 
 \paragraph{If Blara flees,}
-she takes the only light out of the room.
+she runs out, taking her torch with her.
 \iftoggle{oneshot}{%
-  This gives the \glspl{pc} a bonus to any attack roll equal to their Wits + Vigilance +3 (Olf cannot coordinate well in the dark).
+  If the fire has gone out and Blara leaves with the torch, the room becomes pitch-black.
+  This gives the \glspl{pc} a bonus to any attack roll equal to their \roll{Wits}{Vigilance} +3 (Olf cannot coordinate well in the dark).
 }{}
 
 \paragraph{If the party win the fight,}
@@ -202,54 +200,35 @@ He will not join any fights, but can hold a torch.
   Of course the \glspl{pc} won't know exactly how long they've spent underground, but they will at least be able to count the number of resting periods they take.
 }
 
-\mapentry[escapeShaft]{Exit Shaft}
-
-\iftoggle{oneshot}{%
-  \paragraph{New \Glsentrytext{interval}}
-  mean regeneration.
-  As the \glspl{pc} enter this new room, they heal 40\% of their \textit{Base \glspl{fp}}, so characters with 5 \glspl{fp} regain 2, and characters with 10 \glspl{fp} regain 4.
-  Any characters with Mana Points (\glspl{mp}) regain 2 + their Wits Bonus.
-}{}
+\mapentry[escapeShaft]{Fire Room}
 
 \begin{exampletext}
-
-  This exit shaft was used by gnomes to travel up quickly.
-  Aware of the dangers below, they trapped the ladder and hid the door at the top.
-  Since then, the goblins have forgotten how the ladder works, and stopped using it.
-
+  A fire burns low in this alcove, casting long shadows across the room.%
+  \footnote{The gnomes built this shaft to mine below, but once they had a lift to transport them more easily, they stopped using the stone ladder.
+  Once abandoned, they decided to make it into a fireplace, by adding a chimney to the surface.}
 \end{exampletext}
 
-If the players attempt to climb, they find that every rung of a multiple of five (the fifth, tenth, fifteenth, and so on), are coated in a slipper substance made from the fungal gardens.
-The rungs which are a multiple of seven (seven, fourteen, twenty-one) are set to break once anyone with 7+ \glspl{hp} puts their weight on it.
-These breakable sections are actually solid illusions, so they appear again shortly after breaking, but will resist any markings such as paint, as those marking disappear as the illusion resets every so often.
-Meanwhile, any rung which is both a multiple of 5 and 7 indicates that the next section is entirely illusory -- the real ladder is on the left, but disguised as more wall with clever paint-work.
+If the \glspl{pc} look around the fire, they will notice hand-holds carved into the rock on the left.
+If they climb while the fire burns, the smoke coming up will make them choke and cough, inflicting \pgls{fatigue}.
 
-Despite the ladder switching places, it appears to be one solid piece, reaching upwards.
+Climbing to the top requires a \roll{Speed}{Athletics} roll at \tn[13], and every point rolled below 13 inflicts \pgls{fatigue}.
+E.g. a character rolling a total of `5' would gain 8 \glspl{fatigue}.
 
-The nura have since abandoned this path, and have forgotten the door at the top.
+The \glspl{pc} cannot see how far up this shaft goes, so they will have to track it moment by moment.
+Give any player who climbs up one or two \glspl{fatigue} at a time, and each time, ask them if they want to continue (without knowing how far they have to go) or go back down (and receive the same number of \glspl{fatigue} as before, minus 2).
 
-\paragraph{If the players climb up the staircase without understanding the trap,}
-have them make a Group roll of Dexterity + Athletics, \tn[10].%
-If they fall, they receive $1D6-2$ Damage.
+\paragraph{Once at the top of the ladder,}
+this chimney has an alcove for a furnace in the workshop, above.
+Any \gls{pc} will hear the goblins talking.
 
-\paragraph{If they continue climbing,}
-give additional Dexterity rolls and explain what happens, but only give out specific rung-numbers if the player asks.
+\paragraph{Breaking through the furnace}
+needs a \roll{Intelligence}{Crafts}, \tn[6].
+Failure inflicts $1D6$ Damage as some goof pulls hot coals from the furnace onto the character.
 
-\paragraph{If the players want to make a roll,}
-character can then make an Intelligence + Academics check to understand the trap, \tn[12].
-They cannot re-roll this result, but they can try to climb again, in which case:
+If anyone succeeds in breaking that furnace, they certainly make a lot of noise, and find themselves at room \ref{workshop}.
 
-\begin{itemize}
-
-  \item
-  The Damage they get for failing increases by 1.
-  \item
-  The \gls{tn} to understand the trap decreases by 1 (so they will succeed if they can endure long enough).
-
-\end{itemize}
-
-\paragraph{If a \emph{player} figures out the trap,}
-all rolls can be dispensed with, and the \glspl{pc} can ascend to room \ref{laddertop} at the top.
+\paragraph{If someone wants to continue climbing up,}
+the chimney becomes smaller and smaller, then eventually breaks out into various hand-sized tunnels, and exits above, almost invisibly.
 
 \mapentry[diningRoom]{Dining Room}
 
@@ -262,7 +241,7 @@ all rolls can be dispensed with, and the \glspl{pc} can ascend to room \ref{ladd
 \end{boxtext}
 
 \paragraph{If a \gls{pc} sneaks up quietly,}
-have them roll Dexterity + Stealth, at a \gls{tn} of 7 plus the rat's Wits + Vigilance.
+have them roll \roll{Dexterity}{Stealth},  at \tn[9].
 
 They should get a +2 bonus for leaving any lights behind.
 
@@ -331,10 +310,6 @@ reveals two large knives which can be used as \emph{daggers}.
 \goblin[\npc{\N\F\Gn}{Hungry Goblin}]
 
 \nurarat[\npc{\N\A}{Nura Rat}]
-
-  \paragraph{Once the \glspl{pc} leave the room,}
-  let them regenerate $1D6$ of their Fate Points, because a new \gls{interval} has ended.
-
 
 \mapentry[spellCasters]{Spellcaster Arguments}
 

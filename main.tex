@@ -49,12 +49,6 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \include{appendix.tex}
 
-\iftoggle{hardcore}{}{
-  \iftoggle{oneshot}{}{
-    \include{rules.tex}
-  }
-}
-
 \iftoggle{oneshot}{
   \begin{minipage}{\linewidth}
     \printglossary[
@@ -69,7 +63,6 @@ Keywords={TTRPG,RPG,roleplaying}
   \end{minipage}
 
 }{}
-
 
 \end{document}
 

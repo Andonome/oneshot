@@ -232,11 +232,15 @@ the chimney becomes smaller and smaller, then eventually breaks out into various
 
 \mapentry[diningRoom]{Dining Room}
 
+Every morsel has been licked clean from this little dining room.
+Pots, smashed plates, forks, and candlesticks litter the floor.
+A goblin and a polymorphed rat bicker over a human bone.
+
 \begin{boxtext}
 
-  As you climb the dark stairway, you see a tiny candle's light above, and hear shouting and thrashing.
-  The floor at the top is strewn with pots and plates, knives, forks and candlesticks.
-  It looks like a pack of ravenous dogs swept through here and licked ever morsel from every surface.
+  Smashed-up chairs and broken cutlary surround a low dining table.
+  On the table, a little bleach-white goblin wrestles with a rat-like creature, the size of a dog.
+  The two creatures are fighting over a human leg.
 
 \end{boxtext}
 
@@ -244,13 +248,6 @@ the chimney becomes smaller and smaller, then eventually breaks out into various
 have them roll \roll{Dexterity}{Stealth},  at \tn[9].
 
 They should get a +2 bonus for leaving any lights behind.
-
-\begin{boxtext}
-
-  In the middle of the room you can see two creatures wrestling on a table -- a goblin and the other you would call a rat, but only if the rat had been mated with a Great Dane.
-  The two creatures are fighting over a human leg.
-
-\end{boxtext}
 
 \paragraph{If the \glspl{pc} wait patiently and silently,}
 the nura rat and goblin will leave.
@@ -313,6 +310,10 @@ reveals two large knives which can be used as \emph{daggers}.
 
 \mapentry[spellCasters]{Spellcaster Arguments}
 
+%! Remove scroll
+
+The two spell casters cannot figure out what the scrolls on the table do, despite the fact that one is a Scroll of uprising, brought here by the nura.
+
 \begin{boxtext}
 
   At the end of the tunnel, in an alcove to the right, goblins wearing long black robes bicker with each other over a little table.
@@ -322,8 +323,6 @@ reveals two large knives which can be used as \emph{daggers}.
   Over on the left, you can see a light so strong it must be daylight.
 
 \end{boxtext}
-
-The two spell casters cannot figure out what the scrolls on the table do, despite the fact that one is a Scroll of uprising, brought here by the nura.
 
 \paragraph{If the \glspl{pc} try to sneak past,}
 they make a Group Roll with \roll{Dexterity}{Stealth}, \tn[10].
@@ -690,17 +689,6 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
 \noteRaidingParty
 
 \mapentry[treasureRoom]{The Treasure Room}
-
-\begin{boxtext}
-
-  Through the door, two locked chests lie on the ground.
-  Above them, a shortbow and two beautiful short swords stand affixed to the wall, with a quiver of arrows with gemstones used as arrow tips.
-  \iftoggle{hardcore}{%
-    The scroll cabinet has two scrolls left.
-  }{The scroll cabinet has three scrolls inside.}
-
-\end{boxtext}
-
 \begin{itemize}
 
   \item{A short bow}
@@ -717,6 +705,17 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
   }
 
 \end{itemize}
+
+
+\begin{boxtext}
+
+  Through the door, two locked chests lie on the ground.
+  Above them, a shortbow and two beautiful short swords stand affixed to the wall, with a quiver of arrows with gemstones used as arrow tips.
+  \iftoggle{hardcore}{%
+    The scroll cabinet has two scrolls left.
+  }{The scroll cabinet has three scrolls inside.}
+
+\end{boxtext}
 
 \end{multicols}
 
@@ -737,6 +736,13 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
 
 \mapentry[nursery]{Nursery}
 
+\begin{exampletext}
+
+  When the nura arrived, the gnomes put their children in here, then left enough food for a few days, locked the door, and destroyed the key.
+  Unfortunately, those gnomes have turned into goblins, and if they entered the room they would probably eat their own children.
+
+\end{exampletext}
+
 \begin{boxtext}
 
   The sound of crying emanates from the door as you swing it open.
@@ -744,13 +750,6 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
   The entire crib and the floor around stink of shit.
 
 \end{boxtext}
-
-\begin{exampletext}
-
-  When the nura arrived, the gnomes put their children in here, then left enough food for a few days, locked the door, and destroyed the key.
-  Unfortunately, those gnomes have turned into goblins, and if they entered the room they would probably eat their own children.
-
-\end{exampletext}
 
 The door is locked, but can be picked with a \roll{Dexterity}{Larceny} check, \tn[9].
 It's far too strong to be broken into by force.
@@ -788,6 +787,16 @@ There are six children in total, and they each have a Weight Rating between 1 an
 
 \mapentry[slugHall]{Slug Hall}
 
+\begin{exampletext}
+
+Gnomes grew mushrooms throughout this room in order to grow slugs, so that they could feed fireflies.
+While torches work best, having omnipresent fireflies around the warren makes sure that people can coordinate between rooms without worrying about light.
+
+Since then, the nura turned those slugs into nura slugs.
+The fireflies have survived on the enlarged slug, which the nura keep alive with the scraps they don't want to eat, such as mushrooms and bones and faeces.
+
+\end{exampletext}
+
 \begin{boxtext}
 
   The doorway reveals a massive hallway of sparkling, floating, lights.
@@ -799,18 +808,6 @@ There are six children in total, and they each have a Weight Rating between 1 an
   To your left, stairs head upwards into darkness.
 
 \end{boxtext}
-
-\begin{exampletext}
-
-Gnomes grew mushrooms throughout this room in order to grow slugs, so that they could feed fireflies.
-While torches work best, having omnipresent fireflies around the warren makes sure that people can coordinate between rooms without worrying about light.
-
-Since then, the nura turned those slugs into nura slugs.
-The fireflies have survived on the enlarged slug, which the nura keep alive with the scraps they don't want to eat, such as mushrooms and bones and faeces.
-
-\end{exampletext}
-
-\nuraslug[\npc{\T[9]\N}{20 Nura Slugs}]
 
 \paragraph{If the \glspl{pc} run up the stairs,}
 have them roll initiative against the slugs.
@@ -827,7 +824,15 @@ they find two dead gnomes, one with a torch, the other with a Portal Scroll.
   As with the others, the Portal Scroll requires a riddle to be answered, takes four rounds before it activates, and vanishes once used.
 }{}
 
+\nuraslug[\npc{\T[9]\N}{20 Nura Slugs}]
+
 \mapentry[greatHall]{The Great Hallway}
+
+If the \glspl{pc} have indeed been quiet enough in the previous room to not raise an alarm, they find everyone in nearby rooms napping.
+A single sound means they will be in serious trouble.
+
+The greasy floor results from a mixture of faeces, drool, blood and leftover mushroom-juice.
+Anyone who can use Conjuration magic will be able to turn the offal on the floor into a slippery substance.
 
 \begin{boxtext}
 
@@ -838,12 +843,6 @@ they find two dead gnomes, one with a torch, the other with a Portal Scroll.
   Somewhere close, you hear snoring.
 
 \end{boxtext}
-
-If the \glspl{pc} have indeed been quiet enough in the previous room to not raise an alarm, they find everyone in nearby rooms napping.
-A single sound means they will be in serious trouble.
-
-The greasy floor results from a mixture of faeces, drool, blood and leftover mushroom-juice.
-Anyone who can use Conjuration magic will be able to turn the offal on the floor into a slippery substance.
 
 \paragraph{If the \glspl{pc} have come from room \ref{slugHall},}
 they will not immediately see the staircase on their left, but will see it after doing literally anything (fighting, searching, et c.).
@@ -857,14 +856,6 @@ Each margin on the roll allows them an additional round before the horde wakes.
 
 \label{laddertop}
 
-\begin{boxtext}
-
-  Some goblins and three ogres lie sleeping on the floor between workbenches.
-  The place is so full, you can't make out how many lie here, but the snoring indicates more than you can see.
-  On the benches, most of the equipment lies broken, but obviously delicate gnomish hands once used these tables to polish gems, craft magical items, and forge digging equipment.
-  On one table, you can see a pile of weapons -- short swords and spears -- piled on a table.
-
-\end{boxtext}
 
 \begin{exampletext}
 
@@ -874,6 +865,14 @@ Each margin on the roll allows them an additional round before the horde wakes.
 
 \end{exampletext}
 
+\begin{boxtext}
+
+  Some goblins and three ogres lie sleeping on the floor between workbenches.
+  The place is so full, you can't make out how many lie here, but the snoring indicates more than you can see.
+  On the benches, most of the equipment lies broken, but obviously delicate gnomish hands once used these tables to polish gems, craft magical items, and forge digging equipment.
+  On one table, you can see a pile of weapons -- short swords and spears -- piled on a table.
+
+\end{boxtext}
 Picks, shovels, wood, short swords, shortbows, and all manner of crafting and mining equipment litter the room.
 
 \paragraph{If the \glspl{pc} have come up from room \ref{entrycell},}
@@ -898,15 +897,7 @@ Failure will awaken the entire horde.
 
 \mapentry[grandLibrary]{The Grand Library}
 
-\begin{boxtext}
-
-  At the top of the stairs you find the ruins of a massive library.
-  Book cases lie in a smashed heap on the ground, others appear to be used as a makeshift bed for an ogre.
-  The books themselves are gone, except for a few scrolls, now tightly clutched by a goblin in a black cowl.
-  His hand shines with a thumb-ring, showing three massive gemstones.
-
-\end{boxtext}
-
+%! Remove old magical items
 In total, the room contains the following magical items:
 
 This bowl is always full of water.
@@ -935,6 +926,15 @@ The nura do not know, or have forgotten, these activation words, so they simply 
 
 If wrapped up in heavy sheets and suddenly displayed, the light can blind opponents, as usual.
 
+\begin{boxtext}
+
+  At the top of the stairs you find the ruins of a massive library.
+  Book cases lie in a smashed heap on the ground, others appear to be used as a makeshift bed for an ogre.
+  The books themselves are gone, except for a few scrolls, now tightly clutched by a goblin in a black cowl.
+  His hand shines with a thumb-ring, showing three massive gemstones.
+
+\end{boxtext}
+
 \iftoggle{hardcore}{
   \ogre[\npc{\N\T}{2 Docile Ogres}]
 }{
@@ -960,6 +960,8 @@ The player should not roll again -- the original roll remains, but increasing th
 \begin{multicols}{2}
 
 \mapentry[windingStairs]{Winding Stairs}
+
+A single ogre guards the prisoners here (the door has no lock).
 
 \begin{boxtext}
 
@@ -1030,6 +1032,13 @@ Take the last two farmers from the handout to join the troupe.
 
 \mapentry[armoury]{Armoury}
 
+\begin{exampletext}
+
+  The gnomes once stashed their little weapons here.
+  The nura horde have added to it considerably.
+
+\end{exampletext}
+
 \begin{boxtext}
 
   At the top of the stairway, three dying fireflies wander pointlessly.
@@ -1037,13 +1046,6 @@ Take the last two farmers from the handout to join the troupe.
   To the left, a wooden door waits, with dirty footprints visible on the floor.
 
 \end{boxtext}
-
-\begin{exampletext}
-
-  The gnomes once stashed their little weapons here.
-  The nura horde have added to it considerably.
-
-\end{exampletext}
 
 \begin{itemize}
 
@@ -1088,14 +1090,6 @@ Take the last two farmers from the handout to join the troupe.
 
 \mapentry[trappedHall]{Trapped Hallway}
 
-\begin{boxtext}
-
-  Your lantern illuminates dirty footprints leading out the door, to the left, and down a dark corridor.
-  To your right, two statues of ogres stand, like stooping gargoyles, blocking the path.
-  All around, the floor glistens with tiny gemstones carved into the centre of flagstones.
-
-\end{boxtext}
-
 The squares between the exit door and the party's path can turn anyone stepping upon them into stone.
 One goblin was unfortunate enough to trigger the trap.
 The second goblin did not believe the original goblins about why the first was there, and ignored the statue, so he was turned to stone too.
@@ -1107,6 +1101,14 @@ Anyone standing on the stone rolls their Weight Rating at \tn[15] to avoid being
 \iftoggle{oneshot}{%
   Each character's Weight Rating is equal to their \glspl{hp}.
 }{}
+
+\begin{boxtext}
+
+  Your lantern illuminates dirty footprints leading out the door, to the left, and down a dark corridor.
+  To your right, two statues of ogres stand, like stooping gargoyles, blocking the path.
+  All around, the floor glistens with tiny gemstones carved into the centre of flagstones.
+
+\end{boxtext}
 
 \paragraph{If anyone steps into the trap,}
 they must roll their Weight Rating at \tn[15], but anyone failing may spend 5 \glspl{fp} to ignore the effects of the trap.
@@ -1120,13 +1122,6 @@ If they avoid stepping into the trap, they can make a \roll{Speed}{Athletics} ro
 
 \widePic{Roch_Hercka/garden}
 
-\begin{boxtext}
-
-  Ahead lies to massive double-doors.
-  To the right, the hallway extends into a massive room, where you can hear the sound of sawing.
-
-\end{boxtext}
-
 Grank the nuramancer goblin has heard the \glspl{pc} coming, and has no intention of fighting them alone.
 He knows he has the only key to the exit door, so he intends to loose the hell-hounds he has tied up at the room's side before fleeing into the fungal gardens.
 
@@ -1135,6 +1130,13 @@ He knows he has the only key to the exit door, so he intends to loose the hell-h
 }{
   The party arrive to see him still sawing through the ropes, and have only a single round to stop him before he runs.
 }
+
+\begin{boxtext}
+
+  Ahead lies to massive double-doors.
+  To the right, the hallway extends into a massive room, where you can hear the sound of sawing.
+
+\end{boxtext}
 
 \paragraph{No matter what the party do,}
 the wolves go straight for the kill.
@@ -1150,14 +1152,6 @@ they end up in the mid-section of the warren.
 
 \mapentry[fungusGarden]{Fungal Gardens}
 
-\begin{boxtext}
-
-  As the doors open, your torchlight shows a crowded mess of fungus.
-  Some reach up to your knees, others tower above the light and so far that you cannot see the top.
-  The maze of unkempt mushrooms shows random, meandering paths between the taller fungi.
-
-\end{boxtext}
-
 \begin{exampletext}
 
   This beautiful fungal garden took dripping rain from above, and sieved it through the roof then the soil below, until it distributed nutrients for a forest of mushrooms, big and small.
@@ -1165,6 +1159,14 @@ they end up in the mid-section of the warren.
   The nura never really kept up with the garden's maintenance, so the room festered with dangerous jellies.
 
 \end{exampletext}
+
+\begin{boxtext}
+
+  As the doors open, your torchlight shows a crowded mess of fungus.
+  Some reach up to your knees, others tower above the light and so far that you cannot see the top.
+  The maze of unkempt mushrooms shows random, meandering paths between the taller fungi.
+
+\end{boxtext}
 
 While the place looks serene, it is inhabited by
 \iftoggle{hardcore}{%

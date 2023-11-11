@@ -1,20 +1,26 @@
-\chapter{The Siege}
+\chapter{The Black Tower}
 \epigraph{
-  As you cross the next hill, you see the stone walls of Darton town ahead, and the smoke coming up from the hundreds of chimneys within.
-  Climbing higher, you can see ladders poking at the town's tall walls.
-  A man runs along the edge, pushing them aside.
+  Emerging into the wild hills, you see the Sun beginning its descent.
+  Clouds gather overhead.
+  A nasty roaring sound comes from someone's stomach.
 
-  You climb higher, and see Darton surrounded by energetic, deformed, creatures of all sizes.
-  The nura have multiplied more than you thought.
-  They have laid siege to the entire town.
+  The hill ridges all around lie empty, with a cold wind.
+  Below, the forest offers food, darkness, and danger.
+
+  Where do you go?
 }{}
 
 \begin{multicols}{2}
 
 \noindent
-The party probably thought they were out of the woods, but you can continue the adventure with the siege.
-Darton has been completely surrounded by the nura, but a single outlaw alchemist can help.
-If they can find him, and convince him to return to the town, he may be able to turn the tides on the siege.
+The party probably thought they were out of the woods, but you can continue the adventure with the black tower.
+This lonely island of civilization provides the only place to rest and eat.
+
+\begin{exampletext}
+  The black tower began as a half-way house for the \gls{guard}, as they travelled between Darton and Grungefell.
+  The wardens of Grungefell never posted enough guards, spending the town's money on games and statues instead, and it soon fell.
+  The tower lay unoccupied, until `the alchemist' -- a noble who took to the study of alchemy -- set himself up there, along with a few servants and a hidden store of treasure.
+\end{exampletext}
 
 \end{multicols}
 
@@ -22,74 +28,35 @@ If they can find him, and convince him to return to the town, he may be able to 
 
 \begin{multicols}{2}
 
-\subsection{The Last Messenger}
+\subsection{Lights in the Night}
 
-\begin{exampletext}
+Night's darkness allows the \glspl{pc} to see two fires.
+The first lies 3 miles away, North West.
+The fire hosts a camp of cowardly \gls{guard} who fled their posts when the goblinoid horde descended.
 
-  Laith and his men were charged with escaping the city, and delivering a message to `Baron Quenn' (as he likes to call himself), otherwise known as the `Black Alchemist'.
-  The message would pardon him of all wrongdoings, and recognize his current lands as an official domain, if only he approaches the town to save it.
-
-  Unfortunately, Laith and his men were then attacked by dozens of goblins.
-  All died, except a heavily wounded Laith, who is bleeding heavily.
-
-\end{exampletext}
+The second lies 4 miles North, and comes from the alchemist's tower.
 
 \begin{boxtext}
-
-  You see a man wandering towards you, wearing thick, black, leather armour.
-  He seems to be a member of the Night Guard.
-  As he stumbles closer, you notice the trickle of blood leaking a river behind him.
-
+  Once the sky goes black, you perceive little lights in the distance.
+  Once lies low.
+  The other seems higher (but lower than the feint starlight), and flickers blue on occasion, but seems far weaker.
 \end{boxtext}
 
-The moment Laith approaches, he explains his mission, and gives the party directions.
-\exRef{judgement}{Judgement}{god:Sylf}
+\paragraph{If the troupe head towards either light,}
+they will have to descend into the forest, at which point they can no longer see the lights.
 
-\begin{speechtext}
+Finding the lights requires an \roll{Intelligence}{Wyldcrafting} roll, \tn[9].
+Each Margin of failure on the roll adds an extra mile to the journey.
 
-  You must walk East until the Sun sets, find the place in the forest where the trees neither grow, nor die, then scout for the Black Alchemist who lives there in his tower, and hand him this message.
-  Darton needs him.
-  He is our only hope.
+\paragraph{Marching through the forest}
+inflicts 1 \gls{fatigue} every mile travelled.%
+\exRef{core}{the core rules}{fatigue}
 
-\end{speechtext}
+\paragraph{Remaining on the hill}
+means no food, and goblins skulking around the area at night.
 
-\humansoldier[\npc{\M}{Laith the Scout}]
+However, the goblin horde will be easy to avoid as long as the troupe don't light a fire or make any noise.
 
-\paragraph{At this point,}
-the party spot a goblin sniffing along the stream of blood Laith left behind, far in the distance.
-He shrieks in delight, then runs back.
-
-\paragraph{If the party leave Laith behind immediately,}
-they can run to safety, but will still hear Laith being torn apart.
-
-\paragraph{If they wait to speak with him,}
-a horde of goblins and ogres run fast behind them, but they should get the opportunity to ask any questions they wish.
-
-\paragraph{If they insist on saving Laith,}
-they will have to carry him, with all the encumbrance that entails.
-
-\paragraph{If the party end up fighting with Laith,}
-he has only 1 \glspl{hp} left, but can still make one last stand.
-
-\paragraph{When the party flee,}
-they will find that the nura stop to feast on Laith before following, so they have plenty of time to get away.
-
-\paragraph{If the players decide they'd rather go directly to the town,}
-skip ahead to \autoref{siege}: \nameref{siege}.
-They will find the entire situation hopeless, and will not survive without a lot of sneaking.
-Make sure to impress upon them just how many nura wander around the outskirts freely.
-
-\iftoggle{hardcore}{%
-  \deepogre[\npc{\N\T[2]}{2 Ogres}]
-}{
-  \deepogre[\npc{\N\M}{Ogre}]
-}
-
-\iftoggle{hardcore}{%
-  \goblin
-}{
-  \goblin[\npc{\N\T[1]}{6 Goblins}]
-}
 
 \subsection{Finding the Tower}
 
@@ -101,11 +68,6 @@ Make sure to impress upon them just how many nura wander around the outskirts fr
 
 \end{boxtext}
 
-\noindent
-The tower is 15 miles away, which is a reasonable walk for most humans, but any non-humans in the group will need a rest before that.
-Have the players roll Intelligence + Survival, TN 11.
-Each failure margin adds another 2 miles to the journey.%
-\exRef{core}{the core rules}{fatigue}
 
 \subsection{The Chitincrawler}
 

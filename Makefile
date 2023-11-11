@@ -29,7 +29,7 @@ oneshot_handouts.pdf: images handouts.tex $(wildcard ex_cs/*) .switch-gls
 	rm -f .switch-gls
 
 hardcore: hardcore_horde_escape.pdf hardcore_handouts.pdf
-hardcore_horde_escape.pdf: main.tex intro.tex warren.tex top.tex siege.tex appendix.tex svg-inkscape/black_tower_f5_svg-tex.pdf
+hardcore_horde_escape.pdf: main.tex intro.tex warren.tex top.tex the_tower.tex appendix.tex svg-inkscape/black_tower_f5_svg-tex.pdf
 	pdflatex -jobname hardcore_horde_escape main.tex
 svg-inkscape/black_tower_f5_svg-tex.pdf: $(wildcard config/*) images
 	pdflatex -shell-escape -jobname hardcore_horde_escape main.tex

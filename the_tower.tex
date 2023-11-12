@@ -60,7 +60,7 @@ However, the goblin horde will be easy to avoid as long as the troupe don't ligh
 \subsection{The Cowardly Guards}
 
 \begin{speechtext}
-  ``There's no use fighting when the goblins come, you know?
+  ``There's no use fighting giants, you know?
 
   Like, we can't expect to survive, so no use in getting eaten, you know?
 
@@ -90,7 +90,7 @@ And while they talk, little goblins watch the fire, hungrily, then return to the
 \goblin[\npc{\N\T[4]}{\arabic{noAppearing} Goblin Scouts}]
 
 \paragraph{Spotting the goblin scouts}
-requires a \roll{Wits}{Vigilance} roll against the goblins' \roll{Dexterity}{Stealth} (\tn)
+requires a \roll{Wits}{Vigilance} roll against the goblins' \roll{Dexterity}{Stealth} (\tn).
 
 \paragraph{If the troupe decide to rest,}
 they will have to designate watchmen for the night.
@@ -115,14 +115,18 @@ requires a \roll{Wits}{Vigilance} roll, against the ogres' \roll{Dexterity}{Stea
 \subsection{The Chitincrawler}
 
 En route to the tower, the party run into a chitincrawler's web.
-Have them roll Wits + Vigilance, TN 10.
-This is a group roll, so everyone who fails has been caught in the web.
+Have them roll \roll{Wits}{Vigilance}, \tn[10].
+This is a group roll, so the check counts against the first three characters (probably those with the highest \roll{Speed}{Athletics}).
 
 \chitincrawler
 
+\paragraph{If the chitincrawler passes its Morale check,}
+it attacks.%
+\exRef{judgement}{Judgement}{morale}
+
 \subsection{Footprints}
 
-Have the party make a Teamwork Roll of Wits + Survival, TN 10.
+Have the party make a Teamwork Roll of \roll{Wits}{Survival}, \tn[10].
 Success indicates that one has spotted nura footprints nearby.
 
 \begin{boxtext}
@@ -132,7 +136,25 @@ Success indicates that one has spotted nura footprints nearby.
 
 \end{boxtext}
 
-The characters guess at least a dozen goblins, and half a dozen ogres, given the footprints.
+The characters guess at least a dozen goblins, and half a dozen ogres, from the footprints.
+
+\subsubsection{Consumed Villages}
+
+If the troupe approach any villages, they find them already consumed by the horde.
+If the \glspl{guard} joined them, they will refuse to approach any villages.
+
+The villages sometimes have some of the goblin horde remaining.
+Roll to find the inhabitants:
+
+
+\begin{itemize}
+  \item
+  $(1D6 - 3)\times 5$ goblins.
+  \item
+  $(1D6 - 3)\times 3$ ogres.
+  \item
+  Any village with goblins still around has $1D6$ farmers, tied up and waiting to be eaten.
+\end{itemize}
 
 \end{multicols}
 
@@ -140,19 +162,12 @@ The characters guess at least a dozen goblins, and half a dozen ogres, given the
 
 \begin{multicols}{2}
 
+\noindent
 \begin{exampletext}
+  The rampant goblin horde, having eaten their way through the villages, have invaded the black tower.
+  If they can secure this outpost, they can travel farther, eventually reaching farther villages.
 
-  The Black Tower began as a lonely outpost deep in wild lands.
-  It was planned as the first part of a new place for civilization, but the plan was interrupted once the Rex of Fenestra banned townmasters from keeping their own guards, leaving only the Night Guard to defend against monsters.
-
-  When the local lawmakers outlawed Theodore Quenn for learning Necromancy, and for refusing to reply to various summons from the College of Alchemy, he ventured into the wilderness and made his home here in the tower.
-  Since then, the local declared theoretical war on him, and he declared himself theoretically `baron' of his own domain, and everyone in practice left each other well-alone.
-  After all, `the Black Baron', can summon enough raging fire to wipe out an army, and he managed to explain this politely to any of the Night Guard who came to his gates, before offering his sympathy with their position.
-
-  Since then, things have been good for Baron Quenn, until today.
-  Nura invaded his home, so he burned them to death them with alchemical fire.
-  Then more came and killed his servant, so now he finds himself stuck on his own roof with three apples and yesterday's pie.
-
+  The bridge here provides the only place to cross the massive river, so if the troupe stop the horde progressing, they will have limited the horde's reach substantially.
 \end{exampletext}
 
 \smolMapPic{Dyson_Logos/black_tower_base}{
@@ -162,48 +177,49 @@ The characters guess at least a dozen goblins, and half a dozen ogres, given the
 
 \subsection{The Approach}
 
+The Alchemist sits at the top of the tower, and will wave to the troupe.
+
 \begin{boxtext}
 
   Ahead, a wide, raging river stands in front of the black tower, which is in fact a grey colour typical of the slate in the area.
+  At the top, a man wearing a long, dark robe, watches your approach.
 
 \end{boxtext}
+
+\paragraph{If anyone shouts towards the Alchemist,}
+he remains silent and indicates the danger in the tower below him, as he does not want to draw attention to himself.
 
 \mapentry[towerBridge]{The Bridge}
 
 The bridge is a simple stone construction, which stays put.
-Below, it is supported by wood, and can be taken apart with a Strength + Crafts roll, TN 12.
+Below, it is supported by wood, and can be taken apart with a \roll{Strength}{Crafts} roll, \tn[14].
 Proper tools, such as a saw, can add up to a +4 Bonus.
+
+\paragraph{If the troupe approach during daylight,}
+a goblin spellcaster, watching from \nameref{towerServants} (room \ref{towerServants}) spots them, and begins casting offensive spells.
 
 \mapentry[towerPortcullis]{The Portcullis}
 
-\begin{boxtext}
+Two ogres stand inside, happily eating a horse.
+They have lowered the gates, so the troupe cannot rush in to attack.
 
-  Approaching the portcullis, two ogres inside race forward, then pull it up with their hands, keeping eye-contact with you the whole time.
-
-\end{boxtext}
-
-\noindent
-By the time the party stand 10 steps away, the ogres start to pull the gates up.
-It takes the ogres 8 Initiative points to raise the portcullis.
-\iftoggle{core}{%
-\footnote{See the core book, page \pageref{movement} for rules on maximum movement.}
-}{}
-
-\paragraph{If someone in the group kills an ogre,}
-they drop the portcullis.
+\ogre[\npc{\N\T[2]}{2 Ogres}]
 
 \paragraph{Raising the portcullis}
 requires a total of 6 Strength points, so the party will have a difficult time doing this on their own.
-However, if one ogres remains alive inside, tricking it into opening the gate will not pose much difficulty.
+
+\paragraph{Going around the back of the tower}
+means edging along the narrow earthy edge.
+This demands a \roll{Dexterity}{Athletics} (\tn[10]).%
+\footnote{Remember, anyone wants to go around the outside, start by asking \emph{all} the players if they want to go around the outside, before the roll occurs.}
 
 \paragraph{If anyone ends up in the river,}
-have them roll Speed + Athletics, TN 9.
-Failure indicates they have been washed downstream, and must take \pgls{interval} trudging back.
+have them roll \roll{Speed}{Athletics}, \tn[9].
+Failure indicates they have been washed downstream, and must take \pgls{interval} trudging back.%
 \iftoggle{core}{%
-\footnote{Larger party members carrying small ones will gain the standard penalties for carrying a heavy item (or in this case, `party member').  See the core book, page \pageref{weightrating}.}
+  \footnote{Larger party members carrying small ones will gain the standard penalties for carrying a heavy item (or in this case, `party member').
+  See the core rules, \autopageref{weight}.}
 }{}
-
-\ogre[\npc{\N\T[2]}{2 Ogres}]
 
 \smolMapPic{Dyson_Logos/black_tower_f1}{
   \ref{towerPortcullis}/23/44,
@@ -212,21 +228,20 @@ Failure indicates they have been washed downstream, and must take \pgls{interval
 
 \mapentry[exStable]{The Stable}
 
-\begin{boxtext}
-
-  Opening the door, you find a room covered in straw.
-  At the far side lies a horse-corpse, covered in goblins, swarming like maggots.
-
-\end{boxtext}
-
-\paragraph{If the party have any sense,}
-they will close the door.
-
-If they draw attention to themselves, the goblins pick up their weapons, then attack.
+Further goblins hide in here, eating a horse the ogres left for them.
 
 \goblin
 
+\begin{boxtext}
+  Opening the door, the blood-sodden stable only hosts \arabic{noAppearing} goblins, swarming over a horse corpse, and competing with a mass of flies to see how quickly they can consume the beast.
+\end{boxtext}
+
 \mapentry[towerArmoury]{The Armoury}
+
+\begin{exampletext}
+  Whenever the \gls{guard} came to the tower, the Alchemist had excellent weapons waiting for them.
+  This ensured they kept on good terms with him, and that he had a rotation of well-armed guards.
+\end{exampletext}
 
 \begin{boxtext}
 
@@ -246,8 +261,8 @@ If they draw attention to themselves, the goblins pick up their weapons, then at
 
 The party can pick up three suits of chainmail for anyone with Strength 2-3, and three longswords.
 
-The human feet across the room belonged to Baron Quenn's servant, who kept the place tidy, and helped with the portcullis.
-He has been eaten, and little remains except his boots and bones.
+The human feet across the room belonged to the Alchemist's servant, who kept the place tidy, and helped with the portcullis.
+He has been eaten, and little remains except his boots, blood, and bones.
 
 \mapentry[towerMechanism]{The Portcullis Mechanism}
 
@@ -256,9 +271,11 @@ They require only a Strength Bonus of +1 to operate.
 
 \mapentry[towerKitchen]{Kitchen}
 
+The kitchen still holds 6 meals, but the ogre will eat all of it soon enough.
+
 \begin{boxtext}
 
-  Traipsing up the steps, you heard the sound of angry mastication.
+  Traipsing up the steps, you hear the sound of angry mastication.
   At the top, you see an open door, with an ogre inside a kitchen, pulling down fruits with one hand and salted meats with the other.
 
   He looks up at you, but does not stop eating.
@@ -279,22 +296,11 @@ Otherwise, he attacks.
 
 \mapentry[towerServants]{Servant's Room}
 
-\begin{boxtext}
-
-  A high-pitched voice gives a lecture in the common tongue, but it's so fast the contents make little sense.
-
-\end{boxtext}
-
-\paragraph{If the party have not opened the door, but merely listen,}
-have them make a Wits + Vigilance check.
-Success indicates that they can pass unnoticed, or stay and listen.
-
-Understanding the conversation from outside the room requires a Wits + Empathy check, TN 9.
-If the roll succeeds, tell the players that the Black Alchemist is hiding on the roof, and the head goblin is having a hard time explaining that if anyone goes up there, they will have their head incinerated by magic.
+A goblin spellcaster stands here, watching for anyone approaching.
 
 \goblinnuramancer
 
-\goblin[\npc{\N\T[6]}{6 Goblins}]
+\showStdSpells
 
 \mapentry[towerStorage]{Storage Room}
 
@@ -305,11 +311,18 @@ An \roll{Intelligence}{Larceny} check \tn[10] is required to figure out how to o
 
 \mapentry[towerLibrary]{Library}
 
+The library contains myriad books on history, alchemy, political tracts in support of a monarchy, and analyses of the afterlives we all go to once the gods take us.
+
+A single goblin hides underneath a table.
+It feels scared by the big people approaching, and waits to stab a player from hiding, then bolt downstairs.
+
 \begin{boxtext}
 
   Stellar maps cover the walls, full of numbers etched into the side.
   The desks have etches of Sunlit deserts, with strange geometrical shapes.
-  Scrolls have calculations concerning abstract coordinates, such as `area A', with no mention of what that area may be.
+  Scrolls have calculations concerning abstract coordinates, such as `area C', with no mention of what that area may be.
+
+  Myriad books lie in a heap, next to a conspicuously blank wall.
 
 \end{boxtext}
 
@@ -318,30 +331,23 @@ An \roll{Intelligence}{Larceny} check \tn[10] is required to figure out how to o
   \ref{towerBaron}/25/72,
 }
 
-\noindent
-Players may spot at this point that the maps pertain to the Realm of Bright Rocks lying on a table.
-What they may not spot, is a little goblin who came up to look for food, who ended up hiding behind that table, in order to avoid being caught by the party.
-
-\paragraph{If the players succeed on a Wits + Vigilance roll}
-(TN 10), they find the hiding goblin.
-If not, the last one to exit the room has a nasty surprise in store as the goblin attacks from behind, prompting a Sneak Attack.%
-\iftoggle{core}{%
-\footnote{See the core rules, page \pageref{sneakattack}.}%
-}{}
-
 \goblin[\npc{\N\F}{Hiding Goblin}]
+
+\paragraph{If the \glspl{pc} fail to spot the hiding goblin,}
+it attempts a sneak attack, then bolts down the stairs.
+\exRef{core}{Core rules}{sneakattack}
+
+\paragraph{Searching for particularly valuable books}
+requires an \roll{Intelligence}{Academics} roll (\tn[12]).
 
 \paragraph{Once the \glspl{pc} enter}
 they notice a trapdoor in the roof.
 
 If any goblins enter, they will be fried by the Black Alchemist, but the players only need to shout up in a friendly voice, and say they mean no harm to come up without being incinerated.
 
-\mapentry[towerBaron]{Baron Quenn's Room}
+\mapentry[towerBaron]{the Alchemist's Room}
 
-The baron's room is a mess, but one made of fine quilts and quality pillows.
-Anyone familiar with gnomish culture can roll Wits + Crafts (TN 8) to notice that the bedding and most of the room's contents is Gnomish in origin.
-
-The quilts have come through gnomish contacts, but the Baron will not wish to discuss this, as he is aware that gifting the gnomes with knowledge of the Realm of Bright Rocks lead to the current predicament.
+The room is a mess, but a mess made of fine quilts and quality pillows.
 
 Around the room are:
 
@@ -350,7 +356,8 @@ Around the room are:
   \item{A jar with the web-spinning organ of a chitincrawler, soaked in wine.}
   \item{A rare green gem, worth 40 \glspl{gp}.%
   \footnote{Finding a buyer will prove difficult.}}
-  \item{The preserved eyeballs of Darren the seer. He had 20 \glspl{fp} in life, so this could make an excellent \gls{ingredient} for a Fate spell.}
+  \item{The preserved eyeballs of Coltrank the seer.
+  It could make an excellent \gls{ingredient} for a Fate spell.}
   \item
   A magical item, hidden in a drawer:
 
@@ -360,7 +367,11 @@ Around the room are:
 
 \mapentry[towerRoof]{The Roof}
 
-Here, the Black Alchemist has stayed safe from the nura horde by first taking the ladder up, and secondly by blasting any nura who come up in the face with magical fire.
+\begin{exampletext}
+  The Alchemist has lit a bonfire, made from a broken bookshelf.
+  He has enchanted it to flicker blue in order to call for aid.
+  When goblins poke their heads up, he uses his magical abilities to blast them off the side of the tower, or have the bonfire consume them.
+\end{exampletext}
 
 \paragraph{Once the party enter,}
 the Baron allows them to come up, greets them politely, and listens to anything they have to say.
@@ -371,16 +382,9 @@ the Baron allows them to come up, greets them politely, and listens to anything 
 
 \paragraph{If any party members have died,}
 a new \gls{pc} can be found here.
-This might be someone in the employ of the Barron, or a random person who was in the deep forest and ran away from the nura, then took shelter in the Barron's keep.
+This might be someone in the employ of the Alchemist, or a random person who was in the deep forest and ran away from the horde, then took shelter in the tower.
 
-\paragraph{Once the party give over the letter,}
-the Barron reads it slowly, and agrees to return with the party.
-
-\paragraph{If the party asks why such a powerful alchemist requires escorts,}
-he explains that while he could defeat an entire army, a single goblin javelin could still kill him.
-He will require the party not only to guard him on the way back, but especially to guard him at the siege while he prepares his spells.
-
-\npc{\M}{Baron Quenn}
+\npc{\M\Hu}{The Alchemist}
 \person{1}% STRENGTH
 {0}% DEXTERITY 
 {0}% SPEED
@@ -400,6 +404,10 @@ He will require the party not only to guard him on the way back, but especially 
 
 \showStdSpells
 
+\paragraph{While the troupe make their introductions,}
+the goblins below feel hungry again, and ascend the tower.
+List out all enemies the troupe have not eliminated: all of them join together and plan their attack.
+
 \end{multicols}
 
 \section{The Journey Back}
@@ -414,13 +422,12 @@ If they wish to rest and recover, throw in another encounter.
 
 \subsection{Discovering the Theft}
 
-If the players have stolen anything precious from Baron Quenn, he might notice if they do not hide it well enough.
+If the players have stolen anything precious from the Alchemist, he might notice if they do not hide it well enough.
 Have the player roll their \roll{Intelligence}{Larceny} against the baron's \roll{Wits}{Vigilance} (so \tn).
 Failure indicates that while rummaging through a bag to take out food or equipment, they have revealed the stolen item for a moment.
 
-If the Baron sees a stolen item, he will remember, and attempt to kill the character later.
-Make a note of his intentions.
-Once pardoned, he will launch an official complaint, and if nobody arrests the character and returns the item, he will swear an oath of vengeance.
+If the Alchemist sees a stolen item, he will remember, and attempt to kill the character later.
+Make a note of his intentions -- he understands the value of patience well.
 
 \subsection{The Basilisk}
 
@@ -431,99 +438,10 @@ Once pardoned, he will launch an official complaint, and if nobody arrests the c
 \end{boxtext}
 
 The party will notice the basilisk coming a mile away, and have time to prepare.
-This gives a great opportunity to see what the Black Alchemist can do, as he rains hell-fire on the basilisk, with a \textit{\textbf{Raging}, Raging Fireball} for $2D6+3$ Damage.
+This gives a great opportunity to see what the Black Alchemist can do, as he rains hell-fire on the basilisk, with a Fire spell.
 
 \basilisk
 
 If seriously damaged, the basilisk retreats.
-
-\subsection{The Goblins}
-
-By this point, there is a good chance the party have become too tired to move, and will need to rest.
-The journey back poses no navigation problems, as Baron Quenn knows exactly how to return to Darton.
-However, the party will still have to decide during each slice of the day if they wish to rest or continue marching.
-\paragraph{If they decide to recover Fatigue Points by resting,}
-they will need to put up with the additional encounter of goblins riding nura wolves.
-
-\goblin[\npc{\N\T[7]}{7 Goblin Riders}]
-
-\nurawolf[\npc{\N\A\T[7]}{7 Nura Wolves}]
-
-If, on the other hand, they do not rest, they will not recover Fatigue Points from the journey.
-
-\pic{Decky/shaman2}
-
-\end{multicols}
-
-\section{The Siege Breaks}
-
-\begin{multicols}{2}
-
-\noindent
-The party must break the siege, by allowing the Black Barron to cast a spell over a massive section of the nura horde surrounding it.
-
-Specifically, the baron plans to cast a \textit{Massive, Raging Fireball}, which will cover 5 areas around the town, inflicting $2D6+1$ Damage on everything inside.
-These areas may be any areas around the town which he can see, so he can simply cast fire over any half of the town which he can see.
-
-Alternatively, he might cast a \textit{Ranged, Massive Fireball}, but this would inflict only $1D6 + 3$ Damage on everyone inside.
-
-This final part of the adventure leaves everything open to player planning and plotting.
-They have time to deliberate, but not too long.
-You may wish to set a ten minute timer, and tell them that nightfall comes once the timer ends (of course, this is artificial `game-time', as Sunset does not necessarily come in ten minutes).
-
-\paragraph{At the start of the encounter,}
-show the players the town map and explain their options.%
-\footnote{See \autoref{handouts}, for the map handouts.}
-
-The party have a number of questions to answer before they begin this exercise:
-
-\begin{itemize}
-
-  \item{Where do they begin the spell, such that the Barron can see everything he needs to, but will not be overrun by nura?}
-  \item{If surviving nura rush towards them, what will they do?}
-  \item{Do they want to orchestrate something inside the town walls to coincide with the attack?}
-
-\end{itemize}
-
-\paragraph{If the party scout around the area,}
-have them make a Group Roll of Dexterity + Stealth, TN 9.
-
-    \paragraph{Failure}
-    means the scout is caught, and will be eaten, publicly, within about ten minutes (the nura want to start a fire and gather some spices).
-
-\setcounter{list}{-1}
-\begin{list}{\addtocounter{list}{1}\textbf{Margin \arabic{list}}:}{\raggedleft}
-
-  \item{only allows them to return safely with the knowledge that Darton town is indeed surrounded.}
-  \item{tells them that the majority of the nura horde around them are ogres.}
-  \item{tells them that the Southern portion of the wall has fewer nura around it.}
-  \item{tells the group that a number of goblins go diving around the East section of town, and seem to have found some secret entrance to town.}
-\end{list}
-
-\paragraph{If the party wait until nightfall,}
-the goblins enter town through a sewage system which leads to the river at the Eastern side.
-Darton's night guard spends the rest of the night dealing with these dozens of goblins, and by the morning the drawbridge has been lowered, ogres enter, and the town is doomed.
-
-\paragraph{If the party get caught wandering,}
-then some ogres will chase after them.
-The Barron will probably be able to save them with his magic, but will afterwards be depleted, forcing them to hide and rest.
-
-\ogre
-
-\end{multicols}
-
-\section{The End}
-
-\begin{multicols}{2}
-
-\noindent
-If the party are successful, the Night Guard in the town rush out and chase away the remaining nura.
-They want to make a good show of bravery so nobody calls them cowards.
-If the party left the nura portal open, the location will forever have a nura blight around it, but nobody could really blame them.%
-
-The townsfolk then exit and give three cheers to Baron Quenn for saving the day.
-A local crier also requests thanks to the party for bringing him, but by this point the townsfolk will have started dispersing back to their villages to see if anything remains of them.
-
-A lone man in a black uniform wanders out to ask if they would like to join the Night Guard.
 
 \end{multicols}

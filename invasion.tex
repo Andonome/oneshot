@@ -14,7 +14,6 @@
 
 \begin{multicols}{2}
 
-
 \subsection{Who You Are (Hopefully)}
 
 This RPG module was made for \glspl{gm} who want to run a game of BIND with new characters.
@@ -40,21 +39,34 @@ This RPG module was made for \glspl{gm} who want to run a game of BIND with new 
   }
 }
 
-\widePic{Roch_Hercka/transformation}
+%\widePic{Roch_Hercka/transformation}
 
 \subsection{Overview}
 
 The \glspl{pc} awaken to find themselves in a cell, deep underground.
 Their last memories surface slowly as the players \iftoggle{hardcore}{themselves start to make their characters}{get to know their character}.
-Over the course of the adventure, they find out that the gnomes opened a portal to a distant land where the goblins invaded, transforming the gnomes into more goblins.
 
-Once out into the warren, the party may speak to a dragon who guards a hidden passage, grab magical scrolls made by the gnomes before they became so deformed, and avoid the traps, guards, and aberrations of the goblin lair.
-They will meet other prisoners, and hear how the goblins destroyed all the villages around with their unending hunger.
+Once they escape, into the once-gnomish warren, the troupe may
+
+
+\begin{itemize}
+  \item
+  speak to a dragon who cannot squeeze through the door to the treasure room,
+  \item
+  grab magical scrolls made by the gnomes before their defeat,
+  \item
+  avoid goblins raiding parties,
+  \item
+  dodge the traps left by the gnomes,
+  \item
+  find and free other prisoners,
+  \item
+  and perhaps even escape.
+\end{itemize}
 
 \iftoggle{hardcore}{
   Once out, they emerge into the hillside at night, without food or water.
   Once night comes, a light appears in the distance, which seems to signal for aid.
-  
   If the \glspl{pc} investigate, they will find the black tower, where goblins have surrounded the proprietor, known as `the alchemist'.
 }{
   The \glspl{pc}' mission is simple -- to escape through the exit at the top, and return to civilization.
@@ -64,31 +76,25 @@ They will meet other prisoners, and hear how the goblins destroyed all the villa
 \label{invasionHistory}
 
 \begin{exampletext}
-Ten years ago, the enlightened gnomes of the Whittling Warren made a magical portal to the Realm of Bright Rocks in order to filch crystal flowers, which they used to make more portals, and plenty of magical scrolls which make magical portals.
-They have made all manner of portal scrolls, which open gates to other far realms (and allow users to jump back in case of emergency), and even a magical lift to transport heavy loads up and down the warren.
 
-The twist here comes with a goblin, who came through the portal from the other realm, and cast a spell to turn the gnomes into goblins.
+  When the gnomes heard the hum of mana in the \glspl{deep} below them, they did not fancy making the long journey.
+  Instead, they cast a portal spell, to open a magical doorway \emph{down}, right next to the source of all that power.
+  Stepping through, they found a plentiful garden of magical plants, tended by goblin druids.
+  They picked a few choice plants, and left quietly, without suspecting that the druids had spotted them.
 
-Goblins are in fact simply gnomes cursed with nura magic, and once transformed they become stronger, faster, stupider, uglier, and very, \emph{very}, hungry.
+  The gnomes planned to create a series of portal-scroll pairs.
+  One would create a portal to the goblin realm, and its twin would open a portal back to their home.
 
-They started by fighting back, but the goblin ran and hid, and waited for the curse to take its course.
-The new goblins ate all the food in the warren, and eventually darted upstairs to eat the other gnomes.
+  The goblin druids, with some divination spells, predicted where the portal would appear, and amassed a host of goblins and ogres to defend themselves, and fight back against the strange invaders with hairy faces. 
 
-Unable to defeat the caster, and fast losing their minds, they eventually agreed to raid human villages out of hunger.
-In the villages, the original nuramancer-goblin started transforming humans.
-\iftoggle{hardcore}{}{
+  Neither plan worked very well.
+  The gnomes' plan ended with the start of the goblins' plan.
+  The goblins plan went sour once they realized that a) they had no way to return, and b) no source of food.
 
-  The process works about the same for humans, although we call them `ogres'.
-  They grow tall, strong, ugly, and stupid.
-  And of course, \emph{hungry}.
+  The horde emerged from the warren, and journeyed to nearby human towns.
+  They had a dozen reasons they could not simply ask for food, and two dozen ogres.
 
-  Collectively, we call these creatures `nura',%
-  \footnote{Pronounced `noo-rah'.}
-  and their essence is always hunger.
-}
-
-Back at the warren, the new goblins had begun to forget where some of the traps they had known as gnomes lay, and blundered into them.
-But they continued raiding, filling the areas with people to eat or transform into ogres, and planning their next raid.
+  The rest you might guess.
 
 \end{exampletext}
 
@@ -106,14 +112,12 @@ The first page is
   \iftoggle{core}{a quick summary of the rules (you can ignore Character Creation), and the next is
   }{}
   a \gls{gm} sheet, for recording a few notes about the \glspl{pc} and taking general notes on upcoming encounters, or \glspl{npc} with the group.
+
 }{
-  a map of the upper dungeon level (which the \glspl{pc} may find inside the dungeon)%
-  \iftoggle{hardcore}{%
-    , followed by a map of Dayton town, the last surviving remnants of civilization in the area.
-  }{.}
+  a map of the upper dungeon level (which the \glspl{pc} may find inside the dungeon).
 }
 
-Next, six villagers are given as statblocks.
+Next, you will find six villagers statblocks.
 You should cut (or tear) these apart, so you can hand them to players to individually keep track of, in case those villagers join the troupe's fight for freedom.
 
 \iftoggle{hardcore}{}{
@@ -130,7 +134,6 @@ You should cut (or tear) these apart, so you can hand them to players to individ
 
   When you see this description of a room, your \glspl{pc} might not have a single candle, or might have three torches.
   It lays out a picture while reading this module for the first time, but should be modified or forgotten when running it live.
-
 }
 
 \subsection{Creation}
@@ -139,11 +142,13 @@ You should cut (or tear) these apart, so you can hand them to players to individ
 
 
   \sidebox{
-    \begin{tabularx}{\linewidth}{cL}
+    \begin{tabularx}{\linewidth}{c|L}
+      \hline
       4-6 & Nothing \\
       3   & Partial leather armour \\
       2   & Flint box \\
       1   & Knife    \\
+      \hline
     \end{tabularx}
   }
 
@@ -206,42 +211,30 @@ You should cut (or tear) these apart, so you can hand them to players to individ
 
 }{}
 
-\subsection{Newly Fledged Nura}
+\subsection{Light}
 
-The ogres here remember being human only hours or days ago.
-They still haven't accepted their transformation fully, so many will not want to kill or eat humans unless they feel really hungry.
+Keep careful track of the light sources -- they are rare and exceedingly valuable.
+If only a single \gls{pc} has a light source, switch all narrative to that person's perspective -- after all, everyone else will be in the dark, so they can only focus on the light-bearer.
+\exRef{core}{core rules}{darkness}
 
-If the party encounter ogres, but have not yet attacked them, they can make a Charisma + Empathy roll with a \gls{tn} of 10, to convince the ogres to not attack for a round.
-The check has to be made each round if the players are in sight.
-This trick can't last forever, but it \emph{can} buy them time to flee.
+\subsubsection{Candles}
 
-The gnomes have turned into goblins some time ago, and are quite beyond help.
+While common, these light sources go out easily.
+Any running will put a candle out, but dropping them will do nothing.
+Wax and mushroom-based candles lay in almost every room in the warren, though they sit unlit in empty rooms.
 
-\iftoggle{hardcore}{
-  \subsection{Light}
+\subsubsection{Torches}
 
-  Keep careful track of the light sources -- they are rare and exceedingly valuable.
-  If only a single \gls{pc} has a light source, switch all narrative to that person's perspective -- after all, everyone else will be in the dark, so they can only focus on the light-bearer.
-  \exRef{core}{core rules}{darkness}
-
-  \subsubsection{Candles}
-
-  While common, these light sources go out easily.
-  Any running will put a candle out, but dropping them will do nothing.
-  Wax and mushroom-based candles lay in almost every room in the warren, though they sit unlit in empty rooms.
-
-  \subsubsection{Torches}
-
-  These far more practical light sources are held by most nuramancer goblins in the warren.
-  Anyone with a torch can light up the entire room.
-}{}
+These far more practical light sources are held by most nuramancer goblins in the warren.
+Anyone with a torch can light up the entire room.
 
 \subsection{Captured}
 
 If the party ever lose a fight, do not push this until each lie dead.
 Instead, when it becomes obvious they cannot win, have the nura draw back, mock the party, and then tell them to drop their weapons so a group of ogres can escort them down to their cells.
 
-If any of the party have died, more prisoners come in soon, so another character can be rolled and added to the story from this new group once someone in the party spends the necessary Story Points.
+If any of the party have died, more prisoners come in soon, so another character can be rolled and added to the story from this new group%
+\iftoggle{stories}{once someone in the party spends the necessary \glspl{storypoint}}{}.
 Once this is done, the party can attempt to flee again.
 
 \subsection{Death}
@@ -249,7 +242,7 @@ Once this is done, the party can attempt to flee again.
 If any character dies, another can be introduced once the troupe reaches any prison.
 The nura regularly send out raiding parties to capture people, and those people get dumped back into the prisons, so even if the \glspl{pc} have fled the prisons, any time they return, more prisoners can be found and liberated.
 
-\subsubsection{Party Death}
+\subsubsection{Annihilation}
 
 Everyone in the party dying doesn't have to mean the game ends.
 Just pull up some more characters, and have the new group awaken, ready for the goblins to eat them.

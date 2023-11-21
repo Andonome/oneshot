@@ -284,10 +284,12 @@ reveals two large knives which can be used as \emph{daggers}.
   \ref{windingStairs}/58/64,
   \ref{secondPrison}/43/68,
   \ref{armoury}/64/84,
-  \ref{trappedHall}/54/84,
+  \ref{inDoor}/54/84,
+  \rotatebox{37}{$\huge\Longleftarrow$}/46/78,
+  \ref{outDoor}/35/94,
+  \rotatebox{41}{$\huge\Longrightarrow$}/34/86,
   \ref{topShaft}/25/87,
   \ref{fungusGarden}/09/77,
-  \ref{lockedDoor}/35/94,
   \ref{lowerExit}/62/97,%
   {\iftoggle{hardcore}{\ref{goblinSentry}}{}}/41/53,
 }
@@ -676,7 +678,7 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
 
 \noteRaidingParty
 
-\mapentry[treasureRoom]{The Treasure Room}
+\mapentry[treasureRoom]{Treasure Room}
 \begin{itemize}
 
   \item{A short bow}
@@ -979,11 +981,6 @@ The prisoners require no locks or handcuffs -- the ogre waiting outside suffices
 
 \paragraph{If any of the \glspl{pc} have died,}
 another player should spend 2 Story Points to introduce an old friend.
-\iftoggle{hardcore}{}%
-  \iftoggle{core}{%
-    Pick another pre-made character sheet from the pile and hand it to any players without characters.
-  }{}%
-The players should agree on how they know each other.
 
 Take the last two farmers from the handout to join the troupe.
 
@@ -1065,35 +1062,22 @@ Take the last two farmers from the handout to join the troupe.
   If anyone hits 5 points over what they need to hit the wolves, they get a `\textit{Vitals Shot}', which ignores the \gls{dr} entirely, as the attack hits a sensitive area.
 }
 
-\mapentry[trappedHall]{Trapped Hallway}
+\mapentry[inDoor]{The Two-Way Doors}
 
-The squares between the exit door and the party's path can turn anyone stepping upon them into stone.
-One goblin was unfortunate enough to trigger the trap.
-The second goblin did not believe the original goblins about why the first was there, and ignored the statue, so he was turned to stone too.
+\begin{exampletext}
+  When gnomes rushed busily around the warren, taking mushrooms to the kitchen, chamber-pots to the mushrooms, and secrets to fellow conspirators, they sometimes bumped into each other.
+  To stop this happening again, they designated this door as `out', and the other as `in'.
+\end{exampletext}
 
-This magical trap didn't look quite right when the flagstones had to be inlaid with gems in order to complete the alchemical spell -- that kind of shine gives the game away.
-The gnomes' solution was to make sure \textit{all} flagstones had a magical amulet in them, so nobody could tell which might hold a deadly spell.
+If the \glspl{pc} open the doors they can walk to the lift, but if the doors close, they will not open from the anterior side easily.
 
-Anyone standing on the stone rolls their Weight Rating at \tn[15] to avoid being turned to stone.
-\iftoggle{oneshot}{%
-  Each character's Weight Rating is equal to their \glspl{hp}.
-}{}
+\paragraph{Opening either door from the wrong side}
+requires a \roll{Strength}{Larceny} roll, \tn[10].
 
-\begin{boxtext}
+\mapentry[outDoor]{The Out Door}
 
-  Your lantern illuminates dirty footprints leading out the door, to the left, and down a dark corridor.
-  To your right, two statues of ogres stand, like stooping gargoyles, blocking the path.
-  All around, the floor glistens with tiny gemstones carved into the centre of flagstones.
-
-\end{boxtext}
-
-\paragraph{If anyone steps into the trap,}
-they must roll their Weight Rating at \tn[15], but anyone failing may spend 5 \glspl{fp} to ignore the effects of the trap.
-If this happens, explain that their foot or hand begins to harden, then turn to stone for half a second before they retract it.
-
-\paragraph{If the players figure out that the area is trapped and try to jump over it,}
-remind them that they cannot see where the trap starts and where it ends.
-If they avoid stepping into the trap, they can make a \roll{Speed}{Athletics} roll, \tn[9], to jump over the afflicted area.
+This door opens on the other side.
+As above, opening it from the wrong side demands \roll{Strength}{Larceny} roll, \tn[10].
 
 \mapentry[topShaft]{The Top of the Shaft}
 
@@ -1196,14 +1180,6 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
 }{}
 
 \jelly
-
-\mapentry[lockedDoor]{The Locked Door}
-
-The locked door has a bronze border and cannot be broken without a \roll{Strength}{Crafts} roll, \tn[18].
-The exit key, however, fits in nicely.
-
-If the party rest here long enough (perhaps because they have failed to get any key), a raiding party of nura return.
-See page \pageref{raidingParty} for the returning raiding party.
 
 \mapentry[lowerExit]{The Exit}
 

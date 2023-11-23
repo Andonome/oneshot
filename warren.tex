@@ -300,57 +300,76 @@ reveals two large knives which can be used as \emph{daggers}.
 
 \mapentry[spellCasters]{Spellcaster Arguments}
 
-%! Remove scroll
 
-The two spell casters cannot figure out what the scrolls on the table do, despite the fact that one is a Scroll of uprising, brought here by the nura.
+A single gnome escaped death by casting a spell to transform his body to look like a goblin.
+Unfortunately, he does not speak the goblin language, and everyone soon noticed the problem.
+
+The two druids interrogate Kalama, who remains silently baffled, until the \glspl{pc} or the sounds of a fight interrupt them.
 
 \begin{boxtext}
 
-  At the end of the tunnel, in an alcove to the right, goblins wearing long black robes bicker with each other over a little table.
-  \iftoggle{hardcore}{%
-    Other goblins stand at the side, apparently bored of the argument.
-  }{}%
-  Over on the left, you can see a light so strong it must be daylight.
+  As you round the corner, you see two figures, clothed in leather satchels.
+  They have another goblin held on the ground, and are yelling at him.
+
+  The goblin on the ground looks round, and winks at you\ldots
 
 \end{boxtext}
 
+\paragraph{If the \glspl{pc} have already made a ruckus,}
+the spellcasters will prepare to fight, then flee.
+Kalama, the gnome, will flee immediately.
+
 \paragraph{If the \glspl{pc} try to sneak past,}
-they make a Group Roll with \roll{Dexterity}{Stealth}, \tn[10].
+they make a Group Roll with \roll{Dexterity}{Stealth}, \tn[11].
 \iftoggle{oneshot}{As before, one player rolls 2D6, and everyone adds their own \roll{Dexterity}{Stealth}.
 If a single \gls{pc} fails, everyone fails.}{}%
 \exRef{core}{core rules}{teamwork}
 
-\paragraph{If the goblins spot the party,}
-they attempt to flee.
-They cannot call the lift quickly enough to escape.
+\goblincaster[\npc{\F}{Hunched Goblin Druid}]
 
-Two rounds later, the goblins in the kitchen join the attack.
-
-\paragraph{If the \glspl{pc} corner the goblins,}
-they respond with aggressive spells.
-
-\goblincaster[\npc{\F}{Screamer the Nuramancer}]
-
-\goblincaster[\npc{\M}{Brock the Nuramancer}]
+\goblincaster[\npc{\M}{Snotty Goblin Druid}]
 
 \iftoggle{hardcore}{
   \goblin[\npc{\T}{3 Goblins}]
 }{}
 
 \iftoggle{oneshot}{
-  \paragraph{After the fight,}
-  give each player 1 \gls{fatigue} for each round of combat.
+  \paragraph{If the \glspl{pc} fight,}
+  give each \pgls{fatigue}.
 }{}
 
+\npc{\Gn\M}{Kalama}
+\person{0}% STRENGTH
+{1}% DEXTERITY 
+{2}% SPEED
+{{-1}% INTELLIGENCE
+{0}% WITS
+{-2}}% CHARISMA
+{0}% DR
+{0}% COMBAT
+{}% SKILLS
+{Nothing}% EQUIPMENT
+{
+  \setcounter{Earth}{2}
+  \setcounter{Water}{2}
+  \setcounter{Academics}{1}
+  \setcounter{Caving}{2}
+  \setcounter{Wyldcrafting}{1}
+}
+
 \paragraph{If the characters investigate the table,}
-they find a Portal Scroll, and a Scroll of Uprising.
+they find these magical talismans.
 
-Once the spell is cast, all creatures with 11 \glspl{hp} or fewer in the surrounding 3 areas, instantly raise from the dead as ghouls.
-See \autoref{creaturesAndItems} for stats on the various ghouls.
+\lootMagic
 
-Unlike other magical items in this area, this scroll was made by a nuramancer (not a gnome), so the command word is written plainly in the Trade Tongue (which many nura speak).
-The scroll contains the epic of Logan, an Elvish poem.
-Once the last line is spoken, the scroll activates (the rest does not need to be spoken).
+\talisman{Labyrinth Scroll}% Name
+  {distant, duplicated, detailed}% Enhancements
+  {warp}% Action
+  {Fire,Earth}% Spheres
+  {wind}% Resistance
+  {One the riddle on the scroll is answered, it opens a magical portal (the size of a full corridor) to the goblin realm, some deep below the warren}% Summary
+  {The portal hangs mid-air in front of the caster.
+  Any damage to its edges will quickly destroy it.}% Details
 
 \iftoggle{oneshot}{
   \paragraph{If the \glspl{pc} try to examine a scroll,}
@@ -372,18 +391,9 @@ have them roll \roll{Intelligence}{Academics}, \tn[12].
 they will have to answer its riddle.
 Go to \autoref{riddles} and select any riddle to activate the scroll.
 
-\paragraph{Once the Portal Scroll is activated,}
+\paragraph{If the \textit{Labyrinth Scroll} is activated,}
 it begins to shimmer with golden flecks, and four rounds later the portal destroys itself, creating a magical portal to another realm.
 See \autoref{creaturesAndItems}: \nameref{creaturesAndItems} for details on the calamities which ensue after reading a Portal Scroll.
-
-\paragraph{When leaving this alcove,}
-the \glspl{pc} head towards the blinding light.
-
-\begin{boxtext}
-
-  Turning away from the table in the little alcove, the hallway ahead drops into two shadowy openings, and on the right daylight floods in through a passage, almost blinding you.
-
-\end{boxtext}
 
 \mapentry[desertPortal]{Magic Portal}
 

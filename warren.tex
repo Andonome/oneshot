@@ -97,7 +97,7 @@ A tie means he asks a follow-up question (allowing another re-roll if they can a
 A failure means he disengages, muttering ``no, it won't work''.
 
 \paragraph{Shortly after,}
-Blara the goblin nuramancer, and Olf the ogre walk towards the cell.
+Blara the goblin druid, and Olf the ogre walk towards the cell.
 
 \begin{boxtext}
 
@@ -128,7 +128,7 @@ they can do so with a -4 penalty to the roll.
   \ogre[\npc{\N\M}{Olf the Ogre}]
 }
 
-\npc{\N\F}{Blara the Goblin Nuramancer}
+\npc{\N\F}{Blara the Goblin Druid}
 
 \person{-2}% STRENGTH
 {2}% DEXTERITY 
@@ -238,7 +238,7 @@ have them roll \roll{Dexterity}{Stealth},  at \tn[9].
 They should get a +2 bonus for leaving any lights behind.
 
 \paragraph{If the \glspl{pc} wait patiently and silently,}
-the nura rat and goblin will leave.
+the morph rat and goblin will leave.
 The goblin will go up the lift, and the rat will wander the hall, searching for more food.
 
 \paragraph{If the \glspl{pc} make a sound,}
@@ -248,12 +248,12 @@ The goblin will go up the lift, and the rat will wander the hall, searching for 
   \item
   the goblin grabs the candle on the table (which puts it out),
   \item
-  then he runs out of the room, shouting for a nuramancer in area \ref{spellCasters}.
+  then he runs out of the room, shouting for a druid in area \ref{spellCasters}.
   \item
   The rat attacks the \glspl{pc} immediately.
   \iftoggle{oneshot}{(As before, players roll 2D6 + Dexterity + Combat roll, at \gls{tn} equal to the creature's `{\scshape Att}', and the winner deals Damage)}{}
   \item
-  The goblin nuramancers observe them for a moment, then flee to the lift (room \ref{lift}). 
+  The goblin druids observe them for a moment, then flee to the lift (room \ref{lift}). 
 \end{itemize}
 
 \paragraph{If the \glspl{pc} enter combat,}
@@ -296,7 +296,7 @@ reveals two large knives which can be used as \emph{daggers}.
 
 \goblin[\npc{\N\F\Gn}{Hungry Goblin}]
 
-\morphrat[\npc{\N\A}{Nura Rat}]
+\morphrat[\npc{\N\A}{Morph Rat}]
 
 \mapentry[spellCasters]{Spellcaster Arguments}
 
@@ -325,12 +325,12 @@ they make a Group Roll with \roll{Dexterity}{Stealth}, \tn[11].
 If a single \gls{pc} fails, everyone fails.}{}%
 \exRef{core}{core rules}{teamwork}
 
-\goblincaster[\npc{\F}{Hunched Goblin Druid}]
+\goblincaster[\npc{\F\N}{Hunched Goblin Druid}]
 
-\goblincaster[\npc{\M}{Snotty Goblin Druid}]
+\goblincaster[\npc{\M\N}{Snotty Goblin Druid}]
 
 \iftoggle{hardcore}{
-  \goblin[\npc{\T}{3 Goblins}]
+  \goblin[\npc{\T[3]\N}{3 Goblins}]
 }{}
 
 \iftoggle{oneshot}{
@@ -426,12 +426,12 @@ If they stay there long, give them 4 \glspl{fatigue} (due to the heat).
 %.}
 
 
-\paragraph{If they enter the portal to flee from the nura,}
+\paragraph{If they enter the portal to flee from the goblins,}
 \iftoggle{hardcore}{%
-  the nura give chase\ldots for a while, however nura without food tire very quickly.
-  If they run through 3 or more areas, the nura must turn back due to exhaustion.
+  they give chase\ldots for a while, however goblins without food tire very quickly.
+  If they run through 3 or more areas, the goblins must turn back due to exhaustion.
 }{%
-  the nura leave them alone -- their hyperactive metabolism tires too quickly without food.
+  the goblins leave them alone -- their hyperactive metabolism tires too quickly without food.
   They can only journey through that realm with a well-stocked supply line and heavy Sun-proof cloaks.
 }
 
@@ -544,19 +544,16 @@ all goblins wake up
 \widePic[t]{Roch_Hercka/dragon}
 
 \paragraph{If the party raid the room for food,}
-they'll find a few canteens of water, one of wine, and some spare sacks of vegetables.
+they'll find a few canteens of water, one of wine, and sacks vegetables (enough for 4 meals).
 
-The players can unlock the cold store%
-\footnote{A cold store is an old fashioned fridge where people put ice to keep food from going bad.}
-  with a Dexterity + Larceny roll at \tn[10] to pick the lock, at which point they discover that the larder is still full of food.
+The players can unlock the larder with a \roll{Dexterity}{Larceny} roll at \tn[10] to pick the lock, at which point they discover that the larder is still full of food.
 
 \mapentry[lift]{The Gnomish Lift}
 
 The gnomes created the lift with the Force sphere.
 It can lift a combined Weight Rating of 16, and safely descend with a total Weight Rating of 26 standing on it.%
-\footnote{A creature's Weight Rating is equal to its \glspl{hp}.
-Some items count towards this total, but items with a negative Weight Rating do not.}
-If the party step on it with a greater Weight Rating than this, each additional point inflicts 2 \glspl{fatigue} on everyone in the lift upon impact with the ground.
+\footnote{A creature's \gls{weight} equals its \glspl{hp}, plus half the value of its equipment.}
+If the party step on it with a greater \gls{weight} than this, each additional point inflicts 2 \glspl{fatigue} on everyone in the lift upon impact with the ground.
 
 \begin{boxtext}
 
@@ -568,7 +565,7 @@ If the party step on it with a greater Weight Rating than this, each additional 
 
 The lift responds to magical passwords -- the gnomish words for `farm' (for the top), `sleep' (for the middle), and `food' (for the bottom).
 The various ogres and goblins who use the lift only know the passwords for the bottom and middle section.
-Only the nuramancer goblins know the word for the top.
+Only the druidic goblins know the word for the top.
 
 The lift responds to any password within earshot.
 
@@ -583,17 +580,18 @@ See \autopageref{raidingParty} for details.
 
 \begin{exampletext}
 
+  %!
   Once the gnomes turned into nura, they neglected to de-activate the portal, as it's easier to see when it's open.
   A couple of hours ago, a dragon named `Makil' wandered in, and went up the stairs towards the treasure room, but could not fit through the little gnomish door.
   He managed to pull a chest full of copper coinage through the door, but could not get anything else as he could not reach.
 
   The Makil wanted to barter with the goblins, but found that they responded to him either by trying to fight him, or by running away, and none spoke elvish (the only language he knows spoken in these parts).
 
-  The cautious beast won't approach the nura to attack when he has no idea how many there are around him.
+  The cautious beast won't approach the goblins and ogres to attack when he has no idea how many there are around him.
   He may be powerful, but a room full of ogres alongside a spell caster could seriously injure or kill him, and he doesn't want to take the chance.
-  Similarly, the nura don't want to take any chances, so they've decided to just leave him where he is.
+  Similarly, the goblins don't want to take any chances, so they've decided to just leave him where he is.
 
-  The nura and dragon have ended with a stalemate, so he has taken a nap.
+  The goblins and dragon have ended with a stalemate, so he has taken a nap.
 
 \end{exampletext}
 
@@ -617,7 +615,7 @@ Despite his linguistic deficits, he can communicate using the Enchantment sphere
 
 The dragon's eventual goal is to obtain the rest of the treasure, then return through the portal to the Realm of Bright Rocks.
 
-\paragraph{If the party request he kill nura for them}
+\paragraph{If the party request he kill goblins for them}
 then he agrees to kill any in the current area, but will not journey to another floor.
 In return, he wants all the treasure out of the treasure room.
 
@@ -731,7 +729,7 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
 
 \begin{exampletext}
 
-  When the nura arrived, the gnomes put their children in here, then left enough food for a few days, locked the door, and destroyed the key.
+  When the goblins arrived, the gnomes put their children in here, then left enough food for a few days, locked the door, and destroyed the key.
   Unfortunately, those gnomes have turned into goblins, and if they entered the room they would probably eat their own children.
 
 \end{exampletext}
@@ -781,7 +779,8 @@ There are six children in total, and they each have a Weight Rating between 1 an
 Gnomes grew mushrooms throughout this room in order to grow slugs, so that they could feed fireflies.
 While torches work best, having omnipresent fireflies around the warren makes sure that people can coordinate between rooms without worrying about light.
 
-Since then, the nura turned those slugs into nura slugs.
+%!
+Since then, the druids morphed those slugs into nura slugs.
 The fireflies have survived on the enlarged slug, which the nura keep alive with the scraps they don't want to eat, such as mushrooms and bones and faeces.
 
 \end{exampletext}
@@ -813,7 +812,7 @@ they find two dead gnomes, one with a torch, the other with a Portal Scroll.
   As with the others, the Portal Scroll requires a riddle to be answered, takes four rounds before it activates, and vanishes once used.
 }{}
 
-\morphslug[\npc{\T[9]\N}{20 Nura Slugs}]
+\morphslug[\npc{\T[9]\N}{20 Morph Slugs}]
 
 \mapentry[greatHall]{The Great Hallway}
 
@@ -865,7 +864,7 @@ Picks, shovels, wood, short swords, shortbows, and all manner of crafting and mi
 
 \paragraph{If the \glspl{pc} have come up from room \ref{entrycell},}
 they find the exit has been covered by an illusion of a wall.
-If they investigate the area at all, the illusion fades, revealing the sleeping nura.
+If they investigate the area at all, the illusion fades, revealing the sleeping goblins.
 
 \paragraph{If the \glspl{pc} attempt to take either a short sword or a spear,}
 each attempt requires a \roll{Dexterity}{Stealth} roll, \tn[7].
@@ -902,7 +901,7 @@ The effect feels very disorienting at first, as most people are not used to havi
 
 This `staff' will probably feel more like a wand in the hands of a human, as it's about the height of a short gnome.
 The gnomish word for `morning', activates the light, while the gnomish word for `night' stops it.
-The nura do not know, or have forgotten, these activation words, so they simply keep it under blankets as they find the light irritating.
+The goblins do not know these activation words, so they simply keep it under blankets as they find the light irritating.
 
 If wrapped up in heavy sheets and suddenly displayed, the light can blind opponents, as usual.
 
@@ -966,9 +965,7 @@ With a successful roll,
 \paragraph{If the party try to talk with the ogre,}
 Rick has only recently been turned into an ogre, and he has eaten his fill of mushrooms, so a \roll{Wits}{Empathy} roll, \tn[10], will allow the party to convince him to let them go.
 However, if Rick lets them go, he will insist on joining them so he can be free.
-While he genuinely wants to escape and become human again,%
-\footnote{Nura who have recently turned can change back to their original forms if they are starved for twice as long as they have been nura.}
-the moment the party enter battle with other nura his instincts will kick in, and he will turn on the party.%
+While he genuinely wants to escape and become human again, the moment the party enter battle with other nura his instincts will kick in, and he will turn on the party.
 
 \mapentry[secondPrison]{Second Prison}
 
@@ -987,7 +984,7 @@ Take the last two farmers from the handout to join the troupe.
 
 \iftoggle{hardcore}{%
   \paragraph{If the party get a moment to ask about the outside world,}
-  the villagers tell them that they last saw hundreds of nura swarming around town, and she was on her horse to get away.
+  the villagers tell them that they last saw hundreds of goblins swarming around town, and she was on her horse to get away.
   They suspect that the entire place will have been overrun.
 }{}
 
@@ -1010,7 +1007,7 @@ Take the last two farmers from the handout to join the troupe.
 \begin{exampletext}
 
   The gnomes once stashed their little weapons here.
-  The nura horde have added to it considerably.
+  The horde have added to it considerably.
 
 \end{exampletext}
 
@@ -1107,7 +1104,7 @@ the wolves go straight for the kill.
 they will suddenly find an empty lift-shaft, unless they have taken the lift to the top themselves.
 Have them make a Wits + Athletics check (\tn[7]) to back off before they fall.
 
-\morphwolf[\npc{\A\N\T[4]}{4 Nura Wolves}]
+\morphwolf[\npc{\A\N\T[4]}{4 Morph Wolves}]
 
 \paragraph{If the party fall into the lift,}
 they end up in the mid-section of the warren.

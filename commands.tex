@@ -182,7 +182,7 @@
 }
 
 \newcommand\firstPrisoner{
-  \NPC{\Hu\M}{Bellcut}{Seaweed-like hair half-covers his gloomy eyes}{Sighs}{Tribalist}
+  \NPC{\Hu\M}{Bellcut}{seaweed-like hair half-covers his gloomy eyes}{sighs}{to hide in the dark}
   \person{2}% STRENGTH
   {0}% DEXTERITY 
   {1}% SPEED
@@ -198,3 +198,16 @@
   {Nothing}% EQUIPMENT
   {}
 }
+
+\newcommand\riddle[2]{
+  \bigLine
+  \begin{quotation}
+  #1
+  \end{quotation}
+
+  \textbf{Answer: #2.}
+
+  \weeline
+}
+
+

@@ -294,7 +294,7 @@ reveals two large knives which can be used as \emph{daggers}.
   {\iftoggle{hardcore}{\ref{goblinSentry}}{}}/41/53,
 }
 
-\goblin[\npc{\N\F\Gn}{Hungry Goblin}]
+\goblin[\npc{\N\F}{Hungry Goblin}]
 
 \morphrat[\npc{\N\A}{Morph Rat}]
 
@@ -338,24 +338,11 @@ If a single \gls{pc} fails, everyone fails.}{}%
   give each \pgls{fatigue}.
 }{}
 
-\npc{\Gn\M}{Kalama}
-\person{0}% STRENGTH
-{1}% DEXTERITY 
-{2}% SPEED
-{{-1}% INTELLIGENCE
-{0}% WITS
-{-2}}% CHARISMA
-{0}% DR
-{0}% COMBAT
-{}% SKILLS
-{Nothing}% EQUIPMENT
-{
-  \setcounter{Earth}{2}
-  \setcounter{Water}{2}
-  \setcounter{Academics}{1}
-  \setcounter{Caving}{2}
-  \setcounter{Wyldcrafting}{1}
-}
+\paragraph{If Kalama finds a peaceful moment to speak,}
+he explains his whole situation, and his mission to find the children (in room \ref{nursery}).
+He has become so exhausted that he will be of little use to anyone without a meal and a rest.
+
+\spyGnome{2}
 
 \paragraph{If the characters investigate the table,}
 they find these magical talismans.
@@ -387,13 +374,13 @@ they find these magical talismans.
 \paragraph{If the \glspl{pc} want to identify what a scroll does,}
 have them roll \roll{Intelligence}{Academics}, \tn[12].
 
-\paragraph{If the \glspl{pc} want to activate a Portal Scroll,}
+\paragraph{If the \glspl{pc} want to activate any scroll,}
 they will have to answer its riddle.
 Go to \autoref{riddles} and select any riddle to activate the scroll.
 
 \paragraph{If the \textit{Labyrinth Scroll} is activated,}
 it begins to shimmer with golden flecks, and four rounds later the portal destroys itself, creating a magical portal to another realm.
-See \autoref{creaturesAndItems}: \nameref{creaturesAndItems} for details on the calamities which ensue after reading a Portal Scroll.
+See \autoref{creaturesAndItems}: \nameref{creaturesAndItems} for details on the calamities which ensue after reading a \gls{deep} Scroll.
 
 \mapentry[desertPortal]{Magic Portal}
 
@@ -603,7 +590,7 @@ See \autopageref{raidingParty} for details.
 \end{boxtext}
 
 \paragraph{If the \glspl{pc} loot the bodies}
-they find a portal scroll wrapped safely in a scroll case.
+they find a \gls{deep} Scroll wrapped safely in a scroll case.
 
 \mapentry[dragon]{The Dragon's Lair}
 
@@ -729,8 +716,7 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
 
 \begin{exampletext}
 
-  When the goblins arrived, the gnomes put their children in here, then left enough food for a few days, locked the door, and destroyed the key.
-  Unfortunately, those gnomes have turned into goblins, and if they entered the room they would probably eat their own children.
+  When the horde arrived, a gnome locked the children in here with enough food for a few days.
 
 \end{exampletext}
 
@@ -744,12 +730,17 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
 
 The door is locked, but can be picked with a \roll{Dexterity}{Larceny} check, \tn[9].
 It's far too strong to be broken into by force.
-If the \glspl{pc} enter the room, they may think these little gnomes are little goblins and kill them.
-If any of them try to do so, have them roll a Wits + Medicine check to realize their mistake, \tn[8].
-Any gnomes in the party will automatically pass this check.
 
-\paragraph{If the party save the children,}
-the children know to know to keep quiet and to follow, but they will be at the back of the party when moving alone.
+If the \glspl{pc} enter the room, they may think these little gnomes are little goblins and kill them.
+If any of them try to do so, have them roll a \roll{Wits}{Medicine} check to realize their mistake, \tn[8].
+Of course, any gnome can identify the children immediately.
+
+\paragraph{If the party leave with the children,}
+they know to know to keep quiet and follow, but they will move slowly.
+
+\iftoggle{oneshot}{}{
+  \swarm{Gnomish Children}{6}{-2}{-3}{-5}
+}
 
 There are six children in total, and they each have a Weight Rating between 1 and 2.
 \iftoggle{oneshot}{
@@ -807,9 +798,10 @@ The slugs will spray acid at them, follow them up the stairs, and pester them fo
 the nura slugs chase it rather than them.
 
 \paragraph{If the \glspl{pc} manage to investigate the corpses somehow,}
-they find two dead gnomes, one with a torch, the other with a Portal Scroll.
+they find a dead gnome with a \gls{deep} Scroll, and a discarded, half-eaten cloak, with a key to room \ref{nursery} in the pocket.%
+\footnote{See \autopageref{saving_the_children} for how the key arrived here.}
 \iftoggle{oneshot}{%
-  As with the others, the Portal Scroll requires a riddle to be answered, takes four rounds before it activates, and vanishes once used.
+  As with the others, the \gls{deep} Scroll requires a riddle to be answered, takes four rounds before it activates, and vanishes once used.
 }{}
 
 \morphslug[\npc{\T[9]\N}{20 Morph Slugs}]
@@ -842,7 +834,6 @@ Each margin on the roll allows them an additional round before the horde wakes.
 \mapentry[workshop]{The Workshop}
 
 \label{laddertop}
-
 
 \begin{exampletext}
 
@@ -892,7 +883,7 @@ If it empties, then the air around it quickly forms into more water.
 
 This lock scroll will lock any door, increasing the \gls{tn} to break through it by 4.
 
-As with any Portal Scroll, it leads to the Realm of Shifting Corridors.
+As with any \gls{deep} Scroll, it leads to the Realm of Shifting Corridors.
 
 \goblincaster
 

@@ -83,6 +83,30 @@
   {}
 }
 
+\newcommand\spyGnome[1]{
+  \npc{\Gn(\N)\M}{Kalama}
+  \person{-2}% STRENGTH
+  {1}% DEXTERITY 
+  {-1}% SPEED
+  {{1}% INTELLIGENCE
+  {0}% WITS
+  {-2}}% CHARISMA
+  {0}% DR
+  {0}% COMBAT
+  {}% SKILLS
+  {Nothing}% EQUIPMENT
+  {
+    \setcounter{Earth}{2}
+    \setcounter{Water}{2}
+    \setcounter{Academics}{1}
+    \setcounter{Caving}{2}
+    \setcounter{Stealth}{1}
+    \setcounter{Wyldcrafting}{1}
+    \addtocounter{Strength}{#1}
+    \addtocounter{Speed}{#1}
+    \addtocounter{Intelligence}{-#1}
+  }
+}
 
 \newcommand{\prisoner}[1][\NPC{\Hu\F}{Random Villager}{Pessimistic}{Scratches nose}{Tribe}]{
 	#1

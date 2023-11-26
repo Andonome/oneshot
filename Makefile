@@ -1,9 +1,9 @@
 output=normal
 
-normal: horde_escape.pdf handouts.pdf
+normal: config/bind.sty horde_escape.pdf handouts.pdf
 horde_escape.pdf: main.tex intro.tex warren.tex top.tex appendix.tex svg-inkscape/upper_svg-tex.pdf svg-inkscape/shaman_svg-tex.pdf
 	pdflatex -jobname horde_escape main.tex
-svg-inkscape/upper_svg-tex.pdf svg-inkscape/shaman_svg-tex.pdf: config/bind.sty images/
+svg-inkscape/upper_svg-tex.pdf svg-inkscape/shaman_svg-tex.pdf: images/
 	pdflatex -jobname horde_escape -shell-escape main.tex
 	pdflatex -jobname horde_escape main.tex
 	pdflatex -jobname horde_escape main.tex
@@ -14,7 +14,7 @@ handouts.pdf: images handouts.tex $(wildcard ex_cs/*)
 .switch-gls:
 	touch -r Makefile .switch-gls
 
-oneshot: oneshot_horde_escape.pdf oneshot_handouts.pdf .switch-gls
+oneshot: config/bind.sty oneshot_horde_escape.pdf oneshot_handouts.pdf .switch-gls
 oneshot_horde_escape.pdf: main.tex intro.tex warren.tex appendix.tex svg-inkscape/lower_svg-tex.pdf
 	pdflatex -jobname oneshot_horde_escape main.tex
 	rm -f .switch-gls
@@ -28,7 +28,7 @@ oneshot_handouts.pdf: images handouts.tex $(wildcard ex_cs/*) .switch-gls
 	pdflatex -shell-escape -jobname oneshot_handouts handouts.tex
 	rm -f .switch-gls
 
-hardcore: hardcore_horde_escape.pdf hardcore_handouts.pdf
+hardcore: config/bind.sty hardcore_horde_escape.pdf hardcore_handouts.pdf
 hardcore_horde_escape.pdf: main.tex intro.tex warren.tex top.tex the_tower.tex appendix.tex svg-inkscape/black_tower_f5_svg-tex.pdf
 	pdflatex -jobname hardcore_horde_escape main.tex
 svg-inkscape/black_tower_f5_svg-tex.pdf: $(wildcard config/*) images

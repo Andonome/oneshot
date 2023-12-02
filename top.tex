@@ -21,21 +21,21 @@
 \begin{exampletext}
 
   When the horde invaded, three little gnomes found themselves trapped in this little side-room.
-  They grabbed a few days' worth of food from the adjacent kitchen,%
-  \footnote{Room \ref{upperKitchen}.}
-  barred the main door, across the other entrance, cast a \textit{Warp Light} spell, to give the appearance of giant, fresh webs, hanging from floor to ceiling.
-  They still rest there, with two tiny barrels of salted mushrooms to sustain them.
+  They grabbed a few days' worth of food from the adjacent kitchen (room \ref{upperKitchen}),
+  barred the door to the main hall (room \ref{spiral}), then blocked off room \ref{webTrap} with a \textit{Warp Light} spell, to give the appearance of giant, fresh webs, hanging from floor to ceiling.
+
+  The illusion spell worked -- the goblin horde decided some monstrous spider must wait somewhere in that darkness, behind the webs.
+  The gnomes still rest in room \ref{gnomes}, with two tiny barrels of salted mushrooms to sustain them.
 
   When Kalama%
   \footnote{See \autopageref{kalama}.}
-  returned, disguised with magic as a goblin, he noted a woodspy%
+  returned to the warren, disguised with magic as a goblin, he noted a woodspy%
   \iftoggle{hardcore}{}%
   {\footnote{Woodspies are giant land-octopuses, which can change their colour and texture to ambush prey.}}
-  creeping in.
-  Seizing the opportunity for mischief, he transformed the woodspy with the same spell he used on himself.
+  creeping in after him.
+  Seizing the opportunity for mischief, he transformed the woodspy with the same spell he used to transform himself.
   It swelled into a tidal wave of tentacles, chased after him, and ate a number of goblins on the way.
-  Now it lies in a pool of water, slowly digesting.%
-  \footnote{See \autopageref{woodspies}.}
+  Now it lies in a pool of water in room \ref{woodspies}, slowly digesting the goblin bodies.
 
 \end{exampletext}
 
@@ -45,15 +45,11 @@
 
 \widePic{Roch_Hercka/spiral_staircase}
 
-At the other side of this door sits the lonely guard, Rubble.
-He only turned into a goblin recently, and he doesn't like it.
-He is also extremely hungry.
+At the other side of this door sits the lonely goblin guard, Rubble.
 
-\paragraph{If the party attempt to trick Rubble,}
-it's not terribly difficult.
-
-\paragraph{If the party simple enter,}
-then Rubble will run as fast as he can, away from the door, in order to alert the rest of the upper warren.
+\paragraph{Once the \glspl{pc} enter}
+Rubble flees, then watches them from afar.
+He reports their every move to others in the warren, and tries to get round them, go back down the stairs, and summon the rest of the horde to come and eat them.
 
 \goblin[\npc{\N\M}{Rubble}]
 
@@ -409,10 +405,9 @@ It is not possible for anyone with a Strength bonus greater than 0 to get throug
 \mapentry[finalRoom]{The Last Room}
 
 This nasty little room holds a couple of beds and the remnants of gnomish board games.
-Among the wreckage, the party can find
-\iftoggle{aif}%
-  {three Spider Arrows in a quiver (see Adventures in Fenestra, page \pageref{spiderarrows}).}%
-  {yet another portal scroll.}
+Among the wreckage, the party can find a hidden item:
+
+\lootMagic
 
 \end{multicols}
 

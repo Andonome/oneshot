@@ -326,9 +326,9 @@ As before, one player rolls $2D6$, and everyone adds their own \roll{Dexterity}{
 If a single \gls{pc} fails, everyone fails.
 }{}
 
-\goblincaster[\npc{\F\N}{Hunched Goblin Druid}]
+\goblincaster[\npc{\F\N}{Hunch, Goblin Druid}]
 
-\goblincaster[\npc{\M\N}{Snotty Goblin Druid}]
+\goblincaster[\npc{\M\N}{Snot, Goblin Druid}]
 
 \iftoggle{hardcore}{
   \goblin[\npc{\T[3]\N}{3 Goblins}]
@@ -359,29 +359,13 @@ they find these magical talismans.
   {The portal hangs mid-air in front of the caster.
   Any damage to its edges will quickly destroy it.}% Details
 
-\iftoggle{oneshot}{
-  \paragraph{If the \glspl{pc} try to examine a scroll,}
-  ask if they think their character should speak Gnomish.
-  If any say `yes', have them mark off a \glspl{storypoint} (on the back of their character sheet) and explain where they learnt the language.
-
-  Every time players spend a \glspl{storypoint}, the character gains 5 \glspl{xp} for every \glspl{storypoint} marked off so far (so the second gives 2 \glspl{xp}, the third gives 3, and so on).%
-  \exRef{stories}{core rules}{stories}
-
-  \paragraph{Understanding the scrolls}
-  requires more than being literate.
-  They will have to roll 
-}{}
-
-\paragraph{If the \glspl{pc} want to identify what a scroll does,}
-have them roll \roll{Intelligence}{Academics}, \tn[12].
-
 \paragraph{If the \glspl{pc} want to activate any scroll,}
 they will have to answer its riddle.
 Go to \autoref{riddles} and select any riddle to activate the scroll.
 
 \paragraph{If the \textit{Labyrinth Scroll} is activated,}
-it begins to shimmer with golden flecks, and four rounds later the portal destroys itself, creating a magical portal to another realm.
-See \autoref{creaturesAndItems}: \nameref{creaturesAndItems} for details on the calamities which ensue after reading a \gls{deep} Scroll.
+it begins to shimmer with golden flecks, then blocks any nearby walls, turning into a portal to a deep underground world.
+See \autoref{readingScrolls}: \nameref{readingScrolls} for details on the calamities which ensue after reading a \gls{deep} Scroll.
 
 \mapentry[kitchen]{Kitchen}
 
@@ -495,16 +479,15 @@ See \autopageref{raidingParty} for details.
   When the horde attacked, one gnome decided to activate a \Gls{deep} Scroll in order to flee.
   Like the others, it targeted an unknown area, full of powerful magic, deep underground.
   Unlike the others, it held a sleeping dragon, who woke, and sauntered through the magical portal.
-
-  Makil (the dragon) stomped on a couple of goblins, then followed the smell of gold and magic, to the treasure room.
+  He stomped on a couple of goblins, then followed the smell of gold and magic, to the treasure room.
   However, the massive monster could not fit through the door.
 
-  When goblins came up the stairs to investigate, Makil mistook them for gnomes, up to no good, and incinerated them with his fiery breath.
+  When goblins came up the stairs to investigate, the dragon mistook them for gnomes, up to no good, and incinerated them with his fiery breath.
   So now he waits, with the legendary patience of a dragon.
   He has no intention of fighting, since he could get hurt, and the goblin horde have no intention of bothering him, so they just pass by that corridor.
 
-  Makil and the horde have ended in a kind of stalemate.
-  And just like the horde, Makil cannot leave, as he does not know how to use the \Gls{deep} Scrolls\ldots
+  The dragon and the horde have ended in a kind of stalemate.
+  And just like the horde, he cannot leave, as he does not know how to use the \Gls{deep} Scrolls\ldots
 
 \end{exampletext}
 
@@ -520,18 +503,18 @@ they find a \gls{deep} Scroll wrapped safely in a scroll case.
 
 \mapentry[dragon]{The Dragon's Lair}
 
-The dragon will happily talk with anyone who approaches, but only understands Elvish.
-\iftoggle{hardcore}{}{%
-  Remind the players that they can spend \pgls{storypoint} to say that they know another language, as long as they say when they learnt the language.
-}
-Despite his linguistic deficits, he can communicate using the Enchantment sphere to send ideas to characters.
-This enchantment feels like a natural thought at first, but the character will quickly notice this thinking does not belong to them.
+The dragon will happily talk with anyone who approaches%
+\iftoggle{hardcore}{%
+  , but only understands Elvish.
+  Despite his linguistic deficits, he can communicate using the Enchantment sphere to send ideas to characters.
+  This enchantment feels like a natural thought at first, but the character will quickly notice this thinking does not belong to them.
 
-\begin{speechtext}
-  ``I should go and introduce myself to that dragon, then help him.
-  I bet his name is `Makil'\ldots
-  wait a minute\ldots''
-\end{speechtext}
+  \begin{speechtext}
+    ``I should go and introduce myself to that dragon, then help him.
+    I bet his name is `Makil'\ldots
+    wait a minute\ldots''
+  \end{speechtext}
+}{.}
 
 The dragon's eventual goal is to obtain the rest of the treasure, then leave the warren, and go somewhere he can spread his wings.
 

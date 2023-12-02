@@ -1,138 +1,3 @@
-\chapter{Creatures \& Items}
-\label{creaturesAndItems}
-
-\section{Portal Scrolls}
-\label{portalScrollEncounters}
-
-\begin{multicols}{2}
-
-\iftoggle{oneshot}{
-  \begin{figure*}[t!]
-  \section{Weapons}
-
-  \begin{nametable}[XYYYY]{Weapons}
-
-  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\Glsentrytext{ap} Cost} & \textbf{Weight Rating} \\\hline
-
-  \showWeapon{\greatsword} \\
-
-  \showWeapon{\greatclub} \\
-
-  \showWeapon{\javelin} \\
-
-  \showWeapon{\maul} \\
-
-  \showWeapon{\spear} \\
-
-  \showWeapon{\woodaxe} \\
-
-  \end{nametable}
-  \end{figure*}
-}{}
-
-\noindent
-The gnomes did not want anyone to be able to operate the items, except other gnomes, so they wrote riddles on the scrolls, and made the activation word the answer to the riddle.
-Some of the gnomes which were transformed into goblins (rather than eaten) still remember the scrolls' command words, and may use them during emergencies.
-
-\begin{boxtext}
-
-  As you pick up the scroll you suddenly sense a distant world.
-  Little insects dance about walls with hard crystals protruding from them.
-  You cannot see the area, instead you sense it, blindly.
-
-  As you drop the scroll on the ground, the vision fades.
-
-\end{boxtext}
-
-These scrolls contain two spells -- the first continuously allows the holder to see into the distant `Realm of Shifting Corridors'.%
-\exRef{aif}{\textit{Adventures in Fenestra}}{shiftingcorridors}
-The second holds a slow \textit{Gate} spell\exRef{core}{core rules}{gateSpell}
-which opens a magical portal to that realm.
-
-The gnomes made these scrolls as escape routes in case of sudden danger, and as a way to gather the gems which spill from the walls of that realm.
-Since all Portal Scrolls lead to places nearby each other in the Realm of Shifting Corridors, so if anyone is lost in that realm, they may be seen again the next time a scroll is cast.
-
-Any time a character grasps the scroll, they see some new scene from the other side.
-If they speak the scroll's command word, a portal opens four rounds later, and an encounter occurs.
-Here are some pre-rolled encounters from that distant realm:
-
-\needspace{4em}
-\begin{itemize}
-
-  \item{Encounter 1}
-  \begin{itemize}
-    \item{14 maze-dwarves spill out of the portal, fleeing the poisonous gas of a watcher.}
-    \item{The dwarves have no languages in common with the \glspl{pc}, but they will jump out, kill any nura in sight, then try to return to their labyrinthine realm with goblin heads as trophies.}
-  \end{itemize}
-  \item{Encounter 2}
-  \begin{itemize}
-    \item{A single dark corridor stretches out.  At the other end, rests a watchman, spilling poisonous gas slowly into the single, trapped area.}
-    \item
-    Any \gls{pc} entering the portal makes a Wits + Vigilance check, \gls{tn} 10. If they pass, they still live the next time a portal scroll opens (having found their way to the next encounter). If they fail, they have died from the poisonous gas.
-    \item
-    If \emph{all} of the \glspl{pc} entered the portal, have them wander that strange realm for a while and return when a goblin nuramancer opens a portal from room \ref{grandLibrary}\iftoggle{oneshot}{}{ of the lower warren} (he just wanted to see what would happen).
-  \end{itemize}
-  \item{Encounter 3}
-  \begin{itemize}
-    \item{A long, dark corridor beckons. At the other end, 10 maze dwarves discuss what to do about the injured archmage in front of them. It has 5 \glspl{mp} left, and will retaliate if approached.}
-    \item{Since these maze dwarves are trapped in their current room, they follow any \glspl{pc} back through the dark corridor.  They will fight any nura present, before returning.}
-    \item
-    Before returning, they gift the \glspl{pc} the magical item: \lootMagic.
-    \exRef{aif}{\textit{Adventures in Fenestra}}{magicalitems}
-  \end{itemize}
-  \item{Encounter 4}
-  \begin{itemize}
-    \item{A wide corridor with nothing but an umber hulk opens. It crashes through and fights the first thing it can eat, before returning to its own realm.}
-  \end{itemize}
-\end{itemize}
-
-\end{multicols}
-
-\section{Potential Creatures}
-
-\begin{multicols}{2}
-
-\iftoggle{core}{%
-  For rules on large battles between \glspl{npc}, see the core book, page \pageref{npcfights}.}{}
-
-\dwarvensoldier[\npc{\Dw\T}{Maze Dwarves}]
-
-\umberhulk
-
-\label{undeadstats}
-
-\npc{\D\N}{Gnomish Ghoul}
-\animal{-2}% STRENGTH
-{-1}% DEXTERITY 
-{-1}% SPEED
-{-2}% WITS
-{2}% DR
-{2}% AGGRESSION
-{None}% SKILLS
-{Undead}% ABILITIES
-{}
-
-\undeadgoblin[\npc{\D\N}{Goblin Ghoul}]
-
-\ghoul[\npc{\D\N}{Human Ghoul}]
-
-\iftoggle{oneshot}{}{
-  \npc{\D\N}{Nura Woodspy Ghoul}
-  \animal{4}% STRENGTH
-  {-1}% DEXTERITY 
-  {-1}% SPEED
-  {-2}% WITS
-  {4}% DR
-  {2}% AGGRESSION
-  {Vigilance 1}% SKILLS
-  {Undead}% ABILITIES
-  {}
-}
-
-\undeadogre[\npc{\D\N}{Ogre Ghoul}]
-
-\end{multicols}
-
 \chapter{Riddles}
 \label{riddles}
 
@@ -210,9 +75,7 @@ Here are some pre-rolled encounters from that distant realm:
 
     }{Blood}
 
-
 }{
-
 
   \riddle{
     What comes once in a minute, twice in a moment, but never in a thousand years?
@@ -230,18 +93,14 @@ Here are some pre-rolled encounters from that distant realm:
       David's father has three sons: Snap, Crackle, and  \ldots?
   }{David}
 
-
   \riddle{
     Tall I am young, Short I am old, While with life I glow, Wind is my foe. What am I?
   }{A candle}
-
 }{
   \riddle{
     You must give me in order to keep me.
     What am I? 
   }{Your word}
-
-
 }
 
 \riddle{
@@ -259,7 +118,6 @@ Here are some pre-rolled encounters from that distant realm:
 
     What are we?
 }{Stars}
-
 
 \riddle{
 
@@ -307,9 +165,7 @@ Here are some pre-rolled encounters from that distant realm:
 
     }{Snow}
 
-
 \fi
-
 
 \ifnum\month=10
 
@@ -340,4 +196,3 @@ Here are some pre-rolled encounters from that distant realm:
 \fi
 
 \end{multicols}
-

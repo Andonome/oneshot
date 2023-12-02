@@ -72,15 +72,14 @@ have them roll \roll{Dexterity}{Larceny},
 a small voice from the corner of the room says
 
 \begin{quotation}
-  \noindent
   ``No use in struggling.
   They will eat us soon no matter what we do''.
 \end{quotation}
 
 \noindent
 The ogres captured Bellcut from a nearby village, along with others.
-When the goblinoid hordes entered, Bellcut hid in the side of the room while his companions fought.
-He's learnt how to survive through cowardice and will keep himself as safe as he can from now on.
+They ate the others, while Bellcut hid under debris at the side of the room.
+He's learnt that cowardice means survival quickly, but won't unlearn it as fast.
 
 \firstPrisoner
 
@@ -210,10 +209,9 @@ this chimney has an alcove for a furnace in the workshop, above.
 Any \gls{pc} will hear the goblins talking.
 
 \paragraph{Breaking through the furnace}
-needs a \roll{Intelligence}{Crafts}, \tn[6].
-Failure inflicts $1D6$ Damage as some goof pulls hot coals from the furnace onto the character.
-
-If anyone succeeds in breaking that furnace, they certainly make a lot of noise, and find themselves at room \ref{workshop}.
+demands an \roll{Intelligence}{Crafts} roll (\tn[6]).
+Failure inflicts $1D6$ Damage as a single mistake can cover the character in hot coals.
+Breaking through the furnace, certainly makes a lot of noise, which wakes the horde in room \ref{workshop}.
 
 \paragraph{If someone wants to continue climbing up,}
 the chimney becomes smaller and smaller, then eventually breaks out into various hand-sized tunnels, and exits above, almost invisibly.
@@ -222,7 +220,11 @@ the chimney becomes smaller and smaller, then eventually breaks out into various
 
 Every morsel has been licked clean from this little dining room.
 Pots, smashed plates, forks, and candlesticks litter the floor.
-A goblin and a polymorphed rat bicker over a human bone.
+A goblin and a giant rat bicker over a human bone.%
+\footnote{%
+  Kalama cast a spell upon the rat, transforming it into a beast, in order to distract the goblins.
+  For Kalama's background, remember `\nameref{saving_the_children}', \autopageref{saving_the_children}.
+}
 
 \begin{boxtext}
 
@@ -270,7 +272,6 @@ reveals two large knives which can be used as \emph{daggers}.
   \ref{escapeShaft}/86/15,
   \ref{diningRoom}/72/27,
   \ref{spellCasters}/58/29,
-  \ref{desertPortal}/47/32,
   \ref{kitchen}/51/07,
   \ref{lift}/32/33,
   \ref{dragonApproach}/08/33,
@@ -302,13 +303,12 @@ reveals two large knives which can be used as \emph{daggers}.
 
 
 A single gnome escaped death by casting a spell to transform his body to look like a goblin.
-Unfortunately, he does not speak the goblin language, and everyone soon noticed the problem.
-
-The two druids interrogate Kalama, who remains silently baffled, until the \glspl{pc} or the sounds of a fight interrupt them.
+Unfortunately, he does not speak the goblin language, and everyone soon noticed.
+Two druids interrogate Kalama while he can only shrug in confusion unless the \glspl{pc} interrupt the scene.
 
 \begin{boxtext}
 
-  As you round the corner, you see two figures, clothed in leather satchels.
+  From the top of the stairs, you see two figures, clothed in leather satchels.
   They have another goblin held on the ground, and are yelling at him.
 
   The goblin on the ground looks round, and winks at you\ldots
@@ -319,11 +319,12 @@ The two druids interrogate Kalama, who remains silently baffled, until the \glsp
 the spellcasters will prepare to fight, then flee.
 Kalama, the gnome, will flee immediately.
 
+\iftoggle{oneshot}{%
 \paragraph{If the \glspl{pc} try to sneak past,}
 they make a Group Roll with \roll{Dexterity}{Stealth}, \tn[11].
-\iftoggle{oneshot}{As before, one player rolls 2D6, and everyone adds their own \roll{Dexterity}{Stealth}.
-If a single \gls{pc} fails, everyone fails.}{}%
-\exRef{core}{core rules}{teamwork}
+As before, one player rolls $2D6$, and everyone adds their own \roll{Dexterity}{Stealth}.
+If a single \gls{pc} fails, everyone fails.
+}{}
 
 \goblincaster[\npc{\F\N}{Hunched Goblin Druid}]
 
@@ -382,52 +383,6 @@ Go to \autoref{riddles} and select any riddle to activate the scroll.
 it begins to shimmer with golden flecks, and four rounds later the portal destroys itself, creating a magical portal to another realm.
 See \autoref{creaturesAndItems}: \nameref{creaturesAndItems} for details on the calamities which ensue after reading a \gls{deep} Scroll.
 
-\mapentry[desertPortal]{Magic Portal}
-
-\begin{boxtext}
-  Shielding your eyes, you turn right and head towards the light.
-
-  Just four steps down the passage, you find the Sunlight coming from a massive opening on the right.
-  A warm wind blows through the portal and on the other side you can see an endless desert of bright, yellow rocks.
-  Strange symbols and gemstones sit around the opening's perimeter.
-
-  On the left, double doors made of wood stare into the light.
-  Then passageway continues, but becomes quickly lost in darkness.
-
-\end{boxtext}
-
-\iftoggle{oneshot}{
-  \paragraph{Ask the players if they can speak Gnomish,}
-  if none got an opportunity to spend \glspl{storypoint} on the scrolls (above, in room \ref{spellCasters}).
-}{}
-
-\paragraph{If any of the \glspl{pc} are literate and speak the Gnomish tongue,}
-they can read the runes above the magical portal; they read ``Realm of Bright Rocks''.
-
-\paragraph{If the \glspl{pc} enter the portal and journey through the Realm of Bright Rocks,}
-they won't find much -- not even a place to hide, given the desert is expansive and flat.
-If they stay there long, give them 4 \glspl{fatigue} (due to the heat).
-%\footnote{See \textit{Adventures in Fenestra} for more on the Realm of Bright Rocks\iftoggle{aif}{%
-%  , page \pageref{brightrocks}}%
-%  {}%
-%.}
-
-
-\paragraph{If they enter the portal to flee from the goblins,}
-\iftoggle{hardcore}{%
-  they give chase\ldots for a while, however goblins without food tire very quickly.
-  If they run through 3 or more areas, the goblins must turn back due to exhaustion.
-}{%
-  the goblins leave them alone -- their hyperactive metabolism tires too quickly without food.
-  They can only journey through that realm with a well-stocked supply line and heavy Sun-proof cloaks.
-}
-
-\iftoggle{oneshot}{
-  \paragraph{\glspl{fatigue}}
-  don't do much at first, but every \gls{fatigue} above the character's \emph{current} \glspl{hp} gives a -1 penalty.
-  So a character with 6 \glspl{fatigue} who gets reduced to 3 \glspl{hp} would take a -3 penalty to all actions.
-}{}
-
 \mapentry[kitchen]{Kitchen}
 
 \paragraph{If the \glspl{pc} have avoided making a lot of noise nearby,}
@@ -435,11 +390,11 @@ then the goblins are asleep in the kitchen.
 
 \begin{boxtext}
 
-The door creaks open and as you peer into the darkness you can just make out the four figures sprawled over tables and chairs or curled up on the oven, snoring quietly.
-From the embers of the hearth you can see the ovens and cooking utensils that make up a substantial kitchen, and silhouettes of human femurs and skulls.
+  The door creaks open and as you peer into the darkness you can just make out the four figures sprawled over tables and chairs or curled up on the oven, snoring quietly.
+  From the embers of the hearth you can see the ovens and cooking utensils that make up a substantial kitchen, and silhouettes of human femurs and skulls.
 
-Opening the door further, the light from the hall's sconces fills the room, and you can see that the four figures are more goblins with little fat bellies.
-At the end of the kitchen you can see a large door to a cold store with a lock on it and some large cleavers stuck into a butchers block.
+  Opening the door further, the light from the hall's sconces fills the room, and you can see that the four figures are more goblins with little fat bellies.
+  At the end of the kitchen you can see a large door to a cold store with a lock on it and some large cleavers stuck into a butchers block.
 
 \end{boxtext}
 
@@ -450,39 +405,9 @@ have them make a Group Roll of \roll{Dexterity}{Stealth}, \tn[8].
 }{}
 
 \paragraph{If the roll fails,}
-all goblins wake up
-\iftoggle{oneshot}{
-  but must take a morale check before attacking.
-  The Morale check only uses the Combat Skill at \tn[5], with some modifiers.
-
-  \begin{itemize}
-    \item
-    -2 if any \gls{pc} has a higher Strength than the goblin.
-    \item
-    -2 if there are more \glspl{pc} \emph{in the room} than goblins.
-    \item
-    -2 if the goblin is wounded.
-    \item
-    -1 if any \gls{pc} has displayed magical powers.
-  \end{itemize}
-
-  Make a Group Roll for all the goblins (one roll, but each goblins adds their own Combat Skill to get a new result).
-
-  \paragraph{If the goblins fail the Morale Check,}
-  they attempt to flee into the prison cell the \glspl{pc} just came from.
-
-  Their Morale check remains throughout the combat, without needing to re-roll it.
-  If they roll a `7' from the start, then a Goblin with Combat +1 will have a total of `8', and one with Combat +2 would have `9'.
-  If the \glspl{pc} outnumber the goblins, and one is stronger than them, then their total would become `5' and `6'.
-  If a goblin became wounded, they would flee, but the others might stay.
-}{
-  and take a morale check.
-
-  Two more goblins are sleeping in a corner, making six in total.
-}
+all goblins wake up with hungry stomachs.
 
 \newRule{Weapons}{
-
 
   \input{config/rules/weight}
 
@@ -567,18 +492,19 @@ See \autopageref{raidingParty} for details.
 
 \begin{exampletext}
 
-  %!
-  Once the gnomes turned into nura, they neglected to de-activate the portal, as it's easier to see when it's open.
-  A couple of hours ago, a dragon named `Makil' wandered in, and went up the stairs towards the treasure room, but could not fit through the little gnomish door.
-  He managed to pull a chest full of copper coinage through the door, but could not get anything else as he could not reach.
+  When the horde attacked, one gnome decided to activate a \Gls{deep} Scroll in order to flee.
+  Like the others, it targeted an unknown area, full of powerful magic, deep underground.
+  Unlike the others, it held a sleeping dragon, who woke, and sauntered through the magical portal.
 
-  The Makil wanted to barter with the goblins, but found that they responded to him either by trying to fight him, or by running away, and none spoke elvish (the only language he knows spoken in these parts).
+  Makil (the dragon) stomped on a couple of goblins, then followed the smell of gold and magic, to the treasure room.
+  However, the massive monster could not fit through the door.
 
-  The cautious beast won't approach the goblins and ogres to attack when he has no idea how many there are around him.
-  He may be powerful, but a room full of ogres alongside a spell caster could seriously injure or kill him, and he doesn't want to take the chance.
-  Similarly, the goblins don't want to take any chances, so they've decided to just leave him where he is.
+  When goblins came up the stairs to investigate, Makil mistook them for gnomes, up to no good, and incinerated them with his fiery breath.
+  So now he waits, with the legendary patience of a dragon.
+  He has no intention of fighting, since he could get hurt, and the goblin horde have no intention of bothering him, so they just pass by that corridor.
 
-  The goblins and dragon have ended with a stalemate, so he has taken a nap.
+  Makil and the horde have ended in a kind of stalemate.
+  And just like the horde, Makil cannot leave, as he does not know how to use the \Gls{deep} Scrolls\ldots
 
 \end{exampletext}
 
@@ -599,8 +525,20 @@ The dragon will happily talk with anyone who approaches, but only understands El
   Remind the players that they can spend \pgls{storypoint} to say that they know another language, as long as they say when they learnt the language.
 }
 Despite his linguistic deficits, he can communicate using the Enchantment sphere to send ideas to characters.
+This enchantment feels like a natural thought at first, but the character will quickly notice this thinking does not belong to them.
 
-The dragon's eventual goal is to obtain the rest of the treasure, then return through the portal to the Realm of Bright Rocks.
+\begin{speechtext}
+  ``I should go and introduce myself to that dragon, then help him.
+  I bet his name is `Makil'\ldots
+  wait a minute\ldots''
+\end{speechtext}
+
+The dragon's eventual goal is to obtain the rest of the treasure, then leave the warren, and go somewhere he can spread his wings.
+
+\paragraph{Revealing a portal scroll}
+gains no reaction.
+Makil knows he has to play it cool, and not let anyone know that he really needs that spell to leave this place.
+He \emph{might} fit through the narrow passages up, but he would be in a dangerous situation, being cramped in a tiny corridor, with ogres everywhere.
 
 \paragraph{If the party request he kill goblins for them}
 then he agrees to kill any in the current area, but will not journey to another floor.
@@ -625,6 +563,7 @@ In return, he wants all the treasure out of the treasure room.
   \knacks{\snapcaster}
   \addtocounter{Brawl}{3}
   \addtocounter{Fate}{2}
+  \addtocounter{Water}{2}
   \addtocounter{Fire}{2}
 }
 
@@ -634,7 +573,7 @@ In return, he wants all the treasure out of the treasure room.
 he refuses, unless they give him a good reason.
 
 \iftoggle{hardcore}{
-  The treasure chinks noisily of course, so the party will then receive a -1 penalty to all Stealth checks.}{}
+  The treasure chinks noisily of course, so the party will then receive a -1 penalty to all Stealth checks while carrying it.}{}
 
 \paragraph{If the party push for more treasure,}
 the dragon asks if they would like to challenge him to a game of riddles.
@@ -661,7 +600,7 @@ He will then decorate the statue with magical items.
 Dragons think the answer is obvious.}
 
 \paragraph{If the dragon parts on good terms,}
-he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp}), and casts a \textit{Fortune} spell on the weakest member, allowing them to receive +1 to their Combat Skill for the rest of the adventure.
+he blesses them all, restoring any lost \glspl{fp}.
 
 \iftoggle{oneshot}{
   \paragraph{If the \glspl{pc} attack the dragon,}
@@ -676,14 +615,19 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
 \mapentry[treasureRoom]{Treasure Room}
 \begin{itemize}
 
-  \item{A short bow}
-  \item{A buckler shield made of pure silver, worth 30sp (it breaks after one use)}
-  \item{Two gem-encrusted shortswords (worth 20 \glspl{sp})}
-  \item{A chest containing 432 \glspl{cp}}
-  \item{A chest containing 300 \glspl{sp}}
+  \item
+  A short bow
+  \item
+  A buckler shield made of pure silver, worth 30sp (it breaks after one use)
+  \item
+  Two gem-encrusted shortswords (worth 20 \glspl{sp})
+  \item
+  A chest containing 432 \glspl{cp}%
+  \footnote{Every 100 coins has a \gls{weight} of 1.}
+  \item
+  A chest containing 300 \glspl{sp}
 
 \end{itemize}
-
 
 \begin{boxtext}
 
@@ -704,12 +648,12 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
 \iftoggle{hardcore}{
   \mapentry[goblinSentry]{The Sentry}
 
-  Svart the goblin stands at the door to room \ref{nursery} (below), attempting to pick the lock.
+  Svart, the goblin, stands at the door to room \ref{nursery} (below), attempting to pick the lock.
   \paragraph{If the \glspl{pc} exit the lift door,}
-  she runs over, hoping to beg some food from the goblin she expects to emerge.
+  he runs over, hoping to beg some food from the goblin she expects to emerge.
   Once he sees the \glspl{pc}, he runs for aid.
 
-  \goblin[\npc{\F\N}{Svart}]
+  \goblin[\npc{\M\N}{Svart}]
 }{}
 
 \mapentry[nursery]{Nursery}
@@ -721,18 +665,16 @@ he blesses them all with a \textit{Wide Blessing} (which heals $2D6$ \glspl{fp})
 \end{exampletext}
 
 \begin{boxtext}
-
   The sound of crying emanates from the door as you swing it open.
   A dozen baby creatures with fat little noses lie in a crib with hay, looking up at you in terror.
   The entire crib and the floor around stink of shit.
-
 \end{boxtext}
 
-The door is locked, but can be picked with a \roll{Dexterity}{Larceny} check, \tn[9].
+The door is locked, but can be picked with a \roll{Dexterity}{Larceny} check (\tn[9]).
 It's far too strong to be broken into by force.
 
 If the \glspl{pc} enter the room, they may think these little gnomes are little goblins and kill them.
-If any of them try to do so, have them roll a \roll{Wits}{Medicine} check to realize their mistake, \tn[8].
+If any of them try to do so, have them roll a \roll{Wits}{Medicine} (\tn[8]) check to realize their mistake.
 Of course, any gnome can identify the children immediately.
 
 \paragraph{If the party leave with the children,}
@@ -742,13 +684,8 @@ they know to know to keep quiet and follow, but they will move slowly.
   \swarm{Gnomish Children}{6}{-2}{-3}{-5}
 }
 
-There are six children in total, and they each have a Weight Rating between 1 and 2.
-\iftoggle{oneshot}{
-  Characters can only carry a Weight Rating equal or less than their Strength Bonus, or they will take penalties to their \glspl{ap}, and gain \glspl{fatigue} at the end of each \gls{interval} of activity.
-
-  \paragraph{If the \glspl{pc} rest,}
-  Remember to have them heal \glspl{fatigue} equal to half their \glspl{hp}.
-}{}
+There are six children in total, and they each have a Weight Rating between 1 and 2, but can generally be treated as a single `swarm'.
+\exRef{core}{Core Rules}{swarms}
 
 \newRule{Projectiles}{
   \begin{itemize}
@@ -767,12 +704,13 @@ There are six children in total, and they each have a Weight Rating between 1 an
 
 \begin{exampletext}
 
-Gnomes grew mushrooms throughout this room in order to grow slugs, so that they could feed fireflies.
-While torches work best, having omnipresent fireflies around the warren makes sure that people can coordinate between rooms without worrying about light.
+Gnomes grew mushrooms throughout this room in order to grow slugs, which fed fireflies.
+While torches work better than fireflies, having omnipresent little lights wandering around the warren made sure that people could get about easier.
 
-%!
-Since then, the druids morphed those slugs into nura slugs.
-The fireflies have survived on the enlarged slug, which the nura keep alive with the scraps they don't want to eat, such as mushrooms and bones and faeces.
+Once the goblin druids arrived, they cast life-engorging spells to grow the slugs to monstrous proportions, in order to ensure that prisoners don't escape past this point.
+Salt covers the stairs, preventing the slugs from moving upwards.
+The fireflies continue nipping at them, and have quadrupled their population.
+The slugs don't make good guardians, but at least the halls have plenty of light.
 
 \end{exampletext}
 
@@ -789,13 +727,13 @@ The fireflies have survived on the enlarged slug, which the nura keep alive with
 \end{boxtext}
 
 \paragraph{If the \glspl{pc} run up the stairs,}
-have them roll initiative against the slugs.
+have them roll \roll{Speed}{Athletics} (\tn[7]) to avoid the acidic spray form the slugs.
 
 From that point until the slugs loose sight of them, they are in combat.
 The slugs will spray acid at them, follow them up the stairs, and pester them for as long as they remain in sight.
 
 \paragraph{If the \glspl{pc} throw in some food,}
-the nura slugs chase it rather than them.
+the nura slugs head\ldots slowly\ldots towards it rather than fight.
 
 \paragraph{If the \glspl{pc} manage to investigate the corpses somehow,}
 they find a dead gnome with a \gls{deep} Scroll, and a discarded, half-eaten cloak, with a key to room \ref{nursery} in the pocket.%
@@ -804,11 +742,14 @@ they find a dead gnome with a \gls{deep} Scroll, and a discarded, half-eaten clo
   As with the others, the \gls{deep} Scroll requires a riddle to be answered, takes four rounds before it activates, and vanishes once used.
 }{}
 
+\paragraph{If the \glspl{pc} remove all the salt from the stairs,}
+the slugs ascend\ldots slowly.
+
 \morphslug[\npc{\T[9]\N}{20 Morph Slugs}]
 
 \mapentry[greatHall]{The Great Hallway}
 
-If the \glspl{pc} have indeed been quiet enough in the previous room to not raise an alarm, they find everyone in nearby rooms napping.
+If the \glspl{pc} have indeed been quiet enough in the previous room to not raise an alarm, they find everyone in the neighbouring rooms napping.
 A single sound means they will be in serious trouble.
 
 The greasy floor results from a mixture of faeces, drool, blood and leftover mushroom-juice.
@@ -824,10 +765,10 @@ The greasy floor results from a mixture of faeces, drool, blood and leftover mus
 \end{boxtext}
 
 \paragraph{If the \glspl{pc} have come from room \ref{slugHall},}
-they will not immediately see the staircase on their left, but will see it after doing literally anything (fighting, searching, et c.).
+they will not immediately see the staircase on their left, but will see it after doing literally anything (fighting, searching, et~c.).
 
 \paragraph{If the \glspl{pc} tarry or talk,}
-have them make a \roll{Dexterity}{Stealth} check, \tn[6].
+have them make a \roll{Dexterity}{Stealth} check (\tn[6]).
 They make this as a \textit{Group Roll}, so a single roll counts for the whole group.
 Each margin on the roll allows them an additional round before the horde wakes.
 
@@ -851,6 +792,7 @@ Each margin on the roll allows them an additional round before the horde wakes.
   On one table, you can see a pile of weapons -- short swords and spears -- piled on a table.
 
 \end{boxtext}
+
 Picks, shovels, wood, short swords, shortbows, and all manner of crafting and mining equipment litter the room.
 
 \paragraph{If the \glspl{pc} have come up from room \ref{entrycell},}
@@ -875,33 +817,19 @@ Failure will awaken the entire horde.
 
 \mapentry[grandLibrary]{The Grand Library}
 
-%! Remove old magical items
 In total, the room contains the following magical items:
 
-This bowl is always full of water.
-If it empties, then the air around it quickly forms into more water.
+\lootMagic
 
-This lock scroll will lock any door, increasing the \gls{tn} to break through it by 4.
-
-As with any \gls{deep} Scroll, it leads to the Realm of Shifting Corridors.
+\lootMagic
 
 \goblincaster
-
-The spell allows the user to feel 4 areas around (meaning `rooms'), though not with much detail.
-The effect feels very disorienting at first, as most people are not used to having their consciousness spread apart so far.
-
-This `staff' will probably feel more like a wand in the hands of a human, as it's about the height of a short gnome.
-The gnomish word for `morning', activates the light, while the gnomish word for `night' stops it.
-The goblins do not know these activation words, so they simply keep it under blankets as they find the light irritating.
-
-If wrapped up in heavy sheets and suddenly displayed, the light can blind opponents, as usual.
 
 \begin{boxtext}
 
   At the top of the stairs you find the ruins of a massive library.
   Book cases lie in a smashed heap on the ground, others appear to be used as a makeshift bed for an ogre.
-  The books themselves are gone, except for a few scrolls, now tightly clutched by a goblin in a black cowl.
-  His hand shines with a thumb-ring, showing three massive gemstones.
+  The books themselves are gone, except for a scroll, now tightly clutched by a goblin in a black cowl.
 
 \end{boxtext}
 
@@ -969,9 +897,8 @@ While he genuinely wants to escape and become human again, the moment the party 
 The prisoners require no locks or handcuffs -- the ogre waiting outside suffices to terrify them into staying put.
 
 \paragraph{If any of the \glspl{pc} have died,}
-another player should spend 2 \glspl{storypoint} to introduce an old friend.
-
-Take the last two farmers from the handout to join the troupe.
+introduce another \gls{pc} here%
+\iftoggle{hardcore}{.}{, from the pool.}
 
 \iftoggle{hardcore}{%
   \paragraph{If the party get a moment to ask about the outside world,}

@@ -22,10 +22,11 @@
 }{
   \pic{Dyson_Logos/upper-handout}
   \iftoggle{hardcore}{
-    \subsubsection*{Dayton Town}
-    \includesvg{images/Dyson_Logos/town}
+    \clearpage
+    \subsection*{Dayton Town}
+    \pic{Dyson_Logos/town}
   }{}
-  \clearpage
+  \cleardoublepage
   \shipout\null
 }
 
@@ -57,19 +58,20 @@
 
 \end{multicols}
 
-\iftoggle{hardcore}{
-  \clearpage
-  \shipout\null
+\clearpage
+\shipout\null
 
+\iftoggle{hardcore}{
+
+  \begin{multicols}{2}
   \humanfarmer[\npc{\M\Hu}{Ratcaul}]
 
   \humanthief[\npc{\F\Hu}{Nightsore}]
 
   \humansoldier[\npc{\M\Hu}{Goutmare}]
+  \end{multicols}
 
 }{}
-
-
 
 \clearpage
 \shipout\null

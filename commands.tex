@@ -18,12 +18,11 @@
     }{}
   }
 
-\ifStrSame{\jobname}{handouts_hardcore}%
+\ifStrSame{\jobname}{hardcore_handouts}%
   {\settoggle{hardcore}{true}}%
-  {\ifStrSame{\jobname}{handouts_oneshot}%
+  {\ifStrSame{\jobname}{oneshot_handouts}%
     {\settoggle{oneshot}{true}}{}}
 
-% When 'examplecharacter' = true, some stats show more information about how they work.
 \iftoggle{oneshot}{
   \settoggle{examplecharacter}{true}{}
 }

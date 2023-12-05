@@ -350,14 +350,7 @@ they find the \gls{talisman}, `\lootMagic', left by the goblin druids.
 
 \showTalisman
 
-\talisman{Labyrinth Scroll}% Name
-  {distant, duplicated, detailed}% Enhancements
-  {warp}% Action
-  {Fire,Earth}% Spheres
-  {wind}% Resistance
-  {Once the riddle on the scroll is answered, it opens a magical portal (the size of a full corridor) to the goblin realm, some deep below the warren}% Summary
-  {The portal hangs mid-air in front of the caster.
-  Any damage to its edges will quickly destroy it.}% Details
+\labyrinthScroll
 
 \showTalisman
 
@@ -367,7 +360,7 @@ Go to \autoref{riddles} and select any riddle to activate the scroll.
 
 \paragraph{If the \textit{Labyrinth Scroll} is activated,}
 it begins to shimmer with golden flecks, then blocks any nearby walls, turning into a portal to a deep underground world.
-See \autoref{readingScrolls}: \nameref{readingScrolls} for details on the calamities which ensue after reading a \gls{deep} Scroll.
+See \nameref{readingScrolls} (\autopageref{readingScrolls}) for details on the calamities which ensue after reading a \gls{deep} Scroll.
 
 \mapentry[kitchen]{Kitchen}
 
@@ -820,6 +813,9 @@ It remains on the ground beside him.
   The books themselves are gone, except for a scroll, now tightly clutched by a goblin in a black cowl.
 
 \end{boxtext}
+
+\labyrinthScroll 
+The goblin druid holds a \spellName\ in her sleepy hands.
 
 \iftoggle{hardcore}{
   \ogre[\npc{\N\T}{2 Docile Ogres}]

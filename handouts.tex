@@ -16,50 +16,39 @@
 \iftoggle{oneshot}{
   \settoggle{examplecharacter}{false}
   \input{config/GS.tex}
-  \clearpage
   \shipout\null
   \settoggle{examplecharacter}{true}
 }{
   \pic{Dyson_Logos/upper-handout}
+  \cleardoublepage
   \iftoggle{hardcore}{
     \cleardoublepage
     \subsection*{Dayton Town}
     \pic{Dyson_Logos/town}
+    \cleardoublepage
+    \shipout\null
   }{}
-  \cleardoublepage
-  \shipout\null
 }
 
 \setlength{\columnsep}{30pt}
-\begin{multicols}{2}
 
+\begin{multicols}{2}
 \firstPrisoner
 
-\begin{multicols}{2}
 \prisoner[\NPC{\Hu\F}{Boarkelt}{Warm}{Humms}{Paladin}]
-\end{multicols}
 
-\begin{multicols}{2}
-\prisoner[\NPC{\Hu\M}{Kinlint}{Calm}{Um\ldots}{Tribalist}]
 \end{multicols}
 
 \begin{multicols}{2}
 \prisoner[\NPC{\Hu\F}{Swelcut}{Reasonable}{Folds arms}{Paladin}]
-\end{multicols}
 
-\begin{multicols}{2}
 \prisoner[\NPC{\Hu\M}{Fenzcrok}{Fierce}{Points Fingers}{Tribalist}]
 \end{multicols}
 
 \begin{multicols}{2}
 \prisoner[\NPC{\Hu\F}{Swelcrist}{Demanding}{Wrinkles nose}{Tribalist}]
-\end{multicols}
 
-\begin{multicols}{2}
 \prisoner[\NPC{\Hu\M}{Barncull}{Jovial}{Looks up}{Tribe}]
-\end{multicols}
-
-
 \end{multicols}
 
 \clearpage
@@ -70,6 +59,10 @@
   \begin{multicols}{2}
   \humanfarmer[\npc{\M\Hu}{Ratcaul}]
 
+  \prisoner[\NPC{\Hu\M}{Kinlint}{Calm}{Um\ldots}{Tribalist}]
+  \end{multicols}
+
+  \begin{multicols}{2}
   \humanthief[\npc{\F\Hu}{Nightsore}]
 
   \humansoldier[\npc{\M\Hu}{Goutmare}]

@@ -263,9 +263,19 @@ This serves two functions:
 \end{enumerate}
 
 The only restriction is that you need to keep the \Gls{deep} Scrolls well stuffed in a bag.
-The moment someone states the correct answer to the riddle, they activate.
+The moment someone states the correct answer to the riddle, the scrolls activate.
 
 \labyrinthScroll
+
+\showTalisman
+
+\begin{exampletext}
+  The scroll flashes with energy, then fire spreads across it, burning the parchment.
+  The ashes and flame spread across the hallway, blocking it with a patch of darkness with an orange glow.
+
+  You can see the silhouettes of some scene on the other side, but can't understand if those twisted shapes come from plants, rocks, or something else.
+  They seem to be very far away -- the darkness clearly leads somewhere \emph{other}.
+\end{exampletext}
 
 \paragraph{Understanding the scrolls}
 requires an \roll{Intelligence}{Academics} roll (\tn[12]) to identify what it targets (somewhere deep underground, with magical energy) and the same again (\tn[14]) to understand what it does (it opens a portal).
@@ -276,6 +286,13 @@ The writing on the scroll is Gnomish, which forms the basis of the common Tradin
 \paragraph{If goblins ever encounter an open portal to their realm,}
 they jump through it immediately!
 Their ultimate goal is to return home.
+
+\paragraph{If anyone goes through the portal,}
+\iftoggle{hardcore}%
+  {they are lost forever}%
+  {they will return the next time a portal scroll opens, with a strange story of a magma-filled landscape.
+
+  Have the player mark $1D6$ \glspl{fatigue} on the character sheet.}
 
 \subsection{Setbacks \& Death}
 

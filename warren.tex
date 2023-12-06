@@ -110,23 +110,6 @@ Olf then tries to pick up a character, and take it up to the kitchen.
 \paragraph{If anyone wants to fight while still tied up,}
 they can do so with a -4 penalty to the roll.
 
-\iftoggle{oneshot}{
-  \npc{\N\M}{Olf the Ogre}
-  \person{6}% STRENGTH
-  {0}% DEXTERITY 
-  {1}% SPEED
-  {{-2}% INTELLIGENCE
-  {-3}% WITS
-  {-5}}% CHARISMA
-  {0}% DR
-  {1}% COMBAT
-  {Crafts 1, Wyldcrafting 1}% SKILLS
-  {Nothing}% EQUIPMENT
-  {}
-}{
-  \ogre[\npc{\N\M}{Olf the Ogre}]
-}
-
 \npc{\N\F}{Blara the Goblin Druid}
 
 \person{-2}% STRENGTH
@@ -152,6 +135,23 @@ they can do so with a -4 penalty to the roll.
 }
 
 \showStdSpells
+
+\iftoggle{oneshot}{
+  \npc{\N\M}{Olf the Ogre}
+  \person{6}% STRENGTH
+  {0}% DEXTERITY 
+  {1}% SPEED
+  {{-2}% INTELLIGENCE
+  {-3}% WITS
+  {-5}}% CHARISMA
+  {0}% DR
+  {1}% COMBAT
+  {Crafts 1, Wyldcrafting 1}% SKILLS
+  {Nothing}% EQUIPMENT
+  {}
+}{
+  \ogre[\npc{\N\M}{Olf the Ogre}]
+}
 
 \paragraph{If anyone attacks Blara,}
 Olf immediately turns his attention to them.
@@ -394,23 +394,21 @@ all goblins wake up with hungry stomachs.
 
   \input{config/rules/weapons.tex}
 
-  The \glspl{pc} can find all these items in the \nameref{kitchen}.
+  The \glspl{pc} can find all these items in room \ref{kitchen}.
   They don't make the best weapons, but the \glspl{pc} have little choice!
 
-  \end{multicols}
-  \begin{nametable}[YXYYYY]{Kitchen Weapons}
+  \begin{boxtable}[YlYYYY]
 
-    \textbf{No.} & \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\glspl{ap} Cost} & \textbf{Weight Rating} \\\hline
+    \textbf{No.} & \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\glspl{ap} Cost} & \textbf{Weight} \\\hline
 
     1 & Broom & 1 & 0 & 2 & -1 \\
-    4 & Small\showWeapon{\chair} \\
+    4 & Small \showWeapon{\chair} \\
     2 & \showWeapon{\Dagger}  \\
     2 & \showWeapon{\skillet} \\
     4 & \showWeapon{\Log} \\
     1 & \showWeapon{\woodaxe} \\
 
-    \end{nametable}
-  \begin{multicols}{2}
+  \end{boxtable}
 
 }
 
@@ -524,7 +522,8 @@ He \emph{might} fit through the narrow passages up, but he would be in a dangero
 then he agrees to kill any in the current area, but will not journey to another floor.
 In return, he wants all the treasure out of the treasure room.
 
-\NPC{\E}{Makil the Dragon}{Inquisitive}{Drums Fingers}{Acquisition}
+\needspace{20em}
+\NPC{\E}{Makil the Dragon}{inquisitive, cruel, \& massive}{drums fingers}{gold}
 \person{7}% STRENGTH
 {2}% DEXTERITY 
 {3}% SPEED
@@ -749,14 +748,14 @@ The greasy floor results from a mixture of faeces, drool, blood and leftover mus
 \paragraph{If the \glspl{pc} have come from room \ref{slugHall},}
 they will not immediately see the staircase on their left, but will see it after doing literally anything (fighting, searching, et~c.).
 
+\label{laddertop}
+
 \paragraph{If the \glspl{pc} tarry or talk,}
 have them make a \roll{Dexterity}{Stealth} check (\tn[6]).
 They make this as a \textit{Group Roll}, so a single roll counts for the whole group.
 Each margin on the roll allows them an additional round before the horde wakes.
 
 \mapentry[workshop]{The Workshop}
-
-\label{laddertop}
 
 \begin{exampletext}
 
@@ -781,6 +780,8 @@ Picks, shovels, backpacks, wood, short swords, shortbows, and all manner of craf
 they find the exit has been covered by an illusion of a wall.
 If they investigate the area at all, the illusion fades, revealing the sleeping goblins.
 
+\pic{Decky/armoury}
+
 \paragraph{If the \glspl{pc} attempt to take either a short sword or a spear,}
 each attempt requires a \roll{Dexterity}{Stealth} roll, \tn[7].
 Failure will awaken the entire horde.
@@ -788,8 +789,6 @@ Failure will awaken the entire horde.
 \iftoggle{oneshot}{
   You can find stats for the weapons in \autoref{creaturesAndItems}.
 }{}
-
-\pic{Decky/armoury}
 
 \goblin[\npc{\T[\arabic{enemyNo}]\N}{\arabic{enemyNo} Goblins}]
 
@@ -920,6 +919,8 @@ introduce another \gls{pc} here%
   To the left, a wooden door waits, with dirty footprints visible on the floor.
 
 \end{boxtext}
+
+The \glspl{pc} can clearly see the following:
 
 \begin{itemize}
 
@@ -1102,5 +1103,7 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
   \paragraph{If the \glspl{pc} examine the door,}
   they can see the goblin in the next area by a glimmer of candle-light.
 }
+
+\pic{Decky/screech}
 
 \end{multicols}

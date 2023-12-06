@@ -203,7 +203,7 @@ See page \pageref{invasionhistory} for the complete history.
 remember to keep track of their \glsentrylongpl{fp}
 Each \gls{interval} they will regenerate 2.
 
-\paragraph{Before the party leave,}
+\paragraph{Before the \glspl{pc} leave,}
 the gnomes request they nip out to the kitchen, (room \ref{lounge}) and get them some food.
 
 With proper food, the party and the gnomes can rest, regain any Fatigue Points they may have accumulated, and the gnomes can do the same.
@@ -214,7 +214,7 @@ With proper food, the party and the gnomes can rest, regain any Fatigue Points t
 
 \gnomishsoldier[\npc{\Gn\M}{Klaus}]
 
-\NPC{\Gn\F}{Tar\'ik the Alchemist}{Nosey}{Picks nose}{Tribe}
+\NPC{\Gn\F}{Tar\'ik the Alchemist}{nosey}{picks nose}{cake \& freedom}
 \person{-3}% STRENGTH
 {1}% DEXTERITY 
 {-2}% SPEED
@@ -466,7 +466,9 @@ Among the wreckage, the party can find a hidden item:
   Perhaps this ends the story, or perhaps it marks the beginning of a new group, ready to purge the goblins from the land.
 }
 
-\pic{Decky/shaman}
+\iftoggle{hardcore}{
+  \pic{Decky/shaman}
+}{}
 
 \end{multicols}
 

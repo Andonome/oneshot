@@ -14,6 +14,11 @@
 
 \noindent
 The party probably thought they were out of the woods, but in fact they will have to enter the woods, before salvation.
+\ifnum\value{temperature}=0
+  To make matters worse, those woods are white with snow.
+  The land lies barren, and frozen.
+  Each character without warm clothing receives 3 \glspl{fatigue} per \gls{interval}.
+\fi
 
 \begin{exampletext}
   The black tower began as a half-way house for the \gls{guard}, as they travelled between Darton and Grungefell.
@@ -163,6 +168,11 @@ Roll to find the inhabitants:
 
 \begin{multicols}{2}
 
+\smolMapPic{Dyson_Logos/black_tower_base}{
+  \ref{towerBridge}/24/45,
+  \ref{towerPortcullis}/46/66,
+}
+
 \noindent
 \begin{exampletext}
   The rampant goblin horde, having eaten their way through the villages, have invaded the black tower.
@@ -170,11 +180,6 @@ Roll to find the inhabitants:
 
   The bridge here provides the only place to cross the massive river, so if the troupe stop the horde progressing, they will have limited the horde's reach substantially.
 \end{exampletext}
-
-\smolMapPic{Dyson_Logos/black_tower_base}{
-  \ref{towerBridge}/24/45,
-  \ref{towerPortcullis}/46/66,
-}
 
 \subsection{The Approach}
 
@@ -255,9 +260,17 @@ Further goblins hide in here, eating a horse the ogres left for them.
 
 \end{boxtext}
 
-\smolMapPic{Dyson_Logos/black_tower_f2}{
-  \ref{towerArmoury}/59/64,
-  \ref{towerMechanism}/25/43,
+\boxPair{
+  \smolMapPic{Dyson_Logos/black_tower_f2}{
+    \ref{towerArmoury}/59/64,
+    \ref{towerMechanism}/25/43,
+  }
+}{
+  \smolMapPic{Dyson_Logos/black_tower_f3}{
+    \ref{towerServants}/25/47,
+    \ref{towerKitchen}/25/75,
+    \ref{towerStorage}/70/44,
+  }
 }
 
 The party can pick up three suits of chainmail for anyone with Strength 2-3, and three longswords.
@@ -289,12 +302,6 @@ Otherwise, he attacks.
 
 \ogre[\npc{\N\M}{Hungry Ogre}]
 
-\smolMapPic{Dyson_Logos/black_tower_f3}{
-  \ref{towerServants}/25/47,
-  \ref{towerKitchen}/25/75,
-  \ref{towerStorage}/70/44,
-}
-
 \mapentry[towerServants]{Servant's Room}
 
 A goblin spellcaster stands here, watching for anyone approaching.
@@ -309,6 +316,17 @@ This room contains spare clothing and all manner of long-life food.
 The goblins have not managed to figure out the lock yet.
 It has no key -- instead, there is a hole with a series of ropes inside which one must lift in the correct way.
 An \roll{Intelligence}{Larceny} check \tn[10] is required to figure out how to open it.
+
+\boxPair[t]{
+  \smolMapPic{Dyson_Logos/black_tower_f4}{
+    \ref{towerLibrary}/59/46,
+    \ref{towerBaron}/25/72,
+  }
+}{
+  \smolMapPic{Dyson_Logos/black_tower_f5}{
+    \ref{towerRoof}/60/54,
+  }
+}
 
 \mapentry[towerLibrary]{Library}
 
@@ -341,16 +359,10 @@ It feels scared by the big people approaching, and waits to stab a player from h
 
 \end{boxtext}
 
-\smolMapPic{Dyson_Logos/black_tower_f4}{
-  \ref{towerLibrary}/59/46,
-  \ref{towerBaron}/25/72,
-}
-
 \goblin[\npc{\N\F}{Hiding Goblin}]
 
 \paragraph{If the \glspl{pc} fail to spot the hiding goblin,}
 it attempts a sneak attack, then bolts down the stairs.
-\exRef{core}{Core rules}{sneakattack}
 
 \paragraph{Searching for particularly valuable books}
 requires an \roll{Intelligence}{Academics} roll (\tn[12]).
@@ -391,13 +403,13 @@ Around the room are:
 \paragraph{Once the party enter,}
 the Baron allows them to come up, greets them politely, and listens to anything they have to say.
 
-\smolMapPic{Dyson_Logos/black_tower_f5}{
-  \ref{towerStorage}/60/54,
-}
-
 \paragraph{If any party members have died,}
 a new \gls{pc} can be found here.
 This might be someone in the employ of the Alchemist, or a random person who was in the deep forest and ran away from the horde, then took shelter in the tower.
+
+\paragraph{While the troupe make their introductions,}
+the goblins below feel hungry again, and ascend the tower.
+List out all enemies the troupe have not eliminated: all of them join together and plan their attack.
 
 \npc{\M\Hu}{The Alchemist}
 \person{1}% STRENGTH
@@ -411,17 +423,12 @@ This might be someone in the employ of the Alchemist, or a random person who was
 {\setcounter{Projectiles}{1}\setcounter{Academics}{2}\setcounter{Crafts}{1}\setcounter{Deceit}{1}\setcounter{Medicine}{2}\setcounter{Vigilance}{1}}%SKILLS
 {\shortsword, 3 daggers, \partialleather}% EQUIPMENT
 {
-  \addtocounter{fp}{10}
   \setcounter{Fire}{3}
   \setcounter{Air}{2}
   \setcounter{Earth}{1}
 }
 
 \showStdSpells
-
-\paragraph{While the troupe make their introductions,}
-the goblins below feel hungry again, and ascend the tower.
-List out all enemies the troupe have not eliminated: all of them join together and plan their attack.
 
 \end{multicols}
 

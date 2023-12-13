@@ -785,10 +785,6 @@ If they investigate the area at all, the illusion fades, revealing the sleeping 
 each attempt requires a \roll{Dexterity}{Stealth} roll, \tn[7].
 Failure will awaken the entire horde.
 
-\iftoggle{oneshot}{
-  You can find stats for the weapons in \autoref{creaturesAndItems}.
-}{}
-
 \goblin[\npc{\T[\arabic{enemyNo}]\N}{\arabic{enemyNo} Goblins}]
 
 \addtocounter{enemyNo}{-2}
@@ -836,6 +832,20 @@ The player should not roll again -- the original roll remains, but increasing th
 }{
   \section{Upper Warren}
 }
+
+\iftoggle{oneshot}{% This weapon chart goes next to the armoury
+  \begin{wideTable}[XYYYY]{Weapons}
+  \label{armouryWeapons}
+
+  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\glspl{ap} Cost} & \textbf{Weight Rating} \\\hline
+
+  Bucklar Shield & +2 & None & 1 & 1 \\
+  \showWeapon{\shortsword} \\
+  \showWeapon{\spear} \\
+  \showWeapon{\woodaxe} \\
+
+  \end{wideTable}
+}{}
 
 \begin{multicols}{2}
 
@@ -886,20 +896,6 @@ introduce another \gls{pc} here%
   \paragraph{If the party get a moment to ask about the outside world,}
   the villagers tell them that they last saw hundreds of goblins swarming around town, and she was on her horse to get away.
   They suspect that the entire place will have been overrun.
-}{}
-
-\iftoggle{oneshot}{% This weapon chart goes next to the armoury
-  \begin{figure*}[t!]
-  \begin{nametable}[YXYYYY]{Armoury Weapons}
-
-  \textbf{Quantity} & \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\glspl{ap} Cost} & \textbf{Weight Rating} \\\hline
-
-  3 & Bucklar Shield & +2 & None & 1 & 0 \\
-  3 & \showWeapon{\shortsword} \\
-  7 & \showWeapon{\woodaxe} \\
-
-  \end{nametable}
-  \end{figure*}
 }{}
 
 \mapentry[armoury]{Armoury}

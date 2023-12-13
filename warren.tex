@@ -467,6 +467,19 @@ they will find less purchase than a Sun-screen salesman in a Scotland.
 a Raiding party return with more prisoners to place in the cell (room \ref{entrycell}).
 See \autopageref{raidingParty} for details.
 
+\newRule{Projectiles}{
+  \begin{itemize}
+    \item
+    Players roll \roll{Dexterity}{Projectiles} against \tn[6] to hit targets.
+    \item
+    Every 5 steps adds +1 to the \gls{tn}.
+    \item
+    When a player hits the \gls{tn} precisely, they miss their first target, but hit any other target behind.
+    \item
+    Shortbows deal only $1D6-1$ Damage.
+  \end{itemize}
+}
+
 \mapentry[dragonApproach]{Dragon's Approach}
 
 \begin{exampletext}
@@ -518,11 +531,6 @@ gains no reaction.
 Makil knows he has to play it cool, and not let anyone know that he really needs that spell to leave this place.
 He \emph{might} fit through the narrow passages up, but he would be in a dangerous situation, being cramped in a tiny corridor, with ogres everywhere.
 
-\paragraph{If the party request he kill goblins for them}
-then he agrees to kill any in the current area, but will not journey to another floor.
-In return, he wants all the treasure out of the treasure room.
-
-\needspace{20em}
 \NPC{\E}{Makil the Dragon}{inquisitive, cruel, \& massive}{drums fingers}{gold}
 \person{7}% STRENGTH
 {2}% DEXTERITY 
@@ -547,6 +555,10 @@ In return, he wants all the treasure out of the treasure room.
 }
 
 \showStdSpells
+
+\paragraph{If the party request he kill goblins for them}
+then he agrees to kill any in the current area, but will not journey to another floor.
+In return, he wants all the treasure out of the treasure room.
 
 \paragraph{If the party offer to split the treasure,}
 he refuses, unless they give him a good reason.
@@ -667,19 +679,6 @@ they know to know to keep quiet and follow, but they will move slowly.
 
 There are six children in total, and they each have a Weight Rating between 1 and 2, but can generally be treated as a single `swarm'.
 \exRef{core}{Core Rules}{swarms}
-
-\newRule{Projectiles}{
-  \begin{itemize}
-    \item
-    Players \roll{Dexterity}{Projectiles} against \tn[6] to hit targets.
-    \item
-    Every 5 steps adds +1 to the \gls{tn}.
-    \item
-    When a player hits the \gls{tn} precisely, they miss their first target, but hit any other target behind.
-    \item
-    Shortbows deal only $1D6-1$ Damage.
-  \end{itemize}
-}
 
 \mapentry[slugHall]{Slug Hall}
 
@@ -1085,6 +1084,8 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
 \mapentry[lowerExit]{The Exit}
 
 \iftoggle{oneshot}{
+  The \glspl{pc} have found the exit, and can finally leave the nightmare behind.
+
   \begin{boxtext}
 
     As the key turns, the door swings open, and daylight floods in.
@@ -1104,6 +1105,8 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
   they can see the goblin in the next area by a glimmer of candle-light.
 }
 
-\pic{Decky/screech}
+\iftoggle{oneshot}{}{
+  \pic{Decky/screech}
+}
 
 \end{multicols}

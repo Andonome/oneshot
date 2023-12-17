@@ -412,11 +412,12 @@ all goblins wake up with hungry stomachs.
 
 }
 
-\goblin[\npc{\T[2]\N}{2 Goblins on the table}]
+\goblin[\npc{\N}{Goblin on the table}]
 
 \iftoggle{hardcore}{
   \goblin[\npc{\T[4]\N}{4 Goblins on the floor}]
 }{
+  \goblin[\npc{\N}{Goblin on the floor}]
   \goblin[\npc{\T[2]\N}{2 Goblins on the oven}]
 }
 
@@ -524,13 +525,20 @@ The dragon will happily talk with anyone who approaches%
   \end{speechtext}
 }{.}
 
-The dragon's eventual goal is to obtain the rest of the treasure, then leave the warren, and go somewhere he can spread his wings.
+\iftoggle{hardcore}{}{
+  The dragon's eventual goal is to obtain the rest of the treasure, then leave the warren, and go somewhere he can spread his wings.
+  Like all dragons, he has more cunning than ferocity, and \emph{plenty} of both.
+  He will look for opportunities to turn the \glspl{pc} against each other, and reframe all conversations around the assumption that he will soon leave, with most of the treasure, through a portal scroll, and that the \glspl{pc} should view this as their best possible outcome.
+
+  Despite his cunning, he will agree to worse terms if he has to.
+}
 
 \paragraph{Revealing a portal scroll}
 gains no reaction.
 Makil knows he has to play it cool, and not let anyone know that he really needs that spell to leave this place.
 He \emph{might} fit through the narrow passages up, but he would be in a dangerous situation, being cramped in a tiny corridor, with ogres everywhere.
 
+\needspace{20em}
 \NPC{\E}{Makil the Dragon}{inquisitive, cruel, \& massive}{drums fingers}{gold}
 \person{7}% STRENGTH
 {2}% DEXTERITY 
@@ -775,11 +783,11 @@ Each margin on the roll allows them an additional round before the horde wakes.
 
 Picks, shovels, backpacks, wood, short swords, shortbows, and all manner of crafting and mining equipment litter the room.
 
+\pic{Decky/armoury}
+
 \paragraph{If the \glspl{pc} have come up from room \ref{entrycell},}
 they find the exit has been covered by an illusion of a wall.
 If they investigate the area at all, the illusion fades, revealing the sleeping goblins.
-
-\pic{Decky/armoury}
 
 \paragraph{If the \glspl{pc} attempt to take either a short sword or a spear,}
 each attempt requires a \roll{Dexterity}{Stealth} roll, \tn[7].

@@ -67,21 +67,6 @@
 
 }
 
-\newcommand{\armouredOgre}[1][\npc{\M\N}{Armoured Ogre}]{
-  #1
-  \person{\iftoggle{oneshot}{5}{6}}% STRENGTH
-  {0}% DEXTERITY 
-  {4}% SPEED
-  {{-3}% INTELLIGENCE
-  {0}% WITS
-  {-3}}% CHARISMA
-  {0}% DR
-  {1}% COMBAT
-  {Crafts~1, Vigilance~2}% SKILLS
-  {\greatsword, \partialleather}% EQUIPMENT
-  {}
-}
-
 \newcommand\spyGnome[1]{
   \npc{\Gn(\N)\M}{Kalama}
   \person{-2}% STRENGTH

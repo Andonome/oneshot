@@ -216,6 +216,14 @@ Breaking through the furnace, certainly makes a lot of noise, which wakes the ho
 \paragraph{If someone wants to continue climbing up,}
 the chimney becomes smaller and smaller, then eventually breaks out into various hand-sized tunnels, and exits above, almost invisibly.
 
+\begin{boxtext}
+
+  Smashed-up chairs and broken cutlary surround a low dining table.
+  On the table, a little bleach-white goblin wrestles with a rat-like creature, the size of a dog.
+  The ugly pair fight over a human leg.
+
+\end{boxtext}
+
 \mapentry[diningRoom]{Dining Room}
 
 Every morsel has been licked clean from this little dining room.
@@ -225,14 +233,6 @@ A goblin and a giant rat bicker over a human bone.%
   Kalama cast a spell upon the rat, transforming it into a beast, in order to distract the goblins.
   For Kalama's background, remember `\nameref{saving_the_children}', \autopageref{saving_the_children}.
 }
-
-\begin{boxtext}
-
-  Smashed-up chairs and broken cutlary surround a low dining table.
-  On the table, a little bleach-white goblin wrestles with a rat-like creature, the size of a dog.
-  The two creatures are fighting over a human leg.
-
-\end{boxtext}
 
 \paragraph{If a \gls{pc} sneaks up quietly,}
 have them roll \roll{Dexterity}{Stealth},  at \tn[9].
@@ -297,24 +297,24 @@ reveals two large knives which can be used as \emph{daggers}.
 
 \morphrat[\npc{\N\A}{Morph Rat}]
 
+\begin{boxtext}
+
+  From the top of the stairs, you see two figures, clothed only in leather satchels.
+  They hold another goblin held on the ground, and yell at him.
+
+  The goblin on the ground looks round, and winks at you\ldots?
+
+\end{boxtext}
+
 \mapentry[spellCasters]{Spellcaster Arguments}
 
 A single gnome escaped death by casting a spell to transform his body to look like a goblin.
 Unfortunately, he does not speak the goblin language, and everyone soon noticed.
 Two druids interrogate Kalama while he can only shrug in confusion unless the \glspl{pc} interrupt the scene.
 
-\begin{boxtext}
-
-  From the top of the stairs, you see two figures, clothed in leather satchels.
-  They have another goblin held on the ground, and are yelling at him.
-
-  The goblin on the ground looks round, and winks at you\ldots
-
-\end{boxtext}
-
 \paragraph{If the \glspl{pc} have already made a ruckus,}
 the spellcasters will prepare to fight, then flee.
-Kalama, the gnome, will flee immediately.
+Kalama, the disguised gnome, will flee immediately.
 
 \iftoggle{oneshot}{%
 \paragraph{If the \glspl{pc} try to sneak past,}
@@ -359,20 +359,20 @@ Go to \autoref{riddles} and select any riddle to activate the scroll.
 it begins to shimmer with golden flecks, then blocks any nearby walls, turning into a portal to a deep underground world.
 See \nameref{readingScrolls} (\autopageref{readingScrolls}) for details on the calamities which ensue after reading a \gls{deep} Scroll.
 
+\begin{boxtext}
+
+  Peering into the darkness in the alcove, you can just make out the four figures sprawled over tables and chairs or curled up on the oven, snoring contentedly.
+  From the embers of the hearth you can see the ovens and cooking utensils that make up a substantial kitchen, and silhouettes of human femurs and skulls.
+
+  Entering further, you see that the four figures are more goblins with little fat bellies.
+  At the end of the kitchen you can see a large door to a cold store with a lock on it and two large cleavers stuck into a butchers block.
+
+\end{boxtext}
+
 \mapentry[kitchen]{Kitchen}
 
 \paragraph{If the \glspl{pc} have avoided making a lot of noise nearby,}
 then the goblins are asleep in the kitchen.
-
-\begin{boxtext}
-
-  The door creaks open and as you peer into the darkness you can just make out the four figures sprawled over tables and chairs or curled up on the oven, snoring quietly.
-  From the embers of the hearth you can see the ovens and cooking utensils that make up a substantial kitchen, and silhouettes of human femurs and skulls.
-
-  Opening the door further, the light from the hall's sconces fills the room, and you can see that the four figures are more goblins with little fat bellies.
-  At the end of the kitchen you can see a large door to a cold store with a lock on it and some large cleavers stuck into a butchers block.
-
-\end{boxtext}
 
 \paragraph{If the \glspl{pc} try to sneak in,}
 have them make a Group Roll of \roll{Dexterity}{Stealth}, \tn[8].
@@ -398,7 +398,8 @@ all goblins wake up with hungry stomachs.
 
     \textbf{No.} & \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\glspl{ap} Cost} & \textbf{Weight} \\\hline
 
-    1 & Broom & 1 & 0 & 2 & -1 \\
+    1 & Broom & 1 & 0 & 2 & 1 \\
+    2 & Cleaver & 0 & 2 & 2 & 2 \\
     4 & Small \showWeapon{\chair} \\
     2 & \showWeapon{\Dagger}  \\
     2 & \showWeapon{\skillet} \\
@@ -437,13 +438,6 @@ they'll find a few canteens of water, one of wine, and sacks vegetables (enough 
 
 The players can unlock the larder with a \roll{Dexterity}{Larceny} roll at \tn[10] to pick the lock, at which point they discover that the larder is still full of food.
 
-\mapentry[lift]{The Gnomish Lift}
-
-The gnomes created the lift with the Force sphere.
-It can lift a combined Weight Rating of 16, and safely descend with a total Weight Rating of 26 standing on it.%
-\footnote{A creature's \gls{weight} equals its \glspl{hp}, plus half the value of its equipment.}
-If the party step on it with a greater \gls{weight} than this, each additional point inflicts 2 \glspl{fatigue} on everyone in the lift upon impact with the ground.
-
 \begin{boxtext}
 
   The great double doors swing open, revealing a wide, empty room.
@@ -451,6 +445,13 @@ If the party step on it with a greater \gls{weight} than this, each additional p
   The room appears otherwise empty.
 
 \end{boxtext}
+
+\mapentry[lift]{The Gnomish Lift}
+
+The gnomes created the lift with the Force sphere.
+It can lift a combined Weight Rating of 16, and safely descend with a total Weight Rating of 26 standing on it.%
+\footnote{A creature's \gls{weight} equals its \glspl{hp}, plus half the value of its equipment.}
+If the party step on it with a greater \gls{weight} than this, each additional point inflicts 2 \glspl{fatigue} on everyone in the lift upon impact with the ground.
 
 The lift responds to magical passwords -- the gnomish words for `farm' (for the top), `sleep' (for the middle), and `food' (for the bottom).
 The various ogres and goblins who use the lift only know the passwords for the bottom and middle section.
@@ -478,6 +479,13 @@ See \autopageref{raidingParty} for details.
   \end{itemize}
 }
 
+\begin{boxtext}
+
+  Ahead, three charred goblin corpses lie on the ground.
+  A strange scent wanders down from above, something like a chicken cooked in rotten eggs.
+
+\end{boxtext}
+
 \mapentry[dragonApproach]{Dragon's Approach}
 
 \begin{exampletext}
@@ -496,13 +504,6 @@ See \autopageref{raidingParty} for details.
   And just like the horde, he cannot leave, as he does not know how to use the \Gls{deep} Scrolls\ldots
 
 \end{exampletext}
-
-\begin{boxtext}
-
-  Ahead, three charred goblin corpses lie on the ground.
-  A strange scent wanders down from above, something like a chicken cooked in sulphur.
-
-\end{boxtext}
 
 \paragraph{If the \glspl{pc} loot the bodies}
 they find a \gls{deep} Scroll wrapped safely in a scroll case.
@@ -608,9 +609,21 @@ he blesses them all, restoring any lost \glspl{fp}.
 
 \noteRaidingParty
 
-\mapentry[treasureRoom]{Treasure Room}
-\begin{itemize}
+\begin{boxtext}
 
+  Through the door, two locked chests lie on the ground.
+  Above them, a shortbow and two beautiful short swords stand affixed to the wall, with a quiver of arrows with gemstones used as arrow tips.
+
+\end{boxtext}
+
+\mapentry[treasureRoom]{Treasure Room}
+
+\begin{itemize}
+  \item
+  A chest containing 432 \glspl{cp}%
+  \footnote{Every 100 coins has a \gls{weight} of 1.}
+  \item
+  A chest containing 300 \glspl{sp}
   \item
   A short bow
   \item
@@ -619,23 +632,7 @@ he blesses them all, restoring any lost \glspl{fp}.
   A buckler shield made of pure silver, worth 30sp (it breaks after one use)
   \item
   Two gem-encrusted shortswords (worth 20 \glspl{sp})
-  \item
-  A chest containing 432 \glspl{cp}%
-  \footnote{Every 100 coins has a \gls{weight} of 1.}
-  \item
-  A chest containing 300 \glspl{sp}
-
 \end{itemize}
-
-\begin{boxtext}
-
-  Through the door, two locked chests lie on the ground.
-  Above them, a shortbow and two beautiful short swords stand affixed to the wall, with a quiver of arrows with gemstones used as arrow tips.
-  \iftoggle{hardcore}{%
-    The scroll cabinet has two scrolls left.
-  }{The scroll cabinet has three scrolls inside.}
-
-\end{boxtext}
 
 \end{multicols}
 
@@ -654,6 +651,12 @@ he blesses them all, restoring any lost \glspl{fp}.
   \goblin[\npc{\M\N}{Svart}]
 }{}
 
+\begin{boxtext}
+  The sound of crying emanates from the door as you swing it open.
+  In this tiny room, a dozen infants with fat little noses lie in a crib with hay, looking up at you in terror.
+  The tiny room stinks of shit.
+\end{boxtext}
+
 \mapentry[nursery]{Nursery}
 
 \begin{exampletext}
@@ -661,12 +664,6 @@ he blesses them all, restoring any lost \glspl{fp}.
   When the horde arrived, a gnome locked the children in here with enough food for a few days.
 
 \end{exampletext}
-
-\begin{boxtext}
-  The sound of crying emanates from the door as you swing it open.
-  A dozen baby creatures with fat little noses lie in a crib with hay, looking up at you in terror.
-  The entire crib and the floor around stink of shit.
-\end{boxtext}
 
 The door is locked, but can be picked with a \roll{Dexterity}{Larceny} check (\tn[9]).
 It's far too strong to be broken into by force.
@@ -685,6 +682,16 @@ they know to know to keep quiet and follow, but they will move slowly.
 There are six children in total, and they each have a Weight Rating between 1 and 2, but can generally be treated as a single `swarm'.
 \exRef{core}{Core Rules}{swarms}
 
+\begin{boxtext}
+
+  The doorway reveals a massive hallway of sparkling, floating, gently-buzzing, lights.
+  Over to the left, a massive staircase leads up into the darkness.
+  And ahead, the little lights gently illuminate giant slugs, feasting on corpses and torn-up books.
+
+  The moment you enter, the slugs' eye-stalks perk up, and they begin to slide off the corpses they were feasting on, and approach\ldots
+
+\end{boxtext}
+
 \mapentry[slugHall]{Slug Hall}
 
 \begin{exampletext}
@@ -698,18 +705,6 @@ The fireflies continue nipping at them, and have quadrupled their population.
 The slugs don't make good guardians, but at least the halls have plenty of light.
 
 \end{exampletext}
-
-\begin{boxtext}
-
-  The doorway reveals a massive hallway of sparkling, floating, lights.
-  Across the earthy floor, pieces of paper lie everywhere.
-  Giant slugs lazily wander, masticating them.
-  Half of the slugs wear the pages, as if someone had thrown the paper in the room from above.
-  Around those pages, little grubs eat into the massive slugs.
-  The moment you enter, their eye-stalks perk up, and they begin to slide off the corpses they were feasting on.
-  To your left, stairs head upwards into darkness.
-
-\end{boxtext}
 
 \paragraph{If the \glspl{pc} run up the stairs,}
 have them roll \roll{Speed}{Athletics} (\tn[7]) to avoid the acidic spray form the slugs.
@@ -734,7 +729,7 @@ the slugs ascend\ldots slowly.
 
 \begin{boxtext}
 
-  At the top of the stairs, this massive chamber lies empty, except for the fireflies darting about, and a few human bones.
+  At the top of the stairs, this massive chamber lies empty, except for the fireflies darting about, and a few human bones on the filthy floor.
   To the right, there are two short tunnels.
   Ahead of you, two grand staircases lead up into a dim but unwavering light.
   Below you, the entire floor is sticky and greasy.
@@ -796,6 +791,14 @@ Failure will awaken the entire horde.
 
 \ogre[\npc{\T[\arabic{enemyNo}]\N}{\arabic{enemyNo} Ogres}]
 
+\begin{boxtext}
+
+  At the top of the stairs you find the ruins of a massive library.
+  Book cases lie in a smashed heap on the ground, others appear to be used as a makeshift bed for an ogre.
+  The books themselves are gone, except for a scroll, now tightly clutched by a goblin in a black cowl.
+
+\end{boxtext}
+
 \mapentry[grandLibrary]{The Grand Library}
 
 The goblin druid had been investigating \pgls{talisman} -- \lootMagic.
@@ -804,14 +807,6 @@ It remains on the ground beside him.
 \showTalisman
 
 \goblincaster
-
-\begin{boxtext}
-
-  At the top of the stairs you find the ruins of a massive library.
-  Book cases lie in a smashed heap on the ground, others appear to be used as a makeshift bed for an ogre.
-  The books themselves are gone, except for a scroll, now tightly clutched by a goblin in a black cowl.
-
-\end{boxtext}
 
 \labyrinthScroll 
 The goblin druid holds a \spellName\ in her sleepy hands.
@@ -854,16 +849,15 @@ The player should not roll again -- the original roll remains, but increasing th
 
 \begin{multicols}{2}
 
+\begin{boxtext}
+
+  As you round the stairs' third turn, you see a massive ogre crouching by a door, blocking the path upwards completely.
+
+\end{boxtext}
+
 \mapentry[windingStairs]{Winding Stairs}
 
 A single ogre guards the prisoners here (the door has no lock).
-
-\begin{boxtext}
-
-  As you round the stairs' third turn, you see a massive ogre crouching by a door.
-  It blocks the path completely.
-
-\end{boxtext}
 
 \paragraph{If the party have made a reasonable attempt at staying quiet,}
 they can avoid alerting this ogre with a \roll{Wits}{Stealth} roll, \tn[9].
@@ -903,6 +897,14 @@ introduce another \gls{pc} here%
   They suspect that the entire place will have been overrun.
 }{}
 
+\begin{boxtext}
+
+  At the top of the stairway, three dying fireflies wander pointlessly.
+  Behind them, a cluster of shadow in an alcove holds metallic glints.
+  To the left, dirty little footprints lead out a little wooden door.
+
+\end{boxtext}
+
 \mapentry[armoury]{Armoury}
 
 \begin{exampletext}
@@ -911,14 +913,6 @@ introduce another \gls{pc} here%
   The horde have added to it considerably.
 
 \end{exampletext}
-
-\begin{boxtext}
-
-  At the top of the stairway, three dying fireflies wander pointlessly.
-  Behind them, you see shadows, with a glimpse of metal, lying in an alcove.
-  To the left, a wooden door waits, with dirty footprints visible on the floor.
-
-\end{boxtext}
 
 The \glspl{pc} can clearly see the following:
 
@@ -963,6 +957,13 @@ The \glspl{pc} can clearly see the following:
   If anyone hits 5 points over what they need to hit the wolves, they get a `\textit{Vitals Shot}', which ignores the \gls{dr} entirely, as the attack hits a sensitive area.
 }
 
+\begin{boxtext}
+
+  The dark hall reveals one passage to the far right.
+  On your left, smooth, man-sized, double-doors stand without any handle, lock or other feature.
+
+\end{boxtext}
+
 \mapentry[inDoor]{The Two-Way Doors}
 
 \begin{exampletext}
@@ -993,13 +994,6 @@ He knows he has the only key to the exit door, so he intends to loose the hell-h
   The party arrive to see him still sawing through the ropes, and have only a single round to stop him before he runs.
 }
 
-\begin{boxtext}
-
-  Ahead lies to massive double-doors.
-  To the right, the hallway extends into a massive room, where you can hear the sound of sawing.
-
-\end{boxtext}
-
 \paragraph{No matter what the party do,}
 the wolves go straight for the kill.
 
@@ -1012,6 +1006,18 @@ Have them make a Wits + Athletics check (\tn[7]) to back off before they fall.
 \paragraph{If the party fall into the lift,}
 they end up in the mid-section of the warren.
 
+\begin{boxtext}
+
+  As the door opens, your torchlight shows a crowded mess of fungus.
+  Some reach up to your knees, others tower above the light so far that you cannot see the top.
+  The maze of unkempt mushrooms shows random, meandering paths between the taller fungi.
+
+  \iftoggle{hardcore}{}{
+    In the distance, feint patches of green light glow softly\ldots
+  }
+
+\end{boxtext}
+
 \mapentry[fungusGarden]{Fungal Gardens}
 
 \begin{exampletext}
@@ -1021,14 +1027,6 @@ they end up in the mid-section of the warren.
   The nura never really kept up with the garden's maintenance, so the room festered with dangerous jellies.
 
 \end{exampletext}
-
-\begin{boxtext}
-
-  As the doors open, your torchlight shows a crowded mess of fungus.
-  Some reach up to your knees, others tower above the light and so far that you cannot see the top.
-  The maze of unkempt mushrooms shows random, meandering paths between the taller fungi.
-
-\end{boxtext}
 
 While the place looks serene, it is inhabited by
 \iftoggle{hardcore}{%
@@ -1044,6 +1042,10 @@ While the place looks serene, it is inhabited by
   If multiple oozes chase them, the smaller ones will always back away from the larger ones, so no more than one ooze should follow them at a time (always the largest one).
 }{%
   the ooze begins to stalk them.
+
+  \paragraph{Investigating the green glows}
+  reveals little patches of fluorescent mushrooms.%
+  \exRef{judgement}{Judgement}{glowshroom}
 }
 
 \paragraph{If the \glspl{pc} approach Grank,}

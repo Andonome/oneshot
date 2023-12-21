@@ -151,17 +151,17 @@ You should cut (or tear) these apart, so you can hand them to players to individ
 
 \iftoggle{hardcore}{
 
+
   \sidebox{
-    \begin{tabularx}{\linewidth}{c|L}
-      \hline
-      \textbf{Roll} & \textbf{Item} \\
-      \hline
-      4-6 & Nothing \\
-      3   & Partial leather armour \\
-      2   & Flint box \\
-      1   & Knife    \\
-      \hline
-    \end{tabularx}
+    \begin{dlist}
+      \ifnumcomp{\value{temperature}}{=}{0}{\item Warm clothing (\gls{weight} 2)}{}
+      \item
+      Partial leather armour
+      \item
+      Flint box
+      \item
+      Knife
+    \end{dlist}
   }
 
   Players should start the adventure first, and make characters while they (the characters) sit in the dark, getting to know each other.

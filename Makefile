@@ -42,7 +42,7 @@ hardcore_handouts.pdf: images handouts.tex ex_cs
 config/bind.sty:
 	git submodule update --init
 
-all: oneshot normal hardcore
+all: normal hardcore oneshot
 
 clean:
 	rm -fr *.slg *slo *sls *.aux *.toc *.acn *.log *.ptc *.out *.idx *.ist *.glo *.glg *.gls *.acr *.alg *.ilg *.ind *.pdf svg-inkscape \

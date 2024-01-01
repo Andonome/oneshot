@@ -511,18 +511,6 @@ they find a \gls{deep} Scroll wrapped safely in a scroll case.
 \mapentry[dragon]{The Dragon's Lair}
 
 The dragon will happily talk with anyone who approaches%
-\iftoggle{hardcore}{%
-  , but only understands Elvish.
-  Despite his linguistic deficits, he can communicate using the Enchantment sphere to send ideas to characters.
-  This enchantment feels like a natural thought at first, but the character will quickly notice this thinking does not belong to them.
-
-  \begin{speechtext}
-    ``I should go and introduce myself to that dragon, then help him.
-    I bet his name is `Makil'\ldots
-    wait a minute\ldots''
-  \end{speechtext}
-}{.}
-
 \iftoggle{hardcore}{}{
   The dragon's eventual goal is to obtain the rest of the treasure, then leave the warren, and go somewhere he can spread his wings.
   Like all dragons, he has more cunning than ferocity, and \emph{plenty} of both.
@@ -535,32 +523,6 @@ The dragon will happily talk with anyone who approaches%
 gains no reaction.
 Makil knows he has to play it cool, and not let anyone know that he really needs that spell to leave this place.
 He \emph{might} fit through the narrow passages up, but he would be in a dangerous situation, being cramped in a tiny corridor, with ogres everywhere.
-
-\needspace{20em}
-\NPC{\E}{Makil the Dragon}{inquisitive, cruel, \& massive}{drums fingers}{gold}
-\person{7}% STRENGTH
-{2}% DEXTERITY 
-{3}% SPEED
-{{4}% INTELLIGENCE
-{3}% WITS
-{-2}}% CHARISMA
-{}% DR
-{1}% COMBAT
-{
-  Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4
-}% SKILLS
-{Nothing}% EQUIPMENT
-{
-  \renewcommand\abilities{\flight}
-  \hide{5}
-  \knacks{\snapcaster}
-  \addtocounter{Brawl}{3}
-  \addtocounter{Fate}{2}
-  \addtocounter{Water}{2}
-  \addtocounter{Fire}{2}
-}
-
-\showStdSpells
 
 \paragraph{If the party request he kill goblins for them}
 then he agrees to kill any in the current area, but will not journey to another floor.
@@ -606,6 +568,7 @@ he blesses them all, restoring any lost \glspl{fp}.
   His {\scshape \gls{dr} 5} means he reduces all Damage by 5, unless the attacker hits 5 over the \gls{tn} to attack him (a total of 15), achieving a `Vitals Shot'.
 }{}
 
+\dragonMakil
 
 \noteRaidingParty
 

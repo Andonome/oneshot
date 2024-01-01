@@ -118,6 +118,34 @@
 {}
 }
 
+\newcommand\dragonMakil{
+  \NPC{\E}{Makil the Dragon}{inquisitive, cruel, \& massive}{drums fingers}{gold}
+  \person{7}% STRENGTH
+  {2}% DEXTERITY 
+  {3}% SPEED
+  {{4}% INTELLIGENCE
+  {3}% WITS
+  {-2}}% CHARISMA
+  {}% DR
+  {1}% COMBAT
+  {
+    Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4
+  }% SKILLS
+  {Nothing}% EQUIPMENT
+  {
+    \renewcommand\abilities{\flight}
+    \hide{5}
+    \knacks{\snapcaster}
+    \addtocounter{Brawl}{3}
+    \addtocounter{Fate}{2}
+    \addtocounter{Water}{2}
+    \addtocounter{Fire}{2}
+  }
+
+  \showStdSpells
+
+}
+
 \newcommand\noteRaidingParty{
   \begin{baseNote}{The Raiding Party}
   \label{raidingParty}

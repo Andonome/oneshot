@@ -19,7 +19,7 @@
 *glg
 *glo
 *gls
-*.glsdefs
+*.fls
 *.ist
 *ist
 *.maf
@@ -35,4 +35,5 @@ old
 *.slg
 *.slo
 *.sls
+*latexmk
 .switch-gls

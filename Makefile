@@ -37,6 +37,7 @@ svg-inkscape/black_tower_f5_svg-tex.pdf: $(wildcard config/*) images
 
 hardcore_handouts.pdf: images handouts.tex ex_cs
 	pdflatex -shell-escape -jobname hardcore_handouts handouts.tex
+	pdflatex -shell-escape -jobname hardcore_handouts handouts.tex
 
 config/bind.sty:
 	git submodule update --init

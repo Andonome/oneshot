@@ -380,9 +380,6 @@ have them make a Group Roll of \roll{Dexterity}{Stealth}, \tn[8].
   As before, the Group Roll only requires one player to roll, and any character which enters the room produces a different result.
 }{}
 
-\paragraph{If the roll fails,}
-all goblins wake up with hungry stomachs.
-
 \newRule{Weapons}{
 
   \input{config/rules/weight}
@@ -418,6 +415,9 @@ all goblins wake up with hungry stomachs.
   \goblin[\npc{\N}{Goblin on the floor}]
   \goblin[\npc{\T[2]\N}{2 Goblins on the oven}]
 }
+
+\paragraph{If the roll fails,}
+all goblins wake up with hungry stomachs.
 
 \paragraph{If the players try to find weapons,}%
 \iftoggle{oneshot}{
@@ -552,6 +552,8 @@ If someone asks `what is black and white and read all over', anything which fits
 
 See \autoref{riddles} for riddles.
 
+\dragonMakil
+
 \paragraph{If the players ask why he wants treasure,}
 he explains that he wants to attract a mate; when his flame becomes hot enough to melt the gold, he will carve a golden statue of the most deadly dragon in his area in order to attract her attention.
 He will then decorate the statue with magical items.
@@ -567,8 +569,6 @@ he blesses them all, restoring any lost \glspl{fp}.
 
   His {\scshape \gls{dr} 5} means he reduces all Damage by 5, unless the attacker hits 5 over the \gls{tn} to attack him (a total of 15), achieving a `Vitals Shot'.
 }{}
-
-\dragonMakil
 
 \noteRaidingParty
 
@@ -736,8 +736,6 @@ Each margin on the roll allows them an additional round before the horde wakes.
 
 \end{exampletext}
 
-\pic{Decky/armoury}
-
 Picks, shovels, backpacks, wood, short swords, shortbows, and all manner of crafting and mining equipment litter the room.
 
 \paragraph{If the \glspl{pc} have come up from room \ref{entrycell},}
@@ -747,6 +745,8 @@ If they investigate the area at all, the illusion fades, revealing the sleeping 
 \paragraph{If the \glspl{pc} attempt to take either a short sword or a spear,}
 each attempt requires a \roll{Dexterity}{Stealth} roll, \tn[7].
 Failure will awaken the entire horde.
+
+\pic{Decky/armoury}
 
 \goblin[\npc{\T[\arabic{enemyNo}]\N}{\arabic{enemyNo} Goblins}]
 

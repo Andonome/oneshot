@@ -16,20 +16,17 @@
 \iftoggle{oneshot}{
   \settoggle{examplecharacter}{false}
   \input{config/GS.tex}
-  \shipout\null
   \settoggle{examplecharacter}{true}
 }{
   \pic{Dyson_Logos/upper-handout}
   \cleardoublepage
   \iftoggle{hardcore}{
-    \cleardoublepage
     \subsection*{Dayton Town}
     \pic{Dyson_Logos/town}
-    \cleardoublepage
-    \shipout\null
   }{}
 }
 
+\cleardoublepage
 \setlength{\columnsep}{30pt}
 
 \begin{multicols}{2}
@@ -51,10 +48,9 @@
 \prisoner[\NPC{\Hu\M}{Barncull}{Jovial}{Looks up}{Tribe}]
 \end{multicols}
 
-\clearpage
-\shipout\null
-
 \iftoggle{hardcore}{
+
+  \cleardoublepage
 
   \begin{multicols}{2}
   \humanfarmer[\npc{\M\Hu}{Ratcaul}]
@@ -70,8 +66,7 @@
 
 }{}
 
-\clearpage
-\shipout\null
+\cleardoublepage
 
 \iftoggle{hardcore}{
   \settoggle{examplecharacter}{false}

@@ -123,27 +123,29 @@
   \person{7}% STRENGTH
   {2}% DEXTERITY 
   {3}% SPEED
-  {{4}% INTELLIGENCE
+  {{3}% INTELLIGENCE
   {3}% WITS
   {-2}}% CHARISMA
-  {}% DR
-  {1}% COMBAT
+  {0}% DR
+  {0}% COMBAT
   {
     Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4
   }% SKILLS
   {Nothing}% EQUIPMENT
   {
-    \renewcommand\abilities{\flight}
+    \renewcommand\abilities{\flight, \claws}
     \hide{5}
     \knacks{\snapcaster}
     \addtocounter{Brawl}{3}
+    \addtocounter{Athletics}{2}
+    \addtocounter{Flight}{2}
+    \addtocounter{Deceit}{3}
+    \addtocounter{Tactics}{1}
+    \addtocounter{Vigilance}{3}
     \addtocounter{Fate}{2}
     \addtocounter{Water}{2}
     \addtocounter{Fire}{2}
   }
-
-  \showStdSpells
-
 }
 
 \newcommand\noteRaidingParty{
@@ -269,5 +271,18 @@
     \ref{lowerExit}/59/999,%
     {\iftoggle{hardcore}{\ref{goblinSentry}}{}}/41/56,
   }
+
+}
+
+\newcommand\mindChatterSpell{
+  \spell{Mind's Chatter}% Name
+    {duplicated}% Enhancements
+    {Warp}% Action
+    {Water, Fate}% Spheres
+    {\roll{Wits}{Academics}}% Resist with
+    {With an intense stare, the caster suggests various thoughts to \arabic{spellTargets} targets.
+    The targets may not believe these thoughts, but it lets the caster communicate easily}% Description
+    {The targets suffer a -\arabic{spellPlusOne} Penalty to focussing on anything while the caster bestows these new thoughts.
+    The spell lasts for \arabic{spellCost} \glspl{interval}.}
 
 }

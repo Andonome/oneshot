@@ -154,12 +154,12 @@
 
   \paragraph{If the \glspl{pc} decide to stop and rest,}
   \iftoggle{hardcore}{%
-    they are immediately interrupted by a returning raiding party of nura, with fresh prisoners.
+    they are immediately interrupted by a returning raiding party, with fresh prisoners.
   }{
     they will be able to recovery for a while,\footnote{As usual, they recover Fatigue Points equal to half their current \glspl{hp}, and 40\% of their base \glspl{fp}.} before a raiding party descends with freshly captured prisoners.
   }
 
-  The lift (room \ref{lift}) cannot take the full weight of an ogre plus the prisoners, so one goblin nuramancer and an ogre go to the bottom, then the prisoners get shoved in the lift by ogres at the top.
+  The lift (room \ref{lift}) cannot take the full weight of an ogre plus the prisoners, so one goblin druid and an ogre go to the bottom, then the prisoners get shoved in the lift by ogres at the top.
 
   \begin{boxtext}
     A creaking noise comes from the two wooden doors, then you hear loud voices from inside.
@@ -174,13 +174,13 @@
   \end{boxtext}
 
   \iftoggle{hardcore}{%
-    \goblincaster[\npc{\M\N}{Goblin Nuramancer}]
+    \goblincaster[\npc{\M\N}{Goblin Druid}]
     \showStdSpells
   }{
     \iftoggle{oneshot}{
       \goblin[\npc{\N\F}{Goblin}]
     }{
-      \goblin[\npc{\T[2]\N}{2 Goblins}]
+      \goblin[\npc{\T[2]\N}{\arabic{noAppearing} Goblins}]
     }
   }
 
@@ -196,7 +196,7 @@
   \paragraph{If the \glspl{pc} try to hide,}
   they will find it easy.
 
-  \paragraph{If they try to ambush the nura,}
+  \paragraph{If they try to ambush the horde,}
   give them a Wits + Stealth (\gls{tn} 8) roll to determine the best location to stand.
 
   Success means they can each make one attack roll at \gls{tn} 7 (not the creature's usual attack score) with +2 Damage.

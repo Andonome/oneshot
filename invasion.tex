@@ -231,23 +231,24 @@ You should cut (or tear) these apart, so you can hand them to players to individ
   \paragraph{Monster Statblocks}
   look like this:
 
-  \npc{\N\F}{Ogre}
-  \person{4}% STRENGTH
-  {0}% DEXTERITY 
-  {2}% SPEED
-  {{-2}% INTELLIGENCE
-  {-3}% WITS
-  {-5}}% CHARISMA
-  {0}% DR
-  {1}% COMBAT
-  {Crafts 1, Stealth 2, Tactics 1}% SKILLS
-  {\Dagger}% EQUIPMENT
-  {}
+  \goblincaster[\npc{\F\N}{Goblin Druid}]
 
-  This ogre has \arabic{ap}~\glspl{ap}, and Attack \arabic{att}, so when she attacks, put a coin on your \gls{gm} sheet at `\arabic{ap}', and remove one for each attack.
-  If a \gls{pc} attacks her, they roll $2D6$ plus their Attack, and try to beat her \gls{tn} of \arabic{att}.
-  If the \gls{pc} rolls a tie, they can choose to both deal and take Damage,or neither.
+  This goblin has \arabic{ap}~\glspl{ap}, and Attack \arabic{att}, so when she attacks, put a coin on your \gls{gm} sheet at `\arabic{ap}', and remove one for each attack.
+  If \pgls{pc} attacks her, they roll $2D6$ plus their Attack, and try to beat her \gls{tn} of \arabic{att}.
+  If the \gls{pc} rolls a tie, they can choose to both deal and take Damage, or neither.
 
+  \paragraph{Spells}
+  mostly explain themselves, but do pay attention to the `\textit{Roll}' and `\textit{Resistance by}' text.
+  The `roll' indicates the spellcaster's Bonus, while you set the \gls{tn} depending on what makes the spell easier or harder to cast.
+  But if you see `resisted by', then this spell might target \pgls{pc} directly, so the player would roll against the \gls{tn} beside the spell.
+
+  These spells look like this:
+
+  \begin{exampletext}
+    \showStdSpells
+  \end{exampletext}
+
+  \Glspl{talisman} work the same way, showing either how \pgls{pc} resists, or just showing their Bonus to cast.
 }{}
 
 \subsection{Darkness \& Light}

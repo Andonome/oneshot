@@ -103,33 +103,35 @@
   }{Your word}
 }
 
-\riddle{
-    Farther than the horizon,
+\ifodd\month
+  \riddle{
+      Farther than the horizon,
 
-    Smaller than a pin,
+      Smaller than a pin,
 
-    Still you see us.
+      Still you see us.
 
-    \iftoggle{oneshot}{
-    Never all together,
+      \iftoggle{oneshot}{
+      Never all together,
 
-    Never one-at-a-time.
-    }{}
+      Never one-at-a-time.
+      }{}
 
-    What are we?
-}{Stars}
+      What are we?
+  }{Stars}
+\else
+  \riddle{
 
-\riddle{
+    I can crush great boulders into fine sand,
 
-  I can crush great boulders into fine sand,
+    But without me you will die as sure as you stand.
 
-  But without me you will die as sure as you stand.
+    I rise when I'm cold and I soar when I'm hot,
 
-  I rise when I'm cold and I soar when I'm hot,
+    Tell me what I am and what I am not.
 
-  Tell me what I am and what I am not.
-
-}{Water}
+  }{Water}
+\fi
 
 \ifnum\month<5
   \ifnum\month>3

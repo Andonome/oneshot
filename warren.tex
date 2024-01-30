@@ -853,7 +853,7 @@ The \glspl{pc} can clearly see the following:
   To stop this happening again, they designated this door as `out', and the other as `in'.
 \end{exampletext}
 
-If the \glspl{pc} open the doors they can walk to the lift, but if the doors close, they will not open from the anterior side easily.
+The \glspl{pc} will see the lift's double-doors straight ahead of them (assuming they have any light at all).
 
 \begin{boxtext}
   The dark hall reveals one passage to the far right.
@@ -862,33 +862,26 @@ If the \glspl{pc} open the doors they can walk to the lift, but if the doors clo
 
 \paragraph{Opening either door from the wrong side}
 requires a \roll{Strength}{Larceny} roll, \tn[10].
+Once it shuts, it shuts.
 
 \mapentry[outDoor]{The Out Door}
 
-This door opens on the other side.
-As above, opening it from the wrong side demands \roll{Strength}{Larceny} roll, \tn[10].
+This door opens the opposite way from the last, and also demands a roll of \roll{Strength}{Larceny} (\tn[10]) to open from the wrong side.
 
 \mapentry[topShaft]{The Top of the Shaft}
 
 \widePic{Roch_Hercka/garden}
 
 Grank the goblin druid has heard the \glspl{pc} coming, and has no intention of fighting them alone.
-He knows he has the only key to the exit door, so he intends to loose the hell-hounds he has tied up at the room's side before fleeing into the fungal gardens.
+He knows he has the only key to the exit door (room \vref{lowerExit}), so he intends to loose the morph-wolves he has tied up at the room's side before fleeing into the fungal gardens.
 
-\iftoggle{hardcore}{%
-  By the time the party reach round the corner, he will have cut the ropes disappeared, leaving unchained morph-wolves.
-}{
-  The party arrive to see him still sawing through the ropes, and have only a single round to stop him before he runs.
-}
+\paragraph{If the party attempt to run through the lift's double doors,}
+they might suddenly find an empty lift-shaft.
+In this case, have them roll \roll{Wits}{Athletics} (\tn[7]) to back off before they fall.
+A drop from this height inflicts $1D6+1$ Damage, plus their Strength Bonus.%
+\footnote{Larger creatures receive more Damage from falls}
 
-\paragraph{No matter what the party do,}
-the wolves go straight for the kill.
-
-\paragraph{If the party attempt to run through the double doors,}
-they will suddenly find an empty lift-shaft, unless they have taken the lift to the top themselves.
-Have them make a Wits + Athletics check (\tn[7]) to back off before they fall.
-
-\morphwolf[\npc{\A\N\T[4]}{4 Morph Wolves}]
+\morphwolf[\npc{\T[4]\A\N}{\arabic{noAppearing} Morph Wolves}]
 
 \paragraph{If the party fall into the lift,}
 they end up in the mid-section of the \gls{warren}.
@@ -904,7 +897,6 @@ they end up in the mid-section of the \gls{warren}.
 While the place looks serene, it is inhabited by
 \iftoggle{hardcore}{%
   dangerous oozes.
-
 }{%
   a dangerous ooze.
 }
@@ -974,7 +966,7 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
 
   \paragraph{If the \glspl{pc} don't have a key,}
   they might try tricking the goblin on the other side, who has a key to let people in and out.
-  See area 1, \autoref{upper}.
+  See room \vref{entrance}.
 
   \paragraph{If the \glspl{pc} examine the door,}
   they can see the goblin in the next area by a glimmer of candle-light.

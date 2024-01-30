@@ -15,22 +15,27 @@
   }
 }{}
 
+\glsresetall
+
 \noindent
-When the horde invaded, three little gnomes found themselves trapped in this little side-room.
-They grabbed a few days' worth of food from the adjacent kitchen (room \ref{upperKitchen}),
-barred the door to the main hall (room \ref{spiral}), then blocked off room \ref{webTrap} with a \textit{Warp Light} spell, to give the appearance of giant, fresh webs, hanging from floor to ceiling.
+\begin{exampletext}
+  When the horde invaded, three little gnomes found themselves trapped in this little side-room.
+  They grabbed a few days' worth of food from the adjacent kitchen (room \ref{upperKitchen}),
+  barred the door to the main hall (room \ref{spiral}), then blocked off room \ref{webTrap} by spinning water into webs, to give the appearance of giant, fresh webs, hanging from floor to ceiling.
+  When two goblins entered, they used their crossbows to kill them in an instant, then retrieved the crossbow bolts.
 
-The illusion spell worked -- the goblin horde decided some monstrous spider must wait somewhere in that darkness, behind the webs.
-The gnomes still rest in room \ref{gnomes}, with two tiny barrels of salted mushrooms to sustain them.
+  The intimidating spell worked -- the goblin horde decided some monstrous spider must wait somewhere in that darkness, behind the webs.
+  The gnomes still rest in room \vref{gnomes}, with two tiny barrels of salted mushrooms to sustain them.
 
-When \gls{kalama}%
-returned to the \gls{warren}, disguised with magic as a goblin, he noted a woodspy%
-\exRef{judgement}{Judgement}{woodspy}
-creeping in after him
-(see \autopageref{kalama} for \gls{kalama}).
-Seizing the opportunity for mischief, he transformed the woodspy with the same spell he used to transform himself.
-It swelled into a tidal wave of tentacles, chased after him, and ate a number of goblins on the way.
-Now it lies in a pool of water in room \ref{woodspies}, slowly digesting the goblin bodies.
+  When \gls{kalama}%
+  returned to the \gls{warren}, disguised with magic as a goblin, he noted a woodspy%
+  \exRef{judgement}{Judgement}{woodspy}
+  creeping in after him
+  (see \autopageref{kalama} for \gls{kalama}).
+  Seizing the opportunity for mischief, he transformed the woodspy with the same spell he used to transform himself.
+  It swelled into a tidal wave of tentacles, chased after him, and ate a number of goblins on the way.
+  Now it lies in a pool of water in room \ref{woodspies}, slowly digesting the goblin bodies.
+\end{exampletext}
 
 \section{Quiet Rooms}
 \label{upper}
@@ -59,30 +64,16 @@ they can find a knife which functions as a dagger.
   Human bones lie on the table, all polished clean.
   The cups and cutlery lie smashed and broken.
   At the far end of the hallway, a door stands ajar.
-  On the right, a passageway with a hint of sunlight.
+  On the right, a passageway shows a shaft of Sunlight in the far distance.
 \end{boxtext}
 
 \mapentry[spiral]{The Spiral Staircase Exit}
 
 The party can see the exit, but cannot escape without being attacked by three ferocious ogres.
-
-In order to progress, they could do any number of things:
-
-\begin{itemize}
-
-  \item
-  Trick one of the ogres into chasing them (but only one).
-  \item
-  Find a missile weapon in order to shoot from afar, forcing the guardian ogres to chase them.
-  \item
-  Distract the ogres with illusions of something, while running up the stairs.
-
-\end{itemize}
-
 Exactly what plans they come up with and how well they work depends entirely on your players and how their situation emerges.
 
 \begin{boxtext}
-  In the sunlit intersection of four hallways,
+  In the Sunlit intersection of four hallways,
   \iftoggle{hardcore}%
     {four ogres sit playing a game of dice.  Two are clad in black leather armour, with a massive sword by their side.
     Another sucks on a horse's uncooked head, while the third goes for a piss behind the staircase.}%
@@ -138,15 +129,16 @@ The entire contents of this room are illusory, left by the gnomes to scare the h
 \end{boxtext}
 
 \paragraph{If anyone tries to wriggle past the webbing,}
-have them roll Dexterity + Athletics, TN 12.
+have them roll \roll{Dexterity}{Athletics} (\tn[12]).
 
 \paragraph{If they get caught,}
-three gnomes will rush out and try to kill them while they're trapped and unable to defend themselves.
-Have them make a \roll{Wits}{Empathy} roll, \tn[8], to avoid the initial attack.
+three gnomes will rush out to kill with crossbows.
+Trying the missiles with \roll{Dexterity}{Athletics} takes a -4 Penalty from the magical webs, but quickly shouting that they are not the enemy (\roll{Wits}{Empathy})  has no penalty.
 
-\paragraph{If the party use torches to destroy the webs,}
-it works okay, but moving through quietly isn't easy.
-Have them roll \roll{Intelligence}{Stealth} to plan a route through, without upsetting the goblin corpses (which could fall and clatter), or otherwise make a racket.
+In either case, they roll at \tn[10].
+
+\paragraph{If the party use a torch to destroy the webs,}
+they vanish, silently.
 
 \mapPic{b}{Dyson_Logos/upper}{
   \ref{entrance}/85/36,
@@ -165,18 +157,18 @@ Have them roll \roll{Intelligence}{Stealth} to plan a route through, without ups
 
 \mapentry[lounge]{The Lounge}
 
-If the party entered secretly, have them roll Wits + Vigilance, TN 8, to notice a dozing gnome.
-If the party move through without explaining themselves, he wakes, then sounds the alarm, and Tar\'ik in the far room incinerates the place with a \textit{Wide Fireball}, inflicting $1D6+3$ Damage.
-
-\begin{boxtext}
-  Row after row of beds, little hammocks, and tables with old, cold pipes sitting on them stretch across the room.
-  In the distance, little voices come through an open doorway.
-  They talk lazily, quite unlike the goblinoid chatter you normally hear.
-\end{boxtext}
+If the party entered secretly, have them roll \roll{Wits}{Vigilance} (\tn[8]), to notice Yan, dozing gently.
+If the party move through without explaining themselves, he wakes, then sounds the alarm, and all of them come out attacking, frantically.
 
 \mapentry[gnomes]{Trapped Gnomes}
 
 What happens here depends entirely on how the party have come through the previous rooms.
+
+\begin{boxtext}
+  Row after row of beds, little hammocks, and tables with old, cold pipes sitting on them stretch across the room.
+  In the distance, little voices come through an open doorway.
+  They talk lazily, quite unlike the goblinoid chatter you've heard for too long.
+\end{boxtext}
 
 \paragraph{If they shouted in a loud, friendly manner,}
 they get a friendly greeting as all the gnomes here thank them for their presumed rescue, and hope to join them in the escape.
@@ -184,46 +176,49 @@ they get a friendly greeting as all the gnomes here thank them for their presume
 These gnomes know the entire \gls{warren}, and can tell them about the contents of every room.
 
 \paragraph{If the party entered secretly,}
-then as soon as the gnomes spot them, they will draw their weapons while Tar\'ik throws invocation spells at them.
+then as soon as the gnomes spot them, they will draw their weapons while Lawa throws invocation spells at them.
 
 \paragraph{If the gnomes join the party,}
-remember to keep track of their \glsentrylongpl{fp}
-Each \gls{interval} they will regenerate 2.
+they will enter combat behind the \glspl{pc}.
 
 \paragraph{Before the \glspl{pc} leave,}
-the gnomes request they nip out to the kitchen, (room \ref{lounge}) and get them some food.
+the gnomes request they nip out to the kitchen, (room \vref{lounge}) and get them some food.
 
-With proper food, the party and the gnomes can rest, regain any Fatigue Points they may have accumulated, and the gnomes can do the same.
+With proper food, the party and the gnomes can rest, lose some \glspl{fatigue}, and the gnomes can do the same.
 
-\gnomishsoldier[\npc{\Gn\M}{Derkel}]
+\gnomishsoldier[\npc{\Gn\M}{Yan}]
 
-\gnomishsoldier[\npc{\Gn\F}{Merkel}]
+\gnomishsoldier[\npc{\Gn\F}{Nanpa}]
 
-\gnomishsoldier[\npc{\Gn\M}{Klaus}]
+\gnomishsoldier[\npc{\Gn\M}{Open}]
 
-\NPC{\Gn\F}{Tar\'ik the Alchemist}{nosey}{picks nose}{cake \& freedom}
+\NPC{\Gn\F}{Lawa the Alchemist}{nosey}{picks nose}{cake \& freedom}
 \person{-3}% STRENGTH
 {1}% DEXTERITY 
 {-2}% SPEED
 {{2}% INTELLIGENCE
 {1}% WITS
-{-1}}% CHARISMA
+{2}}% CHARISMA
 {0}% DR
 {0}% COMBAT
 {Projectiles~1, Academics~2, Empathy~1, Tactics~2}% SKILLS
-{Handkerchief}% EQUIPMENT
+{Handkerchief, Earth \gls{boon}}% EQUIPMENT
 {
-  \setcounter{Fire}{2}
-  \setcounter{Air}{2}
+  \setcounter{Fate}{2}
+  \setcounter{Water}{3}
+  \setcounter{Earth}{1}
+  \setcounter{fp}{3}
 }
 
 \mapentry[upperKitchen]{The Kitchen}
 
-A recent raiding party managed to get enough food to save, and one of the goblins convinced the ogres to leave it here for later.
+\begin{exampletext}
+  A recent raiding party managed to get enough food to save, and one of the goblins convinced the ogres to leave it here for later.
+\end{exampletext}
 
-If the party want the food, they will have to make a Dexterity + Stealth roll to pilfer it without making any noise, TN 8.
-Each margin on the roll gives them enough food to heal 4 Fatigue Points.
-They can roll as many times as they like, but each roll carries the danger of being spotted.
+If the party want the food, they will have to make a \roll{Dexterity}{Stealth} roll to pilfer it without making any noise (\tn[8]).
+Each Margin on the roll gives them enough food to heal 4 \glspl{fatigue}.
+They can roll as many times as they like, but each roll carries the danger of being spotted by a mobile ogre at the stairs.
 
 \begin{boxtext}
   This Spartan kitchen has pans, pots, hip-bones, skulls, rib-bones, and boxes strewn all over the place.
@@ -232,7 +227,7 @@ They can roll as many times as they like, but each roll carries the danger of be
 \end{boxtext}
 
 \paragraph{If the party make any noise,}
-the chasing ogre from the central room rushes after them (Page \pageref{chasingogre}).
+the chasing ogre from the central room rushes after them (\vref{chasingogre}).
 
 \begin{figure*}[b!]
 
@@ -245,14 +240,13 @@ the chasing ogre from the central room rushes after them (Page \pageref{chasingo
 
 Yet another raiding party returns, this time with only one villager.
 
-If the ogres at the stairs (room \ref{spiral}) tell them about the \glspl{pc}, the raiding party immediately begin to hunt for them.
+If the ogres at the stairs (room \vref{spiral}) tell them about the \glspl{pc}, the raiding party immediately begin to hunt for them.
 Otherwise, they are content to hand a dead villager to the ogres at the stairs to eat, and move on.
 
 \ogre[\npc{\T[3]\M\N}{3 Ogres}]
 
 \iftoggle{hardcore}{%
-  \goblincaster
-  \showStdSpells
+  \goblin[\npc{\N\T[4]}{4 Screaming Goblins}]
 }{}
 
 \end{multicols}
@@ -302,7 +296,7 @@ Hand them the map from the handouts if they don't have a copy already.
 
   Since then, a woodspy has entered, and \gls{kalama} the spell-casting, trouble-making gnome, has transformed the cephalopod into an even more monstrous creature, using Life magic.
 
-  It ate a few goblins who were putting away prisoners in room \ref{upperPrison}, and the other goblins retreated to room \ref{duelling}, where they remain, trapped by the giant creature.
+  It ate a few goblins who were putting away prisoners in room \vref{upperPrison}, and the other goblins retreated to room \vref{duelling}, where they remain, trapped by the giant creature.
 
 \end{exampletext}
 
@@ -337,8 +331,8 @@ If it receives any injury, and has something to eat, it remains passive for a fu
 
 \end{exampletext}
 
-Currently the room hosts a rabble of goblins, trapped by the monstrous woodspy in room \ref{woodspies}.
-They occasionally shout to the ogres in room \ref{spiral}, but the ogres don't want to fight the monster, so they stick to their duty of guarding.
+Currently the room hosts a rabble of goblins, trapped by the monstrous woodspy in room \vref{woodspies}.
+They occasionally shout to the ogres in room \vref{spiral}, but the ogres don't want to fight the monster, so they stick to their duty of guarding.
 
 The display cabinet at the side of the room contains the following:
 
@@ -368,9 +362,7 @@ The display cabinet at the side of the room contains the following:
 \mapentry[upperPrison]{The Upper Prison}
 
 \begin{exampletext}
-
 When gnomes slept here, some of the cheeky young ones wanted to sneak out and play unnoticed, so they poked away at the walls and eventually dug a secret exit for themselves behind a tapestry.
-
 \end{exampletext}
 
 \begin{boxtext}
@@ -382,9 +374,9 @@ When gnomes slept here, some of the cheeky young ones wanted to sneak out and pl
 the prisoners will think they are more goblins, here to eat them or put in more prisoners.
 
 Take three farmers from the handout.
-The first farmer tries to grab the first \gls{pc} in the door,
+The first farmer tries to grab the first \gls{pc} in the door,%
 \exRef{core}{core rules}{grab}
-and the other two attack them while they are trapped.
+and the other two attack them while they are trapped.%
 \exRef{core}{core rules}{trapped}
 
 \iftoggle{hardcore}{
@@ -401,13 +393,11 @@ this is yet another place to find a new character.
 \paragraph{If the players end up captured in any areas nearby,}
 they are imprisoned here, rather than down stairs.
 
-\paragraph{If the \glspl{pc} search around the room,}
-they will soon find the secret exit.
-If they don't search, have them make a Team roll with Wits + Vigilance (TN 10).%
-\exRef{core}{core rules}{teamwork}
+\paragraph{Searching the room}
+reveals the dark, little exit with a \roll{Wits}{Crafts} roll (\tn[10]).
 
-The secret hole in the wall is, unfortunately, rather narrow.
-It is not possible for anyone with a Strength bonus greater than 0 to get through, but a \roll{Strength}{Crafts} check, \tn[11], might allow someone to chisel away at just enough to let someone of Strength +1 through.
+Unfortunately, the little hole can only fit people with 6~\glspl{hp} or fewer.
+But a \roll{Strength}{Crafts} check (\tn[11]), might allow someone to chisel away at just enough to let someone of Strength +1 through (while making a lot of noise).
 
 \mapentry[finalRoom]{The Last Room}
 
@@ -424,7 +414,6 @@ Among the wreckage, the party can find a hidden item:
   they gnomes go their own way.
   They thank the \glspl{pc} for their help, but refuse to travel with them further.
 }{
-
   \end{multicols}
   \section{The Sunlight}
 

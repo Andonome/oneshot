@@ -34,20 +34,16 @@
   \setcounter{enemyNo}{4}
 }
 
-\newenvironment{baseNote}[1]{
-
-  \begin{figure*}[b!]
-
-  \setcounter{enc}{\value{list}}
-  \bigLine
-  \subsection{#1}
-  \setcounter{list}{\value{enc}}
-
-  \begin{multicols}{2}
+\newenvironment{baseNote}[1]{%
+  \begin{figure*}[b!]%
+  \setcounter{enc}{\value{list}}%
+  \bigLine%
+  \vspace{-2em}%
+  \subsection{#1}%
+  \setcounter{list}{\value{enc}}%
+  \begin{multicols}{2}%
   \setlength\parindent{24pt}
-
 }{
-
   \end{multicols}
 
   \end{figure*}
@@ -263,4 +259,31 @@
     {The targets suffer a -\arabic{spellPlusOne} Penalty to focussing on anything while the caster bestows these new thoughts.
     The spell lasts for \arabic{spellCost} \glspl{interval}.}
 
+}
+
+\newcommand\theAlchemist{
+  \npc{\M\Hu}{\Gls{alchemist}}
+  \person{1}% STRENGTH
+  {0}% DEXTERITY 
+  {0}% SPEED
+  {{2}% INTELLIGENCE
+  {-1}% WITS
+  {2}}% CHARISMA
+  {0}% DR
+  {1}% COMBAT
+  {}%SKILLS
+  {\shortsword, \arabic{r3}~Air \gls{boon} (\boxStat{r3}), hidden smoked beer, \partialleather}% EQUIPMENT
+  {
+    \setcounter{Academics}{2}
+    \setcounter{Crafts}{2}
+    \setcounter{Deceit}{1}
+    \setcounter{Medicine}{1}
+    \setcounter{Vigilance}{1}
+
+  \setcounter{Fire}{3}
+  \setcounter{Air}{2}
+  \setcounter{Earth}{1}
+}
+
+\showStdSpells
 }

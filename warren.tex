@@ -627,7 +627,7 @@ The slugs will spray acid at them, follow them up the stairs, and pester them fo
 \paragraph{If the \glspl{pc} throw in some food,}
 the morph-slugs head\ldots slowly\ldots towards it rather than fight.
 
-\paragraph{If the \glspl{pc} manage to investigate the corpses somehow,}
+\paragraph{If the \glspl{pc} want to investigate the corpses,}
 they find a dead gnome with a \gls{deep} Scroll, and a discarded, half-eaten cloak, with a key to room \ref{nursery} in the pocket.%
 \footnote{See \autopageref{saving_the_children} for how the key arrived here.}
 \iftoggle{oneshot}{%
@@ -654,41 +654,36 @@ The greasy floor results from a mixture of faeces, drool, blood and leftover mus
 \end{boxtext}
 
 \paragraph{If the \glspl{pc} have come from room \ref{slugHall},}
-they will not immediately see the staircase on their left, but will see it after doing literally anything (fighting, searching, et~c.).
-
-\label{laddertop}
+they will not see the staircase on their left immediately, but \emph{will} see it after doing literally anything (fighting, searching, et~c.).
 
 \paragraph{If the \glspl{pc} tarry or talk,}
-have them make a \roll{Dexterity}{Stealth} check (\tn[6]).
-They make this as a \textit{Group Roll}, so a single roll counts for the whole group.
-Each margin on the roll allows them an additional round before the horde wakes.
+have them roll \roll{Intelligence}{Stealth} (\tn[8]), to get across the sticky floor without squelching too much.
+\iftoggle{oneshot}{%
+  They make this as a \textit{Group Roll}, so a single roll counts for the whole group.
+  Each margin on the roll allows them an additional round before the horde wakes.
+}{}
+
+\iftoggle{hardcore}{
+  If a single \emph{player} clearly give in-character advice to another, the horde awaken.
+}{}
 
 \mapentry[workshop]{The Workshop}
-
-\begin{exampletext}
-
-  Frightened gnomes fled their bedrooms from the goblins who had rushed through the portal.
-  Most were caught, but some managed to run up the trapped ladders, having memorized the sequence perfectly.
-  As the last one got to the top of the ladders, he turned to cast an illusion of a solid wall in order to fool anyone coming up behind him.
-
-\end{exampletext}
 
 Picks, shovels, backpacks, wood, short swords, shortbows, and all manner of crafting and mining equipment litter the room.
 
 \begin{boxtext}
   Some goblins and three ogres lie sleeping on the floor between workbenches.
   The place is so full, you can't make out how many lie here, but the snoring indicates more than you can see.
-  On the benches, most of the equipment lies broken, but obviously delicate gnomish hands once used these tables to polish gems, craft magical items, and forge digging equipment.
-  On one table, you can see a pile of weapons -- short swords and spears -- piled on a table.
+  On the benches, most of the equipment lies broken, but delicate gnomish hands once used these tables to polish gems, craft magical items, and forge digging equipment.
+  On one table, you can see a pile shortswords and spears.
 \end{boxtext}
 
-\paragraph{If the \glspl{pc} have come up from room \ref{entrycell},}
-they find the exit has been covered by an illusion of a wall.
-If they investigate the area at all, the illusion fades, revealing the sleeping goblins.
+\paragraph{If the \glspl{pc} have come up from room \ref{escapeShaft},}
+the reaction depends entirely on how much noise they made while pushing the great forge aside.
 
 \paragraph{If the \glspl{pc} attempt to take either a short sword or a spear,}
 each attempt requires a \roll{Dexterity}{Stealth} roll, \tn[7].
-Failure will awaken the entire horde.
+Failure will awaken the entire horde, while a tie allows them a good head start.
 
 \pic{Decky/armoury}
 
@@ -775,10 +770,6 @@ With a successful roll,
 
 \ogre[\npc{\N\M}{Rick, the Ogre Guard}]
 
-\paragraph{If the party try to talk with the ogre,}
-Rick has only recently been turned into an ogre, and he has eaten his fill of mushrooms, so a \roll{Wits}{Empathy} roll, \tn[10], will allow the party to convince him to let them go.
-However, if Rick lets them go, he will insist on joining them so he can be free.
-
 \mapentry[secondPrison]{Second Prison}
 
 \begin{exampletext}
@@ -793,8 +784,8 @@ introduce another \gls{pc} here%
 
 \iftoggle{hardcore}{%
   \paragraph{If the party get a moment to ask about the outside world,}
-  the villagers tell them that they last saw hundreds of goblins swarming around town, and she was on her horse to get away.
-  They suspect that the entire place will have been overrun.
+  the ex-prisoners inform them that all the \pgls{village} for some miles have fallen, and the \gls{dayton} lies unprotected.
+  Even if the goblins die, the town will be in trouble.
 }{}
 
 \mapentry[armoury]{Armoury}
@@ -812,7 +803,7 @@ The \glspl{pc} can clearly see the following:
 
   \item{3 buckler shields}
   \item{1 crossbow (unstrung but usable with an \roll{Wits}{Crafts} roll, \tn[7])}
-  \item{3 quivers, each with 20 arrows}
+  \item{3 quivers, each with 20 arrows (for a shortbow)}
   \iftoggle{hardcore}{%
     \item{3 crossbow bolts}
     \item{2 shortbows (also unstrung)}

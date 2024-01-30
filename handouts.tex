@@ -1,17 +1,9 @@
-\documentclass[a4paper,openany]{book}
+\pagestyle{empty}
 
-\usepackage{config/bind}
+\cleardoublepage
 
 \settoggle{examplecharacter}{true}
 \settoggle{allyCharacter}{true}
-
-\input{commands.tex}
-
-\begin{document}
-
-\frontmatter
-
-\pagestyle{empty}
 
 \iftoggle{oneshot}{
   \settoggle{examplecharacter}{false}
@@ -66,85 +58,74 @@
 
 }{}
 
-\cleardoublepage
-
-\iftoggle{hardcore}{
-  \settoggle{examplecharacter}{false}
-  \input{config/reset_cs.tex}
-  \Repeat{8}{
+\iftoggle{hardcore}{}{
+  \cleardoublepage
+  \newcommand\printCharacter[1]{
+    \input{config/reset_cs.tex}
+    \input{ex_cs/#1.tex}
     \input{config/CS.tex}
     \input{config/backpage.tex}
   }
-}{
-    \newcommand\printCharacter[1]{
-      \input{config/reset_cs.tex}
-      \input{ex_cs/#1.tex}
-      \input{config/CS.tex}
-      \input{config/backpage.tex}
-    }
-    \cleardoublepage
+  \cleardoublepage
 
-    \ifodd\value{r4}
-      \printCharacter{Roina}
+  \ifodd\value{r4}
+    \printCharacter{Roina}
+  \else
+    \printCharacter{Gharsh}
+  \fi
+
+  \ifodd\value{r3}
+    \printCharacter{Bevl}
+  \else
+    \printCharacter{Fox}
+  \fi
+
+  \ifnum\value{r4}>2
+    \printCharacter{Greyling}
+  \else
+    \printCharacter{Hugi}
+  \fi
+
+  \ifnum\value{r3}>2
+    \printCharacter{Minkblot}
+  \else
+    \ifnum\value{r3}=1
+      \printCharacter{Charkmould}
     \else
-      \printCharacter{Gharsh}
+      \printCharacter{Harad}
     \fi
+  \fi
 
-    \ifodd\value{r3}
-      \printCharacter{Bevl}
-    \else
-      \printCharacter{Fox}
-    \fi
-
-    \ifnum\value{r4}>2
-      \printCharacter{Greyling}
-    \else
-      \printCharacter{Hugi}
-    \fi
-
-    \ifnum\value{r3}>2
-      \printCharacter{Minkblot}
-    \else
-      \ifnum\value{r3}=1
-        \printCharacter{Charkmould}
+  \ifnum\day>14
+    \printCharacter{Aeglir}
+  \else
+    \ifnum\day>25
+        \printCharacter{Oakbleach}
+      \ifnum\day>18
       \else
-        \printCharacter{Harad}
+        \printCharacter{Cainfold}
       \fi
-    \fi
-
-    \ifnum\day>14
-      \printCharacter{Aeglir}
     \else
-      \ifnum\day>25
-          \printCharacter{Oakbleach}
-        \ifnum\day>18
-        \else
-          \printCharacter{Cainfold}
-        \fi
-      \else
-        \printCharacter{Sootgrawl}
-      \fi
+      \printCharacter{Sootgrawl}
     \fi
+  \fi
 
-    \ifodd\day
-      \printCharacter{Ben}
-    \else
-      \printCharacter{Advir}
-    \fi
+  \ifodd\day
+    \printCharacter{Ben}
+  \else
+    \printCharacter{Advir}
+  \fi
 
-    \ifodd\month
-      \printCharacter{Dent}
-    \else
-      \printCharacter{Ashkale}
-    \fi
+  \ifodd\month
+    \printCharacter{Dent}
+  \else
+    \printCharacter{Ashkale}
+  \fi
 
-    \ifodd\year
-      \printCharacter{Waxcaul}
-    \else
-      \printCharacter{Guts_Pike}
-    \fi
+  \ifodd\year
+    \printCharacter{Waxcaul}
+  \else
+    \printCharacter{Guts_Pike}
+  \fi
 }
 
-\input{rules.tex}
-
-\end{document}

@@ -188,6 +188,33 @@
   \end{baseNote}
 }
 
+\newcommand\secondRaidingParty{
+  \begin{figure*}[t!]
+
+  \setcounter{enc}{\value{list}}
+  \subsection{Another Raiding Party Return}
+  \setcounter{list}{\value{enc}}
+
+  \begin{multicols}{2}
+  \setlength\parindent{24pt}
+
+  Yet another raiding party returns, this time with only one villager.
+
+  If the ogres at the stairs (room \vref{spiral}) tell them about the \glspl{pc}, the raiding party immediately begin to hunt for them.
+  Otherwise, they are content to hand a dead villager to the ogres at the stairs to eat, and move on.
+
+  \ogre[\npc{\T[3]\M\N}{3 Ogres}]
+
+  \iftoggle{hardcore}{%
+    \goblin[\npc{\N\T[4]}{4 Screaming Goblins}]
+  }{}
+
+  \end{multicols}
+
+  \bigLine
+  \end{figure*}
+}
+
 \newcommand\firstPrisoner{
   \NPC{\Hu\M}{Bellcut}{seaweed-like hair half-covers his gloomy eyes}{sighs}{to hide in the dark}
   \person{2}% STRENGTH

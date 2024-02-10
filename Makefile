@@ -21,7 +21,7 @@ svg-inkscape/lower_svg-tex.pdf: $(wildcard config/*) images .switch-gls
 	pdflatex -jobname oneshot_horde_escape main.tex
 
 hardcore: config/bind.sty hardcore_horde_escape.pdf
-hardcore_horde_escape.pdf: $(wildcard *.tex)
+hardcore_horde_escape.pdf: $(wildcard *.tex) svg-inkscape/black_tower_f5_svg-tex.pdf
 	pdflatex -jobname hardcore_horde_escape -shell-escape main.tex
 svg-inkscape/black_tower_f5_svg-tex.pdf: $(wildcard config/*) images
 	pdflatex -shell-escape -jobname hardcore_horde_escape main.tex

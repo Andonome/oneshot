@@ -57,3 +57,4 @@ As they travel upwards towards the sunlight, they learn about the rules and the 
 [normal]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/horde_escape.pdf?job=build
 [core]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/core.pdf?job=build
 [stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/stories.pdf?job=build
+[issues email]: contact-project+bindrpg-oneshot-22760003-issue-@incoming.gitlab.com

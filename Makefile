@@ -24,7 +24,8 @@ horde_escape.pdf: $(UPPER_WARREN)
 	@$(COMPILER) -jobname=horde_escape main.tex
 
 hardcore_horde_escape.pdf: $(OUTSIDE_WARREN) the_tower.tex
-	$(RM) .switch-gls
+	@$(RM) .switch-gls
+	@$(RUN) -jobname=hardcore_horde_escape main.tex
 	@$(COMPILER) -jobname=hardcore_horde_escape main.tex
 
 .PHONY: all

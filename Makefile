@@ -1,12 +1,11 @@
 include config/vars
 
-.PHONY: out
-out:
-	horde_escape.pdf
+.PHONY: all
+all: oneshot_horde_escape.pdf horde_escape.pdf hardcore_horde_escape.pdf
 
 WARREN := main.tex glossary.tex commands.tex intro.tex invasion.tex warren.tex appendix.tex handouts.tex ex_cs
 
-UPPER_WARREN := $(GENERAL_FILES) top.tex 
+UPPER_WARREN := $(GENERAL_FILES) top.tex tour.tex
 
 OUTSIDE_WARREN := $(UPPER_WARREN) the_tower.tex 
 
@@ -28,8 +27,6 @@ hardcore_horde_escape.pdf: $(OUTSIDE_WARREN) the_tower.tex
 	@$(RUN) -jobname=hardcore_horde_escape main.tex
 	@$(COMPILER) -jobname=hardcore_horde_escape main.tex
 
-.PHONY: all
-all: oneshot_horde_escape.pdf horde_escape.pdf hardcore_horde_escape.pdf
 
 clean:
 	$(CLEAN)

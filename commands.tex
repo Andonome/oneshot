@@ -244,6 +244,29 @@
 
 }
 
+\newcommand\forwards[1]{%
+  \refstepcounter{age}%
+  \label{tr:#1}
+  \textit{\large\arabic{age}}%
+}
+
+\newcommand\tourMapUpper{
+  \smolMapPic{Dyson_Logos/upper}{
+    \ref{tr:stairs}/55/27,
+  }
+
+}
+
+\newcommand\tourMapLower{
+  \smolMapPic{Dyson_Logos/lower}{
+    \ref{horseUpstairs}/55/27,
+    \ref{horseSideRoom}/55/80,
+    \ref{wolfRoom}/28/27,
+    \ref{horseCupboard}/85/08,
+  }
+
+}
+
 \newcommand\warrenMap{
   \mapPic{b}{Dyson_Logos/lower}{
     \ref{entrycell}/75/16,

@@ -16,8 +16,6 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \begin{document}
 
-\frontmatter
-
 \frontpage[Escape from the Goblin Horde]{%
   \iftoggle{oneshot}{A oneshot adventure for BIND}{%
     \iftoggle{hardcore}%
@@ -25,6 +23,12 @@ Keywords={TTRPG,RPG,roleplaying}
     {An introductory adventure for BIND}%
   }%
 }
+
+\iftoggle{oneshot}{}{
+  \input{tour.tex}
+}
+
+\frontmatter
 
 \include{intro}
 

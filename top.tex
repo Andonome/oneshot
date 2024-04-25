@@ -85,35 +85,41 @@ Exactly what plans they come up with and how well they work depends entirely on 
 \paragraph{If the party attempt to get the ogres to chase them,}
 the armour-wearing ogres remain where they are, as they have strict orders not to leave the base of the staircase.
 
-\npc{\T[2]\N}{2 Armoured Ogres}
 
-\person{6}% STRENGTH
-{0}% DEXTERITY 
-{1}% SPEED
-{{-3}% INTELLIGENCE
-{0}% WITS
-{-3}}% CHARISMA
-{0}% DR
-{1}% COMBAT
-{Crafts~1, Vigilance~2}% SKILLS
-{\greatsword, \partialleather}% EQUIPMENT
-{}
-
-\npc{\N\M}{Sitting Ogre}
+\Person{\npc{\T[2]\N}{2 Armoured Ogres}}%
+  {{6}{0}{1}}% BODY
+  {{-3}{0}{-3}}% MIND
+  {%
+    \set{Combat}{1}
+    \set{Brawl}{1}
+    \set{Crafts}{1}
+    \set{Vigilance}{2}
+    \greatsword
+    \partialleather
+  }% SKILLS
+  {}% KNACKS
+  {%
+      \lootGoblin/ \lootGoblin%
+  }% EQUIPMENT
+  {}% ABILITIES
 
 \label{chasingogre}
 
-\person{4}% STRENGTH
-{0}% DEXTERITY 
-{0}% SPEED
-{{-3}% INTELLIGENCE
-{0}% WITS
-{-3}}% CHARISMA
-{0}% DR
-{1}% COMBAT
-{Crafts~1, Vigilance~2}% SKILLS
-{\greatclub}% EQUIPMENT
-{}
+\Person{\npc{\N\M}{Sitting Ogre}}%
+  {{4}{0}{0}}% BODY
+  {{-3}{0}{-3}}% MIND
+  {%
+    \set{Combat}{1}
+    \set{Brawl}{3}
+    \set{Caving}{2}
+    \set{Vigilance}{2}
+    \greatclub
+  }% SKILLS
+  {}% KNACKS
+  {%
+      \lootGoblin%
+  }% EQUIPMENT
+  {}% ABILITIES
 
 \iftoggle{hardcore}{%
   \ogre[\npc{\M\N}{Hidden Ogre}]
@@ -186,29 +192,13 @@ the gnomes request they nip out to the kitchen, (room \vref{lounge}) and get the
 
 With proper food, the party and the gnomes can rest, lose some \glspl{ep}, and the gnomes can do the same.
 
-\gnomishsoldier[\npc{\Gn\M}{Yan}]
+\gnome[\npc{\Gn\M}{Yan}]
 
 \gnomishsoldier[\npc{\Gn\F}{Nanpa}]
 
-\gnomishsoldier[\npc{\Gn\M}{Open}]
+\gnomishsoldier[\npc{\Gn\M}{\"{O}pen}]
 
-\NPC{\Gn\F}{Lawa the Alchemist}{nosey}{picks nose}{cake \& freedom}
-\person{-3}% STRENGTH
-{1}% DEXTERITY 
-{-2}% SPEED
-{{2}% INTELLIGENCE
-{1}% WITS
-{2}}% CHARISMA
-{0}% DR
-{0}% COMBAT
-{Projectiles~1, Academics~2, Empathy~1, Tactics~2}% SKILLS
-{Handkerchief, Earth \gls{boon}}% EQUIPMENT
-{
-  \setcounter{Fate}{2}
-  \setcounter{Water}{3}
-  \setcounter{Earth}{1}
-  \setcounter{fp}{3}
-}
+\gnomishillusionist[\NPC{\Gn\F}{Lawa the Alchemist}{nosey}{picks nose}{cake \& freedom}]
 
 \secondRaidingParty
 
@@ -323,11 +313,11 @@ The display cabinet at the side of the room contains the following:
   \item
   1 Earth \gls{boon} powder.
   \item
-  1 \lootMagic, in a drawer.
+  1 \lootTalisman, in a drawer.
 
   \showTalisman
   \item
-  1 \lootMagic, in a drawer.
+  1 \lootTalisman, in a drawer.
 
   \showTalisman
 \end{itemize}
@@ -385,7 +375,7 @@ But a \roll{Strength}{Crafts} check (\tn[11]), might allow someone to chisel awa
 This nasty little room holds a couple of beds and the remnants of gnomish board games.
 Among the wreckage, the party can find a hidden item:
 
-\lootMagic
+\lootTalisman
 
 \showTalisman
 

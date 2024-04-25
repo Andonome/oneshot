@@ -63,85 +63,45 @@
 }
 
 \newcommand\spyGnome[1]{
-  \npc{\Gn(\N)\M}{Kalama}
-  \person{-2}% STRENGTH
-  {1}% DEXTERITY 
-  {-1}% SPEED
-  {{1}% INTELLIGENCE
-  {0}% WITS
-  {-2}}% CHARISMA
-  {0}% DR
-  {0}% COMBAT
-  {}% SKILLS
-  {Nothing}% EQUIPMENT
-  {
-    \setcounter{Earth}{2}
-    \setcounter{Water}{2}
-    \setcounter{Academics}{1}
-    \setcounter{Caving}{2}
-    \setcounter{Stealth}{1}
-    \setcounter{Wyldcrafting}{1}
-    \addtocounter{Strength}{#1}
-    \addtocounter{Speed}{#1}
-    \addtocounter{Intelligence}{-#1}
-  }
+  \Person{\npc{\Gn(\N)\M}{Kalama}}%
+    {{-2}{1}{-1}}% BODY
+    {{1}{0}{-2}}% MIND
+    {
+      \setcounter{Earth}{2}
+      \setcounter{Water}{2}
+      \setcounter{Academics}{1}
+      \setcounter{Caving}{2}
+      \setcounter{Stealth}{1}
+      \setcounter{Wyldcrafting}{1}
+      \addtocounter{Strength}{#1}
+      \addtocounter{Speed}{#1}
+      \addtocounter{Intelligence}{-#1}
+    }% SKILLS
+    {}% KNACKS
+    {}% EQUIPMENT
+    {}% ABILITIES
 }
 
-\newcommand{\prisoner}[1][\NPC{\Hu\F}{Random Villager}{Pessimistic}{Scratches nose}{Tribe}]{
-	#1
-	\randomthree
-  \addtocounter{age}{-1}
-	\randomthreeB
-	\randomthreeC
-    \setcounter{enc}{\value{r3c}}
-    \addtocounter{enc}{-2}
-	\randomtwo
-	\randomtwoB
-    \setcounter{list}{\value{r2b}}
-    \addtocounter{r2b}{-1}
-	\randomtwoC
-  \randomdozen
-\person{\arabic{age}}% STRENGTH
-{0}% DEXTERITY 
-{0}% SPEED
-{{\arabic{enc}}% INTELLIGENCE
-{-1}% WITS
-{0}}% CHARISMA
-{0}% DR
-{\ifodd\value{r3b} 0\else 1\fi}% COMBAT
-{\ifnum\value{r3}=1 Projectiles~1, \fi \ifnum\value{r3c}=3 Deceit\else Crafts\fi~\arabic{r2c}, \ifodd\value{r3}\else Vigilance~1, \fi Wyldcrafting~\arabic{r2}}% SKILLS
-{Nothing}% EQUIPMENT
-{}
+\newcommand{\prisoner}[1][\NPC{\Hu\F}{Random Villager}{Pessimistic}{Scratches nose}{Food}]{
+  \Person{#1}%
+    {{r3}{0}{0}}% BODY
+    {{rn1t2}{-1}{0}}% MIND
+    {%
+      \ifodd\value{r3}
+        \set{Combat}{1}
+      \else
+        \set{Projectiles}{1}
+      \fi
+      \set{Crafts}{r2}
+      \set{Wyldcrafting}{2}
+    }% SKILLS
+    {}% KNACKS
+    {}% EQUIPMENT
+    {}% ABILITIES
 }
 
-\newcommand\dragonMakil{
-  \NPC{\E}{Makil the Dragon}{inquisitive, cruel, \& massive}{drums fingers}{gold}
-  \person{7}% STRENGTH
-  {2}% DEXTERITY 
-  {3}% SPEED
-  {{3}% INTELLIGENCE
-  {3}% WITS
-  {-2}}% CHARISMA
-  {0}% DR
-  {0}% COMBAT
-  {
-    Projectiles~2, Academics~3, Athletics~1, Deceit~3, Tactics~2, Vigilance~4
-  }% SKILLS
-  {Nothing}% EQUIPMENT
-  {
-    \renewcommand\abilities{\flight, \claws}
-    \hide{5}
-    \knacks{\snapcaster}
-    \addtocounter{Brawl}{3}
-    \addtocounter{Athletics}{2}
-    \addtocounter{Flight}{2}
-    \addtocounter{Deceit}{3}
-    \addtocounter{Tactics}{1}
-    \addtocounter{Vigilance}{3}
-    \addtocounter{Fate}{2}
-    \addtocounter{Water}{2}
-    \addtocounter{Fire}{2}
-  }
+\newcommand\dragonMakil{%
+  \dragon[\NPC{\E}{Makil the Dragon}{inquisitive, cruel, \& massive}{drums fingers}{gold}]
 }
 
 \newcommand\noteRaidingParty{
@@ -215,22 +175,8 @@
   \end{figure*}
 }
 
-\newcommand\firstPrisoner{
-  \NPC{\Hu\M}{Bellcut}{seaweed-like hair half-covers his gloomy eyes}{sighs}{to hide in the dark}
-  \person{2}% STRENGTH
-  {0}% DEXTERITY 
-  {1}% SPEED
-  {{0}% INTELLIGENCE
-  {-1}% WITS
-  {0}}% CHARISMA
-  {0}% DR
-  {0}% COMBAT
-  {
-    \setcounter{Projectiles}{2}
-    Crafts 2, Empathy 1, Wyldcrafting 2
-  }% SKILLS
-  {Nothing}% EQUIPMENT
-  {}
+\newcommand\firstPrisoner{%
+  \prisoner{\NPC{\Hu\M}{Bellcut}{seaweed-like hair half-covers his gloomy eyes}{sighs}{to hide in the dark}}
 }
 
 \newcommand\riddle[2]{
@@ -299,28 +245,25 @@
 }
 
 \newcommand\theAlchemist{
-  \npc{\M\Hu}{\Gls{alchemist}}
-  \person{1}% STRENGTH
-  {0}% DEXTERITY 
-  {0}% SPEED
-  {{2}% INTELLIGENCE
-  {-1}% WITS
-  {2}}% CHARISMA
-  {0}% DR
-  {1}% COMBAT
-  {}%SKILLS
-  {\shortsword, \arabic{r3}~Air \gls{boon} (\boxStat{r3}), hidden smoked beer, \partialleather}% EQUIPMENT
-  {
-    \setcounter{Academics}{2}
-    \setcounter{Crafts}{2}
-    \setcounter{Deceit}{1}
-    \setcounter{Medicine}{1}
-    \setcounter{Vigilance}{1}
-
-  \setcounter{Fire}{3}
-  \setcounter{Air}{2}
-  \setcounter{Earth}{1}
-}
+  \Person{\npc{\M\Hu}{\Gls{alchemist}}}%
+    {{1}{0}{0}}% BODY
+    {{1}{-1}{2}}% MIND
+    {
+      \setcounter{Academics}{2}
+      \setcounter{Crafts}{2}
+      \setcounter{Deceit}{1}
+      \setcounter{Medicine}{1}
+      \setcounter{Vigilance}{1}
+      %
+      \setcounter{Fire}{3}
+      \setcounter{Air}{2}
+      \setcounter{Earth}{1}
+    }% SKILLS
+    {}% KNACKS
+    {
+      \lootMagic
+    }% EQUIPMENT
+    {}% ABILITIES
 
 \showStdSpells
 }

@@ -23,7 +23,7 @@
 
 \newRule{Team Rolls}{
 
-  \input{config/rules/actions_team.tex}
+  \input{config/rules/banding.tex}
 
   \paragraph{Example 1:}
   the troupe are sneaking down a hallway, and have to roll \roll{Stealth}{Dexterity} (\tn[9]).
@@ -693,7 +693,7 @@ The goblin druid holds a \spellName\ in her sleepy hands.
 \iftoggle{hardcore}{
   \ogre[\npc{\N\T}{2 Docile Ogres}]
 }{
-  \ogre[\npc{\N\T}{Sleeping Ogre}]
+  \ogre[\npc{\N}{Sleeping Ogre}]
 }
 
 \begin{boxtext}

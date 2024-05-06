@@ -5,7 +5,7 @@ all: oneshot_horde_escape.pdf horde_escape.pdf hardcore_horde_escape.pdf
 
 WARREN := main.tex commands.tex images/ glossary.tex commands.tex intro.tex invasion.tex warren.tex appendix.tex handouts.tex appendix.tex ex_cs
 
-UPPER_WARREN := $(GENERAL_FILES) top.tex tour.tex
+UPPER_WARREN := $(WARREN) top.tex tour.tex
 
 OUTSIDE_WARREN := $(UPPER_WARREN) the_tower.tex 
 

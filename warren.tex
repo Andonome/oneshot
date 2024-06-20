@@ -23,7 +23,8 @@
 
 \newRule{Team Rolls}{
 
-  \input{config/rules/banding.tex}
+  \Gls{bandAct}
+  \glsdesc{bandAct}
 
   \paragraph{Example 1:}
   the troupe are sneaking down a hallway, and have to roll \roll{Stealth}{Dexterity} (\tn[9]).
@@ -160,7 +161,8 @@ He will not join any fights, but can hold a torch.
 }
 
 \newRule{End of \Glsentrytext{interval} Regeneration}{
-  \input{config/rules/interval.tex}
+  \Gls{interval}
+  \glsdesc{interval}
 
   Being underground, the \glspl{pc} will only regenerate 1 \gls{mp} per interval, which goes to whichever \gls{pc} has the most \glspl{mp} lost.
 
@@ -313,11 +315,13 @@ then the goblins are asleep in the kitchen, and they can sneak in with a \roll{D
 
 \newRule{Weapons}{
 
-  \input{config/rules/weight}
+  \Gls{weight}
+  \glsdesc{weight}
 
   Without a backpack, \glspl{pc} can only carry two items -- one in each hand.
 
-  \input{config/rules/weapons.tex}
+  \Gls{weapon}
+  \glsdesc{weapon}
 
   The \glspl{pc} can find all these items in room \ref{kitchen}.
   They don't make the best weapons, but the \glspl{pc} have little choice!
@@ -817,13 +821,13 @@ The \glspl{pc} see the following:
 
 \newRule{\Glsfmtlong{dr} \& Vitals Shots}{
 
-  \input{config/rules/armour.tex}
+  \paragraph{\Gls{armour}}
+  \glsdesc{armour}
+  \paragraph{\Gls{dr}}
+  \glsdesc{dr}
+  \paragraph{\Gls{vitalShot}}
+  \glsdesc{vitalShot}
 
-  \Gls{dr} reduce Damage taken due to armour, or just a creature's thick hide.
-  The morph-wolves have `{\scshape \gls{dr} 2}', so they remove 2 from any Damage Taken.
-
-  We assume everyone is trying to target sensitive areas, like the throat, groin, and eyes, whenever they can, to hit more exposed areas.
-  If anyone hits 5 points over what they need to hit the wolves, they get a `\textit{Vitals Shot}', which ignores the \gls{dr} entirely, as the attack hits a sensitive area.
 }
 
 \mapentry[inDoor]{The Two-Way Doors}

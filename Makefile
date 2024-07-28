@@ -15,8 +15,13 @@ config/vars:
 .switch-gls:
 	touch .switch-gls
 
-oneshot_horde_escape.pdf: $(WARREN) rules.tex | .switch-gls
+config/booklet.pdf:
+	make -C config booklet.pdf
+
+oneshot_horde_escape.pdf: config/booklet.pdf $(WARREN) rules.tex | .switch-gls
 	@$(COMPILER) -jobname=oneshot_horde_escape main.tex
+	@pdfunite $@ config/booklet.pdf /tmp/out.pdf
+	@mv /tmp/out.pdf $@
 
 horde_escape.pdf: $(UPPER_WARREN)
 	@$(RM) .switch-gls

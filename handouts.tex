@@ -60,13 +60,6 @@
 
 \iftoggle{hardcore}{}{
   \cleardoublepage
-  \newcommand\printCharacter[1]{
-    \resetCS
-    \input{ex_cs/#1.tex}
-    \input{config/CS.tex}
-    \input{config/backpage.tex}
-  }
-  \cleardoublepage
 
   \ifodd\value{r4}
     \printCharacter{Roina}

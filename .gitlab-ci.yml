@@ -7,9 +7,10 @@ build:
   script:
     - git lfs pull
     - make all
-  only:
-    - master
-    - run
-  artifacts:
+  rules:
+    - if: $CI_COMMIT_BRANCH == "master"
+    - if: $CI_COMMIT_BRANCH == "run"
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+ artifacts:
     paths:
       - "*.pdf"

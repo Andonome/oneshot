@@ -5,12 +5,12 @@ variables:
 build:
   image: $LATEX_IMAGE
   script:
-    - git lfs pull
+    - make config/vars
     - make all
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
     - if: $CI_COMMIT_BRANCH == "run"
     - if: $CI_PIPELINE_SOURCE == "schedule"
- artifacts:
+  artifacts:
     paths:
       - "*.pdf"

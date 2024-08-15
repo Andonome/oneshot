@@ -18,7 +18,7 @@ config/vars:
 config/booklet.pdf:
 	make -C config booklet.pdf
 
-oneshot_horde_escape.pdf: config/booklet.pdf $(WARREN) rules.tex | .switch-gls
+oneshot_horde_escape.pdf: config/booklet.pdf $(WARREN) | .switch-gls
 	@$(COMPILER) -jobname=oneshot_horde_escape main.tex
 	@pdfunite $@ config/booklet.pdf /tmp/out.pdf
 	@mv /tmp/out.pdf $@

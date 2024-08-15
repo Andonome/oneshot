@@ -135,12 +135,12 @@ they can do so with a -4 penalty to the roll.
 \ogre[\npc{\N\M}{Olf the Ogre}]
 
 \paragraph{If anyone attacks Blara,}
-the ogre immediately turns his attention to them.
+the ogre immediately starts to guard her -- then if anyone else tries to attack, he can defend as \pgls{quickaction}.
 
 Blara will attempt to run away, but must wait for the ogre to move out of the doorway.
 
 \iftoggle{oneshot}{
-  Chasing after Blara requires a resisted roll of \roll{Speed}{Athletics}
+  Chasing after Blara requires \gls{resistedaction} roll of \roll{Speed}{Athletics}
   (the player rolls 2D6 plus their \roll{Speed}{Athletics} against Blara's \roll{Speed}{Athletics}, \tn[10]).%
 }{}%
 
@@ -654,7 +654,7 @@ they will not see the staircase on their left immediately, but \emph{will} see i
 \paragraph{If the \glspl{pc} tarry or talk,}
 have them roll \roll{Intelligence}{Stealth} (\tn[8]), to get across the sticky floor without squelching too much.
 \iftoggle{oneshot}{%
-  They make this as a \textit{Group Roll}, so a single roll counts for the whole group.
+  They make only one \gls{natural}, which counts for the whole group.
   Each margin on the roll allows them an additional round before the horde wakes.
 }{}
 

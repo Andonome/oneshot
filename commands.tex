@@ -9,18 +9,13 @@
 \newtoggle{hardcore}
 \newtoggle{oneshot}
 
-\ifStrSame{\jobname}{hardcore_horde_escape}%
+\ifStrSame{\jobname}{hardcore_oneshot}%
   {\settoggle{hardcore}{true}}%
-  {\ifStrSame{\jobname}{oneshot_horde_escape}%
+  {\ifStrSame{\jobname}{oneshot}%
     {\settoggle{oneshot}{true}
     \settoggle{verbose}{false}
     }{}
   }
-
-\ifStrSame{\jobname}{hardcore_handouts}%
-  {\settoggle{hardcore}{true}}%
-  {\ifStrSame{\jobname}{oneshot_handouts}%
-    {\settoggle{oneshot}{true}}{}}
 
 \iftoggle{oneshot}{
   \settoggle{examplecharacter}{true}{}

@@ -1,7 +1,9 @@
+# Escape from the Goblin Horde
+
 | Downloads                      | Related Books            |
 |:-------------------------------|:-------------------------|
 | [Oneshot][oneshot]             | [Core Rules][core]       |
-| [Standard][normal]             | [Players' Book][stories] |
+| [Extended][extended]           | [Players' Book][stories] |
 
 This one-shot module for the [BIND RPG][core] provides a no-stress, simple game, which lasts a single evening.
 It goes like this:
@@ -54,8 +56,8 @@ As they travel upwards towards the sunlight, they learn about the rules and the 
 <img src="images/Dyson_Logos/lower.svg" width="500">
 
 [compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
-[oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_horde_escape.pdf?job=build
-[normal]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/horde_escape.pdf?job=build
+[oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Escape_from_the_Goblin_Horde.pdf?job=build
+[extended]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Extended_Escape_from_the_Goblin_Horde.pdf?job=build
 [core]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/core.pdf?job=build
 [stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/stories.pdf?job=build
 [issues email]: contact-project+bindrpg-oneshot-22760003-issue-@incoming.gitlab.com

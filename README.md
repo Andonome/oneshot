@@ -27,7 +27,7 @@ Reading two-columns of blinding-white PDF on a monitor will only give you a head
     * For Void Linux: `inkscape`, `make`, `texlive-full`, `git-lfs`, and `texlive-latexmk`.
 1. Enter the repo, and do `make all`.
 
-For full setup instructions, see the [wiki](https://gitlab.com/bindrpg/core/-/wikis/dev/startup).
+For full setup instructions, see the [wiki][compiling].
 
 # Plot
 
@@ -53,6 +53,7 @@ As they travel upwards towards the sunlight, they learn about the rules and the 
 
 <img src="images/Dyson_Logos/lower.svg" width="500">
 
+[compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
 [oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/oneshot_horde_escape.pdf?job=build
 [normal]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/horde_escape.pdf?job=build
 [core]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/core.pdf?job=build

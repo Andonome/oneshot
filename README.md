@@ -56,8 +56,8 @@ As they travel upwards towards the sunlight, they learn about the rules and the 
 <img src="images/Dyson_Logos/lower.svg" width="500">
 
 [compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
+[issues email]: mailto:contact-project+bindrpg-oneshot-22760003-issue-@incoming.gitlab.com
 [oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Escape_from_the_Goblin_Horde.pdf?job=build
 [extended]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Extended_Escape_from_the_Goblin_Horde.pdf?job=build
-[core]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/core.pdf?job=build
-[stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/stories.pdf?job=build
-[issues email]: contact-project+bindrpg-oneshot-22760003-issue-@incoming.gitlab.com
+[core]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/Core_Rules.pdf?job=build
+[stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/Stories.pdf?job=build

@@ -10,7 +10,7 @@ config/vars:
 	git submodule update --init
 
 .PHONY: all
-all: Escape_from_the_Goblin_Horde.pdf Extended_Escape_from_the_Goblin_Horde.pdf Hardcore_Escape_from_the_Goblin_Horde.pdf
+all: $(TITLE).pdf Extended_$(TITLE).pdf Hardcore_$(TITLE).pdf
 
 config/booklet.pdf:
 	make -C config booklet.pdf

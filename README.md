@@ -59,5 +59,5 @@ As they travel upwards towards the sunlight, they learn about the rules and the 
 [issues email]: mailto:contact-project+bindrpg-oneshot-22760003-issue-@incoming.gitlab.com
 [oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Escape_from_the_Goblin_Horde.pdf?job=build
 [extended]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Extended_Escape_from_the_Goblin_Horde.pdf?job=build
-[core]: https://gitlab.com/bindrpg/core/-/jobs/artifacts/master/raw/Core_Rules.pdf?job=build
-[stories]: https://gitlab.com/bindrpg/stories/-/jobs/artifacts/master/raw/Stories.pdf?job=build
+[core]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Core_Rules.pdf?job=build
+[stories]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Stories.pdf?job=build

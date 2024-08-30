@@ -15,7 +15,7 @@ all: $(TITLE).pdf Extended_$(TITLE).pdf Hardcore_$(TITLE).pdf
 config/booklet.pdf:
 	make -C config booklet.pdf
 
-$(DBOOK): $(DEPS) | .switch-gls
+$(DBOOK): LOCTEX HANDOUTS STYLE_FILES EXTERNAL config/booklet.pdf | .switch-gls
 	@$(COMPILER) main.tex
 	@pdfunite $@ config/booklet.pdf /tmp/out.pdf
 	@mv /tmp/out.pdf $@

@@ -341,15 +341,6 @@ then the goblins are asleep in the kitchen, and they can sneak in with a \roll{D
   \end{boxtable}
 }
 
-\goblin[\npc{\N}{Goblin on the table}]
-
-\iftoggle{hardcore}{
-  \goblin[\npc{\T[4]\N}{4 Goblins on the floor}]
-}{
-  \goblin[\npc{\N}{Goblin on the floor}]
-  \goblin[\npc{\T[2]\N}{2 Goblins on the oven}]
-}
-
 \paragraph{If the roll fails,}
 all goblins wake up with hungry stomachs.
 
@@ -371,6 +362,15 @@ all goblins wake up with hungry stomachs.
 they'll find a few canteens of water, one of wine, and sacks vegetables (enough for 4 meals).
 
 The players can unlock the larder with a \roll{Dexterity}{Larceny} roll at \tn[10] to pick the lock, at which point they discover that the larder is still full of food.
+
+\goblin[\npc{\N}{Goblin on the table}]
+
+\iftoggle{hardcore}{
+  \goblin[\npc{\T[4]\N}{4 Goblins on the floor}]
+}{
+  \goblin[\npc{\N}{Goblin on the floor}]
+  \goblin[\npc{\T[2]\N}{2 Goblins on the oven}]
+}
 
 \mapentry[lift]{The Gnomish Lift}
 

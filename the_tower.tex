@@ -12,10 +12,14 @@
 
 \noindent
 The party probably thought they were out of the woods, but in fact they will have to enter the woods, before salvation.
-\ifnum\value{temperature}=0
-  To make matters worse, those woods are white with snow.
+\ifnum\value{temperature}=0%
+  To make matters worse, those woods are white with \gls{snow}.
   The land lies barren, and frozen.
-  Each character without warm clothing receives 3 \glspl{ep} per \gls{interval}.
+  Each character without warm clothing receives \pgls{ep} each \gls{interval}.
+\else%
+  \ifnum\value{temperature}=3%
+  And despite the wood's shade, any travel during the afternoon \gls{interval} inflicts \pgls{ep}.
+  \fi%
 \fi
 
 \section{Journey to \Glsfmttext{alchemist}}
@@ -48,8 +52,7 @@ The second lies 4 miles North, and comes from \gls{alchemist}'s tower.
 they will have to descend into the forest, at which point they can no longer see the lights.
 
 Finding the lights requires an \roll{Intelligence}{Survival} roll~(\tn[9]).
-Each Failure Margin on the roll adds an extra mile to the journey.%
-\exRef{core}{Core Rules}{marching}
+Each Failure Margin on the roll adds an extra mile to the journey.
 
 \paragraph{Remaining on the hill}
 means no food, and goblins skulking around the area at night.
@@ -110,14 +113,13 @@ Otherwise, the goblins leave to fetch some ogres, to add the guards to their own
 
 \ogre
 
-\paragraph{Spotting the ogres}
+\paragraph{Spotting the \glspl{ogre}}
 requires a \roll{Wits}{Vigilance} roll, against the ogres' \roll{Dexterity}{Stealth} (\tn).
 
-\subsection{The Chitincrawler}
+\subsection{The \Glsfmttext{crawler}}
 
-En route to the tower, the party run into a chitincrawler's web.
+En route to the tower, the party run into \pgls{crawler}'s web.
 Have them roll \roll{Wits}{Vigilance}, \tn[10].
-This is a group roll, so the check counts against the first three characters (probably those with the highest \roll{Speed}{Athletics}).
 
 \chitincrawler
 
@@ -133,26 +135,26 @@ Otherwise, it withdraws backwards, into the forest, but nobody can see how far\l
 \end{boxtext}
 
 \noindent
-Have the party make a Teamwork Roll of \roll{Wits}{Survival}, \tn[10].
+Have the party make \pgls{bandAct} of \roll{Wits}{Survival}, \tn[10].
 Success indicates that one has spotted goblin footprints nearby.
 
 The characters guess at least a dozen goblins, and half a dozen ogres, from the footprints.
 
-\subsubsection{Consumed Villages}
+\subsubsection{Burnt \Glsfmtplural{village}}
 
-If the troupe approach any villages, they find them already consumed by the horde.
-If the \glspl{guard} joined them, they will refuse to approach any villages.
+If the troupe approach any \glspl{village}, they find them already consumed by the horde.
+If the \glspl{guard} joined them, they will refuse to approach any \glspl{village}.
 
-The villages sometimes have some of the goblin horde remaining.
+The \glspl{village} sometimes have some of the goblin horde remaining.
 Roll to find the inhabitants:
 
 \begin{itemize}
   \item
   $(1D6 - 3)\times 5$ goblins.
   \item
-  $(1D6 - 3)\times 3$ ogres.
+  $(1D6 - 3)\times 3$ \glspl{ogre}.
   \item
-  Any village with goblins still around has $1D6$ farmers, tied up and waiting to be eaten.
+  Any \gls{village} with goblins still around has $1D6$ farmers, tied up and waiting to be eaten.
 \end{itemize}
 
 \end{multicols}
@@ -168,8 +170,8 @@ Roll to find the inhabitants:
 
 \begin{exampletext}
   \noindent
-  The rampant goblin horde, having eaten their way through the villages, have invaded the black tower.
-  If they can secure this outpost, they can travel farther, eventually reaching farther villages.
+  The rampant goblin horde, having eaten their way through the \glspl{village}, have invaded the black tower.
+  If they can secure this outpost, they can travel farther, eventually reaching farther \glspl{village}.
 
   The bridge here provides the only place to cross the massive river, so if the troupe stop the horde progressing, they will have limited its reach.
 \end{exampletext}
@@ -371,11 +373,11 @@ Around the room are:
 
 \begin{enumerate}
 
-  \item{A jar with the web-spinning organ of a chitincrawler, soaked in wine.}
+  \item{A jar with the web-spinning organ of \pgls{crawler}, soaked in wine.}
   \item{A rare green gem, worth 40 \glspl{gp}.%
   \footnote{Finding a buyer will prove difficult.}}
   \item{The preserved eyeballs of Coltrank the seer.
-  It could make \pgls{ingredient} for a Fate spell with a bit of work.}
+  It could make \pgls{ingredient} for a Fate \gls{boon} with a bit of work.}
   \item
   One \lootTalisman, hidden in a drawer.
 

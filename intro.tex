@@ -57,13 +57,15 @@ COPYRIGHT
 
 \iftoggle{hardcore}{
 }{
-  \printglossary[
-    style=topicmcols,
-    nonumberlist,
-    ]
+  \iftoggle{oneshot}{}{
+    \printglossary[
+      style=topicmcols,
+      nonumberlist,
+      ]
+  }
 
-\printglossary[
-  type=mech,
-  style=topicmcols,
-  ]
+  \printglossary[
+    type=mech,
+    style=topicmcols,
+    ]
 }

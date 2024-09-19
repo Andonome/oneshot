@@ -109,8 +109,6 @@ The ogre then tries to pick up a character, and take it up to the kitchen.
 they can do so with a -4 penalty to the roll.
 
 
-
-
 \Person{\npc{\N\F}{Blara the Goblin Druid}}%
   {{-2}{2}{2}}% BODY
   {{0}{0}{-4}}% MIND
@@ -126,9 +124,7 @@ they can do so with a -4 penalty to the roll.
   }% SKILLS
   {\snapcaster}% KNACKS
   {torch, human foot\iftoggle{oneshot}{}{, map}}% EQUIPMENT
-  {\ifnum\value{noAppearing}<3
-    \mutation{r4}%
-  \fi}% ABILITIES
+  {}% ABILITIES
 
 \showStdSpells
 
@@ -172,7 +168,7 @@ He will not join any fights, but can hold a torch.
 \boxPair[t]{
   \goblin[\npc{\N\M}{Hungry Goblin}]
 }{
-  \morphrat[\npc{\N\A}{Morph Rat}]
+  \morphrat[\npc{\R\A}{Morph Rat}]
 }
 
 \mapentry[escapeShaft]{The Chimney}
@@ -606,7 +602,7 @@ have them roll \roll{Speed}{Athletics} (\gls{tn} \arabic{track}) to avoid the ac
 From that point until the slugs loose sight of them, they are in combat.
 The slugs will spray acid at them, follow them up the stairs, and pester them for as long as they remain in sight.
 
-\morphslug[\npc{\T[9]\A\N}{20 Morph Slugs}]
+\morphslug[\npc{\T[9]\A\R}{20 Morph Slugs}]
 
 \paragraph{If the \glspl{pc} throw in some food,}
 the morph-slugs head\ldots slowly\ldots towards it rather than fight.
@@ -695,9 +691,9 @@ It remains on the ground beside him.
 The goblin druid holds a \spellName\ in her sleepy hands.
 
 \iftoggle{hardcore}{
-  \ogre[\npc{\N\T}{2 Docile Ogres}]
+  \ogre[\npc{\T[2]\N}{2 Docile Ogres}]
 }{
-  \ogre[\npc{\N}{Sleeping Ogre}]
+  \ogre[\npc{\F\N}{Sleeping Ogre}]
 }
 
 \begin{boxtext}
@@ -883,7 +879,7 @@ In this case, have them roll \roll{Wits}{Athletics} (\tn[7]) to back off before 
 A drop from this height inflicts $1D6+1$ Damage, plus their Strength Bonus.%
 \footnote{Larger creatures receive more Damage from falls}
 
-\morphwolf[\npc{\T[4]\A\N}{\arabic{noAppearing} Morph Wolves}]
+\morphwolf[\npc{\T[4]\A\R}{\arabic{noAppearing} Morph Wolves}]
 
 \paragraph{If the party fall into the lift,}
 they end up in the mid-section of the \gls{warren}.

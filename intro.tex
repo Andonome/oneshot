@@ -55,17 +55,13 @@ COPYRIGHT
 
 \pagebreak
 
-\iftoggle{hardcore}{
-}{
-  \iftoggle{oneshot}{}{
-    \printglossary[
-      style=topicmcols,
-      nonumberlist,
-      ]
-  }
+\printglossary[
+  style=topicmcols,
+  nonumberlist,
+  ]
 
-  \printglossary[
-    type=mech,
-    style=topicmcols,
-    ]
-}
+
+\printglossary[
+  type=mech,
+  style=topicmcols,
+  ]

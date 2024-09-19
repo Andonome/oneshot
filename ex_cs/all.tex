@@ -1,0 +1,69 @@
+\documentclass[a4paper,openany]{book}
+
+\usepackage{config/bind}
+
+\frontmatter
+\begin{document}
+
+
+\ifodd\value{r4}
+  \printCharacter{Roina}
+\else
+  \printCharacter{Gharsh}
+\fi
+
+\ifodd\value{r3}
+  \printCharacter{Noka}
+\else
+  \printCharacter{Fox}
+\fi
+
+\ifnum\value{r4}>2
+  \printCharacter{Greyling}
+\else
+  \printCharacter{Bight}
+\fi
+
+\ifnum\value{r3}>2
+  \printCharacter{Minkblot}
+\else
+  \ifnum\value{r3}=1
+    \printCharacter{Charkmould}
+  \else
+    \printCharacter{Harad}
+  \fi
+\fi
+
+\ifnum\day>14
+  \printCharacter{Aeglir}
+\else
+  \ifnum\day>25
+      \printCharacter{Oakbleach}
+    \ifnum\day>18
+    \else
+      \printCharacter{Cainfold}
+    \fi
+  \else
+    \printCharacter{Sootgrawl}
+  \fi
+\fi
+
+\ifodd\day
+  \printCharacter{Ben}
+\else
+  \printCharacter{Advir}
+\fi
+
+\ifodd\month
+  \printCharacter{Dent}
+\else
+  \printCharacter{Ashkale}
+\fi
+
+\ifodd\year
+  \printCharacter{Waxcaul}
+\else
+  \printCharacter{Guts_Pike}
+\fi
+
+\end{document}

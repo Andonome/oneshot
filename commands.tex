@@ -77,18 +77,25 @@
     {}% ABILITIES
 }
 
-\newcommand{\prisoner}[1][\NPC{\Hu\F}{Random Villager}{Pessimistic}{Scratches nose}{Food}]{
+\newcommand{\prisoner}[1][\NPC{\Hu\F}{Random Villager}{Pessimistic}{Scratches nose}{Food}\addtocounter{weight}{4}]{
   \Person{#1}%
     {{r3}{0}{0}}% BODY
     {{rn1t2}{-1}{0}}% MIND
     {%
       \ifodd\value{r3}
-        \set{Melee}{1}
+        \set{Brawl}{1}
       \else
-        \set{Projectiles}{1}
+        \ifodd\value{r4}
+          \set{Melee}{1}
+        \else
+          \set{Projectiles}{1}
+        \fi
       \fi
       \set{Crafts}{r2}
       \set{Cultivation}{2}
+      \ifodd\value{r3b}\else
+        \set{Survival}{1}
+      \fi
     }% SKILLS
     {}% KNACKS
     {}% EQUIPMENT

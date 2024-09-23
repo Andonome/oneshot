@@ -15,12 +15,12 @@ all: $(TITLE).pdf Extended_$(TITLE).pdf Hardcore_$(TITLE).pdf
 $(DROSS)/characters.pdf: ex_cs/
 	$(COMPILER) -jobname=characters ex_cs/all.tex
 
-config/booklet.pdf:
-	make -C config booklet.pdf
+config/rules.pdf:
+	make -C config rules.pdf
 
-$(DBOOK): LOCTEX HANDOUTS STYLE_FILES EXTERNAL | .switch-gls
+$(DBOOK): | LOCTEX HANDOUTS STYLE_FILES EXTERNAL .switch-gls
 	@$(COMPILER) main.tex
-$(TITLE).pdf: $(DROSS)/$(BOOK).pdf $(DROSS)/characters.pdf config/booklet.pdf
+$(TITLE).pdf: $(DROSS)/$(BOOK).pdf $(DROSS)/characters.pdf config/rules.pdf
 	pdfunite $^ $@
 
 $(DROSS)/extended_$(BOOK).pdf: $(UPPER_WARREN)

@@ -1,6 +1,6 @@
 include config/vars
 
-WARREN := main.tex commands.tex images/ glossary.tex intro.tex invasion.tex warren.tex appendix.tex handouts.tex appendix.tex config/
+WARREN := main.tex commands.tex images/ glossary.tex intro.tex invasion.tex warren.tex appendix.tex handouts.tex appendix.tex
 
 UPPER_WARREN := $(WARREN) top.tex tour.tex
 
@@ -18,7 +18,7 @@ $(DROSS)/characters.pdf: ex_cs/
 config/rules.pdf:
 	make -C config rules.pdf
 
-$(DBOOK): | LOCTEX HANDOUTS STYLE_FILES EXTERNAL .switch-gls
+$(DBOOK): $(WARREN) | LOCTEX HANDOUTS STYLE_FILES EXTERNAL .switch-gls
 	@$(COMPILER) main.tex
 $(TITLE).pdf: $(DROSS)/$(BOOK).pdf $(DROSS)/characters.pdf config/rules.pdf
 	pdfunite $^ $@

@@ -1,38 +1,20 @@
-\setcounter{Strength}{1}
-\setcounter{Dexterity}{0}
-\setcounter{Speed}{0}
-\setcounter{Intelligence}{1}
-\setcounter{Wits}{1}
-\setcounter{Charisma}{0}
 
-\setcounter{Academics}{1}
-\setcounter{Athletics}{0}
-\setcounter{Caving}{1}
-\setcounter{Crafts}{0}
-\setcounter{Deceit}{0}
-\setcounter{Empathy}{1}
-\setcounter{Medicine}{1}
-\setcounter{Performance}{0}
-\setcounter{Larceny}{0}
-\setcounter{Seafaring}{0}
-\setcounter{Stealth}{0}
-\setcounter{Cultivation}{0}
-\setcounter{Vigilance}{1}
-\setcounter{Survival}{0}
+\begin{filledCS}%
+  {Dent}% NAME
+  {Dwarf}% RACE
+  {Ritual Master}% CONCEPT
+  {Tribalist}% CODE
+  {{1}{0}{0}}% BODY
+  {{1}{1}{0}}% MIND
+  {%
+    \setcounter{Academics}{1}
+    \setcounter{Caving}{1}
+    \setcounter{Empathy}{1}
+    \setcounter{Medicine}{1}
+    \setcounter{Vigilance}{1}
+  }% SKILLS
+  {\ritualcaster}% KNACKS
+  {\partialchain}% EQUIPMENT
 
-\setcounter{Melee}{0}
-\setcounter{Projectiles}{0}
-
-\renewcommand\knackOne{\ritualcaster}
-\renewcommand\knackTwo{}
-
-\renewcommand\race{Dwarf}
-\renewcommand\concept{Ritual Master}
-\renewcommand\culture{Shale}
-\renewcommand\name{Dent}
-\renewcommand\code{Tribalist}
-
-\renewcommand\characterWeapon{}
-\renewcommand\characterArmour{\partialchain}
-\renewcommand\characterEquipment{}
+\end{filledCS}
 

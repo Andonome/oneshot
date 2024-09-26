@@ -1,38 +1,21 @@
-\setcounter{Strength}{-1}
-\setcounter{Dexterity}{1}
-\setcounter{Speed}{0}
-\setcounter{Intelligence}{0}
-\setcounter{Wits}{0}
-\setcounter{Charisma}{0}
 
-\setcounter{Academics}{1}
-\setcounter{Athletics}{0}
-\setcounter{Caving}{0}
-\setcounter{Crafts}{0}
-\setcounter{Deceit}{1}
-\setcounter{Empathy}{1}
-\setcounter{Medicine}{0}
-\setcounter{Performance}{0}
-\setcounter{Larceny}{0}
-\setcounter{Seafaring}{0}
-\setcounter{Stealth}{0}
-\setcounter{Cultivation}{0}
-\setcounter{Vigilance}{0}
-\setcounter{Survival}{0}
+\begin{filledCS}%
+  {Aeglir}% NAME
+  {Elf}% RACE
+  {Human Diplomat}% CONCEPT
+  {Paladin}% CODE
+  {{-1}{1}{0}}% BODY
+  {{0}{0}{0}}% MIND
+  {%
+    \setcounter{Academics}{1}
+    \setcounter{Deceit}{1}
+    \setcounter{Empathy}{1}
 
-\setcounter{Melee}{1}
-\setcounter{Projectiles}{0}
+    \setcounter{Melee}{1}
+    \partialelvish
+  }% SKILLS
+  {\snapcaster, \laststand}% KNACKS
+  {}% EQUIPMENT
 
-\renewcommand\knackOne{\snapcaster}
-\renewcommand\knackTwo{\laststand}
-
-\renewcommand\race{Elf}
-\renewcommand\concept{Human Diplomat}
-\renewcommand\culture{Eastlake}
-\renewcommand\name{Aeglir}
-\renewcommand\code{Paladin}
-
-\renewcommand\characterWeapon{}
-\renewcommand\characterArmour{\partialelvish}
-\renewcommand\characterEquipment{}
+\end{filledCS}
 

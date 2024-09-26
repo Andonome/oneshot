@@ -1,54 +1,29 @@
-\setcounter{Strength}{0}
-\setcounter{Dexterity}{-1}
-\setcounter{Speed}{0}
-\setcounter{Intelligence}{0}
-\setcounter{Wits}{0}
-\setcounter{Charisma}{1}
 
-\setcounter{Academics}{0}
-\setcounter{Athletics}{0}
-\setcounter{Caving}{0}
-\setcounter{Crafts}{0}
-\setcounter{Deceit}{0}
-\setcounter{Empathy}{0}
-\setcounter{Medicine}{0}
-\setcounter{Performance}{1}
-\setcounter{Larceny}{1}
-\setcounter{Seafaring}{0}
-\setcounter{Stealth}{0}
-\setcounter{Cultivation}{0}
-\setcounter{Vigilance}{0}
-\setcounter{Survival}{1}
+\begin{filledCS}%
+  {Advir}% NAME
+  {Elf}% RACE
+  {Travelling Singer}% CONCEPT
+  {Noble}% CODE
+  {{0}{-1}{0}}% BODY
+  {{0}{0}{1}}% MIND
+  {%
+    \setcounter{Performance}{1}
+    \setcounter{Larceny}{1}
+    \setcounter{Survival}{1}
+    \setcounter{Fate}{1}
+    \setcounter{Water}{1}
+  }% SKILLS
+  {\snapcaster, \autophage}% KNACKS
+  {}% EQUIPMENT
+  \renewcommand\charSpells{
+    \showSpells{Fate1}
 
-\setcounter{Melee}{0}
-\setcounter{Fate}{1}
-\setcounter{Water}{1}
-\setcounter{Projectiles}{0}
+    \showSpells{Fate1}
 
-\renewcommand\knackOne{\snapcaster, }
-\renewcommand\knackTwo{\autophage}
+    \showSpells{Water1}
+    \showSpells{Mind1}
+    \showSpells{Mind1}
+  }
 
-\renewcommand\race{Elf}
-\renewcommand\concept{Travelling Singer}
-\renewcommand\culture{Quennom\"e}
-\renewcommand\name{Advir}
-\renewcommand\code{Noble}
+\end{filledCS}
 
-\renewcommand\characterWeapon{}
-\renewcommand\characterArmour{}
-\renewcommand\characterEquipment{}
-
-\renewcommand\charSpellList{
-
-  \subsubsection*{Spells}
-
-  Roll Charisma + \textit{Skill} to cast.
-
-  \begin{multicols}{2}
-  \showSpells{Fate1}
-
-  \showSpells{Fate1}
-
-  \showSpells{Water1}
-  \end{multicols}
-}

@@ -1,55 +1,27 @@
-\setcounter{Strength}{-1}
-\setcounter{Dexterity}{0}
-\setcounter{Speed}{-1}
-\setcounter{Intelligence}{1}
-\setcounter{Wits}{2}
-\setcounter{Charisma}{1}
 
-\setcounter{Academics}{0}
-\setcounter{Athletics}{0}
-\setcounter{Caving}{0}
-\setcounter{Crafts}{0}
-\setcounter{Deceit}{0}
-\setcounter{Empathy}{0}
-\setcounter{Medicine}{0}
-\setcounter{Performance}{2}
-\setcounter{Larceny}{0}
-\setcounter{Seafaring}{0}
-\setcounter{Stealth}{0}
-\setcounter{Cultivation}{0}
-\setcounter{Vigilance}{0}
-\setcounter{Survival}{1}
+\begin{filledCS}%
+  {Harad}% NAME
+  {Elf}% RACE
+  {Innocent Bard}% CONCEPT
+  {Paladin}% CODE
+  {{-1}{0}{-1}}% BODY
+  {{1}{2}{1}}% MIND
+  {%
+    \setcounter{Performance}{2}
+    \setcounter{Survival}{1}
+    \setcounter{Air}{1}
+    \setcounter{Fire}{1}
+  }% SKILLS
+  {\snapcaster}% KNACKS
+  {Flute}% EQUIPMENT
+  \renewcommand\charSpells{
+    \showSpells{Air1}
+    \showSpells{Air1}
 
-\setcounter{Melee}{0}
-\setcounter{Air}{1}
-\setcounter{Fire}{1}
-\setcounter{Projectiles}{0}
+    \showSpells{Fire1}
 
-\renewcommand\knackOne{\snapcaster}
-\renewcommand\knackTwo{}
+    \showSpells{Light1}
+  }
 
-\renewcommand\race{Elf}
-\renewcommand\concept{Innocent Bard}
-\renewcommand\culture{Mt Arthur}
-\renewcommand\name{Harad}
-\renewcommand\code{Paladin}
+\end{filledCS}
 
-\renewcommand\characterWeapon{}
-\renewcommand\characterArmour{}
-\renewcommand\characterEquipment{Flute}
-
-\renewcommand\charSpellList{
-  \subsubsection*{Spells}
-
-  Roll Charisma + \textit{Skill} to cast.
-
-  \begin{multicols}{2}
-  \showSpells{Air1}
-  \showSpells{Air1}
-
-  \showSpells{Fire1}
-
-  \showSpells{Light1}
-  \end{multicols}
-
-}

@@ -1,39 +1,21 @@
-\setcounter{Strength}{4}
-\setcounter{Dexterity}{0}
-\setcounter{Speed}{1}
-\setcounter{Intelligence}{0}
-\setcounter{Wits}{-1}
-\setcounter{Charisma}{0}
 
-\setcounter{Academics}{1}
-\setcounter{Athletics}{0}
-\setcounter{Caving}{0}
-\setcounter{Crafts}{0}
-\setcounter{Deceit}{0}
-\setcounter{Empathy}{0}
-\setcounter{Medicine}{0}
-\setcounter{Performance}{1}
-\setcounter{Larceny}{0}
-\setcounter{Seafaring}{0}
-\setcounter{Stealth}{0}
-\setcounter{Cultivation}{0}
-\setcounter{Vigilance}{0}
-\setcounter{Survival}{0}
+\begin{filledCS}%
+  {Minkblot}% NAME
+  {Human}% RACE
+  {Failed Alchemist}% CONCEPT
+  {Noble}% CODE
+  {{4}{0}{1}}% BODY
+  {{0}{-1}{0}}% MIND
+  {%
+    \setcounter{Academics}{1}
+    \setcounter{Performance}{1}
+    \setcounter{Water}{1}
+  }% SKILLS
+  {}% KNACKS
+  {}% EQUIPMENT
 
-\setcounter{Melee}{0}
-\setcounter{Projectiles}{0}
-
-\renewcommand\knackOne{}
-\renewcommand\knackTwo{}
-
-\renewcommand\race{Human}
-\renewcommand\concept{Failed Alchemist}
-\renewcommand\culture{Shale}
-\renewcommand\name{Minkblot}
-\renewcommand\code{Noble}
-
-\renewcommand\characterWeapon{}
-\renewcommand\characterArmour{}
-\renewcommand\characterEquipment{}
-
+\renewcommand\charSpells{
+  \showSpells{Water1}
+}
+\end{filledCS}
 

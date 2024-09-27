@@ -13,8 +13,8 @@ images/extracted/:
 	mkdir -p $@
 	echo '*' > $@.gitignore
 
-images/extracted/lower-handout.svg: images/extracted/
-	inkscape images/Dyson_Logos/lower.svg --export-id-only --export-id=layer1 -l --export-filename $@
+images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg images/extracted/
+	inkscape $< --export-id-only --export-id=layer1 -l --export-filename $@
 
 .PHONY: all
 all: $(TITLE).pdf Extended_$(TITLE).pdf Hardcore_$(TITLE).pdf

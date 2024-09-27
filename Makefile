@@ -9,6 +9,13 @@ OUTSIDE_WARREN := $(UPPER_WARREN) the_tower.tex
 config/vars:
 	git submodule update --init
 
+images/extracted/:
+	mkdir -p $@
+	echo '*' > $@.gitignore
+
+images/extracted/lower-handout.svg: images/extracted/
+	inkscape images/Dyson_Logos/lower.svg --export-id-only --export-id=layer1 -l --export-filename $@
+
 .PHONY: all
 all: $(TITLE).pdf Extended_$(TITLE).pdf Hardcore_$(TITLE).pdf
 
@@ -36,3 +43,4 @@ Hardcore_$(TITLE).pdf: $(DROSS)/hardcore_$(BOOK).pdf
 .PHONY: clean
 clean:
 	$(CLEAN)
+	$(RM) -r images/extracted

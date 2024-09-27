@@ -2,7 +2,7 @@ include config/vars
 
 WARREN := main.tex commands.tex images/ glossary.tex intro.tex invasion.tex warren.tex appendix.tex handouts.tex appendix.tex
 
-UPPER_WARREN := $(WARREN) top.tex tour.tex
+UPPER_WARREN := $(WARREN) top.tex tour.tex images/extracted/upper-handout.svg
 
 OUTSIDE_WARREN := $(UPPER_WARREN) the_tower.tex 
 
@@ -15,6 +15,9 @@ images/extracted/:
 
 images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg images/extracted/
 	inkscape $< --export-id-only --export-id=layer1 -l --export-filename $@
+
+images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg images/extracted/
+	inkscape $< --export-id-only --export-id=layer3 -l --export-filename $@
 
 .PHONY: all
 all: $(TITLE).pdf Extended_$(TITLE).pdf Hardcore_$(TITLE).pdf

@@ -1,6 +1,6 @@
 include config/vars
 
-WARREN := main.tex commands.tex images/ glossary.tex intro.tex invasion.tex warren.tex appendix.tex handouts.tex appendix.tex
+WARREN := main.tex commands.tex images/ glossary.tex intro.tex invasion.tex warren.tex appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg
 
 UPPER_WARREN := $(WARREN) top.tex tour.tex images/extracted/upper-handout.svg
 

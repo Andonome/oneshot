@@ -14,7 +14,7 @@ images/extracted/:
 	echo '*' > $@.gitignore
 
 images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg images/extracted/
-	inkscape $< --export-id-only --export-id=layer1 -l --export-filename $@
+	inkscape $< --select=layer2 --actions=delete -l --export-filename $@
 
 images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg images/extracted/
 	inkscape $< --export-id-only --export-id=layer3 -l --export-filename $@

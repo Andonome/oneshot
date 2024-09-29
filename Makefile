@@ -13,8 +13,10 @@ images/extracted/:
 	mkdir -p $@
 	echo '*' > $@.gitignore
 
-images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg images/extracted/
-	inkscape $< --select=layer2 --actions=delete -l --export-filename $@
+images/extracted/lower-handout: images/Dyson_Logos/lower.svg images/extracted/
+	inkscape $< --select=layer2 --actions=delete -l --export-filename $@.svg
+	inkscape $@.svg --export-area=159:1936:3020:3039 --export-filename $@-1.png
+	magick $@-1.png -fill white -channel-fx '| gray=>alpha' -draw "rectangle 1680,0 2460,190" $@-1.jpg
 
 images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg images/extracted/
 	inkscape $< --export-id-only --export-id=layer3 -l --export-filename $@

@@ -18,6 +18,9 @@ images/extracted/lower-handout: images/Dyson_Logos/lower.svg images/extracted/
 	inkscape $@.svg --export-area=159:1936:3020:3039 --export-filename $@-1.png
 	magick $@-1.png -fill white -channel-fx '| gray=>alpha' -draw "rectangle 1680,0 2460,190" $@-1.jpg
 
+	inkscape $@.svg --export-area=422:502:3463:2133 --export-filename=$@-2.png
+	magick $@-2.png -fill white -channel-fx "| gray=>alpha" -draw "rectangle 0,0 1000,900" -draw "rectangle 0,0 2000,300" -draw "rectangle 0,0 1330,470" $@-2.jpg
+
 images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg images/extracted/
 	inkscape $< --export-id-only --export-id=layer3 -l --export-filename $@
 

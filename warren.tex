@@ -261,7 +261,11 @@ the spellcaster will run away, then cast spells from a short distance; \gls{kala
   give each \pgls{ep}.
 }{}
 
-\warrenMap
+\iftoggle{hardcore}{
+  \warrenMap
+}{
+  \warrenMapLower
+}
 
 \paragraph{If \gls{kalama} finds a peaceful moment to speak,}
 he explains his whole situation, and his mission to find the children (in room \ref{nursery}).
@@ -504,6 +508,10 @@ he blesses them all, restoring any lost \glspl{fp}.
 }{}
 
 \noteRaidingParty
+
+\iftoggle{hardcore}{}{
+  \warrenMapMiddle
+}
 
 \mapentry[treasureRoom]{Treasure Room}
 
@@ -755,6 +763,10 @@ introduce another \gls{pc} here%
   the ex-prisoners inform them that all the \pgls{village} for some miles have fallen, and \gls{oneTown} lies unprotected.
   Even if the goblins die, the town will be in trouble.
 }{}
+
+\iftoggle{hardcore}{}{
+  \warrenMapUpper
+}
 
 \mapentry[armoury]{Armoury}
 

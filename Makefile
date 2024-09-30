@@ -1,6 +1,6 @@
 include config/vars
 
-WARREN := main.tex commands.tex images/ glossary.tex intro.tex invasion.tex warren.tex appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg
+WARREN := main.tex commands.tex images/ glossary.tex intro.tex invasion.tex warren.tex appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg $(MAP_PARTS)
 
 UPPER_WARREN := $(WARREN) top.tex tour.tex images/extracted/upper-handout.svg
 
@@ -12,6 +12,8 @@ config/vars:
 images/extracted/:
 	mkdir -p $@
 	echo '*' > $@.gitignore
+
+MAP_PARTS = images/extracted/lower-1.jpg images/extracted/lower-2.jpg images/extracted/lower-3.jpg
 
 images/extracted/lower-1.jpg: images/Dyson_Logos/lower.svg images/extracted/
 	cat $< | inkscape --pipe \

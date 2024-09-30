@@ -246,6 +246,46 @@
 
 }
 
+\newcommand\warrenMapLower{
+  \mapPic{b}{extracted/lower-1}{
+    \ref{entrycell}/85/16,
+    \ref{escapeShaft}/95/51,
+    \ref{diningRoom}/80/65,
+    \ref{spellCasters}/65/75,
+    \ref{kitchen}/53/27,
+    \ref{lift}/35/55,
+    \ref{dragonApproach}/05/80,
+  }
+}
+
+\newcommand\warrenMapMiddle{
+  \mapPic{b}{extracted/lower-2}{
+    \ref{dragon}/05/27,
+    \ref{treasureRoom}/15/41,
+    \ref{nursery}/40/30,
+    \ref{slugHall}/64/22,
+    \ref{greatHall}/71/59,
+    \ref{workshop}/90/52,
+    \ref{grandLibrary}/84/83,
+    \ref{windingStairs}/59/70,
+    \ref{secondPrison}/35/70,
+  }
+}
+
+\newcommand\warrenMapUpper{
+  \mapPic{b}{extracted/lower-3}{
+    \ref{armoury}/94/70,
+    \rotatebox{37}{$\huge\Longleftarrow$}/70/55,
+    \ref{inDoor}/75/59,
+    \ref{outDoor}/58/96,
+    \rotatebox{41}{$\huge\Longrightarrow$}/54/86,
+    \ref{topShaft}/35/70,
+    \ref{fungusGarden}/09/42,
+    \ref{lowerExit}/80/999,%
+    {\iftoggle{hardcore}{\ref{goblinSentry}}{}}/41/56,
+  }
+}
+
 \newcommand\theAlchemist{
   \Person{\npc{\M\Hu}{\Gls{alchemist}}}%
     {{1}{0}{0}}% BODY

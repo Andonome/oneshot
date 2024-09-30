@@ -13,19 +13,38 @@ images/extracted/:
 	mkdir -p $@
 	echo '*' > $@.gitignore
 
-images/extracted/lower-handout: images/Dyson_Logos/lower.svg images/extracted/
-	inkscape $< --select=layer2 --actions=delete -l --export-filename $@.svg
-	inkscape $@.svg --export-area=159:1936:3020:3039 --export-filename $@-1.png
-	magick $@-1.png -fill white -channel-fx '| gray=>alpha' -draw "rectangle 1680,0 2460,190" $@-1.jpg
+images/extracted/lower-1.jpg: images/Dyson_Logos/lower.svg images/extracted/
+	cat $< | inkscape --pipe \
+	--select=layer2 --actions=delete \
+	--export-type=png --export-area=159:1936:3020:3039 | \
+	magick - -fill white -channel-fx '| gray=>alpha' \
+	-draw "rectangle 1680,0 2460,190" $@
 
-	inkscape $@.svg --export-area=422:502:3463:2133 --export-filename=$@-2.png
-	magick $@-2.png -fill white -channel-fx "| gray=>alpha" -draw "rectangle 0,0 1000,900" -draw "rectangle 0,0 2000,300" -draw "rectangle 0,0 1330,470" $@-2.jpg
+images/extracted/lower-2.jpg: images/Dyson_Logos/lower.svg images/extracted/
+	cat $< | inkscape --pipe \
+	--select=layer2 --actions=delete \
+	--export-type=png --export-area=422:502:3463:2133 | \
+	magick - -fill white -channel-fx '| gray=>alpha' \
+	-draw "rectangle 0,0 1000,900" \
+	-draw "rectangle 0,0 2000,300" \
+	-draw "rectangle 0,0 1330,470" \
+	$@
 
-	inkscape $@.svg --export-area=30:40:2350:1400 --export-filename=$@-3.png
-	magick $@-3.png -fill white -channel-fx "| gray=>alpha" -draw "rectangle 1370,935 2320,1360" -draw "rectangle 1350,1330 2320,1360" -draw "rectangle 1720,770 2320,1360" $@-3.jpg
+images/extracted/lower-3.jpg: images/Dyson_Logos/lower.svg images/extracted/
+	cat $< | inkscape --pipe \
+	--select=layer2 --actions=delete \
+	--export-type=png --export-area=30:40:2350:1400 | \
+	magick - -fill white -channel-fx '| gray=>alpha' \
+	-draw "rectangle 1370,935 2320,1360" \
+	-draw "rectangle 1350,1330 2320,1360" \
+	-draw "rectangle 1720,770 2320,1360" \
+	$@
 
 images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg images/extracted/
 	inkscape $< --export-id-only --export-id=layer3 -l --export-filename $@
+
+images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg images/extracted/
+	inkscape $< --select=layer2 --actions=delete -l --export-filename $@
 
 .PHONY: all
 all: $(TITLE).pdf Extended_$(TITLE).pdf Hardcore_$(TITLE).pdf

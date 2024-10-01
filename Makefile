@@ -1,10 +1,10 @@
 include config/vars
 
-WARREN := main.tex commands.tex images/ glossary.tex intro.tex invasion.tex warren.tex appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg $(MAP_PARTS)
+WARREN = main.tex commands.tex images/ glossary.tex intro.tex invasion.tex warren.tex appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg $(MAP_PARTS)
 
-UPPER_WARREN := $(WARREN) top.tex tour.tex images/extracted/upper-handout.svg
+UPPER_WARREN = $(WARREN) top.tex tour.tex images/extracted/upper-handout.svg
 
-OUTSIDE_WARREN := $(UPPER_WARREN) the_tower.tex 
+OUTSIDE_WARREN = $(UPPER_WARREN) the_tower.tex 
 
 config/vars:
 	git submodule update --init
@@ -17,29 +17,20 @@ MAP_PARTS = images/extracted/lower-1.jpg images/extracted/lower-2.jpg images/ext
 
 images/extracted/lower-1.jpg: images/Dyson_Logos/lower.svg images/extracted/
 	cat $< | inkscape --pipe \
-	--select=layer2 --actions=delete \
 	--export-type=png --export-area=159:1936:3020:3039 | \
-	magick - -fill white -channel-fx '| gray=>alpha' \
-	-draw "rectangle 1680,0 2460,190" $@
+	magick - \
+	$@
 
 images/extracted/lower-2.jpg: images/Dyson_Logos/lower.svg images/extracted/
 	cat $< | inkscape --pipe \
-	--select=layer2 --actions=delete \
 	--export-type=png --export-area=422:502:3463:2133 | \
-	magick - -fill white -channel-fx '| gray=>alpha' \
-	-draw "rectangle 0,0 1000,900" \
-	-draw "rectangle 0,0 2000,300" \
-	-draw "rectangle 0,0 1330,470" \
+	magick - \
 	$@
 
 images/extracted/lower-3.jpg: images/Dyson_Logos/lower.svg images/extracted/
 	cat $< | inkscape --pipe \
-	--select=layer2 --actions=delete \
 	--export-type=png --export-area=30:40:2350:1400 | \
-	magick - -fill white -channel-fx '| gray=>alpha' \
-	-draw "rectangle 1370,935 2320,1360" \
-	-draw "rectangle 1350,1330 2320,1360" \
-	-draw "rectangle 1720,770 2320,1360" \
+	magick - \
 	$@
 
 images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg images/extracted/

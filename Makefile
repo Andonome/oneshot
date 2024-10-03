@@ -9,10 +9,6 @@ OUTSIDE_WARREN = $(UPPER_WARREN) the_tower.tex
 config/vars:
 	git submodule update --init
 
-images/extracted/:
-	mkdir -p $@
-	echo '*' > $@.gitignore
-
 MAP_PARTS = images/extracted/lower-1.jpg images/extracted/lower-2.jpg images/extracted/lower-3.jpg
 
 LOWER_SECTION_1_RECTS = magick - -fill white -channel-fx '| gray=>alpha' \

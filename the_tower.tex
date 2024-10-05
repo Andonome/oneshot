@@ -43,16 +43,18 @@ The party probably thought they were out of the woods, but in fact they will hav
 \end{boxtext}
 
 Night's darkness allows the \glspl{pc} to see two fires.
-The first lies 3 miles away, North West.
-The fire hosts a camp of cowardly \gls{guard} who fled their posts when the goblinoid horde descended.
+The first lies 3 miles to the North West.
+The fire hosts a camp of cowardly \glspl{guard} who fled their posts when the goblinoid horde descended.
 
 The second lies 4 miles North, and comes from \gls{alchemist}'s tower.
 
 \paragraph{If the troupe head towards either light,}
-they will have to descend into the forest, at which point they can no longer see the lights.
-
-Finding the lights requires an \roll{Intelligence}{Survival} roll~(\tn[9]).
-Each Failure Margin on the roll adds an extra mile to the journey.
+they will have to descend into the forest, at which point they can no longer see the lights, making \gls{navigation} difficult.
+\setcounter{track}{8}
+\ifnum\value{temperature}=0\addtocounter{track}{4}\fi%
+Finding the lights requires an \roll{Intelligence}{Survival} roll~(\gls{tn}~\arabic{track}).
+Each Failure Margin on the roll adds another mile to the journey, and +1 to the \gls{tn} for future rolls (assuming the troupe haven't arrive after \pgls{interval}).%
+\footnote{This is a deathly situation, but every reasonable idea the players have to help get their bearings should reduce the \gls{tn} by 1.}
 
 \paragraph{Remaining on the hill}
 means no food, and goblins skulking around the area at night.
@@ -99,8 +101,8 @@ And while they talk, little goblins watch the fire, hungrily, then return to the
 requires a \roll{Wits}{Vigilance} roll against the goblins' \roll{Dexterity}{Stealth} (\tn).
 
 \paragraph{If the party befriend the \glspl{guard}}
-they will divide the watch phase between the two groups.
-Otherwise, the \glspl{guard} will keep watch, whether or not the \glspl{pc} do so.
+they will divide the \gls{vigil} between the two groups.
+Otherwise, the \glspl{guard} will keep \pgls{vigil}, whether or not the \glspl{pc} do so.
 
 Have the party roll \roll{Charisma}{Empathy} (\tn[10]).
 

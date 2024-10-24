@@ -16,6 +16,7 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \begin{document}
 
+\glsunsetall
 \frontpage[Escape from the Goblin Horde]{%
   \iftoggle{oneshot}{A oneshot adventure for BIND}{%
     \iftoggle{hardcore}%
@@ -33,6 +34,8 @@ Keywords={TTRPG,RPG,roleplaying}
 }
 
 \mainmatter
+
+\glsresetall
 
 \input{invasion.tex}
 

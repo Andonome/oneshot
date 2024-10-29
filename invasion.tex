@@ -16,13 +16,11 @@
 
 \noindent
 \iftoggle{hardcore}{%
-  This module provides an introduction to your BIND campaign.
-  It provides an opportunity for players to make characters, and then make some more once some characters die.
-
   Many scenes may come across as `unfair', but the area provides enough tools, \glspl{talisman}, and potential allies that the troupe should prevail as long as they have a little cunning and insight.
-
+  
   The module will take around two sessions to complete, so you may have to put aside the standard BIND rules on \gls{downtime}, where real-world time passes between sessions, at least until the end of the module.
 }{%
+  \iftoggle{oneshot}{%
   This one-shot module for the BIND RPG provides a no-stress, simple game, which lasts a single evening.
 
   It goes like this:
@@ -46,12 +44,16 @@
 
   However you read, this module's rooms don't stand in isolation.
   It has a handful of parts, like the scrolls, the dragon, and the goblinoid horde; and you should feel comfortable moving these people to a nearby room, or finding out what the \glspl{pc} get up to when they move alchemical scrolls and prisoners about.
+  }{%
+    This module provides an introduction to your BIND campaign.
+    It provides an opportunity for players to make characters, and then make some more once some characters die.
+  }
 }
 
 \subsection{The Premise}
 
 The \glspl{pc} awaken to find themselves in a cell, deep underground.
-Their last memories surface slowly as the players \iftoggle{hardcore}{themselves start to make their characters}{get to know their character}.
+Their last memories surface slowly\iftoggle{hardcore}{}{ as the players \iftoggle{oneshot}{get to know their character}{themselves start to make their characters}}.
 
 Once they escape into the once-gnomish \gls{warren}, the troupe might:
 
@@ -185,34 +187,36 @@ You should cut (or tear) these apart, so you can hand them to players to individ
   It lays out a picture while reading this module for the first time, but should be modified or forgotten when running it live.
 }{}
 
-\subsection{Creation \& Introductions}
 
-\iftoggle{hardcore}{
+\iftoggle{hardcore}{}{%
+  \subsection{Creation \& Introductions}
 
-  \sidebox{
-    \begin{dlist}
-      \ifnumcomp{\value{temperature}}{=}{0}{\item Warm clothing (\glsfmttext{weight} 2)}{}
-      \item
-      Partial leather armour
-      \item
-      Flint box
-      \item
-      Knife
-    \end{dlist}
+  \iftoggle{oneshot}{
+    Shuffle the character sheets and hand each player a random one.
+    Give the players a moment to study their characters while you hide the rest of the character sheets -- you will need them later.
+    Ask them to put the right number of coins on the circles to keep track of their \glspl{hp}, \glspl{fp}, and so on.
+
+    Character sheets with spells on the back should also use coins to mark 3~\glspl{mp} per elemental Sphere listed.
+  }{%  
+    \sidebox{
+      \begin{dlist}
+        \ifnumcomp{\value{temperature}}{=}{0}{\item Warm clothing (\glsfmttext{weight} 2)}{}
+        \item
+        Partial leather armour
+        \item
+        Flint box
+        \item
+        Knife
+      \end{dlist}
+    }
+
+    Players should start the adventure first, and make characters while they (the characters) sit in the dark, getting to know each other.
+    They can decide who they are through introductions.
+    Go through normal character creation,
+    \exRef{stories}{Book of Stories}{character_rolls}
+    but ignore the section on giving \glspl{pc} items, as the goblins have taken most of their items already.
+    Instead, each player should roll $1D6$ to see if the goblins left them with something by accident.
   }
-
-  Players should start the adventure first, and make characters while they (the characters) sit in the dark, getting to know each other.
-  They can decide who they are through introductions.
-  Go through normal character creation,
-  \exRef{stories}{Book of Stories}{character_rolls}
-  but ignore the section on giving \glspl{pc} items, as the goblins have taken most of their items already.
-  Instead, each player should roll $1D6$ to see if the goblins left them with something by accident.
-}{
-  Shuffle the character sheets and hand each player a random one.
-  Give the players a moment to study their characters while you hide the rest of the character sheets -- you will need them later.
-  Ask them to put the right number of coins on the circles to keep track of their \glspl{hp}, \glspl{fp}, and so on.
-
-  Character sheets with spells on the back should also use coins to mark 3~\glspl{mp} per elemental Sphere listed.
 }
 
 \iftoggle{oneshot}{

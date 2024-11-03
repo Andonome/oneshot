@@ -1,10 +1,10 @@
 include config/vars
 
-WARREN = main.tex commands.tex images/ glossary.tex intro.tex invasion.tex warren.tex appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg $(MAP_PARTS)
+WARREN = main.tex commands.tex images/ glossary.tex intro.tex invasion.tex $(wildcard warren_*.tex) appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg $(MAP_PARTS)
 
 UPPER_WARREN = $(WARREN) top.tex tour.tex images/extracted/upper-handout.svg
 
-OUTSIDE_WARREN = $(UPPER_WARREN) the_tower.tex 
+OUTSIDE_WARREN = $(UPPER_WARREN) module.tex the_tower.tex
 
 config/vars:
 	git submodule update --init
@@ -88,7 +88,7 @@ Extended_$(TITLE).pdf: $(DROSS)/extended_$(BOOK).pdf $(DROSS)/characters.pdf
 	pdfunite $^ $@
 
 $(DROSS)/hardcore_$(BOOK).pdf: $(OUTSIDE_WARREN) the_tower.tex
-	@$(COMPILER) -jobname=hardcore_$(BOOK) main.tex
+	@$(COMPILER) -jobname=hardcore_$(BOOK) module.tex
 Hardcore_$(TITLE).pdf: $(DROSS)/hardcore_$(BOOK).pdf
 	@$(CP) $< $@
 

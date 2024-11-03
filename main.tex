@@ -18,11 +18,7 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \glsunsetall
 \frontpage[Escape from the Goblin Horde]{%
-  \iftoggle{oneshot}{A oneshot adventure for BIND}{%
-    \iftoggle{hardcore}%
-    {A meat-grinder for foolish adventurers}%
-    {An introductory adventure for BIND}%
-  }%
+  \iftoggle{oneshot}{A oneshot adventure for BIND}{An introductory adventure for BIND}%
 }
 
 \frontmatter
@@ -39,15 +35,44 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \input{invasion.tex}
 
-\input{warren.tex}
+\chapter{The \Glsfmttext{warren}}
+\epigraph{%
+    There is something I seek.
+
+    While it is bound, it chooses kings and peasants.
+    When it is freed, it foretells war or woe.
+
+    While it bound, it propels men's lusts and furies.
+    When it is freed, it tumbles, falls, and fades.
+
+    While it is bound, life will often thrive.
+    When it is freed, death will often follow.
+}{}
+
+\begin{multicols}{2}
+
+\input{warren_lower.tex}
+
+\input{warren_mid.tex}
+
+\input{warren_upper.tex}
+
+\end{multicols}
 
 \iftoggle{oneshot}{}{
+  \chapter{The Top Floor}
+  \epigraph{%
+      Never resting, never still.
+
+      Moving silently from hill to hill.
+
+      It does not walk, run or trot.
+
+      All is cool where it is not.
+  }{}
+
   \input{top.tex}
 }
-
-\iftoggle{hardcore}{
-  \input{the_tower.tex}
-}{}
 
 \startappendix
 

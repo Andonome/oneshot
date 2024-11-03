@@ -1,0 +1,184 @@
+\subsection{Mid Levels}
+
+\iftoggle{hardcore}{
+  \mapentry[goblinSentry]{The Sentry}
+
+  Svart, the goblin, stands at the door to room \ref{nursery} (below), attempting to pick the lock.
+  \paragraph{When the \glspl{pc} exit the lift door,}
+  he runs over, hoping to beg some food from the \glspl{ogre} he expects to emerge.
+  Once he sees the \glspl{pc}, he runs for the stairs, shouting for help.
+
+  \goblin[\npc{\M\N}{Svart}]
+}{}
+
+\noteRaidingParty
+
+\mapentry[nursery]{Nursery}
+
+\begin{exampletext}
+  When the horde arrived, a gnome locked the children in here with enough food for a few days.
+\end{exampletext}
+
+The door is locked, but can be picked with a \roll{Dexterity}{Larceny} roll (\tn[9]) if anyone has some lock-picking tools.
+It's far too strong to be broken into by force.
+
+If the \glspl{pc} enter the room, they may think these little gnomes are little goblins and kill them.
+If any of them try to do so, have them roll a \roll{Intelligence}{Medicine} (\tn[8]) check to realize their mistake.
+Of course, any gnome can identify the children immediately.
+
+\begin{boxtext}
+  The sound of crying emanates from the door as you swing it open.
+  In this cramped room, a dozen infants with fat little noses lie in a crib with hay, looking up at you in terror.
+  The tiny room stinks of shit.
+\end{boxtext}
+
+\paragraph{The moment the \glspl{pc} approach the nursery door,}
+a goblin falls onto room \ref{lift}'s lift and states the command word to bring it up to the top floor.
+This goblin is Grank, and he is the only goblin who knows the password for the top.
+
+\paragraph{If the \glspl{pc} take the children,}
+they know to know to keep quiet and follow, but will only keep quiet if the party succeed on an \roll{Intelligence}{Empathy} roll (\tn[10]).
+
+\swarm{Gnomish Children}{5}{-2}{-3}{-5}
+
+There are five children in total, and they each have \pgls{weight} between 1 and 2, but can generally be treated as a single `\gls{swarm}'.
+
+None can walk, so the troupe must carry an additional \gls{weight} of 5, distributed as they please.
+To further complicate matters, the gnome-children must go \emph{somewhere}, such as a bag.
+Characters might also construct a baby-wrap out of clothes with an \roll{Intelligence}{Crafts} roll (\tn[10]).
+Rolling a tie indicates the wrap does not work, while rolling a failure means the wrap works until the character tries to run\ldots
+
+\mapentry[slugHall]{Slug Hall}
+
+\begin{exampletext}
+Gnomes grew mushrooms throughout this room in order to grow slugs, which fed fireflies.
+While torches work better than fireflies, having omnipresent little lights wandering around the \gls{warren} made sure that people could get about easier.
+
+Once the goblin druids arrived, they cast life-engorging spells to grow the slugs to monstrous proportions, in order to ensure that prisoners don't escape past this point.
+Salt covers the stairs, preventing the slugs from moving upwards.
+The fireflies continue nipping at them, and have quadrupled their population.
+The slugs don't make good guardians, but at least the halls have plenty of light.
+\end{exampletext}
+
+\begin{boxtext}
+  The doorway reveals a massive hallway of sparkling, floating, gently-buzzing, lights.
+  Over to the left, a massive staircase leads up into the darkness.
+  And ahead, the little lights gently illuminate giant slugs, feasting on corpses and torn-up books.
+
+  The moment you enter, the slugs' eye-stalks perk up, and they begin to slide off the corpses they were feasting on, and approach\ldots
+\end{boxtext}
+
+\paragraph{If the \glspl{pc} run up the stairs,}
+have them roll \roll{Speed}{Athletics} (\gls{tn} \arabic{track}) to avoid the acidic spray form the slugs.
+
+From that point until the slugs loose sight of them, they are in combat.
+The slugs will spray acid at them, follow them up the stairs, and pester them for as long as they remain in sight.
+
+\morphslug[\npc{\T[9]\A\R}{20 Morph Slugs}]
+
+\paragraph{If the \glspl{pc} throw in some food,}
+the morph-slugs head\ldots slowly\ldots towards it rather than fight.
+
+\paragraph{If the \glspl{pc} want to investigate the corpses,}
+they find a dead gnome with \pgls{deep} Scroll, and a discarded, half-eaten cloak, with a key to room \ref{nursery} in the pocket.%
+\footnote{See \autopageref{saving_the_children} for how the key arrived here.}
+\iftoggle{oneshot}{%
+  As with the others, the \Gls{deep} Scroll requires a riddle to be answered, takes four rounds before it activates, and vanishes once used.
+}{}
+
+\paragraph{If the \glspl{pc} remove all the salt from the stairs,}
+the slugs ascend\ldots slowly.
+However, the resulting battle will kill three \glspl{ogre}, and all morph-slugs.
+
+\boxPair{
+  \label{workshopGoblins}
+  \goblin[\npc{\T[\arabic{enemyNo}]\N}{\arabic{enemyNo} Goblins}]
+
+  \addtocounter{enemyNo}{-2}
+
+  \ogre[\npc{\T[\arabic{enemyNo}]\N}{\arabic{enemyNo} Ogres}]
+}{
+  \pic{Decky/armoury}
+
+}
+
+\mapentry[greatHall]{The Great Hallway}
+
+If the \glspl{pc} have indeed been quiet enough in the previous room to not raise an alarm, they find everyone in the neighbouring rooms napping.
+A single sound means they will be in serious trouble.
+
+The greasy floor results from a mixture of faeces, drool, blood and leftover mushroom-juice.
+
+\begin{boxtext}
+  At the top of the stairs, this massive chamber lies empty, except for the fireflies darting about, and some human bones on the filthy floor.
+  To the right, there two short tunnels reverberate with assorted snoring sounds.
+  Ahead of you, two grand staircases lead up into a dim but unwavering light.
+  Below you, the entire floor is sticky and greasy.
+\end{boxtext}
+
+\paragraph{If the \glspl{pc} have come from room \ref{slugHall},}
+they will not see the staircase on their left immediately, but \emph{will} see it after doing literally anything (fighting, searching, et~c.).
+
+\paragraph{If the \glspl{pc} tarry or talk,}
+have them roll \roll{Intelligence}{Stealth} (\tn[8]), to get across the sticky floor without squelching too much.
+\iftoggle{oneshot}{%
+  They make only one \gls{natural}, which counts for the whole group.
+  Each margin on the roll allows them an additional round before the horde wakes.
+}{}
+
+\iftoggle{hardcore}{
+  If a single \emph{player} clearly gives in-character advice to another, the horde awaken.
+}{}
+
+\mapentry[workshop]{The Workshop}
+
+Picks, shovels, backpacks, wood, short swords, shortbows, and all manner of crafting and mining equipment litter the room.
+
+\begin{boxtext}
+  Some goblins and three \glspl{ogre} lie sleeping on the floor between workbenches.
+  The place is so full, you can't make out how many lie here, but the snoring indicates more than you can see.
+  On the benches, most of the equipment lies broken, but delicate gnomish hands once used these tables to polish gems, craft magical items, and forge digging equipment.
+  On one table, you can see a pile shortswords and spears.
+\end{boxtext}
+
+\paragraph{If the \glspl{pc} have come up from room \ref{escapeShaft},}
+the reaction depends entirely on how much noise they made while pushing the great forge aside.
+
+\paragraph{If the \glspl{pc} attempt to take either a short sword or a spear,}
+each attempt requires a \roll{Dexterity}{Stealth} roll, \tn[7].
+Failure will awaken the entire horde, while a tie allows them a good head start.
+
+Find the goblins' stats \vpageref{workshopGoblins}.
+
+\mapentry[grandLibrary]{The Grand Library}
+
+The goblin druid had been investigating \pgls{talisman} -- \lootTalisman.
+It remains on the ground beside him.
+
+\showTalisman
+
+\goblincaster
+
+\labyrinthScroll 
+The goblin druid holds a \spellName\ in her sleepy hands.
+
+\iftoggle{hardcore}{
+  \ogre[\npc{\T[2]\N}{2 Docile Ogres}]
+}{
+  \ogre[\npc{\F\N}{Sleeping Ogre}]
+}
+
+\begin{boxtext}
+  At the top of the stairs you find the ruins of a massive library.
+  Book cases lie in a smashed heap on the ground, others appear to be used as a makeshift bed for an ogre.
+  The books themselves are gone, except for a scroll, now tightly clutched by a goblin in a black cowl.
+\end{boxtext}
+
+\paragraph{If any of the \glspl{pc} attempt to sneak in,}
+have them roll \roll{Dexterity}{Stealth}, \tn[8].
+
+Failure will, of course, spell disaster, but success will allow them to steal a magical item.
+If the player wants to steal multiple magical items, describe them and see how many they decide to take.
+Each item taken increases the roll's \gls{tn} by 1, so taking 3 items would mean \pgls{tn} of 11.
+The player should not roll again -- the original roll remains, but increasing the \gls{tn} may well turn success into awful failure.
+

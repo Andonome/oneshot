@@ -1,0 +1,261 @@
+\iftoggle{oneshot}{%
+  \subsection{Last Level}
+}{
+  \subsection{Upper Warren}
+}
+
+\mapentry[windingStairs]{Winding Stairs}
+
+A single ogre guards the prisoners here (the door has no lock).
+
+\begin{boxtext}
+  As you round the stairs' third turn, you see a massive ogre crouching by a door, blocking the path upwards.
+\end{boxtext}
+
+\paragraph{If the party have made a reasonable attempt at staying quiet,}
+they can avoid alerting this ogre with a \roll{Wits}{Stealth} roll, \tn[9].
+Whoever is at the front makes the roll.
+If it's unclear who's at the front, the character with the highest \roll{Speed}{Athletics} is in the lead.
+With a successful roll,
+\iftoggle{hardcore}{
+  the ogre is resting, and must take a round to gather what's left of his wits, but it will still wake if approached.
+}{%
+ the party find the ogre sleeping.
+}
+
+\ogre[\npc{\N\M}{Rick, the Ogre Guard}]
+
+\mapentry[secondPrison]{Second Prison}
+
+\begin{exampletext}
+  This little room once housed a full family of gnomes, but now serves only as another prison.
+\end{exampletext}
+
+The prisoners require no locks or handcuffs -- the ogre waiting outside suffices to terrify them into staying put.
+
+\paragraph{If any of the \glspl{pc} have died,}
+introduce another \gls{pc} here%
+\iftoggle{hardcore}{.}{, from the pool.}
+
+\iftoggle{hardcore}{%
+  \paragraph{If the party get a moment to ask about the outside world,}
+  the ex-prisoners inform them that all the \pgls{village} for some miles have fallen, and \gls{oneTown} lies unprotected.
+  Even if the goblins die, the town will be in trouble.
+}{}
+
+\iftoggle{hardcore}{}{
+  \warrenMapUpper
+}
+
+\mapentry[armoury]{Armoury}
+
+\begin{exampletext}
+
+  The gnomes once stashed their little weapons here.
+  The horde have added to it considerably.
+
+\end{exampletext}
+
+The \glspl{pc} see the following:
+
+\begin{itemize}
+
+  \item{3 buckler shields}
+  \item{1 crossbow (unstrung but usable with an \roll{Wits}{Crafts} roll, \tn[7])}
+  \item{3 quivers, each with 20 arrows (for a shortbow)}
+  \iftoggle{hardcore}{%
+    \item{3 crossbow bolts}
+    \item{2 shortbows (also unstrung)}
+  }{
+    \item{8 crossbow bolts}
+    \item{2 shortbows}
+  }
+  \item{3 shortswords}
+  \item{7 wood axes}
+
+\end{itemize}
+
+\begin{boxtext}
+  At the top of the stairway, three dying fireflies wander pointlessly.
+  Behind them, a cluster of shadow in an alcove holds metallic glints.
+  To the left, dirty little footprints lead out a little wooden door.
+\end{boxtext}
+
+\iftoggle{oneshot}{
+  \paragraph{Buckler Shields}
+  These shields work like any other \gls{weapon}.
+
+  \paragraph{The crossbow}
+  (if repaired) deals $1D6+3$ Damage, but requires at least 4 rounds to reload.
+
+  \paragraph{Shortbows}
+  Require 1 \glspl{ap} to loose an arrow, and 1 \glspl{ap} to reload.
+  However, they deal only $1D6-1$ Damage.
+
+  \begin{boxtable}[XYYYc]
+  \label{armouryWeapons}
+
+  \textbf{Name} & \textbf{Attack Bonus} & \textbf{Damage Bonus} & \textbf{\glspl{ap} Cost} & \textbf{\gls{weight}} \\\hline
+
+  \showWeapon{\buckler} \\
+  \showWeapon{\shortsword} \\
+  \showWeapon{\spear} \\
+  \showWeapon{\woodaxe} \\
+
+  \end{boxtable}
+}{}
+
+\newRule{\Glsfmtlong{dr} \& \Glsfmtplural{vitalShot}}{
+
+  \paragraph{\Gls{armour}}
+  \glsdesc{armour}
+  \paragraph{\Gls{covering}}
+  \glsdesc{covering}
+  \paragraph{\Gls{dr}}
+  \glsdesc{dr}
+  \paragraph{\Glspl{vitalShot}}
+  \glsdesc{vitalShot}
+
+}
+
+\mapentry[inDoor]{The Two-Way Doors}
+
+\begin{exampletext}
+  When gnomes rushed busily around the \gls{warren}, taking mushrooms to the kitchen, chamber-pots to the mushrooms, and secrets to fellow conspirators, they sometimes bumped into each other.
+  To stop this happening again, they designated this door as `out', and the other as `in'.
+\end{exampletext}
+
+The \glspl{pc} will see the lift's double-doors straight ahead of them (assuming they have any light at all).
+
+\begin{boxtext}
+  Ahead the tunnel continues past a corridor on the right, and ends next to a small door on the left, barely visible in the shadows.
+  On your immediate left, smooth, man-sized, double-doors stand without any handle, lock or other feature.
+\end{boxtext}
+
+\paragraph{Opening either door from the wrong side}
+requires a \roll{Strength}{Larceny} roll, \tn[10].
+Once it shuts, it shuts.
+
+\mapentry[outDoor]{The Out Door}
+
+This little door opens the opposite way from the double doors in area \ref{inDoor}, and also demands a roll of \roll{Strength}{Larceny} (\tn[10]) to open from the wrong side.
+
+The \glspl{ogre} cannot run through this door -- they have to stop, and squeeze.
+Anyone waiting on the other side can roll \roll{Intelligence}{Melee} against the ogre's \roll{Speed}{Melee}; success means the character can make \pgls{vitalShot} against the giant head squirming through the door.%
+\exRef{core}{Core Rules}{sneakattack}
+
+\mapentry[topShaft]{The Top of the Shaft}
+
+\widePic{Roch_Hercka/garden}
+
+Grank the goblin druid has heard the \glspl{pc} coming, and has no intention of fighting them alone.
+He knows he has the only key to the exit door (room \vref{lowerExit}), so he intends to loose the morph-wolves he has tied up at the room's side before fleeing into the fungal gardens.
+
+\begin{boxtext}
+  Ahead of you stand the lift's double-doors.
+  To the far right eyes of monstrous wolves blazing with feral intensity stare at you, straining against the taut ropes that bind them.
+  The metal ring attached to the wall groans under the tension, as if it too feels the weight of the beasts' fury.
+
+  Behind the wolves you spot a goblin.
+  Its torch casts a glow on its face, illuminating a mischievous grin.
+  The creature's eyes sparkle with malevolent glee as it slowly raises the flame higher, watching with rapt attention as the ropes begin to fray under the strain.
+
+  The wolves' restraints rip off in a whipping snap as the beasts burst free from their bonds, and rush straight to you.
+\end{boxtext}
+
+\paragraph{If the party attempt to run through the lift's double doors,}
+they might suddenly find an empty lift-shaft.
+In this case, have them roll \roll{Wits}{Athletics} (\tn[7]) to back off before they fall.
+A drop from this height inflicts $1D6+1$ Damage, plus their Strength Bonus.%
+\footnote{Larger creatures receive more Damage from falls}
+
+\morphwolf[\npc{\T[4]\A\R}{\arabic{noAppearing} Morph Wolves}]
+
+\paragraph{If the party fall into the lift,}
+they end up in the mid-section of the \gls{warren}.
+
+\mapentry[fungusGarden]{Fungal Gardens}
+
+\begin{exampletext}
+  This beautiful fungal garden took dripping rain from above, and sieved it through the roof then the soil below, until it distributed nutrients for a forest of mushrooms, big and small.
+
+  Last \ifnum\value{cycle}=4\gls{cThree}\else\gls{cFive}\fi, acidic oozes crept in through tiny cracks, so the gnomes had to kill the little pests before they grew too large.
+  The goblins haven't kept up with the maintenance, so the semi-sentient gelatinous \glspl{swarm} quickly grew massive, so the goblins simply closed the door and left them alone.
+\end{exampletext}
+
+While the place looks serene, it is inhabited by
+\iftoggle{hardcore}{%
+  dangerous oozes.
+}{%
+  a dangerous ooze.
+}
+
+\paragraph{Once the players enter the room,}
+\iftoggle{hardcore}{%
+  the oozes begin to stalk them.
+  If multiple oozes chase them, the smaller ones will always back away from the larger ones, so no more than one ooze should follow them at a time (always the largest one).
+}{%
+  the ooze begins to stalk them.
+
+  \paragraph{Investigating the green glows}
+  reveals little patches of shiny-green \glspl{glowshroom}.
+}
+
+\paragraph{If the \glspl{pc} approach Grank,}
+he will hide while casting spells.
+
+\paragraph{If Grank ever feels like his life is under threat,}
+then he will taunt the \glspl{pc} with the key to the outside world he has in is position, and throw it into the nearest ooze.
+He then lets out a giggle and dashes off into the fungal undergrowth, leaving the players to face the hulking, pulsating, mass.
+
+\goblincaster[\npc{\M\N}{Grank}\label{grank}]
+
+\setcounter{diceNo}{1}
+\showStdSpells
+
+\iftoggle{oneshot}{}{
+  \jelly
+}
+
+\iftoggle{hardcore}{
+  \jelly
+}{}
+
+\jelly
+
+\mapentry[lowerExit]{The Exit}
+
+\iftoggle{oneshot}{
+  The \glspl{pc} have found the exit, and can finally leave the nightmare behind.
+
+  \begin{boxtext}
+    As the key turns, the door swings open, and daylight floods in.
+    Green trees cover the road down the hill, and in the far distance, chimney-fires from little hamlets wander into the sky.
+
+    You have finally escaped from the \gls{warren}.
+  \end{boxtext}
+}{
+  This is where the party exit the lower portion of the \gls{warren}, and enter the upper.
+
+  \paragraph{If the \glspl{pc} don't have a key,}
+  they might try tricking the goblin on the other side, who has a key to let people in and out.
+  See room \vref{entrance}.
+
+  \paragraph{If the \glspl{pc} examine the door,}
+  they can see the goblin in the next area by a glimmer of candle-light.
+}
+
+
+\iftoggle{oneshot}{
+  \subsection{Rewind}
+
+  Remember to congratulate your players on a tough journey.
+  Give them a moment to breathe.
+  Summarize any clever plans or unexpected outcomes that happened.
+
+  And if you've just finished reading the module for the first time, remember to come back later, and give the module a second read-through before running it.%
+  \footnote{Did you spot the key hiding in an image?}
+}{
+  \pic{Decky/screech}
+}
+

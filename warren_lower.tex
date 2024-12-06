@@ -19,134 +19,137 @@
   The later numbers can be ignored, so the troupe roll with a ($4 + \frac{3}{2} + \frac{3}{4} = 5.8$) +6 Bonus.
 }
 
-\mapentry[entrycell]{Cells}
+\iftoggle{hardcore}{}{
+  \mapentry[entrycell]{Cells}
 
-\begin{exampletext}
+  \begin{exampletext}
 
-  Gnomes erected cots, cribs and hammocks here to be used as a communal sleeping area.
-  Since then, goblins have placed a bar over the outside of the door to house prisoners.
+    Gnomes erected cots, cribs and hammocks here to be used as a communal sleeping area.
+    Since then, goblins have placed a bar over the outside of the door to house prisoners.
 
-\end{exampletext}
+  \end{exampletext}
 
-\noindent
-Here the \glspl{pc} awaken to their hopeless situation.
+  \noindent
+  Here the \glspl{pc} awaken to their hopeless situation.
 
-\begin{itemize}
-  \iftoggle{hardcore}{%
+  \begin{itemize}
+    \iftoggle{hardcore}{%
+      \item
+      Ask the players to mark down $1D6$ \glspl{ep} on their character sheets from the trials they've experienced getting here, and of course from their hunger.
+    }{}%
     \item
-    Ask the players to mark down $1D6$ \glspl{ep} on their character sheets from the trials they've experienced getting here, and of course from their hunger.
+    Give the players a moment to get to know each others' characters and their surroundings.
+  \end{itemize}
+
+  \paragraph{If anyone tries to wriggle free of their ropes,}
+  have them roll \roll{Dexterity}{Larceny},
+  \iftoggle{hardcore}{%
+    \tn[11].
+    Freeing another character requires a \roll{Dexterity}{Crafts} roll, \tn[7], over the space of a round.
+  }{%
+    \tn[9].
+    Freeing another character requires a full round.
+  }
+
+  \paragraph{After a moment,}
+  a small voice from the corner of the room says
+
+  \begin{quotation}
+    ``No use in struggling.
+    They will eat us soon no matter what we do''.
+  \end{quotation}
+
+  \noindent
+  The \glspl{ogre} captured \gls{sadMan} from a nearby village, along with others.
+  They ate the others, while \gls{sadMan} hid under debris at the side of the room.
+  He's learnt that cowardice means survival quickly, but won't unlearn it as fast.
+
+  \firstPrisoner
+
+  \paragraph{If anyone asks \gls{sadMan} for help,}
+  he refuses, and explains why they are powerless, and may as well wait to be eaten.
+  If they say they want to fight, he explains how large \glspl{ogre} stand, and how many wait above.
+  If they say that he should untie them so they can die fighting, then he explains that he can't trust them, and that they might throw him out the door first.
+  He would rather take his chances hiding in the dark.
+
+  \paragraph{Every time the \glspl{pc} give \gls{sadMan} a reason to hope,}
+  have them roll \roll{Charisma}{Empathy} at \iftoggle{oneshot}{\tn[9]}{\tn[11]}.
+  Success means that \gls{sadMan} will untie them.
+  A tie means he asks a follow-up question (allowing another re-roll if they can answer him well).
+  A failure means he disengages, muttering ``no, it won't work''.
+
+  \subsubsection*{Shortly after,}
+  Blara the goblin druid, and an ogre walk towards the cell.
+  The players should have around 5 actions (or dice-rolls) before trouble arrives.
+
+  \begin{boxtext}
+    Heavy footsteps pad down the hall, you hear the door's bar being lifted, and a little goblinoid face peeps in with a torch.
+    Behind her, an ogre stoops to the height of a man to avoid the low ceiling.
+  \end{boxtext}
+
+  The ogre then tries to pick up a character, and take it up to the kitchen.
+
+  \paragraph{If anyone wants to fight while still tied up,}
+  they can do so with a -4 penalty to the roll.
+
+
+  \Person{\npc{\N\F}{Blara the Goblin Druid}}%
+    {{-2}{2}{2}}% BODY
+    {{0}{0}{-4}}% MIND
+    {
+      \setcounter{Athletics}{1}
+      \setcounter{Deceit}{1}
+      \setcounter{Stealth}{2}
+      \setcounter{Brawl}{1}
+      \setcounter{Caving}{2}
+      \setcounter{Fire}{2}
+      \setcounter{Air}{2}
+      \Dagger
+    }% SKILLS
+    {\snapcaster}% KNACKS
+    {torch, human foot\iftoggle{oneshot}{}{, map}}% EQUIPMENT
+    {}% ABILITIES
+
+  \showStdSpells
+
+  \ogre[\npc{\N\M}{Olf the Ogre}]
+
+  \paragraph{If anyone attacks Blara,}
+  the \gls{ogre} immediately starts to guard her.%
+  \exRef{core}{Core Rules}{guarding}
+
+  Blara will attempt to run away, but must wait for the \gls{ogre} to move out of the doorway.
+
+  \iftoggle{oneshot}{
+    Chasing after Blara requires \gls{resistedaction} roll of \roll{Speed}{Athletics}
+    (the player rolls 2D6 plus their \roll{Speed}{Athletics} against Blara's \roll{Speed}{Athletics}, \tn[10]).%
   }{}%
-  \item
-  Give the players a moment to get to know each others' characters and their surroundings.
-\end{itemize}
 
-\paragraph{If anyone tries to wriggle free of their ropes,}
-have them roll \roll{Dexterity}{Larceny},
-\iftoggle{hardcore}{%
-  \tn[11].
-  Freeing another character requires a \roll{Dexterity}{Crafts} roll, \tn[7], over the space of a round.
-}{%
-  \tn[9].
-  Freeing another character requires a full round.
-}
+  \paragraph{If Blara flees,}
+  she runs out, taking her torch with her.
+  \iftoggle{oneshot}{%
+    If the fire has gone out and Blara leaves with the torch, the room becomes pitch-black.
+    This gives the \glspl{pc} a bonus to any attack roll equal to their \roll{Wits}{Vigilance} +3 (the \gls{ogre} cannot coordinate well in the dark).
+  }{}
 
-\paragraph{After a moment,}
-a small voice from the corner of the room says
+  \paragraph{If the party win the fight,}
+  he will accompany them out, but his nerves are too shot to be of much use.
+  He will not join any fights, but can hold a torch.
 
-\begin{quotation}
-  ``No use in struggling.
-  They will eat us soon no matter what we do''.
-\end{quotation}
+  \iftoggle{oneshot}{}{
+    \paragraph{If the \glspl{pc} search Blara's body,}
+    they find a map of the upper level (see the handouts).
+  }
 
-\noindent
-The \glspl{ogre} captured \gls{sadMan} from a nearby village, along with others.
-They ate the others, while \gls{sadMan} hid under debris at the side of the room.
-He's learnt that cowardice means survival quickly, but won't unlearn it as fast.
+  \newRule{End of \Glsentrytext{interval} Regeneration}{
+    \Gls{interval}
+    \glsdesc{interval}
 
-\firstPrisoner
+    Being underground, the \glspl{pc} will only regenerate 1 \gls{mp} per interval, which goes to whichever \gls{pc} has the most \glspl{mp} lost.
 
-\paragraph{If anyone asks \gls{sadMan} for help,}
-he refuses, and explains why they are powerless, and may as well wait to be eaten.
-If they say they want to fight, he explains how large \glspl{ogre} stand, and how many wait above.
-If they say that he should untie them so they can die fighting, then he explains that he can't trust them, and that they might throw him out the door first.
-He would rather take his chances hiding in the dark.
+    Of course the \glspl{pc} won't know exactly how long they've spent underground, but they will at least be able to count the number of resting periods they take.
+  }
 
-\paragraph{Every time the \glspl{pc} give \gls{sadMan} a reason to hope,}
-have them roll \roll{Charisma}{Empathy} at \iftoggle{oneshot}{\tn[9]}{\tn[11]}.
-Success means that \gls{sadMan} will untie them.
-A tie means he asks a follow-up question (allowing another re-roll if they can answer him well).
-A failure means he disengages, muttering ``no, it won't work''.
-
-\subsubsection*{Shortly after,}
-Blara the goblin druid, and an ogre walk towards the cell.
-The players should have around 5 actions (or dice-rolls) before trouble arrives.
-
-\begin{boxtext}
-  Heavy footsteps pad down the hall, you hear the door's bar being lifted, and a little goblinoid face peeps in with a torch.
-  Behind her, an ogre stoops to the height of a man to avoid the low ceiling.
-\end{boxtext}
-
-The ogre then tries to pick up a character, and take it up to the kitchen.
-
-\paragraph{If anyone wants to fight while still tied up,}
-they can do so with a -4 penalty to the roll.
-
-
-\Person{\npc{\N\F}{Blara the Goblin Druid}}%
-  {{-2}{2}{2}}% BODY
-  {{0}{0}{-4}}% MIND
-  {
-    \setcounter{Athletics}{1}
-    \setcounter{Deceit}{1}
-    \setcounter{Stealth}{2}
-    \setcounter{Brawl}{1}
-    \setcounter{Caving}{2}
-    \setcounter{Fire}{2}
-    \setcounter{Air}{2}
-    \Dagger
-  }% SKILLS
-  {\snapcaster}% KNACKS
-  {torch, human foot\iftoggle{oneshot}{}{, map}}% EQUIPMENT
-  {}% ABILITIES
-
-\showStdSpells
-
-\ogre[\npc{\N\M}{Olf the Ogre}]
-
-\paragraph{If anyone attacks Blara,}
-the \gls{ogre} immediately starts to guard her.%
-\exRef{core}{Core Rules}{guarding}
-
-Blara will attempt to run away, but must wait for the \gls{ogre} to move out of the doorway.
-
-\iftoggle{oneshot}{
-  Chasing after Blara requires \gls{resistedaction} roll of \roll{Speed}{Athletics}
-  (the player rolls 2D6 plus their \roll{Speed}{Athletics} against Blara's \roll{Speed}{Athletics}, \tn[10]).%
-}{}%
-
-\paragraph{If Blara flees,}
-she runs out, taking her torch with her.
-\iftoggle{oneshot}{%
-  If the fire has gone out and Blara leaves with the torch, the room becomes pitch-black.
-  This gives the \glspl{pc} a bonus to any attack roll equal to their \roll{Wits}{Vigilance} +3 (the \gls{ogre} cannot coordinate well in the dark).
-}{}
-
-\paragraph{If the party win the fight,}
-he will accompany them out, but his nerves are too shot to be of much use.
-He will not join any fights, but can hold a torch.
-
-\iftoggle{oneshot}{}{
-  \paragraph{If the \glspl{pc} search Blara's body,}
-  they find a map of the upper level (see the handouts).
-}
-
-\newRule{End of \Glsentrytext{interval} Regeneration}{
-  \Gls{interval}
-  \glsdesc{interval}
-
-  Being underground, the \glspl{pc} will only regenerate 1 \gls{mp} per interval, which goes to whichever \gls{pc} has the most \glspl{mp} lost.
-
-  Of course the \glspl{pc} won't know exactly how long they've spent underground, but they will at least be able to count the number of resting periods they take.
 }
 
 \boxPair[t]{
@@ -163,19 +166,31 @@ He will not join any fights, but can hold a torch.
   More recently, the magical lift (room \ref{lift}) made it redundant, so they've placed a forge in front of the entrance to the workshop (room \ref{workshop}), since this shaft ascends above, as a chimney.
 \end{exampletext}
 
-The \glspl{pc} will probably encounter the ladder, carved into the stone, while feeling around in the dark.
-Perhaps one or more will find themselves at the top of the shaft when Blara enters.
+\iftoggle{hardcore}{
+  The players should make a \roll{Wits}{Crafts} (\tn[10]) to deduce that a furnace like this must have a wide chimney, and that tunnel may lead elsewhere.
+}{
+  The \glspl{pc} will probably encounter the ladder, carved into the stone, while feeling around in the dark.
+  Perhaps one or more will find themselves at the top of the shaft when Blara enters.
 
-\paragraph{Anyone at the top of the ladder,}
-will hear an argument between a goblin and \pgls{ogre}.
+  \paragraph{Anyone at the top of the ladder,}
+  will hear an argument between a goblin and \pgls{ogre}.
 
-\paragraph{Pushing the furnace aside}
-demands a \roll{Strength}{Crafts} roll (\tn[6]), but doing so quietly requires a \roll{Strength}{Stealth} roll (\tn[13]).
-A tie means the horde stop bickering to focus on the noise, while failure indicates that they realize that the forge has a tunnel behind it, and two \glspl{ogre} come out to investigate (and likely try to eat a character).
+  \paragraph{Pushing the furnace aside}
+  demands a \roll{Strength}{Crafts} roll (\tn[6]), but doing so quietly requires a \roll{Strength}{Stealth} roll (\tn[13]).
+  A tie means the horde stop bickering to focus on the noise, while failure indicates that they realize that the forge has a tunnel behind it, and two \glspl{ogre} come out to investigate (and likely try to eat a character).
 
-\paragraph{If someone wants to continue climbing up,}
-they can't.
-The rest of the ascent has nothing to hold onto, and becomes smaller as it ascends.
+  \paragraph{If someone wants to continue climbing up,}
+  they can't.
+  The rest of the ascent has nothing to hold onto, and becomes smaller as it ascends.
+}
+
+\iftoggle{hardcore}{
+  \mapentry[entrycell]{Cells}
+  Half a dozen farmers sit here with gloomy chat.
+  Any remaining \gls{pc} allies in the \gls{warren} sit among them.
+
+  None have weapons, but a couple may still have any armour they might normally wear.
+}{}
 
 \mapentry[diningRoom]{Dining Room}
 
@@ -246,9 +261,7 @@ the spellcaster will run away, then cast spells from a short distance; \gls{kala
   give each \pgls{ep}.
 }{}
 
-\iftoggle{hardcore}{
-  \warrenMap
-}{
+\iftoggle{hardcore}{}{
   \warrenMapLower
 }
 

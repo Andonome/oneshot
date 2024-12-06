@@ -23,87 +23,110 @@
 \subsection{Quiet Rooms}
 \label{upper}
 
-\mapentry[entrance]{Entrance Hallway}
-
 \widePic{Roch_Hercka/spiral_staircase}
 
-At the other side of this door sits the lonely goblin guard, Rubble.
+\iftoggle{hardcore}{
+  \mapentry[spiral]{The Spiral Staircase}
+  Four ogres guard the stairs, with strict orders not to move.
+  Three sit in a circle, playing a dice game called `roll the biggest number', and a fourth wanders at the other side of the pillar, searching for his lucky die.
 
-\paragraph{Once the \glspl{pc} enter}
-Rubble flees, then watches them from afar.
-He reports their every move to others in the \gls{warren}, and tries to get round them, go back down the stairs, and summon the rest of the horde to come and eat them.
+  \armouredOgre[\npc{\T[2]\N\F}{Gnasher \& Gnipper}]
 
-\goblin[\npc{\N\M}{Rubble}]
+  \armouredOgre[\npc{\T[2]\N\M}{Groda \& Gaunt}]
+
+  \begin{boxtext}
+    Quietly down, you hear a t-t-t-tap--tap---tap sound, amused laughter, and an irritated snarl.
+  \end{boxtext}
+
+  \paragraph{If the troupe manage to remain quiet,}
+  they can jump down (it's only a couple of steps' distance) and flank the ogres, or jump over them and run towards room \vref{banquet}.
+
+  Otherwise, the ogres stand and attack, but will not chase the troupe.
+  They can hide from any ranged attacks by simply ducking behind the pillar.
+
+}{
+  \mapentry[downstairs]{Entrance Hallway}
+
+  \widePic{Roch_Hercka/spiral_staircase}
+
+  At the other side of this door sits the lonely goblin guard, Rubble.
+
+  \paragraph{Once the \glspl{pc} enter}
+  Rubble flees, then watches them from afar.
+  He reports their every move to others in the \gls{warren}, and tries to get round them, go back down the stairs, and summon the rest of the horde to come and eat them.
+
+  \goblin[\npc{\N\M}{Rubble}]
+}
 
 \mapentry[banquet]{Banquet Hall}
 
-If the players search the table,
+If the \glspl{pc} search the table,
 they can find a knife which functions as a dagger.
 
 \begin{boxtext}
-  The door at the top of the stairs reveals a large banquet hall.
+  A shaft of Sunlight in the distance breaks the shadows, but does not illuminate the room.
   Human bones lie on the table, all polished clean.
-  The cups and cutlery lie smashed and broken.
+  Small cups and cutlery lie smashed and broken.
   At the far end of the hallway, a door stands ajar.
-  On the right, a passageway shows a shaft of Sunlight in the far distance.
 \end{boxtext}
 
-\mapentry[spiral]{The Spiral Staircase Exit}
+\iftoggle{hardcore}{}{
+  \mapentry[spiral]{The Spiral Staircase Exit}
 
-The party can see the exit, but cannot escape without three ferocious \glspl{ogre} attacking them.
-Exactly what plans they come up with and how well they work depends entirely on your players and how their situation emerges.
+    The party can see the exit, but cannot escape without three ferocious \glspl{ogre} attacking them.
+    Exactly what plans they come up with and how well they work depends entirely on your players and how their situation emerges.
 
-\begin{boxtext}
-  In the Sunlit intersection of four hallways,
-  \iftoggle{hardcore}%
-    {four \glspl{ogre} sit playing a game of dice.  Two are clad in black leather armour, with a massive sword by their side.
-    Another sucks on a horse's uncooked head, while the third goes for a piss behind the staircase.}%
-    {three \glspl{ogre} sit playing dice.
-    Two are clad in black, leather armour, apparently pieced together from multiple suits.
-    The third sits watching them play some dice game.}%
-\end{boxtext}
+  \begin{boxtext}
+    In the Sunlit intersection of four hallways,
+    \iftoggle{hardcore}%
+      {four \glspl{ogre} sit playing a game of dice.  Two are clad in black leather armour, with a massive sword by their side.
+      Another sucks on a horse's uncooked head, while the third goes for a piss behind the staircase.}%
+      {three \glspl{ogre} sit playing dice.
+      Two are clad in black, leather armour, apparently pieced together from multiple suits.
+      The third sits watching them play some dice game.}%
+  \end{boxtext}
 
-\paragraph{If the party attempt to get the \glspl{ogre} to chase them,}
-the armour-wearing \glspl{ogre} remain where they are, as they have strict orders not to leave the base of the staircase.
+  \paragraph{If the party attempt to get the \glspl{ogre} to chase them,}
+  the armour-wearing \glspl{ogre} remain where they are, as they have strict orders not to leave the base of the staircase.
 
-\Person{\npc{\T[2]\N}{2 Armoured \Glsfmtplural{ogre}}}%
-  {{6}{0}{1}}% BODY
-  {{-3}{0}{-3}}% MIND
-  {%
-    \set{Melee}{1}
-    \set{Brawl}{1}
-    \set{Crafts}{1}
-    \set{Vigilance}{2}
-    \greatsword
-    \partialleather
-  }% SKILLS
-  {}% KNACKS
-  {%
-      \lootGoblin/ \lootGoblin%
-  }% EQUIPMENT
-  {}% ABILITIES
+  \Person{\npc{\T[2]\N}{2 Armoured \Glsfmtplural{ogre}}}%
+    {{6}{0}{1}}% BODY
+    {{-3}{0}{-3}}% MIND
+    {%
+      \set{Melee}{1}
+      \set{Brawl}{1}
+      \set{Crafts}{1}
+      \set{Vigilance}{2}
+      \greatsword
+      \partialleather
+    }% SKILLS
+    {}% KNACKS
+    {%
+        \lootGoblin/ \lootGoblin%
+    }% EQUIPMENT
+    {}% ABILITIES
 
-\label{chasingogre}
+  \Person{\npc{\N\M}{Sitting \Glsentrytext{ogre}}}%
+    {{4}{0}{0}}% BODY
+    {{-3}{0}{-3}}% MIND
+    {%
+      \set{Melee}{1}
+      \set{Brawl}{3}
+      \set{Caving}{2}
+      \set{Vigilance}{2}
+      \greatclub
+    }% SKILLS
+    {}% KNACKS
+    {%
+        \lootGoblin%
+    }% EQUIPMENT
+    {}% ABILITIES
 
-\Person{\npc{\N\M}{Sitting \Glsentrytext{ogre}}}%
-  {{4}{0}{0}}% BODY
-  {{-3}{0}{-3}}% MIND
-  {%
-    \set{Melee}{1}
-    \set{Brawl}{3}
-    \set{Caving}{2}
-    \set{Vigilance}{2}
-    \greatclub
-  }% SKILLS
-  {}% KNACKS
-  {%
-      \lootGoblin%
-  }% EQUIPMENT
-  {}% ABILITIES
+  \iftoggle{hardcore}{%
+    \ogre[\npc{\M\N}{Hidden \Glsentrytext{ogre}}]
+  }{}
 
-\iftoggle{hardcore}{%
-  \ogre[\npc{\M\N}{Hidden \Glsentrytext{ogre}}]
-}{}
+}
 
 \mapentry[webTrap]{The Trapped Hallway}
 
@@ -127,7 +150,7 @@ In either case, they roll at \tn[10].
 they vanish, silently.
 
 \mapPic{b}{Dyson_Logos/upper}{
-  \ref{entrance}/85/36,
+  \ref{downstairs}/85/36,
   \ref{banquet}/67/31,
   \ref{spiral}/37/66,
   \ref{webTrap}/51/13,
@@ -143,8 +166,10 @@ they vanish, silently.
 
 \mapentry[lounge]{The Lounge}
 
-If the party entered secretly, have them roll \roll{Wits}{Vigilance} (\tn[8]), to notice Yan, dozing gently.
-If the party move through without explaining themselves, he wakes, then sounds the alarm, and all of them come out attacking, frantically.
+Yan, the gnome, dozes gently.
+If he wakes up scared, he will sound the alarm, and other gnomes will immediately arrive and attack from room~\ref{gnomes}.
+
+The \glspl{pc} may sneak past with \roll{Dexterity}{Stealth} (\tn[10]), or wake him gently with \roll{Wits}{Empathy} (\tn[8]).
 
 \mapentry[gnomes]{Trapped Gnomes}
 
@@ -187,17 +212,15 @@ With proper food, the party and the gnomes can rest, lose some \glspl{ep}, and t
 \end{exampletext}
 
 If the party want the food, they will have to make a \roll{Dexterity}{Stealth} roll to pilfer it without making any noise (\tn[8]).
-Each Margin on the roll gives them enough food to heal 4~\glspl{ep}.
-They can roll as many times as they like, but each roll carries the danger of being spotted by a mobile \gls{ogre} at the stairs.
+Each Margin on the roll gives them enough food for half a day.
+They can roll as many times as they like, but each roll carries the danger of being heard by \pgls{ogre} at the stairs.
+Hearing someone raid the kitchen is the only thing that will make them stop guarding the stairs and investigate!
 
 \begin{boxtext}
   This Spartan kitchen has pans, pots, hip-bones, skulls, rib-bones, and boxes strewn all over the place.
   A fireplace with ventilation through the roof sits to your right.
   Amid the mess of sacks and broken plates, you can see that a little food remains, apparently dumped here.
 \end{boxtext}
-
-\paragraph{If the party make any noise,}
-the chasing \gls{ogre} from the central room rushes after them (room \vref{chasingogre}).
 
 \mapentry[storage]{The Storage Room}
 
@@ -347,12 +370,25 @@ reveals the dark, little exit with a \roll{Wits}{Crafts} roll (\tn[10]).
 Unfortunately, the little hole can only fit people with 6~\glspl{hp} or fewer.
 But a \roll{Strength}{Crafts} check (\tn[11]), might allow someone to chisel away at just enough to let someone of Strength +1 through (while making a lot of noise).
 
-\mapentry[finalRoom]{The Last Room}
+\mapentry[finalRoom]{Refuse Room}
 
 This nasty little room holds a couple of beds and the remnants of gnomish board games.
 Among the wreckage, the party can find one \lootTalisman~\gls{talisman}, left behind by a gnome who has since been digested.
 
 \showTalisman
+
+\iftoggle{hardcore}{
+  \mapentry[downstairs]{Downstairs}
+
+  At the other side of this door sits the lonely goblin guard, Rubble.
+
+  \paragraph{Once the \glspl{pc} enter}
+  Rubble flees, then watches them from afar.
+  He reports their every move to others in the \gls{warren}, and tries to get round them, go back down the stairs, and summon the rest of the horde to come and eat them.
+
+  \goblin[\npc{\N\M}{Rubble}]
+
+}{}
 
 \iftoggle{hardcore}{
   \paragraph{If the escapees exit while running from pursing \glspl{ogre} and goblins,}

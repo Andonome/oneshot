@@ -87,7 +87,7 @@ $(DROSS)/extended_$(BOOK).pdf: $(UPPER_WARREN)
 Extended_$(TITLE).pdf: $(DROSS)/extended_$(BOOK).pdf $(DROSS)/characters.pdf
 	pdfunite $^ $@
 
-$(DROSS)/hardcore_$(BOOK).pdf: $(OUTSIDE_WARREN) the_tower.tex
+$(DROSS)/hardcore_$(BOOK).pdf: $(OUTSIDE_WARREN)
 	@$(COMPILER) -jobname=hardcore_$(BOOK) module.tex
 Hardcore_$(TITLE).pdf: $(DROSS)/hardcore_$(BOOK).pdf
 	@$(CP) $< $@

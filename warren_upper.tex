@@ -4,48 +4,25 @@
   \subsection{Upper Warren}
 }
 
-\mapentry[windingStairs]{Winding Stairs}
-
-A single ogre guards the prisoners here (the door has no lock).
-
-\begin{boxtext}
-  As you round the stairs' third turn, you see a massive ogre crouching by a door, blocking the path upwards.
-\end{boxtext}
-
-\paragraph{If the party have made a reasonable attempt at staying quiet,}
-they can avoid alerting this ogre with a \roll{Wits}{Stealth} roll, \tn[9].
-Whoever is at the front makes the roll.
-If it's unclear who's at the front, the character with the highest \roll{Speed}{Athletics} is in the lead.
-With a successful roll,
 \iftoggle{hardcore}{
-  the ogre is resting, and must take a round to gather what's left of his wits, but it will still wake if approached.
-}{%
- the party find the ogre sleeping.
-}
+  \mapentry[lowerExit]{The Locked Door}
 
-\ogre[\npc{\N\M}{Rick, the Ogre Guard}]
+  \begin{exampletext}
+    Grank, the goblin druid, keeps this door locked to make sure the prisoners don't escape.
+  \end{exampletext}
 
-\mapentry[secondPrison]{Second Prison}
+  \paragraph{If Grank hears strange noises,}
+  (like human speech, or battle) he refuses to open the door, and shouts questions through.
 
-\begin{exampletext}
-  This little room once housed a full family of gnomes, but now serves only as another prison.
-\end{exampletext}
+  \paragraph{If the \glspl{pc} simply knock}
+  he unlocks the door, and once he sees who they are, flees through the wide door (\ref{inDoor}) to the \nameref{fungusGarden} (\vpageref{fungusGarden}).
 
-The prisoners require no locks or handcuffs -- the ogre waiting outside suffices to terrify them into staying put.
+  \goblincaster[\npc{\M\N}{Grank}\label{grank}]
 
-\paragraph{If any of the \glspl{pc} have died,}
-introduce another \gls{pc} here%
-\iftoggle{hardcore}{.}{, from the pool.}
+  \setcounter{diceNo}{1}
+  \showStdSpells
 
-\iftoggle{hardcore}{%
-  \paragraph{If the party get a moment to ask about the outside world,}
-  the ex-prisoners inform them that all the \pgls{village} for some miles have fallen, and \gls{oneTown} lies unprotected.
-  Even if the goblins die, the town will be in trouble.
 }{}
-
-\iftoggle{hardcore}{}{
-  \warrenMapUpper
-}
 
 \mapentry[armoury]{Armoury}
 
@@ -78,7 +55,6 @@ The \glspl{pc} see the following:
 \begin{boxtext}
   At the top of the stairway, three dying fireflies wander pointlessly.
   Behind them, a cluster of shadow in an alcove holds metallic glints.
-  To the left, dirty little footprints lead out a little wooden door.
 \end{boxtext}
 
 \iftoggle{oneshot}{
@@ -163,16 +139,18 @@ He knows he has the only key to the exit door (room \vref{lowerExit}), so he int
   The wolves' restraints rip off in a whipping snap as the beasts burst free from their bonds, and rush straight to you.
 \end{boxtext}
 
-\paragraph{If the party attempt to run through the lift's double doors,}
-they might suddenly find an empty lift-shaft.
-In this case, have them roll \roll{Wits}{Athletics} (\tn[7]) to back off before they fall.
-A drop from this height inflicts $1D6+1$ Damage, plus their Strength Bonus.%
+\paragraph{If the \glspl{pc} run through the lift's double doors,}
+they will find a sudden drop.
+The players roll \roll{Wits}{Athletics} (\tn[7]) to have the \glspl{pc} catch themselves before falling.
+
+\paragraph{Falling to the mid-way point}
+inflicts $1D6+1$ Damage, plus the character's Strength Bonus.%
 \footnote{Larger creatures receive more Damage from falls}
 
-\morphwolf[\npc{\T[4]\A\R}{\arabic{noAppearing} Morph Wolves}]
+\paragraph{Falling to the bottom}
+inflicts $2D6+2$ Damage, plus the character's Strength Bonus.%
 
-\paragraph{If the party fall into the lift,}
-they end up in the mid-section of the \gls{warren}.
+\morphwolf[\npc{\T[4]\A\R}{\arabic{noAppearing} Morph Wolves}]
 
 \mapentry[fungusGarden]{Fungal Gardens}
 
@@ -208,10 +186,12 @@ he will hide while casting spells.
 then he will taunt the \glspl{pc} with the key to the outside world he has in is position, and throw it into the nearest ooze.
 He then lets out a giggle and dashes off into the fungal undergrowth, leaving the players to face the hulking, pulsating, mass.
 
-\goblincaster[\npc{\M\N}{Grank}\label{grank}]
+\vpagerefnearby{grank}{}{%
+  \goblincaster[\npc{\M\N}{Grank}\label{grank}]
 
-\setcounter{diceNo}{1}
-\showStdSpells
+  \setcounter{diceNo}{1}
+  \showStdSpells
+}
 
 \iftoggle{oneshot}{}{
   \jelly
@@ -223,39 +203,39 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
 
 \jelly
 
-\mapentry[lowerExit]{The Exit}
+\iftoggle{hardcore}{}{
+  \mapentry[lowerExit]{The Exit}
 
-\iftoggle{oneshot}{
-  The \glspl{pc} have found the exit, and can finally leave the nightmare behind.
+  \iftoggle{oneshot}{
+    The \glspl{pc} have found the exit, and can finally leave the nightmare behind.
 
-  \begin{boxtext}
-    As the key turns, the door swings open, and daylight floods in.
-    Green trees cover the road down the hill, and in the far distance, chimney-fires from little hamlets wander into the sky.
+    \begin{boxtext}
+      As the key turns, the door swings open, and daylight floods in.
+      Green trees cover the road down the hill, and in the far distance, chimney-fires from little hamlets wander into the sky.
 
-    You have finally escaped from the \gls{warren}.
-  \end{boxtext}
-}{
-  This is where the party exit the lower portion of the \gls{warren}, and enter the upper.
+      You have finally escaped from the \gls{warren}.
+    \end{boxtext}
 
-  \paragraph{If the \glspl{pc} don't have a key,}
-  they might try tricking the goblin on the other side, who has a key to let people in and out.
-  See room \vref{entrance}.
+    \subsection{Rewind}
 
-  \paragraph{If the \glspl{pc} examine the door,}
-  they can see the goblin in the next area by a glimmer of candle-light.
+    Remember to congratulate your players on a tough journey.
+    Give them a moment to breathe.
+    Summarize any clever plans or unexpected outcomes that happened.
+
+    And if you've just finished reading the module for the first time, remember to come back later, and give the module a second read-through before running it.%
+    \footnote{Did you spot the key hiding in an image?}
+  }{
+    This is where the party exit the lower portion of the \gls{warren}, and enter the upper.
+
+    \paragraph{If the \glspl{pc} don't have a key,}
+    they might try tricking the goblin on the other side, who has a key to let people in and out.
+    See room \vref{entrance}.
+
+    \paragraph{If the \glspl{pc} examine the door,}
+    they can see the goblin in the next area by a glimmer of candle-light.
+  }
+
 }
 
-
-\iftoggle{oneshot}{
-  \subsection{Rewind}
-
-  Remember to congratulate your players on a tough journey.
-  Give them a moment to breathe.
-  Summarize any clever plans or unexpected outcomes that happened.
-
-  And if you've just finished reading the module for the first time, remember to come back later, and give the module a second read-through before running it.%
-  \footnote{Did you spot the key hiding in an image?}
-}{
-  \pic{Decky/screech}
-}
+%\pic{Decky/screech}
 

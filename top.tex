@@ -257,7 +257,11 @@ Hand them the map from the handouts if they don't have a copy already.
   A portal at the other end holds a patch of darkness, hiding safely away from the Sunlight.
 \end{boxtext}
 
-\secondRaidingParty
+\iftoggle{hardcore}{%
+  \noteRaidingParty
+}{
+  \secondRaidingParty
+}
 
 \mapentry[woodspies]{The \Glsfmttext{woodspy} Pool}
 
@@ -351,7 +355,7 @@ and the other two attack them while they are trapped.%
 \exRef{core}{core rules}{trapped}
 
 \iftoggle{hardcore}{
-  Each farmer here begins with 7 \glspl{ep}, so they will quickly accrue penalties if they exert themselves in any way.
+  None of the \glspl{pc} allies are here, just farmers with 7~\glspl{ep} who will quickly accrue penalties if they have to fight or run.
 }{}
 
 \begin{boxtext}

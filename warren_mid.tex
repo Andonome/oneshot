@@ -103,20 +103,25 @@ However, the resulting battle will kill three \glspl{ogre}, and all morph-slugs.
 
 \mapentry[greatHall]{The Great Hallway}
 
-If the \glspl{pc} have indeed been quiet enough in the previous room to not raise an alarm, they find everyone in the neighbouring rooms napping.
-A single sound means they will be in serious trouble.
-
-The greasy floor results from a mixture of faeces, drool, blood and leftover mushroom-juice.
+\begin{exampletext}
+  The hungry horde have torn apart live humans and cows on this floor, leaving a sticky stain, and well-licked bones all over the floor.
+\end{exampletext}
 
 \begin{boxtext}
-  At the top of the stairs, this massive chamber lies empty, except for the fireflies darting about, and some human bones on the filthy floor.
+  At the
+  \iftoggle{hardcore}{bottom}{top}
+  of the stairs, this massive chamber lies empty, except for the fireflies darting about, and piles of long bones on the filthy floor.
   To the right, there two short tunnels reverberate with assorted snoring sounds.
   Ahead of you, two grand staircases lead up into a dim but unwavering light.
   Below you, the entire floor is sticky and greasy.
 \end{boxtext}
 
-\paragraph{If the \glspl{pc} have come from room \ref{slugHall},}
-they will not see the staircase on their left immediately, but \emph{will} see it after doing literally anything (fighting, searching, et~c.).
+If the \glspl{pc} have kept quiet enough, they find the goblin horde napping in the dark, with a contented chorus of snores (from rooms \ref{workshop} and \ref{grandLibrary}).
+
+\iftoggle{hardcore}{}{
+  \paragraph{If the \glspl{pc} have come from room \ref{slugHall},}
+  they will not see the staircase on their left immediately, but \emph{will} see it after doing literally anything (fighting, searching, et~c.).
+}
 
 \paragraph{If the \glspl{pc} tarry or talk,}
 have them roll \roll{Intelligence}{Stealth} (\tn[8]), to get across the sticky floor without squelching too much.

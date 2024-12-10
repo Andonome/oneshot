@@ -161,23 +161,16 @@ inflicts $2D6+2$ Damage, plus the character's Strength Bonus.%
   The goblins haven't kept up with the maintenance, so the semi-sentient gelatinous \glspl{swarm} quickly grew massive, so the goblins simply closed the door and left them alone.
 \end{exampletext}
 
-While the place looks serene, it is inhabited by
-\iftoggle{hardcore}{%
-  dangerous oozes.
-}{%
-  a dangerous ooze.
-}
+While the place looks serene, it is inhabited by dangerous oozes.
 
 \paragraph{Once the players enter the room,}
+an ooze begin to stalk them.
 \iftoggle{hardcore}{%
-  the oozes begin to stalk them.
   If multiple oozes chase them, the smaller ones will always back away from the larger ones, so no more than one ooze should follow them at a time (always the largest one).
-}{%
-  the ooze begins to stalk them.
+}{}
 
-  \paragraph{Investigating the green glows}
-  reveals little patches of shiny-green \glspl{glowshroom}.
-}
+\paragraph{Investigating the green glows}
+reveals little patches of shiny-green \glspl{glowshroom}.
 
 \paragraph{If the \glspl{pc} approach Grank,}
 he will hide while casting spells.
@@ -186,12 +179,12 @@ he will hide while casting spells.
 then he will taunt the \glspl{pc} with the key to the outside world he has in is position, and throw it into the nearest ooze.
 He then lets out a giggle and dashes off into the fungal undergrowth, leaving the players to face the hulking, pulsating, mass.
 
-\vpagerefnearby{grank}{}{%
+\iftoggle{hardcore}{%
   \goblincaster[\npc{\M\N}{Grank}\label{grank}]
 
   \setcounter{diceNo}{1}
   \showStdSpells
-}
+}{}
 
 \iftoggle{oneshot}{}{
   \jelly

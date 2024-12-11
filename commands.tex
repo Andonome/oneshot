@@ -71,6 +71,9 @@
       \addtocounter{Strength}{#1}
       \addtocounter{Speed}{#1}
       \addtocounter{Intelligence}{-#1}
+
+      \set{weight}{4}
+      \set{spentMP}{5}
     }% SKILLS
     {}% KNACKS
     {}% EQUIPMENT
@@ -236,8 +239,7 @@
     \rotatebox{41}{$\huge\Longrightarrow$}/34/86,
     \ref{topShaft}/25/89,
     \ref{fungusGarden}/09/77,
-    \ref{lowerExit}/59/999,%
-    {\iftoggle{hardcore}{\ref{goblinSentry}}{}}/41/56,
+    \ref{lowerExit}/59/999,
   }
 
 }

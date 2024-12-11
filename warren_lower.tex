@@ -224,38 +224,16 @@ Failure means the goblin and rat attack together.
   they take 1 \gls{ep} for the strenuous activity.
 }{}
 
-\mapentry[spellCasters]{Spellcaster Arguments}
-%!
+\mapentry[spellCasters]{Druidical Debates}
 
-\begin{exampletext}
-  A single gnome has returned, disguised by magic as a goblin.
-  Unfortunately, he does not speak the goblin language, and everyone soon noticed.
-\end{exampletext}
-
-Two druids interrogate \gls{kalama} while he can only shrug in confusion.
-
-The scene either begins with the goblins slowly realizing that the \glspl{pc} have escaped, or by interrogating \gls{kalama}.
-If the \glspl{pc} don't intervene, the druids will kill him.
+Two druids argue about how to use \pgls{deep} Scroll to return home, but can't figure it out.
+If the \glspl{pc} have made any noise, they will shout for the goblins in room \vref{kitchen} to go investigate.
 
 \begin{boxtext}
   From the top of the stairs, you see a goblin, clothed only in leather satchels, holding another goblin on the ground, and yelling at him.
-  The goblin on the ground looks round, and\ldots winks at you?
 \end{boxtext}
 
-\paragraph{If the \glspl{pc} have already made a ruckus,}
-the spellcaster will run away, then cast spells from a short distance; \gls{kalama}, the disguised gnome, will flee immediately; and every goblin in the kitchen will wake up, and run through, at a rate of two per round.
-
-\iftoggle{hardcore}{
-  \goblin[\npc{\T[3]\N}{\arabic{noAppearing} Goblins}]
-}{}
-
-\goblincaster[\npc{\F\N}{Hunch, Goblin Druid}]
-
-\iftoggle{oneshot}{
-  \paragraph{If the \glspl{pc} have not made a noise, they can gain a surprise attack,}
-  with a \roll{Dexterity}{Stealth} roll, against the goblin druid's \roll{Wits}{Vigilance} (\tn).
-  As before, one player rolls $2D6$, and each \gls{pc} who wants to sneak out adds their own Bonuses to that \gls{natural} -- but if a single \gls{pc} fails, everyone fails.
-}{}
+\goblincaster[\npc{\T[2]\F\M\N}{Goblin Druids}]
 
 \iftoggle{oneshot}{
   \paragraph{If the \glspl{pc} fight,}
@@ -265,12 +243,6 @@ the spellcaster will run away, then cast spells from a short distance; \gls{kala
 \iftoggle{hardcore}{}{
   \warrenMapLower
 }
-
-\paragraph{If \gls{kalama} finds a peaceful moment to speak,}
-he explains his whole situation, and his mission to find the children (in room \ref{nursery}).
-He has become so exhausted that he will be of little use to anyone without a meal and a rest.
-
-\spyGnome{2}
 
 \paragraph{If the characters investigate the table,}
 they find the \gls{talisman}, `\lootTalisman', left by the goblin druids.

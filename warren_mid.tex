@@ -1,15 +1,6 @@
 \subsection{Mid Levels}
 
-\iftoggle{hardcore}{
-  \mapentry[goblinSentry]{The Sentry}
-
-  Svart, the goblin, stands at the door to room \ref{nursery} (below), attempting to pick the lock.
-  \paragraph{When the \glspl{pc} exit the lift door,}
-  he runs over, hoping to beg some food from the \glspl{ogre} he expects to emerge.
-  Once he sees the \glspl{pc}, he runs for the stairs, shouting for help.
-
-  \goblin[\npc{\M\N}{Svart}]
-}{
+\iftoggle{hardcore}{}{
   \noteRaidingParty
 }
 
@@ -17,14 +8,26 @@
 
 \begin{exampletext}
   When the horde arrived, a gnome locked the children in here with enough food for a few days.
+  Earlier, Kalama the gnome cast a spell to look like a goblin, and sneaked in find any survivors.
+  However, the spell drains his energy, making him confused and famished.
+  He has found the children, and spotted the key next door, but cannot get to it.
 \end{exampletext}
 
-The door is locked, but can be picked with a \roll{Dexterity}{Larceny} roll (\tn[9]) if anyone has some lock-picking tools.
-It's far too strong to be broken into by force.
+\spyGnome{2}
+
+\begin{boxtext}
+  Round the corner, a goblin squats back against a short, brass door.
+  His eyes widen, as if making a quick plan.
+\end{boxtext}
+
+\paragraph{Opening the door}
+requires the key in room \vref{nursery_key}.
+Characters with a lock-picking set might also try to pick it with a \roll{Dexterity}{Larceny} roll (\tn[11]).
+Breaking it open by force would use Strength at \tn[20], so not even the ogres could manage.
 
 If the \glspl{pc} enter the room, they may think these little gnomes are little goblins and kill them.
-If any of them try to do so, have them roll a \roll{Intelligence}{Medicine} (\tn[8]) check to realize their mistake.
-Of course, any gnome can identify the children immediately.
+If any of them try to do so, have them roll an \roll{Intelligence}{Medicine} (\tn[8]) check to realize their mistake.
+Of course, Kalama can identify the children immediately.
 
 \begin{boxtext}
   The sound of crying emanates from the door as you swing it open.
@@ -32,18 +35,16 @@ Of course, any gnome can identify the children immediately.
   The tiny room stinks of shit.
 \end{boxtext}
 
-\paragraph{The moment the \glspl{pc} approach the nursery door,}
-a goblin falls onto room \ref{lift}'s lift and states the command word to bring it up to the top floor.
-This goblin is Grank, and he is the only goblin who knows the password for the top.
-
 \paragraph{If the \glspl{pc} take the children,}
-they know to know to keep quiet and follow, but will only keep quiet if the party succeed on an \roll{Intelligence}{Empathy} roll (\tn[10]).
+Kalama agrees to share the word to order the lift to go up to the top.
+However, they will also scream at any disturbance.
+Keeping the children quiet requires an \roll{Intelligence}{Empathy} roll (\tn[10]).
 
 \swarm{Gnomish Children}{5}{-2}{-3}{-5}
 
 There are five children in total, and they each have \pgls{weight} between 1 and 2, but can generally be treated as a single `\gls{swarm}'.
 
-None can walk, so the troupe must carry an additional \gls{weight} of 5, distributed as they please.
+None can walk, so the troupe must carry an additional \gls{weight} of~5, distributed as they please.
 To further complicate matters, the gnome-children must go \emph{somewhere}, such as a bag.
 Characters might also construct a baby-wrap out of clothes with an \roll{Intelligence}{Crafts} roll (\tn[10]).
 Rolling a tie indicates the wrap does not work, while rolling a failure means the wrap works until the character tries to run\ldots
@@ -80,6 +81,7 @@ The slugs will spray acid at them, follow them up the stairs, and pester them fo
 the morph-slugs head\ldots slowly\ldots towards it rather than fight.
 
 \paragraph{If the \glspl{pc} want to investigate the corpses,}
+\label{nursery_key}
 they find a dead gnome with \pgls{deep} Scroll, and a discarded, half-eaten cloak, with a key to room \ref{nursery} in the pocket.%
 \footnote{See \autopageref{saving_the_children} for how the key arrived here.}
 \iftoggle{oneshot}{%

@@ -65,6 +65,7 @@
   He's learnt that cowardice means survival quickly, but won't unlearn it as fast.
 
   \firstPrisoner
+  \warrenMapLower
 
   \paragraph{If anyone asks \gls{sadMan} for help,}
   he refuses, and explains why they are powerless, and may as well wait to be eaten.
@@ -149,7 +150,6 @@
 
     Of course the \glspl{pc} won't know exactly how long they've spent underground, but they will at least be able to count the number of resting periods they take.
   }
-
 }
 
 \boxPair[t]{
@@ -238,10 +238,6 @@ If they hear the \glspl{pc} coming, they will shout for the goblins in room \vre
   give each \pgls{ep}.
 }{}
 
-\iftoggle{hardcore}{}{
-  \warrenMapLower
-}
-
 \paragraph{If the characters investigate the table,}
 they find the \gls{talisman}, `\lootTalisman', left by the goblin druids.
 
@@ -282,37 +278,10 @@ then the goblins are asleep in the kitchen, and they can sneak in with a \roll{D
   As before, the only one player rolls, and other characters use the same \gls{natural} to produce their own result.
 }{}
 
-\newRule{Weapons}{
-
-  \Gls{weight}
-  \glsdesc{weight}
-
-  Without a backpack, \glspl{pc} can only carry two items -- one in each hand.
-
-  \Gls{weapon}
-  Weapon add to Attack and Damage.
-  Smaller weapons only cost 1~\gls{ap} to use, while larger weapons cost more, but also have bigger Bonuses.
-
-  The \glspl{pc} can find all these items in room \ref{kitchen}.
-  They don't make the best weapons, but the \glspl{pc} have little choice!
-
-  \begin{boxtable}[YlYYYY]
-
-    \textbf{No.} & \textbf{Name} & \textbf{Att} & \textbf{Dam} & \textbf{\glspl{ap} Cost} & \textbf{Weight} \\\hline
-
-    1 & Broom & 1 & 0 & 2 & 1 \\
-    2 & Cleaver & 0 & 2 & 2 & 2 \\
-    4 & Small \showWeapon{\chair} \\
-    2 & \showWeapon{\Dagger}  \\
-    2 & \showWeapon{\skillet} \\
-    4 & \showWeapon{\Log} \\
-    1 & \showWeapon{\woodaxe} \\
-
-  \end{boxtable}
-}
-
 \paragraph{If the roll fails,}
 all goblins wake up with hungry stomachs.
+
+\goblin[\npc{\N}{Goblin on the table}]
 
 \paragraph{If the players try to find weapons,}%
 \iftoggle{oneshot}{
@@ -322,18 +291,15 @@ all goblins wake up with hungry stomachs.
 
   \paragraph{If the players select weapons for their characters,}
   check out the Kitchen Weapons table and have them write down the stats on their character sheet one at a time.
+
  }{
   they can use either of the two cast iron skillets.
 }
-
-\widePic[t]{Roch_Hercka/dragon}
 
 \paragraph{If the party raid the room for food,}
 they'll find a few canteens of water, one of wine, and sacks vegetables (enough for 4 meals).
 
 The players can unlock the larder with a \roll{Dexterity}{Larceny} roll at \tn[10] to pick the lock, at which point they discover that the larder is still full of food.
-
-\goblin[\npc{\N}{Goblin on the table}]
 
 \iftoggle{hardcore}{
   \goblin[\npc{\T[4]\N}{4 Goblins on the floor}]
@@ -341,6 +307,10 @@ The players can unlock the larder with a \roll{Dexterity}{Larceny} roll at \tn[1
   \goblin[\npc{\N}{Goblin on the floor}]
   \goblin[\npc{\T[2]\N}{2 Goblins on the oven}]
 }
+
+\widePic[t]{Roch_Hercka/dragon}
+
+\newRuleWeapons
 
 \mapentry[lift]{The Gnomish Lift}
 
@@ -368,19 +338,6 @@ they will find less purchase than a Sun-screen salesman in a Scotland.
 a `raiding party' return with more prisoners to place in the lower cell (room \ref{entrycell}).
 See \autopageref{raidingParty} for details on the raiding party.
 
-\newRule{Projectiles}{
-  \begin{itemize}
-    \item
-    Players roll \roll{Dexterity}{Projectiles} against \tn[6] to hit targets.
-    \item
-    Every 5 steps adds +1 to the \gls{tn}.
-    \item
-    When a player hits the \gls{tn} precisely, they miss their first target, but hit any other target behind.
-    \item
-    Shortbows deal only $1D6-1$ Damage.
-  \end{itemize}
-}
-
 \mapentry[dragonApproach]{Dragon's Approach}
 
 \begin{exampletext}
@@ -405,6 +362,8 @@ See \autopageref{raidingParty} for details on the raiding party.
 
 \paragraph{If the \glspl{pc} loot the bodies}
 they find one \Gls{deep} Scroll wrapped safely in a scroll case.
+
+\newRuleProjectiles
 
 \mapentry[dragon]{The Dragon's Lair}
 
@@ -472,10 +431,6 @@ he blesses them all, restoring any lost \glspl{fp}.
 
   His {\scshape \gls{dr} 5} means he reduces all Damage by 5, unless the attacker hits 5 over the \gls{tn} to attack him (a total of 15), achieving a `Vitals Shot'.
 }{}
-
-\iftoggle{hardcore}{}{
-  \warrenMapMiddle
-}
 
 \mapentry[treasureRoom]{Treasure Room}
 

@@ -80,6 +80,24 @@
     {}% ABILITIES
 }
 
+
+\newcommand\Yan[1][]{
+  \Person{\npc{\Gn\M}{Yan}}%
+    {{-2}{1}{-1}}% BODY
+    {{1}{0}{1}}% MIND
+    {
+      \setcounter{Academics}{1}
+      \setcounter{Caving}{1}
+      \setcounter{Stealth}{1}
+      \setcounter{Cultivation}{1}
+      \Dagger
+    }% SKILLS
+    {\specialist{glassworking}}% KNACKS
+    {#1}% EQUIPMENT
+    {}% ABILITIES
+}
+
+
 \newcommand{\prisoner}[1][\NPC{\Hu\F}{Random Farmer}{Pessimistic}{Scratches nose}{Food}\addtocounter{weight}{4}]{
   \Person{#1}%
     {{r3}{0}{0}}% BODY

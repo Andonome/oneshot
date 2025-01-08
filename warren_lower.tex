@@ -228,7 +228,7 @@ Two druids argue about how to use \pgls{deep} Scroll to return home, but can't f
 If they hear the \glspl{pc} coming, they will shout for the goblins in room \vref{kitchen} to go investigate.
 
 \begin{boxtext}
-  From the top of the stairs, you see a goblin, clothed only in leather satchels, holding another goblin on the ground, and yelling at him.
+  From the top of the stairs, you see the silhouettes of a goblin, clothed only in leather satchels, holding another goblin on the ground, and yelling at him while pointing to the darkness behind him.
 \end{boxtext}
 
 \goblincaster[\npc{\T[2]\F\M\N}{Goblin Druids}]
@@ -239,7 +239,7 @@ If they hear the \glspl{pc} coming, they will shout for the goblins in room \vre
 }{}
 
 \paragraph{If the characters investigate the table,}
-they find the \gls{talisman}, `\lootTalisman', left by the goblin druids.
+they find a tinder box, an unlit candle, and the \gls{talisman}, `\lootTalisman', left by the goblin druids.
 
 \showTalisman
 
@@ -263,23 +263,21 @@ See \nameref{readingScrolls} (\vpageref{readingScrolls}) for details on the cala
 \end{exampletext}
 
 \begin{boxtext}
-  Peering into the darkness in the alcove, you can just make out the four figures sprawled over tables and chairs or curled up on the oven, snoring contentedly.
-  From the embers of the hearth you can see the ovens and cooking utensils that make up a substantial kitchen, and silhouettes of human femurs and skulls.
+  Torchlight floods out of the twin entrances to the kitchen, illuminating barrels, a cold cooker, a long table covered in the skin-scraps of minced humans, and scattered bones.
 
-  Entering further, you see that the four figures are more goblins with little fat bellies.
-  At the end of the kitchen you can see a large door to a cold store with a lock on it and two large cleavers stuck into a butchers block.
+  Two goblins lie on top of the cookers, with their fat bellies breathing gently in and out.
 \end{boxtext}
+
+More goblins lie sleeping, on the floor and out of sight.
 
 \paragraph{If the \glspl{pc} have avoided making a lot of noise nearby,}
 then the goblins are asleep in the kitchen, and they can sneak in with a \roll{Dexterity}{Stealth} roll (\tn[8]).%
 \exRef{core}{Core Rules}{sneakattack}
 
 \iftoggle{oneshot}{%
-  As before, the only one player rolls, and other characters use the same \gls{natural} to produce their own result.
+  As before, only one player rolls, and other characters use the same \gls{natural} to produce their own result.
+  If the roll fails, all goblins wake up with hungry stomachs.
 }{}
-
-\paragraph{If the roll fails,}
-all goblins wake up with hungry stomachs.
 
 \goblin[\npc{\N}{Goblin on the table}]
 
@@ -290,7 +288,7 @@ all goblins wake up with hungry stomachs.
   These weapons may not be good quality, but they can still improve the \glspl{pc}' situation immensely.
 
   \paragraph{If the players select weapons for their characters,}
-  check out the Kitchen Weapons table and have them write down the stats on their character sheet one at a time.
+  check out the Kitchen Weapons table (\vpageref{weaponsTable} and have them write down the stats on their character sheet one at a time.
 
  }{
   they can use either of the two cast iron skillets.
@@ -298,15 +296,15 @@ all goblins wake up with hungry stomachs.
 
 \paragraph{If the party raid the room for food,}
 they'll find a few canteens of water, one of wine, and sacks vegetables (enough for 4 meals).
-
-The players can unlock the larder with a \roll{Dexterity}{Larceny} roll at \tn[10] to pick the lock, at which point they discover that the larder is still full of food.
+The table also holds a tinder box and three mushroom-based candles (unlit).
 
 \iftoggle{hardcore}{
-  \goblin[\npc{\T[4]\N}{4 Goblins on the floor}]
+  \goblin[\npc{\T[2]\N\M}{\arabic{noAppearing} Goblins on the floor}]
 }{
-  \goblin[\npc{\N}{Goblin on the floor}]
-  \goblin[\npc{\T[2]\N}{2 Goblins on the oven}]
+  \goblin[\npc{\N\M}{Goblin on the floor}]
 }
+
+\goblin[\npc{\T[2]\N\F}{\arabic{noAppearing} Goblins on the oven}]
 
 \widePic[t]{Roch_Hercka/dragon}
 
@@ -356,8 +354,9 @@ See \autopageref{raidingParty} for details on the raiding party.
 \end{exampletext}
 
 \begin{boxtext}
-  Ahead, three charred goblin corpses lie on the ground.
   A strange scent wanders down from above, something like a chicken cooked in rotten eggs.
+  At the top of the staircase, your flame illuminates three charred goblin corpses on the ground, their charred hands turned upwards like dead spiders.
+  The next staircase turns a sharp right, and up into darkness.
 \end{boxtext}
 
 \paragraph{If the \glspl{pc} loot the bodies}
@@ -375,6 +374,8 @@ The dragon will happily talk with anyone who approaches%
 
   Despite his cunning, he will agree to worse terms if he has to.
 }
+
+If the \glspl{pc} have no light, but still ascend, \gls{warrenDragon}'s booming voice with speak to them from \emph{above}.
 
 \paragraph{Revealing \pgls{deep} scroll}
 gains no reaction.
@@ -398,7 +399,7 @@ Each point anyone scores allows them to demand a single item, such as a chest, o
 If they say `yes', then he accepts their challenge, and asks what their riddle is.%
 \footnote{Use of the internet is prohibited by trans-dimensional law, common sense, basic decency, and the Geneva Convention.}
 If they can think of none,
-then the dragon declares that he has won the first round.
+then the dragon declares that he has won the first round (`best of three!').
 
 \paragraph{The rules for riddles}
 are simple -- any question which someone has the knowledge to answer is a fair riddle.
@@ -435,6 +436,8 @@ he blesses them all, restoring any lost \glspl{fp}.
 \mapentry[treasureRoom]{Treasure Room}
 
 \begin{itemize}
+  \item
+  Four wax candles (they burn for 1 hour each) with a tinder box.
   \item
   A chest containing 432 \glspl{cp}.
   \item

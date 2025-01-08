@@ -80,7 +80,25 @@
     {}% ABILITIES
 }
 
-\newcommand{\prisoner}[1][\NPC{\Hu\F}{Random Villager}{Pessimistic}{Scratches nose}{Food}\addtocounter{weight}{4}]{
+
+\newcommand\Yan[1][]{
+  \Person{\npc{\Gn\M}{Yan}}%
+    {{-2}{1}{-1}}% BODY
+    {{1}{0}{1}}% MIND
+    {
+      \setcounter{Academics}{1}
+      \setcounter{Caving}{1}
+      \setcounter{Stealth}{1}
+      \setcounter{Cultivation}{1}
+      \Dagger
+    }% SKILLS
+    {\specialist{glassworking}}% KNACKS
+    {#1}% EQUIPMENT
+    {}% ABILITIES
+}
+
+
+\newcommand{\prisoner}[1][\NPC{\Hu\F}{Random Farmer}{Pessimistic}{Scratches nose}{Food}\addtocounter{weight}{4}]{
   \Person{#1}%
     {{r3}{0}{0}}% BODY
     {{rn1t2}{-1}{0}}% MIND
@@ -116,7 +134,7 @@
     they will be able to recovery for a while,\footnote{As usual, they recover \glspl{ep} equal to half their current \glspl{hp}, and $1D6$~\glspl{fp}.} before a raiding party descends with freshly captured prisoners.
   }
 
-  The lift (room \ref{lift}) cannot take the full weight of an ogre plus the prisoners, so one goblin druid and an ogre go to the bottom, then the prisoners get shoved in the lift by ogres at the top.
+  The lift (room \ref{lift}) cannot take the full weight of \pgls{ogre} plus the prisoners, so one goblin druid and \pgls{ogre} go to the bottom, then the prisoners get shoved in the lift by \glspl{ogre} at the top.
 
   \iftoggle{hardcore}{%
     \armouredOgre
@@ -144,7 +162,7 @@
     The farmers will refuse to go into any combat situation first, but if the \glspl{pc} fight first then they can make a Morale Check to join.
   }{}
 
-  Shortly after, two more ogres come down to find out where the last people went.
+  Shortly after, two more \glspl{ogre} come down to find out where the last people went.
 
   \end{baseNote}
 }
@@ -159,10 +177,10 @@
   \begin{multicols}{2}
   \setlength\parindent{24pt}
 
-  Yet another raiding party returns, this time with only one villager.
+  Yet another raiding party returns, this time with only one farmer.
 
   If the ogres at the stairs (room \vref{spiral}) tell them about the \glspl{pc}, the raiding party immediately begin to hunt for them.
-  Otherwise, they are content to hand a dead villager to the ogres at the stairs to eat, and move on.
+  Otherwise, they are content to hand a dead farmer to the \glspl{ogre} at the stairs to eat, and move on.
 
   \ogre[\npc{\T[3]\M\N}{3 Ogres}]
 

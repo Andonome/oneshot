@@ -1,9 +1,5 @@
 \subsection{Mid Levels}
 
-\iftoggle{hardcore}{}{
-  \noteRaidingParty
-}
-
 \mapentry[nursery]{Nursery}
 
 \begin{exampletext}
@@ -58,6 +54,10 @@ If he finds them, he'll engineer a plan to save the children.
 
 Exactly how this plays out depends on where the horde moves, whether or not the \glspl{pc} provide a distraction, and any other chaos the players throw into the mix.
 
+\iftoggle{hardcore}{}{
+  \warrenMapMiddle
+}
+
 \mapentry[slugHall]{Slug Hall}
 
 \begin{exampletext}
@@ -72,6 +72,9 @@ Exactly how this plays out depends on where the horde moves, whether or not the 
   The slugs don't make good guardians, but at least the halls have plenty of light.
 \end{exampletext}
 
+The moment the \glspl{pc} enter the room, a morphed slug projectile-vomits acid at the first to enter.
+Each round after that, another slug comes within range, then remains where they are, blocking the return.
+
 \begin{boxtext}
   The doorway reveals a massive hallway of sparkling, floating, gently-buzzing, lights.
   Over to the left, a massive staircase leads up into the darkness.
@@ -79,9 +82,6 @@ Exactly how this plays out depends on where the horde moves, whether or not the 
 
   The moment you enter, the slugs' eye-stalks perk up, and they begin to slide off the corpses they were feasting on, and approach\ldots
 \end{boxtext}
-
-The moment the \glspl{pc} enter the room, a morphed slug projectile-vomits acid at the first to enter.
-Each round after that, another slug comes within range, then remains where they are, blocking the return.
 
 \morphslug[\npc{\T[9]\A\R}{20 Morph Slugs}]
 
@@ -167,10 +167,6 @@ they may wish to \gls{retreat} from the fight and flee.
 Have them roll \roll{Speed}{Athletics} at \tn[10] to see how far they get.
 
 Find the goblins' stats \vpageref{workshopGoblins}.
-
-\iftoggle{hardcore}{}{
-  \warrenMapMiddle
-}
 
 \mapentry[grandLibrary]{The Grand Library}
 

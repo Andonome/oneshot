@@ -167,6 +167,7 @@
 \end{exampletext}
 
 \iftoggle{hardcore}{
+  \columnbreak
   The players should make a \roll{Wits}{Crafts} (\tn[10]) to deduce that a furnace like this must have a wide chimney, and that tunnel may lead elsewhere.
 }{
   The \glspl{pc} will probably encounter the ladder, carved into the stone, while feeling around in the dark.
@@ -410,13 +411,6 @@ If someone asks `what is black and white and read all over', anything which fits
 
 See \autoref{riddles} for riddles.
 
-\warrenDragon
-
-\showStdSpells[
-  \setcounter{diceNo}{1}
-  \input{config/spells/Mind3.tex}
-]
-
 \paragraph{If the players ask why he wants treasure,}
 he explains that he wants to attract a mate; when his flame becomes hot enough to melt the gold, he will carve a golden statue of the most deadly dragon in his area in order to attract her attention.
 He will then decorate the statue with magical items.%
@@ -432,6 +426,17 @@ he blesses them all, restoring any lost \glspl{fp}.
 
   His {\scshape \gls{dr} 5} means he reduces all Damage by 5, unless the attacker hits 5 over the \gls{tn} to attack him (a total of 15), achieving a `Vitals Shot'.
 }{}
+
+\warrenDragon
+
+\showStdSpells[
+  \setcounter{diceNo}{1}
+  \input{config/spells/Mind3.tex}
+]
+
+\iftoggle{hardcore}{}{
+  \noteRaidingParty
+}
 
 \mapentry[treasureRoom]{Treasure Room}
 

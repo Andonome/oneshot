@@ -1,9 +1,5 @@
 \subsection{Mid Levels}
 
-\iftoggle{hardcore}{}{
-  \noteRaidingParty
-}
-
 \mapentry[nursery]{Nursery}
 
 \begin{exampletext}
@@ -58,17 +54,26 @@ If he finds them, he'll engineer a plan to save the children.
 
 Exactly how this plays out depends on where the horde moves, whether or not the \glspl{pc} provide a distraction, and any other chaos the players throw into the mix.
 
+\iftoggle{hardcore}{}{
+  \warrenMapMiddle
+}
+
 \mapentry[slugHall]{Slug Hall}
 
 \begin{exampletext}
-Gnomes grew mushrooms throughout this room in order to grow slugs, which fed fireflies.
-While torches work better than fireflies, having omnipresent little lights wandering around the \gls{warren} made sure that people could get about easier.
+  Gnomes grew mushrooms throughout this room in order to grow slugs, which fed fireflies.
+  While torches work better than fireflies, having omnipresent little lights wandering around the \gls{warren} made sure that people could get about easier.
 
-Once the goblin druids arrived, they cast life-engorging spells to grow the slugs to monstrous proportions, in order to ensure that prisoners don't escape past this point.
-Salt covers the stairs, preventing the slugs from moving upwards.
-The fireflies continue nipping at them, and have quadrupled their population.
-The slugs don't make good guardians, but at least the halls have plenty of light.
+  Once the goblin druids arrived, they cast life-engorging spells to grow the slugs to monstrous proportions, in order to ensure that prisoners don't escape past this point.
+
+  The goblins move through this room by throwing `food' (books, poop, or bones) towards the far side of the room.
+  Salt covers the stairs, preventing the slugs from moving upwards.
+  The fireflies continue nipping at them, and have quadrupled their population.
+  The slugs don't make good guardians, but at least the halls have plenty of light.
 \end{exampletext}
+
+The moment the \glspl{pc} enter the room, a morphed slug projectile-vomits acid at the first to enter.
+Each round after that, another slug comes within range, then remains where they are, blocking the return.
 
 \begin{boxtext}
   The doorway reveals a massive hallway of sparkling, floating, gently-buzzing, lights.
@@ -78,23 +83,17 @@ The slugs don't make good guardians, but at least the halls have plenty of light
   The moment you enter, the slugs' eye-stalks perk up, and they begin to slide off the corpses they were feasting on, and approach\ldots
 \end{boxtext}
 
-\paragraph{If the \glspl{pc} run up the stairs,}
-have them roll \roll{Speed}{Athletics} (\gls{tn} \arabic{track}) to avoid the acidic spray form the slugs.
-
-From that point until the slugs loose sight of them, they are in combat.
-The slugs will spray acid at them, follow them up the stairs, and pester them for as long as they remain in sight.
-
 \morphslug[\npc{\T[9]\A\R}{20 Morph Slugs}]
 
-\paragraph{If the \glspl{pc} throw in some food,}
-the morph-slugs head\ldots slowly\ldots towards it rather than fight.
+\paragraph{If the \glspl{pc} throw food anywhere,}
+the morph-slugs head towards it rather than fight.
 
 \paragraph{If the \glspl{pc} want to investigate the corpses,}
 \label{nursery_key}
 they find a dead gnome with \pgls{deep} Scroll, and a discarded, half-eaten cloak, with a key to room \ref{nursery} in the pocket.%
 \footnote{See \autopageref{saving_the_children} for how the key arrived here.}
 \iftoggle{oneshot}{%
-  As with the others, the \Gls{deep} Scroll requires a riddle to be answered, takes four rounds before it activates, and vanishes once used.
+  As with the others, the \Gls{deep} Scroll requires a riddle to be answered, and vanishes once used.
 }{}
 
 \paragraph{If the \glspl{pc} remove all the salt from the stairs,}
@@ -168,10 +167,6 @@ they may wish to \gls{retreat} from the fight and flee.
 Have them roll \roll{Speed}{Athletics} at \tn[10] to see how far they get.
 
 Find the goblins' stats \vpageref{workshopGoblins}.
-
-\iftoggle{hardcore}{}{
-  \warrenMapMiddle
-}
 
 \mapentry[grandLibrary]{The Grand Library}
 

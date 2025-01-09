@@ -136,18 +136,6 @@
 
   The lift (room \ref{lift}) cannot take the full weight of \pgls{ogre} plus the prisoners, so one goblin druid and \pgls{ogre} go to the bottom, then the prisoners get shoved in the lift by \glspl{ogre} at the top.
 
-  \iftoggle{hardcore}{%
-    \armouredOgre
-  }{
-    \iftoggle{oneshot}{}{
-      \goblin[\npc{\T[2]\N}{\arabic{noAppearing} Goblins}]
-    }
-  }
-
-  \goblin[\npc{\T[3]\N}{\arabic{noAppearing} Goblins}]
-
-  \ogre[\npc{\N\Hu}{Ogre}]
-
   \paragraph{If any \glspl{pc} have died,}
   this is a good time to give out new characters from the recently captured prisoners.
 
@@ -163,6 +151,18 @@
   }{}
 
   Shortly after, two more \glspl{ogre} come down to find out where the last people went.
+
+  \iftoggle{hardcore}{%
+    \armouredOgre
+  }{
+    \iftoggle{oneshot}{}{
+      \goblin[\npc{\T[2]\N}{\arabic{noAppearing} Goblins}]
+    }
+  }
+
+  \goblin[\npc{\T[3]\N}{\arabic{noAppearing} Goblins}]
+
+  \ogre[\npc{\N\Hu}{Ogre}]
 
   \end{baseNote}
 }

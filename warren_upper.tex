@@ -25,7 +25,6 @@
 }{}
 
 \mapentry[armoury]{Armoury}
-
 \begin{exampletext}
 
   The gnomes once stashed their little weapons here.
@@ -33,33 +32,36 @@
 
 \end{exampletext}
 
-\iftoggle{oneshot}{}{
-  \vfill\null
-}
-
-The \glspl{pc} see the following:
-
-\begin{itemize}
-
-  \item{3 buckler shields}
-  \item{1 crossbow (unstrung but usable with an \roll{Wits}{Crafts} roll, \tn[7])}
-  \item{3 quivers, each with 20 arrows (for a shortbow)}
-  \iftoggle{hardcore}{%
-    \item{3 crossbow bolts}
-    \item{2 shortbows (also unstrung)}
-  }{
-    \item{8 crossbow bolts}
-    \item{2 shortbows}
-  }
-  \item{3 shortswords}
-  \item{7 wood axes}
-
-\end{itemize}
-
 \begin{boxtext}
   At the top of the stairway, three dying fireflies wander pointlessly.
   Behind them, a cluster of shadow in an alcove holds metallic glints.
 \end{boxtext}
+
+%The \glspl{pc} see the following:
+
+\iftoggle{oneshot}{}{%
+  %\vfill\null
+  \iftoggle{hardcore}{}{%
+    \columnbreak
+  }%
+}
+
+\begin{itemize}
+  \item
+  3 buckler shields
+  \item
+  1 crossbow (unstrung but usable with an \roll{Wits}{Crafts} roll, \tn[7])
+  \item
+  3 quivers, each with 20 arrows (for a shortbow)
+  \item
+  8 crossbow bolts
+  \item
+  2 shortbows
+  \item
+  3 shortswords
+  \item
+  7 wood axes
+\end{itemize}
 
 \iftoggle{oneshot}{
   \paragraph{Buckler Shields}
@@ -124,9 +126,11 @@ The \glspl{ogre} cannot run through this door -- they have to stop, and squeeze.
 Anyone waiting on the other side can roll \roll{Intelligence}{Melee} against the ogre's \roll{Speed}{Melee}; success means the character can make \pgls{vitalShot} against the giant head squirming through the door.%
 \exRef{core}{Core Rules}{sneakattack}
 
-\mapentry[topShaft]{The Top of the Shaft}
+\iftoggle{hardcore}{}{
+  \warrenMapUpper
+}
 
-\widePic{Roch_Hercka/garden}
+\mapentry[topShaft]{The Top of the Shaft}
 
 Grank the goblin druid has heard the \glspl{pc} coming, and has no intention of fighting them alone.
 He knows he has the only key to the exit door (room \ref{lowerExit}), so he intends to loose the morph-wolves he has tied up at the room's side before fleeing into the fungal gardens.
@@ -145,19 +149,23 @@ He knows he has the only key to the exit door (room \ref{lowerExit}), so he inte
 
 \paragraph{If the \glspl{pc} run through the lift's double doors,}
 they will find a sudden drop.
-The players roll \roll{Wits}{Athletics} (\tn[7]) to have the \glspl{pc} catch themselves before falling.%
-\footnote{If the \glspl{pc} abandoned \gls{kalama} and the children (room \vref{nursery}), consider what he might have done in the mean-time.
-Perhaps he could use \pgls{talisman} to engineer a distraction and get up the lift.
-Perhaps he simply fell to an ogre.}
+The players roll \roll{Wits}{Athletics} (\tn[7]) to have the \glspl{pc} catch themselves before falling.
 
 \paragraph{Falling to the mid-way point}
-inflicts $1D6+1$ Damage, plus the character's Strength Bonus.%
-\footnote{Larger creatures receive more Damage from falls}
+inflicts $1D6+1$ Damage, plus the character's Strength Bonus.
 
 \paragraph{Falling to the bottom}
 inflicts $2D6+2$ Damage, plus the character's Strength Bonus.%
 
+\paragraph{If the \glspl{pc} abandoned \gls{kalama} and the children}
+(room \vref{nursery}),
+consider what he might have done in the mean-time.
+Perhaps he could use \pgls{talisman} to engineer a distraction and get up the lift.
+Or perhaps \pgls{ogre} at him.
+
 \morphwolf[\npc{\T[4]\A\R}{\arabic{noAppearing} Morph Wolves}]
+
+\widePic[t]{Roch_Hercka/garden}
 
 \mapentry[fungusGarden]{Fungal Gardens}
 

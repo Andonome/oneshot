@@ -68,9 +68,6 @@ images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg images/extracte
 images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg images/extracted/
 	inkscape $< --select=layer2 --actions=delete -l --export-filename $@
 
-.PHONY: all
-all: $(TITLE).pdf Extended_$(TITLE).pdf Hardcore_$(TITLE).pdf
-
 $(DROSS)/characters.pdf: ex_cs/
 	$(COMPILER) -jobname=characters ex_cs/all.tex
 
@@ -87,12 +84,12 @@ $(DROSS)/extended_$(BOOK).pdf: $(UPPER_WARREN)
 Extended_$(TITLE).pdf: $(DROSS)/extended_$(BOOK).pdf $(DROSS)/characters.pdf
 	pdfunite $^ $@
 
+targets += Extended_$(TITLE).pdf
+
 $(DROSS)/hardcore_$(BOOK).pdf: $(OUTSIDE_WARREN)
 	@$(COMPILER) -jobname=hardcore_$(BOOK) module.tex
 Hardcore_$(TITLE).pdf: $(DROSS)/hardcore_$(BOOK).pdf
 	@$(CP) $< $@
 
-.PHONY: clean
-clean:
-	$(CLEAN)
-	$(RM) -r images/extracted
+targets += Hardcore_$(TITLE).pdf
+

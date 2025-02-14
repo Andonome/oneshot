@@ -9,6 +9,8 @@ OUTSIDE_WARREN = $(UPPER_WARREN) module.tex sq.tex
 config/vars:
 	git submodule update --init
 
+dependencies += magick
+
 MAP_PARTS = images/extracted/lower-1.jpg images/extracted/lower-2.jpg images/extracted/lower-3.jpg
 
 LOWER_SECTION_1_RECTS = magick - -fill white -channel-fx '| gray=>alpha' \

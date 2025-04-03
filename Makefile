@@ -1,3 +1,5 @@
+EXTERNAL_REFERENTS = core stories judgement
+
 include config/vars
 
 WARREN = main.tex commands.tex images/ glossary.tex intro.tex invasion.tex $(wildcard warren_*.tex) appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg $(MAP_PARTS)
@@ -76,19 +78,19 @@ $(DROSS)/characters.pdf: ex_cs/
 config/rules.pdf:
 	make -C config rules.pdf
 
-$(DBOOK): $(WARREN) | LOCTEX HANDOUTS STYLE_FILES EXTERNAL .switch-gls
+$(DBOOK): $(DEPS) $(WARREN) | LOCTEX HANDOUTS STYLE_FILES EXTERNAL .switch-gls
 	@$(COMPILER) main.tex
 $(TITLE).pdf: $(DROSS)/$(BOOK).pdf $(DROSS)/characters.pdf config/rules.pdf
 	pdfunite $^ $@
 
-$(DROSS)/extended_$(BOOK).pdf: $(UPPER_WARREN)
+$(DROSS)/extended_$(BOOK).pdf: $(DEPS) $(UPPER_WARREN)
 	@$(COMPILER) -jobname=extended_$(BOOK) main.tex
 Extended_$(TITLE).pdf: $(DROSS)/extended_$(BOOK).pdf $(DROSS)/characters.pdf
 	pdfunite $^ $@
 
 targets += Extended_$(TITLE).pdf
 
-$(DROSS)/hardcore_$(BOOK).pdf: $(OUTSIDE_WARREN)
+$(DROSS)/hardcore_$(BOOK).pdf: $(DEPS) $(OUTSIDE_WARREN)
 	@$(COMPILER) -jobname=hardcore_$(BOOK) module.tex
 Hardcore_$(TITLE).pdf: $(DROSS)/hardcore_$(BOOK).pdf
 	@$(CP) $< $@

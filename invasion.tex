@@ -227,16 +227,19 @@ You should cut (or tear) these apart, so you can hand them to players to individ
 
   \goblincaster[\npc{\F\N}{Goblin Druid}]
 
-  This goblin has \arabic{ap}~\glspl{ap}, and Attack \arabic{toHit}, so when she attacks, put a coin on your \gls{gm} sheet at `\arabic{ap}', and remove one for each attack.
-  If \pgls{pc} attacks her, they roll $2D6$ plus their Attack, and try to beat her \gls{tn} of \arabic{toHit}.
-  If the \gls{pc} rolls a tie, they can choose to both deal and take Damage, or neither.
+  This goblin has \arabic{ap}~\glspl{ap}, and Attack \arabic{toHit}, so if combat begins, take your \gls{gm} sheet (\vpageref{gmSheet}) and put a coin on the number-line at~`\arabic{ap}' to mark how may \glspl{ap} she has.
+  When \pgls{pc} attacks her (or if she attacks \pgls{pc}), you move the coin down one place, and the player rolls $2D6$ plus their Attack, and tries to beat her \gls{tn} of \arabic{toHit}.
+
+  If the player wins the roll, they deal Damage (and you can mark off her \glspl{hp} boxes).
+  If they roll under the \gls{tn}, the druid deals \dmg{damage}~Damage.
+  If the player rolls a tie, they can choose to both deal and take Damage, or neither.
 
   You won't normally need to track \gls{weight}-carried for \glspl{npc}, but they appear just-in-case, as a half-filled \gls{hp}-marker.
-  In this case, the dagger has \gls{weight}~1.
-  Creatures can also carry an effective \gls{weight} due to their thick skin, or from \glspl{ep}.
+  In this case, the \gls{weapon} has \gls{weight}~\arabic{weaponWeight}.
+  Some creatures also carry an effective \gls{weight} due to their thick skin, or from \glspl{ep}.
 
   \paragraph{Spells}
-  explain themselves, but do pay attention to the `\textit{Roll}' and `\textit{Resistance by}' text.
+  explain themselves, but do pay attention to the `\textit{roll}' and `\textit{resists}' text.
   The `roll' indicates the spellcaster's Bonus, while you set the \gls{tn} depending on what makes the spell easier or harder to cast.
   But if you see `resisted by', then this spell might target \pgls{pc} directly, so the player would roll against the \gls{tn} beside the spell.
 
@@ -246,7 +249,7 @@ You should cut (or tear) these apart, so you can hand them to players to individ
     \showStdSpells
   \end{exampletext}
 
-  \Glspl{talisman} work the same way, showing either how \pgls{pc} resists, or just showing their Bonus to cast.
+  \Glspl{talisman} display their abilities just like spells, showing either a Bonus to cast, or how characters can resist the effect.
 }{}
 
 \subsection{Darkness \& Light}
@@ -258,9 +261,8 @@ If only a single \gls{pc} has a light source, switch all narrative to that perso
 \subsubsection{Candles}
 are common, these light sources go out easily.
 Any running will put a candle out, but dropping them will do nothing.
-Wax and mushroom-based candles lay in almost every room in the \gls{warren}, though they sit unlit in empty rooms.
 
-\subsubsection{Torches}
+\subsubsection{\Glsfmtplural{torch}}
 can light up an entire room, although characters will struggle to put them out quickly.
 You don't want to put out a torch with your hands!
 

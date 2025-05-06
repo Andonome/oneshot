@@ -1,5 +1,8 @@
 EXTERNAL_REFERENTS = core stories judgement
 
+targets += Extended_Escape_from_the_Goblin_Horde.pdf
+targets += Hardcore_Escape_from_the_Goblin_Horde.pdf
+
 include config/vars
 
 WARREN = main.tex commands.tex images/ glossary.tex intro.tex invasion.tex $(wildcard warren_*.tex) appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg $(MAP_PARTS)

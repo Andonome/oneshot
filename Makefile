@@ -75,7 +75,7 @@ images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg images/extracte
 images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg images/extracted/
 	inkscape $< --select=layer2 --actions=delete -l --export-filename $@
 
-$(DROSS)/characters.pdf: ex_cs/
+$(DROSS)/characters.pdf: $(wildcard ex_cs/*.tex) config/CS.tex
 	$(COMPILER) -jobname=characters ex_cs/all.tex
 
 config/rules.pdf:

@@ -1,7 +1,7 @@
 EXTERNAL_REFERENTS = core stories judgement
 
-targets += Extended_Escape_from_the_Goblin_Horde.pdf
-targets += Hardcore_Escape_from_the_Goblin_Horde.pdf
+pdfs += Extended_$(TITLE).pdf
+pdfs += Hardcore_$(TITLE).pdf
 
 include config/vars
 
@@ -81,8 +81,7 @@ $(DROSS)/characters.pdf: $(wildcard ex_cs/*.tex) config/CS.tex
 config/rules.pdf:
 	make -C config rules.pdf
 
-$(DBOOK): $(DEPS) $(WARREN) | LOCTEX HANDOUTS STYLE_FILES EXTERNAL .switch-gls
-	@$(COMPILER) main.tex
+$(DBOOK): $(DEPS) $(WARREN) $(MAP_PARTS) .switch-gls
 $(TITLE).pdf: $(DROSS)/$(BOOK).pdf $(DROSS)/characters.pdf config/rules.pdf
 	pdfunite $^ $@
 
@@ -91,12 +90,8 @@ $(DROSS)/extended_$(BOOK).pdf: $(DEPS) $(UPPER_WARREN)
 Extended_$(TITLE).pdf: $(DROSS)/extended_$(BOOK).pdf $(DROSS)/characters.pdf
 	pdfunite $^ $@
 
-targets += Extended_$(TITLE).pdf
-
 $(DROSS)/hardcore_$(BOOK).pdf: $(DEPS) $(OUTSIDE_WARREN)
 	@$(COMPILER) -jobname=hardcore_$(BOOK) module.tex
 Hardcore_$(TITLE).pdf: $(DROSS)/hardcore_$(BOOK).pdf
 	@$(CP) $< $@
-
-targets += Hardcore_$(TITLE).pdf
 

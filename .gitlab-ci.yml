@@ -1,16 +1,14 @@
 ---
 variables:
-  LATEX_IMAGE: andonome/texbind
+  LATEX_IMAGE: registry.gitlab.com/bindrpg/config:latest
 
 build:
   image: $LATEX_IMAGE
   script:
-    - make config/vars
     - make all
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
     - if: $CI_COMMIT_BRANCH == "run"
-    - if: $CI_PIPELINE_SOURCE == "schedule"
   artifacts:
     paths:
       - "*.pdf"

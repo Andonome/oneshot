@@ -3,7 +3,9 @@ EXTERNAL_REFERENTS = core stories judgement
 pdfs += Extended_$(TITLE).pdf
 pdfs += Hardcore_$(TITLE).pdf
 
-include config/vars
+dependencies += magick
+
+include config/common.mk
 
 WARREN = main.tex commands.tex images/ glossary.tex intro.tex invasion.tex $(wildcard warren_*.tex) appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg $(MAP_PARTS)
 
@@ -11,10 +13,8 @@ UPPER_WARREN = $(WARREN) top.tex tour.tex images/extracted/upper-handout.svg
 
 OUTSIDE_WARREN = $(UPPER_WARREN) module.tex sq.tex
 
-config/vars:
+config/common.mk:
 	git submodule update --init
-
-dependencies += magick
 
 MAP_PARTS = images/extracted/lower-1.jpg images/extracted/lower-2.jpg images/extracted/lower-3.jpg
 

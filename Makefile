@@ -82,12 +82,12 @@ $(DBOOK): $(DEPS) $(WARREN) $(MAP_PARTS) .switch-gls
 $(TITLE).pdf: $(DROSS)/$(BOOK).pdf $(DROSS)/characters.pdf config/rules.pdf
 	pdfunite $^ $@
 
-$(DROSS)/extended_$(BOOK).pdf: $(DEPS) $(UPPER_WARREN)
+$(DROSS)/extended_$(BOOK).pdf: $(DEPS) $(UPPER_WARREN) $(DROSS)/
 	@$(COMPILER) -jobname=extended_$(BOOK) main.tex
 Extended_$(TITLE).pdf: $(DROSS)/extended_$(BOOK).pdf $(DROSS)/characters.pdf
 	pdfunite $^ $@
 
-$(DROSS)/hardcore_$(BOOK).pdf: $(DEPS) $(OUTSIDE_WARREN)
+$(DROSS)/hardcore_$(BOOK).pdf: $(DEPS) $(OUTSIDE_WARREN) $(DROSS)/
 	@$(COMPILER) -jobname=hardcore_$(BOOK) module.tex
 Hardcore_$(TITLE).pdf: $(DROSS)/hardcore_$(BOOK).pdf
 	@$(CP) $< $@

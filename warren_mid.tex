@@ -100,17 +100,6 @@ they find a dead gnome with \pgls{deep} Scroll, and a discarded, half-eaten cloa
 the slugs ascend\ldots slowly.
 However, the resulting battle will kill three \glspl{ogre}, and all morph-slugs.
 
-\boxPair{
-  \label{workshopGoblins}
-  \goblin[\npc{\T[\arabic{enemyNo}]\N}{\arabic{enemyNo} Goblins}]
-
-  \addtocounter{enemyNo}{-2}
-
-  \ogre[\npc{\T[\arabic{enemyNo}]\N}{\arabic{enemyNo} Ogres}]
-}{
-  \pic{Decky/armoury}
-}
-
 \mapentry[greatHall]{The Great Hallway}
 
 \begin{exampletext}
@@ -143,6 +132,17 @@ have them roll \roll{Intelligence}{Stealth} (\tn[8]), to get across the sticky f
 \iftoggle{hardcore}{
   If a single \emph{player} clearly gives in-character advice to another, the horde awaken.
 }{}
+
+\boxPair{
+  \label{workshopGoblins}
+  \goblin[\npc{\T[\arabic{enemyNo}]\N}{\arabic{enemyNo} Goblins}]
+
+  \addtocounter{enemyNo}{-2}
+
+  \ogre[\npc{\T[\arabic{enemyNo}]\N}{\arabic{enemyNo} Ogres}]
+}{
+  \pic{Decky/armoury}
+}
 
 \mapentry[workshop]{The Workshop}
 

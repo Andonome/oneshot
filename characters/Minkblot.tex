@@ -1,5 +1,5 @@
 
-\begin{filledCS}%
+\filledCS%
   {Minkblot}% NAME
   {Human}% RACE
   {Failed Alchemist}% CONCEPT
@@ -7,15 +7,14 @@
   {{4}{0}{1}}% BODY
   {{0}{-1}{0}}% MIND
   {%
+    \renewcommand\charSpells{
+      \showSpells{Water1}
+      \showSpells{Water1}
+    }
     \setcounter{Academics}{1}
     \setcounter{Performance}{1}
     \setcounter{Water}{1}
   }% SKILLS
   {}% KNACKS
   {}% EQUIPMENT
-
-\renewcommand\charSpells{
-  \showSpells{Water1}
-}
-\end{filledCS}
 

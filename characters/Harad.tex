@@ -1,5 +1,5 @@
 
-\begin{filledCS}%
+\filledCS%
   {Harad}% NAME
   {Elf}% RACE
   {Innocent Bard}% CONCEPT
@@ -7,6 +7,14 @@
   {{-1}{0}{-1}}% BODY
   {{1}{2}{1}}% MIND
   {%
+    \renewcommand\charSpells{
+      \showSpells{Air1}
+      \showSpells{Air1}
+
+      \showSpells{Fire1}
+
+      \showSpells{Light1}
+    }
     \setcounter{Performance}{2}
     \setcounter{Survival}{1}
     \setcounter{Air}{1}
@@ -14,14 +22,4 @@
   }% SKILLS
   {\snapcaster}% KNACKS
   {Flute}% EQUIPMENT
-  \renewcommand\charSpells{
-    \showSpells{Air1}
-    \showSpells{Air1}
-
-    \showSpells{Fire1}
-
-    \showSpells{Light1}
-  }
-
-\end{filledCS}
 

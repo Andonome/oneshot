@@ -1,5 +1,5 @@
 
-\begin{filledCS}%
+\filledCS%
   {Advir}% NAME
   {Elf}% RACE
   {Travelling Singer}% CONCEPT
@@ -7,6 +7,13 @@
   {{0}{-1}{0}}% BODY
   {{0}{0}{1}}% MIND
   {%
+    \renewcommand\charSpells{
+      \showSpells{Fate1}
+      \showSpells{Fate1}
+      \showSpells{Water1}
+      \showSpells{Mind1}
+      \showSpells{Mind1}
+    }
     \setcounter{Performance}{1}
     \setcounter{Larceny}{1}
     \setcounter{Survival}{1}
@@ -15,15 +22,3 @@
   }% SKILLS
   {\snapcaster, \autophage}% KNACKS
   {}% EQUIPMENT
-  \renewcommand\charSpells{
-    \showSpells{Fate1}
-
-    \showSpells{Fate1}
-
-    \showSpells{Water1}
-    \showSpells{Mind1}
-    \showSpells{Mind1}
-  }
-
-\end{filledCS}
-

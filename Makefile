@@ -5,6 +5,10 @@ pdfs += Hardcore_$(TITLE).pdf
 
 dependencies += magick
 
+targets += cs.pdf
+
+vpath a7%.tex characters
+
 include config/common.mk
 
 WARREN = main.tex commands.tex images/ glossary.tex intro.tex invasion.tex $(wildcard warren_*.tex) appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg $(MAP_PARTS)

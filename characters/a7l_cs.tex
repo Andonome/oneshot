@@ -1,0 +1,75 @@
+\documentclass[10pt,landscape]{book}
+
+\usepackage{config/bind}
+\usepackage{config/booklet}
+
+\geometry{%
+  paperwidth=105mm,
+  paperheight=74mm,
+}
+
+\begin{document}
+
+\ifodd\value{r4}
+  \input{characters/Roina.tex}
+\else
+  \input{characters/Gharsh.tex}
+\fi
+
+
+\ifodd\value{r3}
+  \input{characters/Noka.tex}
+\else
+  \input{characters/Fox.tex}
+\fi
+
+\ifnum\value{r4}>2
+  \input{characters/Bight.tex}
+\else
+  \input{characters/Greyling.tex}
+\fi
+
+
+\ifnum\value{r3}>2
+    \input{characters/Minkblot.tex}
+\else
+  \ifnum\value{r3}=1
+    \input{characters/Harad.tex}
+  \else
+    \input{characters/Charkmould.tex}
+  \fi
+\fi
+
+\ifnum\day<14
+  \input{characters/Aeglir.tex}
+\else
+  \ifnum\day>25
+      \input{characters/Oakbleach.tex}
+    \ifnum\day>18
+    \else
+      \input{characters/Cainfold.tex}
+    \fi
+  \else
+    \input{characters/Sootgrawl.tex}
+  \fi
+\fi
+
+\ifodd\day
+  \input{characters/Ben.tex}
+\else
+  \input{characters/Advir.tex}
+\fi
+
+\ifodd\month
+  \input{characters/Dent.tex}
+\else
+  \input{characters/Ashkale.tex}
+\fi
+
+\ifodd\year
+  \input{characters/Waxcaul.tex}
+\else
+  \input{characters/Guts_Pike.tex}
+\fi
+
+\end{document}

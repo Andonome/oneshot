@@ -18,7 +18,9 @@
   }
 
 \iftoggle{oneshot}{
-  \settoggle{examplecharacter}{true}{}
+  \settoggle{examplecharacter}{true}
+}{
+  \settoggle{intro}{false}
 }
 
 \newcounter{enemyNo}

@@ -41,13 +41,9 @@
 \prisoner[\NPC{\Hu\F}{Swelcrist}{Demanding}{Wrinkles nose}{Respect}]
 
 \prisoner[\NPC{\Hu\M}{Barncull}{Jovial}{Looks up}{A bath}]
-\end{multicols}
 
-\iftoggle{hardcore}{
+\iftoggle{intro}{}{
 
-  \cleardoublepage
-
-  \begin{multicols}{2}
   \humanfarmer[\npc{\M\Hu}{Ratcaul}]
 
   \prisoner[\NPC{\Hu\M}{Kinlint}{Calm}{Um\ldots}{Hope}]
@@ -57,9 +53,9 @@
   \humanthief[\npc{\F\Hu}{Nightsore}]
 
   \humansoldier[\npc{\M\Hu}{Goutmare}]
-  \end{multicols}
+}
 
-}{}
+\end{multicols}
 
 \cleardoublepage
 

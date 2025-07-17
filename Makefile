@@ -7,6 +7,8 @@ dependencies += magick
 
 targets += cs.pdf
 
+output += booklets
+
 vpath a7%.tex characters
 
 include config/common.mk

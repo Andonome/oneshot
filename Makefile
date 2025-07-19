@@ -5,7 +5,7 @@ pdfs += Hardcore_$(TITLE).pdf
 
 dependencies += magick
 
-targets += cs.pdf
+targets += zine_characters.pdf
 
 output += booklets
 
@@ -97,4 +97,11 @@ $(DROSS)/hardcore_$(BOOK).pdf: $(DEPS) $(OUTSIDE_WARREN)
 	@$(COMPILER) -jobname=hardcore_$(BOOK) module.tex
 Hardcore_$(TITLE).pdf: $(DROSS)/hardcore_$(BOOK).pdf
 	@$(CP) $< $@
+
+.PHONY: cs_zine
+cs_zine: cs.pdf ## Make A7 zine example characters
+	make zine_characters.pdf
+
+zine_characters.pdf: cs.pdf $(mini_spell_pdf)
+	pdfunite $^ $@
 

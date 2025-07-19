@@ -1,9 +1,10 @@
 # Escape from the Goblin Horde
 
-| Downloads                      | Related Books            |
-|:-------------------------------|:-------------------------|
-| [Oneshot][oneshot]             | [Core Rules][core]       |
-| [Extended][extended]           | [Players' Book][stories] |
+| Downloads                            | Related Books                       |
+|:-------------------------------------|:------------------------------------|
+| [Oneshot][oneshot]                   | [Core Rules][core]                  |
+| [Extended][extended]                 | [Players' Book][stories]            |
+| [Enter the Horde][enter_the_horde]   | [Zine Character Sheets][cs_zine]    |
 
 This one-shot module for the [BIND RPG][core] provides a no-stress, simple game, which lasts a single evening.
 It goes like this:
@@ -37,19 +38,24 @@ Moving upwards, the PCs may encounter:
 
 <img src="images/Roch_Hercka/waking.jpg" width="1000">
 
-## The Grognard Meat-Grinder
+## The Meat-Grinder
 
-If you want a module with more meat, there is an [advanced version][normal] of this same module.
+If you want a module with more meat, there is an [advanced version][extended] of this same module.
 
 The adventure is a PC meat-grinder, with plenty of prisons scattered through the dungeon for players to return with new characters once they die.
 As they travel upwards towards the sunlight, they learn about the rules and the wider world of Fenestra.
 
 <img src="images/Dyson_Logos/lower.svg" width="500">
 
+## Entering the Goblin Horde
+
+For existing chronicles, the troupe may simply [enter the horde][enter_the_horde], to rescue allies.
+
 [compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
 [issues email]: mailto:contact-project+bindrpg-oneshot-22760003-issue-@incoming.gitlab.com
 [oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Escape_from_the_Goblin_Horde.pdf?job=build
 [extended]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Extended_Escape_from_the_Goblin_Horde.pdf?job=build
+[enter_the_horde]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Enter_the_Goblin_Horde.pdf?job=build
 [cs_zine]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/zine_characters.pdf?job=build
 [core]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Core_Rules.pdf?job=build
 [stories]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Stories.pdf?job=build

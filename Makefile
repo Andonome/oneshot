@@ -1,7 +1,7 @@
 EXTERNAL_REFERENTS = core stories judgement
 
 pdfs += Extended_$(TITLE).pdf
-pdfs += Hardcore_$(TITLE).pdf
+pdfs += Enter_the_Goblin_Horde.pdf
 
 dependencies += magick
 
@@ -95,7 +95,7 @@ Extended_$(TITLE).pdf: $(DROSS)/extended_$(BOOK).pdf $(DROSS)/characters.pdf
 
 $(DROSS)/hardcore_$(BOOK).pdf: $(DEPS) $(OUTSIDE_WARREN)
 	@$(COMPILER) -jobname=hardcore_$(BOOK) module.tex
-Hardcore_$(TITLE).pdf: $(DROSS)/hardcore_$(BOOK).pdf
+Enter_the_Goblin_Horde.pdf: $(DROSS)/hardcore_$(BOOK).pdf
 	@$(CP) $< $@
 
 .PHONY: cs_zine

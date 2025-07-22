@@ -15,7 +15,7 @@ include config/common.mk
 
 WARREN = main.tex commands.tex images/ glossary.tex intro.tex invasion.tex $(wildcard warren_*.tex) appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg $(MAP_PARTS)
 
-UPPER_WARREN = $(WARREN) top.tex tour.tex images/extracted/upper-handout.svg
+UPPER_WARREN = $(WARREN) top.tex tour.tex images/extracted/lower-handout.svg
 
 OUTSIDE_WARREN = $(UPPER_WARREN) module.tex sq.tex
 
@@ -75,14 +75,16 @@ images/extracted/lower-handout-3.jpg: images/Dyson_Logos/lower.svg | images/extr
 	--export-type=png --export-area=30:40:2350:1400 | \
 	$(LOWER_SECTION_3_RECTS)
 
-images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg | images/extracted/
+images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg | images/extracted/lower-handout-2.jpg
 	inkscape $< --export-id-only --export-id=layer3 -l --export-filename $@
 
-images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg | images/extracted/
+images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg | images/extracted/upper-handout.svg
 	inkscape $< --select=layer2 --actions=delete -l --export-filename $@
 
 config/rules.pdf:
 	make -C config rules.pdf
+
+$(DROSS)/characters.pdf: $(DBOOK)
 
 $(DBOOK): $(DEPS) $(WARREN) $(MAP_PARTS) .switch-gls
 $(TITLE).pdf: $(DROSS)/$(BOOK).pdf $(DROSS)/characters.pdf config/rules.pdf

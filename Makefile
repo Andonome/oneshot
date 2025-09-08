@@ -5,9 +5,8 @@ pdfs += Enter_the_Goblin_Horde.pdf
 
 dependencies += magick
 
+zines += walkthrough.pdf
 targets += zine_characters.pdf
-
-output += booklets
 
 vpath a7%.tex characters
 
@@ -99,6 +98,8 @@ $(DROSS)/hardcore_$(BOOK).pdf: $(DEPS) $(OUTSIDE_WARREN)
 	@$(COMPILER) -jobname=hardcore_$(BOOK) module.tex
 Enter_the_Goblin_Horde.pdf: $(DROSS)/hardcore_$(BOOK).pdf
 	@$(CP) $< $@
+
+### Zines ###
 
 .PHONY: cs_zine
 cs_zine: cs.pdf ## Make A7 zine example characters

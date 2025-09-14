@@ -4,7 +4,8 @@
 |:-------------------------------------|:------------------------------------|
 | [Oneshot][oneshot]                   | [Core Rules][core]                  |
 | [Extended][extended]                 | [Players' Book][stories]            |
-| [Enter the Horde][enter_the_horde]   | [Zine Character Sheets][cs_zine]    |
+| [Enter the Horde][enter_the_horde]   | [Almanac Zine][almanac]             |
+| [Zine Summary][walkthrough_zine]     | [Zine Character Sheets][cs_zine]    |
 
 This one-shot module for the [BIND RPG][core] provides a no-stress, simple game, which lasts a single evening.
 It goes like this:
@@ -56,6 +57,9 @@ For existing chronicles, the troupe may simply [enter the horde][enter_the_horde
 [oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Escape_from_the_Goblin_Horde.pdf?job=build
 [extended]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Extended_Escape_from_the_Goblin_Horde.pdf?job=build
 [enter_the_horde]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Enter_the_Goblin_Horde.pdf?job=build
+[walkthrough_zine]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/walkthrough.pdf?job=build
+[walkthrough_zine_a7]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/a7_walkthrough.pdf?job=build
 [cs_zine]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/zine_characters.pdf?job=build
 [core]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Core_Rules.pdf?job=build
 [stories]: https://gitlab.com/bindrpg/metabind/-/jobs/artifacts/master/raw/complete/Stories.pdf?job=build
+[almanac]: https://gitlab.com/bindrpg/judgement/-/jobs/artifacts/master/raw/almanac.pdf?job=build

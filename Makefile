@@ -7,6 +7,7 @@ dependencies += magick
 
 zines += walkthrough.pdf
 targets += zine_characters.pdf
+output += booklets/
 
 vpath a7%.tex characters
 
@@ -108,3 +109,5 @@ cs_zine: cs.pdf ## Make A7 zine example characters
 zine_characters.pdf: cs.pdf $(mini_spell_pdf)
 	pdfunite $^ $@
 
+booklets/a7_walkthrough.tex: livedraw.tex | booklets/ $(RELEASE)
+	cp $< $@

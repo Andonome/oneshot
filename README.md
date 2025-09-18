@@ -56,7 +56,7 @@ For existing chronicles, the troupe may simply [enter the horde][enter_the_horde
 [issues email]: mailto:contact-project+bindrpg-oneshot-22760003-issue-@incoming.gitlab.com
 [oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Escape_from_the_Goblin_Horde.pdf?job=build
 [extended]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Extended_Escape_from_the_Goblin_Horde.pdf?job=build
-[enter_the_horde]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Enter_the_Goblin_Horde.pdf?job=build
+[enter_the_horde]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Enter_the_Horde.pdf?job=build
 [walkthrough_zine]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/walkthrough.pdf?job=build
 [walkthrough_zine_a7]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/a7_walkthrough.pdf?job=build
 [cs_zine]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/zine_characters.pdf?job=build

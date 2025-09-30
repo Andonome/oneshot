@@ -81,7 +81,7 @@ images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg | images/extrac
 images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg | images/extracted/upper-handout.svg
 	inkscape $< --select=layer2 --actions=delete -l --export-filename $@
 
-config/rules.pdf:
+config/rules.pdf: images/extracted/lower-handout.svg
 	make -C config rules.pdf
 
 $(DROSS)/characters.pdf: $(DBOOK)

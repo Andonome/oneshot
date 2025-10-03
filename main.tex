@@ -19,12 +19,12 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \glsunsetall
 \frontpage{Escape from the Goblin Horde}{%
-  \iftoggle{oneshot}{A oneshot module for BIND}{An introduction module for BIND}%
+  \iftoggle{intro}{A oneshot module for BIND}{An introduction module for BIND}%
 }
 
 \input{intro.tex}
 
-\iftoggle{oneshot}{}{
+\iftoggle{intro}{}{
   \input{tour.tex}
 }
 
@@ -58,7 +58,7 @@ Keywords={TTRPG,RPG,roleplaying}
 
 \end{multicols}
 
-\iftoggle{oneshot}{}{
+\iftoggle{intro}{}{
   \chapter{The Top Floor}
   \epigraph{%
       Never resting, never still.

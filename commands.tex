@@ -7,21 +7,17 @@
 \externalReferent{judgement}
 
 \newtoggle{hardcore}
-\newtoggle{oneshot}
+\togglefalse{intro}
 
 \ifStrSame{\jobname}{hardcore_oneshot}%
   {\settoggle{hardcore}{true}}%
   {\ifStrSame{\jobname}{oneshot}%
-    {\settoggle{oneshot}{true}
-    \settoggle{intro}{false}
-    }{}
+    { \settoggle{intro}{true} }{}
   }
 
-\iftoggle{oneshot}{
+\iftoggle{intro}{
   \settoggle{examplecharacter}{true}
-}{
-  \settoggle{intro}{false}
-}
+}{}
 
 \newcounter{enemyNo}
 
@@ -50,7 +46,7 @@
 
 \newcommand{\newRule}[2]{
 
-  \iftoggle{oneshot}{
+  \iftoggle{intro}{
     \begin{baseNote}{New Rule: #1}
 
     #2
@@ -148,7 +144,7 @@
   they are tired, and have 8 \glspl{ep} each, so any Damage they receive will quickly rack up penalties.
 
   Take the farmer statblocks from the handout, cut them apart from each other, and hand \iftoggle{hardcore}{2}{3} to the players to keep track of.
-  \iftoggle{oneshot}{
+  \iftoggle{intro}{
     The farmers will refuse to go into any combat situation first, but if the \glspl{pc} fight first then they can make a Morale Check to join.
   }{}
 
@@ -157,7 +153,7 @@
   \iftoggle{hardcore}{%
     \armouredOgre
   }{
-    \iftoggle{oneshot}{}{
+    \iftoggle{intro}{}{
       \goblin[\npc{\T[2]\N}{\arabic{noAppearing} Goblins}]
     }
   }

@@ -74,7 +74,7 @@
   He would rather take his chances hiding in the dark.
 
   \paragraph{Every time the \glspl{pc} give \gls{sadMan} a reason to hope,}
-  have them roll \roll{Charisma}{Empathy} at \iftoggle{oneshot}{\tn[9]}{\tn[11]}.
+  have them roll \roll{Charisma}{Empathy} at \iftoggle{intro}{\tn[9]}{\tn[11]}.
   Success means that \gls{sadMan} will untie them.
   A tie means he asks a follow-up question (allowing another re-roll if they can answer him well).
   A failure means he disengages, muttering ``no, it won't work''.
@@ -108,7 +108,7 @@
       \Dagger
     }% SKILLS
     {\snapcaster}% KNACKS
-    {torch, human foot\iftoggle{oneshot}{}{, map}}% EQUIPMENT
+    {torch, human foot\iftoggle{intro}{}{, map}}% EQUIPMENT
     {}% ABILITIES
 
   \showStdSpells
@@ -121,14 +121,14 @@
 
   Blara will attempt to run away, but must wait for the \gls{ogre} to move out of the doorway.
 
-  \iftoggle{oneshot}{
+  \iftoggle{intro}{
     Chasing after Blara requires \gls{resistedaction} roll of \roll{Speed}{Athletics}
     (the player rolls 2D6 plus their \roll{Speed}{Athletics} against Blara's \roll{Speed}{Athletics}, \tn[10]).%
   }{}%
 
   \paragraph{If Blara flees,}
   she runs out, taking her torch with her.
-  \iftoggle{oneshot}{%
+  \iftoggle{intro}{%
     If the fire has gone out and Blara leaves with the torch, the room becomes pitch-black.
     This gives the \glspl{pc} a bonus to any attack roll equal to their \roll{Wits}{Vigilance} +3 (the \gls{ogre} cannot coordinate well in the dark).
   }{}
@@ -137,7 +137,7 @@
   he will accompany them out, but his nerves are too shot to be of much use.
   He will not join any fights, but can hold a torch.
 
-  \iftoggle{oneshot}{}{
+  \iftoggle{intro}{}{
     \paragraph{If the \glspl{pc} search Blara's body,}
     they find a map of the upper level (see the handouts).
   }
@@ -200,7 +200,7 @@ Pots, smashed plates, forks, and candlesticks litter the floor.
 A goblin and a giant rat bicker over a human bone.
 
 On the table rest two large knives which can be used as \emph{daggers}.
-\iftoggle{oneshot}{%
+\iftoggle{intro}{%
   \Dagger
   \weaponName s grant \absNum{weaponDamage} Damage in combat, but no Bonus to hit.
 }{}
@@ -218,7 +218,7 @@ They should get a -2 Penalty for taking a torch.
 A tie means they must retreat, while the goblin investigates their room.
 Failure means the goblin and rat attack together.
 
-\iftoggle{oneshot}{
+\iftoggle{intro}{
   \paragraph{If the \glspl{pc} fight,}
   they take 1 \gls{ep} for the strenuous activity.
 }{}
@@ -234,7 +234,7 @@ If they hear the \glspl{pc} coming, they will shout for the goblins in room \vre
 
 \goblincaster[\npc{\T[2]\F\M\N}{Goblin Druids}]
 
-\iftoggle{oneshot}{
+\iftoggle{intro}{
   \paragraph{If the \glspl{pc} fight,}
   give each \pgls{ep}.
 }{}
@@ -274,7 +274,7 @@ More goblins lie sleeping, on the floor and out of sight.
 then the goblins are asleep in the kitchen, and they can sneak in with a \roll{Dexterity}{Stealth} roll (\tn[8]).%
 \exRef{core}{Core Rules}{sneakattack}
 
-\iftoggle{oneshot}{%
+\iftoggle{intro}{%
   As before, only one player rolls, and other characters use the same \gls{natural} to produce their own result.
   If the roll fails, all goblins wake up with hungry stomachs.
 }{}
@@ -292,7 +292,7 @@ then the goblins are asleep in the kitchen, and they can sneak in with a \roll{D
 \widePic[t]{Roch_Hercka/dragon}
 
 \paragraph{If the players try to find weapons,}%
-\iftoggle{oneshot}{
+\iftoggle{intro}{
   they can find plenty of make-shift weapons around the kitchen.
 
   These weapons may not be good quality, but they can still improve the \glspl{pc}' situation immensely.
@@ -313,7 +313,7 @@ The table also holds a tinder box and three mushroom-based candles (unlit).
 \mapentry[lift]{The Gnomish Lift}
 
 This \gls{artefact} is fully sentient, but only interested in taking people where they say they need to go.%
-\iftoggle{oneshot}{}{\footnote{For full details, see \autopageref{Lift}.}}
+\iftoggle{intro}{}{\footnote{For full details, see \autopageref{Lift}.}}
 It responds to three words when spoken directly towards it%
 \footnote{The lift is obviously deaf, as it has no ears, but it can lip-read.}
 --- the gnomish words for `farm' (for the top), `work' (for the middle), and `cook' (for the bottom).
@@ -418,7 +418,7 @@ Dragons think the answer is obvious.}
 \paragraph{If the dragon parts on good terms,}
 he blesses them all, restoring any lost \glspl{fp}.
 
-\iftoggle{oneshot}{
+\iftoggle{intro}{
   \paragraph{If the \glspl{pc} attack the dragon,}
   he kills the first to attack.
 

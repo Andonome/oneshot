@@ -86,7 +86,7 @@ config/rules.pdf: images/extracted/lower-handout.svg
 
 $(DROSS)/characters.pdf: $(DBOOK)
 
-$(DBOOK): $(DEPS) $(WARREN) $(MAP_PARTS) .switch-gls
+$(DBOOK): $(DEPS) $(WARREN) $(MAP_PARTS) $(DROSS)/$(BOOK)-switch-gls
 $(TITLE).pdf: $(DROSS)/$(BOOK).pdf $(DROSS)/characters.pdf config/rules.pdf
 	pdfunite $^ $@
 

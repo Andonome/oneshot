@@ -140,6 +140,15 @@ He knows he has the only key to the exit door (room \ref{lowerExit}), so he inte
   The wolves' restraints rip off in a whipping snap as the beasts burst free from their bonds, and rush straight to you.
 \end{boxtext}
 
+\widePic[t]{Roch_Hercka/garden}
+
+\iftoggle{hardcore}{}{%
+  \goblincaster[\npc{\M\N}{Grank}\label{grank}]
+
+  \setcounter{diceNo}{1}
+  \showStdSpells
+}
+
 \paragraph{If the \glspl{pc} run through the lift's double doors,}
 they will find a sudden drop.
 The players roll \roll{Wits}{Athletics} (\tn[7]) to have the \glspl{pc} catch themselves before falling.
@@ -157,8 +166,6 @@ Perhaps he could use \pgls{talisman} to engineer a distraction and get up the li
 Or perhaps \pgls{ogre} at him.
 
 \morphwolf[\npc{\T[4]\A\R}{\arabic{noAppearing} Morph Wolves}]
-
-\widePic[t]{Roch_Hercka/garden}
 
 \mapentry[fungusGarden]{Fungal Gardens}
 
@@ -186,13 +193,6 @@ he will hide while casting spells.
 \paragraph{If Grank ever feels like his life is under threat,}
 then he will taunt the \glspl{pc} with the key to the outside world he has in is position, and throw it into the nearest ooze.
 He then lets out a giggle and dashes off into the fungal undergrowth, leaving the players to face the hulking, pulsating, mass.
-
-\iftoggle{hardcore}{%
-  \goblincaster[\npc{\M\N}{Grank}\label{grank}]
-
-  \setcounter{diceNo}{1}
-  \showStdSpells
-}{}
 
 \iftoggle{intro}{}{
   \jelly
@@ -234,9 +234,8 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
 
     \paragraph{If the \glspl{pc} examine the door,}
     they can see the goblin in the next area by a glimmer of candle-light.
+
   }
 
+  \pic{Decky/screech}
 }
-
-\pic{Decky/screech}
-

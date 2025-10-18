@@ -210,15 +210,24 @@ With a successful roll,
  the party find the ogre sleeping.
 }
 
-\ogre[\npc{\N\M}{Rick, the Ogre Guard}]
+\ogre[\npc{\N\M}{Prisoner Guard}]
 
 \mapentry[secondPrison]{Second Prison}
 
-\begin{exampletext}
-  This little room once housed a full family of gnomes, but now serves only as another prison.
-\end{exampletext}
+\begin{boxtext}
+  Opening the door opens into the room silently.
+  A crumpled human lies on the tiny bed.
+\end{boxtext}
 
-The prisoners require no locks or handcuffs -- the ogre waiting outside suffices to terrify them into staying put.
+This person only pretends to sleep so the other --- hiding round the corner of the room --- can sneak-attack%
+\exRef{core}{Core Rules}{sneakattack}
+whoever comes to eat them.
+
+\iftoggle{intro}{
+  If the troupe don't make it obvious they're not goblins, they'll have to roll \roll{Wits}{Vigilance} to avoid being stabbed.
+  The \gls{tn} equals 7 plus the hiding human's \roll{Dexterity}{Stealth}
+  (Select two \glspl{statblock} from the \gls{npc} handouts).
+}{}
 
 \iftoggle{hardcore}{
   \paragraph{If the \glspl{pc} came looking for their allies,}

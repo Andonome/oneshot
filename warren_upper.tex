@@ -25,25 +25,27 @@
 }{}
 
 \mapentry[armoury]{Armoury}
-\begin{exampletext}
+\iftoggle{hardcore}{
+  \begin{exampletext}
+    The gnomes once stashed their little weapons here.
+    The horde have added to it considerably.
+  \end{exampletext}
+}{
+  \begin{boxtext}
+    Up the stairway, three dying fireflies wander pointlessly.
+    At the top, a stand for little weapons.
+    To the right, a door with an ornate bronze handle.
+  \end{boxtext}
+}
 
-  The gnomes once stashed their little weapons here.
-  The horde have added to it considerably.
+The rack holds the following \glspl{weapon}:
 
-\end{exampletext}
-
-\begin{boxtext}
-  At the top of the stairway, three dying fireflies wander pointlessly.
-  Behind them, a cluster of shadow in an alcove holds metallic glints.
-\end{boxtext}
-
-The \glspl{pc} see the following:
-
+\begin{multicols}{2}
 \begin{itemize}
   \item
   3 buckler shields
   \item
-  1 crossbow (unstrung but usable with an \roll{Wits}{Crafts} roll, \tn[7])
+  1 crossbow (unstrung but usable with an \roll{Intelligence}{Projectiles} roll, \tn[7])
   \item
   3 quivers, each with 20 arrows (for a shortbow)
   \item
@@ -55,10 +57,11 @@ The \glspl{pc} see the following:
   \item
   7 wood axes
 \end{itemize}
+\end{multicols}
 
 \iftoggle{intro}{
-  \paragraph{Buckler Shields}
-  These shields work like any other \gls{weapon}.
+  \paragraph{Shields}
+  work like any other \gls{weapon}.
 
   \paragraph{The crossbow}
   (if repaired) deals $1D6+3$ Damage, but requires at least 4 rounds to reload.
@@ -93,40 +96,40 @@ The \glspl{pc} see the following:
 
 }
 
-\mapentry[inDoor]{The Two-Way Doors}
+\mapentry[inDoor]{The In Door}
 
-\begin{exampletext}
-  When gnomes rushed busily around the \gls{warren}, taking mushrooms to the kitchen, chamber-pots to the mushrooms, and secrets to fellow conspirators, they sometimes bumped into each other.
-  To stop this happening again, they designated this door as `out', and the other as `in'.
-\end{exampletext}
+\iftoggle{hardcore}{}{
+  \begin{boxtext}
+    The door opens into a wide hallway.
+    On the right hand wall, a smaller corridor begins four \glspl{step} ahead.
+    On the left hand wall, a small door, six \glspl{step} ahead, barely visible in the shadows.
+    On the immediate left, perfectly smooth, man-sized, double-doors stand without any handle, lock or other feature.
+  \end{boxtext}
+}
 
-The \glspl{pc} will see the lift's double-doors straight ahead of them (assuming they have any light at all).
-
-\begin{boxtext}
-  Ahead the tunnel continues past a corridor on the right, and ends next to a small door on the left, barely visible in the shadows.
-  On your immediate left, smooth, man-sized, double-doors stand without any handle, lock or other feature.
-\end{boxtext}
+The double-doors open with a simple push, then swing shut.
+They cannot be opened from the other side.
+\footnote{The gnomes kept knocking into each other at the front door, so they made the double-doors an `in door', and the other an `out door'.}
 
 \paragraph{Opening either door from the wrong side}
-requires a \roll{Strength}{Larceny} roll, \tn[10].
-Once it shuts, it shuts.
+requires a \roll{Strength}{Larceny} roll, \tn[12].
 
 \mapentry[outDoor]{The Out Door}
 
-This little door opens the opposite way from the double doors in area \ref{inDoor}, and also demands a roll of \roll{Strength}{Larceny} (\tn[10]) to open from the wrong side.
+This little door opens the opposite way from the double doors in area \ref{inDoor}, and also demands a roll of \roll{Strength}{Larceny} (\tn[12]) to open from the wrong side.
 
-The \glspl{ogre} cannot run through this door -- they have to stop, and squeeze.
-Anyone waiting on the other side can roll \roll{Intelligence}{Melee} against the ogre's \roll{Speed}{Melee}; success means the character can make \pgls{vitalShot} against the giant head squirming through the door.%
-\exRef{core}{Core Rules}{sneakattack}
+\Glspl{ogre} cannot run through this door -- they must stop, and squeeze.
+\iftoggle{intro}{%
+  Anyone waiting on the other side can roll \roll{Intelligence}{Melee} against the ogre's \roll{Speed}{Melee}; success means the character can make \pgls{vitalShot} against the giant head squirming through the door.%
+  \exRef{core}{Core Rules}{sneakattack}}{%
+  It's a good place for \pgls{ambush}.
+}
 
 \iftoggle{hardcore}{}{
   \warrenMapUpper
 }
 
 \mapentry[topShaft]{The Top of the Shaft}
-
-Grank the goblin druid has heard the \glspl{pc} coming, and has no intention of fighting them alone.
-He knows he has the only key to the exit door (room \ref{lowerExit}), so he intends to loose the morph-wolves he has tied up at the room's side before fleeing into the fungal gardens.
 
 \begin{boxtext}
   Ahead of you stand the lift's double-doors.
@@ -139,6 +142,9 @@ He knows he has the only key to the exit door (room \ref{lowerExit}), so he inte
 
   The wolves' restraints rip off in a whipping snap as the beasts burst free from their bonds, and rush straight to you.
 \end{boxtext}
+
+Grank the goblin druid has heard the \glspl{pc} coming, and has no intention of fighting them alone.
+He knows he has the only key to the exit door (room \ref{lowerExit}), so he intends to loose the morph-wolves he has tied up at the room's side before fleeing into the fungal gardens.
 
 \widePic[t]{Roch_Hercka/garden}
 
@@ -169,23 +175,26 @@ Or perhaps \pgls{ogre} at him.
 
 \mapentry[fungusGarden]{Fungal Gardens}
 
-\begin{exampletext}
-  This beautiful fungal garden took dripping rain from above, and sieved it through the roof then the soil below, until it distributed nutrients for a forest of mushrooms, big and small.
-
-  During \ifnum\value{cycle}=4\gls{cThree}\else\gls{cFive}\fi, acidic oozes crept in through tiny cracks, so the gnomes had to kill the little pests before they grew too large.
-  The goblins haven't kept up with the maintenance, so the semi-sentient gelatinous \glspl{swarm} quickly grew massive, so the goblins simply closed the door and left them alone.
-\end{exampletext}
-
-A gentle green glow in the distance gives the area an aerie, serene feeling.
+\begin{boxtext}
+  A gentle green glow in the distance silhouettes ten thousand mushrooms of every size.
+  Some as big as a barn and as wide as a cart.
+  Others only as thick as a man's neck, but just as tall.%
+  \footnote{This beautiful fungal garden took dripping rain from above, and sieved it through the roof then the soil below, until it distributed nutrients for a forest of mushrooms, big and small.}
+\end{boxtext}
 
 \paragraph{Once the players enter the room,}
-an ooze begin to stalk them.
+an ooze begin to stalk them.%
+\footnote{%
+  During \ifnum\value{cycle}=4\gls{cThree}\else\gls{cFive}\fi, acidic oozes crept in through tiny cracks, so the gnomes had to kill the little pests before they grew too large.
+  The goblins haven't kept up with the maintenance, so the semi-sentient gelatinous \glspl{swarm} quickly grew massive, so the goblins simply closed the door and left them alone.
+}
 \iftoggle{hardcore}{%
   If multiple oozes chase them, the smaller ones will always back away from the larger ones, so no more than one ooze should follow them at a time (always the largest one).
 }{}
 
 \paragraph{Investigating the green glows}
-reveals little patches of shiny-green \glspl{glowshroom}.
+reveals little patches of shiny-green \glspl{glowshroom}%
+\iftoggle{intro}{(find them in the glossary, \vpageref{fenestraGlosPreamble})}{}.
 
 \paragraph{If the \glspl{pc} approach Grank,}
 he will hide while casting spells.
@@ -207,10 +216,8 @@ He then lets out a giggle and dashes off into the fungal undergrowth, leaving th
 \iftoggle{hardcore}{}{
   \mapentry[lowerExit]{The Exit}
 
-  \iftoggle{intro}{
-    The \glspl{pc} have found the exit, and can finally leave the nightmare behind.
-
-    \begin{boxtext}
+  \iftoggle{intro}{%
+    \begin{boxtext}[]
       As the key turns, the door swings open, and daylight floods in.
       Green trees cover the road down the hill, and in the far distance, chimney-fires from little hamlets wander into the sky.
 

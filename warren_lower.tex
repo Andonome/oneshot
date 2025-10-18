@@ -194,21 +194,17 @@
 
 \mapentry[diningRoom]{Dining Room}
 
-Every morsel has been licked clean from this little dining room.
-Pots, smashed plates, forks, and candlesticks litter the floor.
-A goblin and a giant rat bicker over a human bone.
+\begin{boxtext}
+  Smashed-up chairs and broken cutlery surround a low dining table, lit by a dribbling candle.
+  On the table, a little bleach-white goblin wrestles with a rat-like creature, the size of a dog.
+  The ugly pair fight over a human leg.
+\end{boxtext}
 
 On the table rest two large knives which can be used as \emph{daggers}.
 \iftoggle{intro}{%
   \Dagger
   \weaponName s grant \absNum{weaponDamage} Damage in combat, but no Bonus to hit.
 }{}
-
-\begin{boxtext}
-  Smashed-up chairs and broken cutlery surround a low dining table, lit by a dribbling candle.
-  On the table, a little bleach-white goblin wrestles with a rat-like creature, the size of a dog.
-  The ugly pair fight over a human leg.
-\end{boxtext}
 
 \paragraph{If \pgls{pc} sneaks up quietly,}
 have them roll \roll{Dexterity}{Stealth} (\tn[9]).
@@ -222,14 +218,16 @@ Failure means the goblin and rat attack together.
   they take 1 \gls{ep} for the strenuous activity.
 }{}
 
-\mapentry[spellCasters]{Druidical Debates}
+\newRuleWeapons
 
-Two druids argue about how to use \pgls{deep} Scroll to return home, but can't figure it out.
-If they hear the \glspl{pc} coming, they will shout for the goblins in room \vref{kitchen} to go investigate.
+\mapentry[spellCasters]{Druidical Debates}
 
 \begin{boxtext}
   From the top of the stairs, you see the silhouettes of a goblin, clothed only in leather satchels, holding another goblin on the ground, and yelling at him while pointing to the darkness behind him.
 \end{boxtext}
+
+Two druids argue about how to use \pgls{deep} Scroll to return home, but can't figure it out.
+If they hear the \glspl{pc} coming, they will shout for the goblins in room \vref{kitchen} to go investigate.
 
 \goblincaster[\npc{\T[2]\F\M\N}{Goblin Druids}]
 
@@ -306,9 +304,13 @@ then the goblins are asleep in the kitchen, and they can sneak in with a \roll{D
 they'll find a few canteens of water, one of wine, and sacks vegetables (enough for 4 meals).
 The table also holds a tinder box and three mushroom-based candles (unlit).
 
-\newRuleWeapons
-
 \mapentry[lift]{The Gnomish Lift}
+
+\begin{boxtext}
+  The great double doors swing open, revealing a wide, empty room.
+  Your torchlight stretches far above, and well out of reach you can see a wooden ceiling.
+  The room appears otherwise empty.
+\end{boxtext}
 
 This \gls{artefact} is fully sentient, but only interested in taking people where they say they need to go.%
 \iftoggle{intro}{}{\footnote{For full details, see \autopageref{Lift}.}}
@@ -320,12 +322,6 @@ The \glspl{ogre} and goblins who use the lift only know the passwords for the bo
 \footnote{Only one goblin druid extracted the password for the top, but has kept this secret.
 Find Grank \vpageref{grank}.}
 
-\begin{boxtext}
-  The great double doors swing open, revealing a wide, empty room.
-  Your torchlight stretches far above, and well out of reach you can see a wooden ceiling.
-  The room appears otherwise empty.
-\end{boxtext}
-
 \paragraph{If anyone tries to climb the walls,}
 they will find less purchase than a Sun-screen salesman in a Scotland.
 
@@ -334,6 +330,12 @@ a `raiding party' return with more prisoners to place in the lower cell (room \r
 See \autopageref{raidingParty} for details on the raiding party.
 
 \mapentry[dragonApproach]{Dragon's Approach}
+
+\begin{boxtext}
+  A strange scent wanders down from above, something like a chicken cooked in rotten eggs.
+  At the top of the staircase, your flame illuminates three charred goblin corpses on the ground, their charred hands turned upwards like dead spiders.
+  The next staircase turns a sharp right, and up into darkness.
+\end{boxtext}
 
 \begin{exampletext}
   When the horde attacked, one gnome decided to activate \pgls{deep} scroll in order to flee.
@@ -349,12 +351,6 @@ See \autopageref{raidingParty} for details on the raiding party.
   The dragon and the horde have ended in a kind of stalemate.
   And just like the horde, he cannot leave, as he does not know how to read the \Gls{deep} Scrolls\ldots
 \end{exampletext}
-
-\begin{boxtext}
-  A strange scent wanders down from above, something like a chicken cooked in rotten eggs.
-  At the top of the staircase, your flame illuminates three charred goblin corpses on the ground, their charred hands turned upwards like dead spiders.
-  The next staircase turns a sharp right, and up into darkness.
-\end{boxtext}
 
 \paragraph{If the \glspl{pc} loot the bodies}
 they find one \Gls{deep} Scroll wrapped safely in a scroll case.
@@ -436,6 +432,11 @@ he blesses them all, restoring any lost \glspl{fp}.
 
 \mapentry[treasureRoom]{Treasure Room}
 
+\begin{boxtext}
+  Through the door, two locked chests lie on the ground.
+  Above them, a shortbow and two beautiful short swords stand affixed to the wall, with a quiver of arrows with gemstones used as arrow tips.
+\end{boxtext}
+
 \begin{itemize}
   \item
   Four wax candles (they burn for 1 hour each) with a tinder box.
@@ -452,9 +453,4 @@ he blesses them all, restoring any lost \glspl{fp}.
   \item
   Two gem-encrusted shortswords worth 4~\glspl{gp}.
 \end{itemize}
-
-\begin{boxtext}
-  Through the door, two locked chests lie on the ground.
-  Above them, a shortbow and two beautiful short swords stand affixed to the wall, with a quiver of arrows with gemstones used as arrow tips.
-\end{boxtext}
 

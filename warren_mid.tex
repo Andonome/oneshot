@@ -5,17 +5,17 @@
 
 \mapentry[nursery]{Nursery}
 
+\begin{boxtext}
+  Round the corner, a goblin squats back against a short, brass door.
+  His eyes widen, as if making a quick plan.
+\end{boxtext}
+
 \begin{exampletext}
   When the horde arrived, a gnome locked the children in here with enough food for a few days.
   Earlier, \gls{kalama} the gnome cast a spell to look like a goblin, and sneaked in find any survivors.
   However, the spell drains his energy, making him confused and famished.
   He has found the children, and spotted the key next door, but cannot get to it.
 \end{exampletext}
-
-\begin{boxtext}
-  Round the corner, a goblin squats back against a short, brass door.
-  His eyes widen, as if making a quick plan.
-\end{boxtext}
 
 \spyGnome{2}
 
@@ -64,7 +64,9 @@ Exactly how this plays out depends on where the horde moves, whether or not the 
 \mapentry[slugHall]{Slug Hall}
 
 \begin{boxtext}
-  The doorway reveals a massive hallway of sparkling, floating, gently-buzzing, lights.
+  The doorway reveals a massive hallway of sparkling, floating, gently-buzzing, lights.%
+  \footnote{Gnomes grew mushrooms throughout this room in order to grow slugs, which fed fireflies.
+  While torches work better than fireflies, having omnipresent little lights wandering around the \gls{warren} made sure that people could get about easier.}
   Over to the left, a massive staircase leads up into the darkness.
   And ahead, the little lights gently illuminate giant slugs, feasting on corpses and torn-up books.
 
@@ -110,7 +112,8 @@ Once that happens, a battle begins; half the \glspl{ogre} above die, and all of 
   of the stairs, this massive chamber lies empty, except for the fireflies darting about, and piles of long bones on the filthy floor.
   To the right, there two short tunnels reverberate with assorted snoring sounds.
   Ahead of you, two grand staircases lead up into a dim but unwavering light.
-  Below you, the entire floor is sticky and greasy.
+  Below you, the entire floor is sticky and greasy.%
+  \footnote{The hungry horde have torn apart live humans and cows on this floor, leaving a sticky stain, and well-licked bones all over the floor.}
 \end{boxtext}
 
 If the \glspl{pc} have kept quiet enough, they find the goblin horde napping in the dark, with a contented chorus of snores (from rooms \ref{workshop} and \ref{grandLibrary}).
@@ -121,10 +124,10 @@ If the \glspl{pc} have kept quiet enough, they find the goblin horde napping in 
 }
 
 \paragraph{If the \glspl{pc} tarry or talk,}
-have them roll \roll{Intelligence}{Stealth} (\tn[8]), to get across the sticky floor without squelching too much.
+have them roll \roll{Intelligence}{Stealth} (\tn[8]), to get across the sticky floor without squelching too much.%
 \iftoggle{intro}{%
   They make only one \gls{natural}, which counts for the whole group.
-  Each margin on the roll allows them an additional round before the horde wakes.
+  Each Margin on the roll allows them an additional round before the horde wakes.
 }{}
 
 \iftoggle{hardcore}{
@@ -166,15 +169,16 @@ Find the goblins' stats \vpageref{workshopGoblins}.
 
 \mapentry[grandLibrary]{The Grand Library}
 
-The goblin druid had been investigating the \lootTalisman\ \gls{talisman}.
-It remains on the ground beside him.
+\begin{boxtext}
+  At the top of the stairs you find the ruins of a massive library, with little candles dotted about the room's edge.
+  \Pgls{ogre} sleeps on a bed of torn-up books, and a pale, little hooded creature lies on a little bed, clutching something to its chest, even in its sleep.
+\end{boxtext}
+
+The sleeping druid holds one \lootTalisman\ \gls{talisman}.
 
 \showTalisman
 
 \goblincaster
-
-\labyrinthScroll 
-The goblin druid holds a \spellName\ in her sleepy hands.
 
 \iftoggle{hardcore}{
   \ogre[\npc{\T[2]\N\M}{2 Docile Ogres}]
@@ -182,27 +186,17 @@ The goblin druid holds a \spellName\ in her sleepy hands.
   \ogre[\npc{\N\F}{Sleeping Ogre}]
 }
 
-\begin{boxtext}
-  At the top of the stairs you find the ruins of a massive library, with little candles dotted about the room's edge.
-  Book cases lie in a smashed heap on the ground, others appear to be used as a makeshift bed for an ogre.
-  The books themselves are gone, except for a scroll, now tightly clutched by a goblin in a black cowl.
-\end{boxtext}
-
-\paragraph{If any of the \glspl{pc} attempt to sneak in,}
-have them roll \roll{Dexterity}{Stealth}, \tn[8].
-
-Failure will, of course, spell disaster, but success will allow them to steal a magical item.
-If the player wants to steal multiple magical items, describe them and see how many they decide to take.
-Each item taken increases the roll's \gls{tn} by 1, so taking 3 items would mean \pgls{tn} of 11.
-The player should not roll again -- the original roll remains, but increasing the \gls{tn} may well turn success into awful failure.
+\paragraph{To investigate quietly,}
+roll \roll{Dexterity}{Stealth} at \tn[8].
+\labyrinthScroll 
+Success reveals a useable \spellName.
+Failure awakens the horde.
 
 \mapentry[windingStairs]{Winding Stairs}
 
-A single ogre guards the prisoners here (the door has no lock).
-
 \begin{boxtext}
-  As you round the stairs' third turn, you see a massive ogre crouching by a door, licking a bone with a bright-red tongue.
-  It blocks the path completely with its falling belly.
+  \Pgls{ogre} slouches in front of a door, licking a long bone with a bright-red tongue.
+  The ong legs block the path completely.
 \end{boxtext}
 
 \paragraph{If the party have made a reasonable attempt at staying quiet,}

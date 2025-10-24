@@ -22,15 +22,11 @@
 \iftoggle{hardcore}{}{
   \mapentry[entrycell]{Cells}
 
-  \begin{exampletext}
-
-    Gnomes erected cots, cribs and hammocks here to be used as a communal sleeping area.
-    Since then, goblins have placed a bar over the outside of the door to house prisoners.
-
-  \end{exampletext}
-
   \noindent
-  Here the \glspl{pc} awaken to their hopeless situation.
+  Here the \glspl{pc} awaken in total darkness, bound with ropes, among ragged sheets and small, splintered beds.%
+  \footnote{Many gnomes slept in this room, due to the excellent ventilation (room \vref{escapeShaft}).}
+  The door is locked.%
+  \footnote{Gnomes have a cultural tradition of putting locks on things, especially unexpected things.}
 
   \begin{itemize}
     \iftoggle{hardcore}{%
@@ -80,19 +76,19 @@
   A failure means he disengages, muttering ``no, it won't work''.
 
   \subsubsection*{Shortly after,}
-  Blara the goblin druid, and an ogre walk towards the cell.
-  The players should have around 5 actions (or dice-rolls) before trouble arrives.
-
   \begin{boxtext}
-    Heavy footsteps pad down the hall, you hear the door's bar being lifted, and a little goblinoid face peeps in with a torch.
-    Behind her, an ogre stoops to the height of a man to avoid the low ceiling.
+    heavy footsteps pad down a hall, beyond the door.
+    An argument begins, then goes silent in the same instant.
+    The feet descend with a softer tapping sound from something metal.
+    Behind her, \pgls{ogre} stoops to the height of a man to avoid the low ceiling.
   \end{boxtext}
 
-  The ogre then tries to pick up a character, and take it up to the kitchen.
+  A goblin druid has come with \pgls{ogre} and the doorkey.
+\index{Key!\Glsfmttext{warren}~\nameref{entrycell}}
+  The players have time for \pgls{action} each (one dice-roll) before the door opens, and the \gls{ogre} reaches out to take a character to the kitchen (room~\vref{kitchen}).
 
   \paragraph{If anyone wants to fight while still tied up,}
-  they can do so with a -4 Penalty to the roll.
-
+  they can do so with a -4~Penalty to the roll.
 
   \Person{\npc{\N\F}{Blara the Goblin Druid}}%
     {{-2}{2}{2}}% BODY
@@ -160,17 +156,12 @@
 
 \mapentry[escapeShaft]{The Chimney}
 
-\begin{exampletext}
-  The gnomes tunnelled down this shaft for mining, then made a ladder to easily reach the lower levels.
 
-  More recently, the magical lift (room \ref{lift}) made it redundant, so they've placed a forge in front of the entrance to the workshop (room \ref{workshop}), since this shaft ascends above, as a chimney.
-\end{exampletext}
-
-\iftoggle{hardcore}{
-  The players should make a \roll{Wits}{Crafts} (\tn[10]) to deduce that a furnace like this must have a wide chimney, and that tunnel may lead elsewhere.
-}{
-  The \glspl{pc} will probably encounter the ladder, carved into the stone, while feeling around in the dark.
-  Perhaps one or more will find themselves at the top of the shaft when Blara enters.
+\iftoggle{hardcore}{}{
+  \begin{boxtext}
+    The air has a subtle draft in the alcove.
+    The stone walls have nothing but shallow, empty, shelves on the left hand side, from top to bottom.
+  \end{boxtext}
 
   \paragraph{Anyone at the top of the ladder,}
   will hear an argument between a goblin and \pgls{ogre}.
@@ -334,21 +325,6 @@ See \autopageref{raidingParty} for details on the raiding party.
   The next staircase turns a sharp right, and up into darkness.
 \end{boxtext}
 
-\begin{exampletext}
-  When the horde attacked, one gnome decided to activate \pgls{deep} scroll in order to flee.
-  Like the others, it targeted an unknown area, full of powerful magic, deep underground.
-  Unlike the others, it held a sleeping dragon, who woke, and sauntered through the magical gateway.
-  He stomped on a couple of goblins, then followed the smell of gold and magic, to the treasure room.
-  However, the massive monster could not fit through the door.
-
-  When goblins came up the stairs to investigate, the dragon incinerated them with his fiery breath.
-  So now he waits, with the legendary patience of a dragon.
-  He has no intention of fighting, since he could get hurt, and the goblin horde have no intention of bothering him, so they just pass by that corridor.
-
-  The dragon and the horde have ended in a kind of stalemate.
-  And just like the horde, he cannot leave, as he does not know how to read the \Gls{deep} Scrolls\ldots
-\end{exampletext}
-
 \paragraph{If the \glspl{pc} loot the bodies}
 they find one \Gls{deep} Scroll wrapped safely in a scroll case.
 
@@ -356,7 +332,20 @@ they find one \Gls{deep} Scroll wrapped safely in a scroll case.
 
 \mapentry[dragon]{The Dragon's Lair}
 
-The dragon will happily talk with anyone who approaches%
+The dragon%
+\footnote{When the horde attacked, one gnome decided to activate \pgls{deep} scroll in order to flee.
+Like the others, it targeted an unknown area, full of powerful magic, deep underground.
+Unlike the others, it held a sleeping dragon, who woke, and sauntered through the magical gateway.
+He stomped on a couple of goblins, then followed the smell of gold and magic, to the treasure room.
+However, the massive monster could not fit through the door.
+
+When goblins came up the stairs to investigate, the dragon incinerated them with his fiery breath.
+So now he waits, with the legendary patience of a dragon.
+He has no intention of fighting, since he could get hurt, and the goblin horde have no intention of bothering him, so they just pass by that corridor.
+
+The dragon and the horde have ended in a kind of stalemate.
+And just like the horde, he cannot leave, as he does not know how to read the \Gls{deep} Scrolls, but can guess the answer to any riddle.}
+will happily talk with anyone who approaches%
 \iftoggle{hardcore}{, although he only speaks Gnollish and Elvish.}{
   The dragon's eventual goal is to obtain the rest of the treasure, then leave the \gls{warren}, and go somewhere he can spread his wings.
   Like all dragons, he has more cunning than ferocity, and \emph{plenty} of both.

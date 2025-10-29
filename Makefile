@@ -11,6 +11,8 @@ output += booklets/
 
 vpath a7%.tex characters
 
+backpages = $(DROSS)/characters.pdf config/rules.pdf
+
 include config/common.mk
 
 WARREN = main.tex commands.tex images/ glossary.tex intro.tex invasion.tex $(wildcard warren_*.tex) appendix.tex handouts.tex appendix.tex images/extracted/lower-handout.svg $(MAP_PARTS)
@@ -87,8 +89,6 @@ config/rules.pdf: images/extracted/lower-handout.svg
 $(DROSS)/characters.pdf: $(DBOOK)
 
 $(DBOOK): $(DEPS) $(WARREN) $(MAP_PARTS) $(DROSS)/$(BOOK)-switch-gls
-$(TITLE).pdf: $(DROSS)/$(BOOK).pdf $(DROSS)/characters.pdf config/rules.pdf
-	pdfunite $^ $@
 
 $(DROSS)/extended_$(BOOK).pdf: $(DEPS) $(UPPER_WARREN)
 	@$(COMPILER) -jobname=extended_$(BOOK) main.tex

@@ -319,6 +319,24 @@ they will find less purchase than a Sun-screen salesman in a Scotland.
 a `raiding party' return with more prisoners to place in the lower cell (room \ref{entrycell}).
 See \autopageref{raidingParty} for details on the raiding party.
 
+\iftoggle{intro}{}{
+  \iftoggle{hardcore}{}{
+    \mapentry[sneakingGoblin]{Backstabber}
+
+    One goblin was taking a nap when the \glspl{pc} got out.
+    Feeling brave, the little warrior decides it will wait until the \glspl{pc} are not paying attention, stab one in the back, or throw something at them from the shadows, and flee.
+    `\nameref{lift}' gives it cover at all times, as it can always move to the opposite side.
+
+    \goblin[\npc{\M\N}{Sneaker}]
+
+    \act{hear the feet in the shadows}{Wits}{Vigilance}{\roll{Dexterity}{Stealth}}
+
+    \pic{Decky/screech}
+
+    \bigbreak
+  }
+}
+
 \mapentry[dragonApproach]{Dragon's Approach}
 
 \begin{boxtext}

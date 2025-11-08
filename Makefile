@@ -19,7 +19,7 @@ WARREN = main.tex commands.tex images/ glossary.tex intro.tex invasion.tex $(wil
 
 UPPER_WARREN = $(WARREN) top.tex tour.tex images/extracted/lower-handout.svg
 
-OUTSIDE_WARREN = $(UPPER_WARREN) module.tex sq.tex
+OUTSIDE_WARREN = $(UPPER_WARREN) module.tex threads.tex
 
 config/common.mk:
 	git submodule update --init

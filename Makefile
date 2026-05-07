@@ -84,7 +84,7 @@ images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg | images/extrac
 	inkscape $< --select=layer2 --actions=delete -l --export-filename $@
 
 config/rules.pdf: images/extracted/lower-handout.svg
-	make -C config rules.pdf
+	$(MAKE) -C config rules.pdf
 
 $(DROSS)/characters.pdf: $(DBOOK)
 
@@ -104,7 +104,7 @@ Enter_the_Horde.pdf: $(DROSS)/hardcore_$(BOOK).pdf
 
 .PHONY: cs_zine
 cs_zine: cs.pdf ## Make A7 zine example characters
-	make zine_characters.pdf
+	$(MAKE) zine_characters.pdf
 
 zine_characters.pdf: cs.pdf $(mini_spell_pdf)
 	pdfunite $^ $@

@@ -13,6 +13,8 @@
   His eyes widen, as if making a quick plan.
 \end{boxtext}
 
+\iftoggle{hardcore}{\label{kalama}}{}
+
 \begin{exampletext}
   When the horde arrived, a gnome locked the children in here with enough food for a few days.
   Earlier, \gls{kalama} the gnome cast a spell to look like a goblin, and sneaked in find any survivors.
@@ -88,8 +90,8 @@ Salt covers the stairs, preventing the slugs from moving upwards.}
 \paragraph{If the \glspl{pc} want to investigate the corpses,}
 \label{nursery_key}
 they find a dead gnome with \pgls{deep} Scroll, and a discarded, half-eaten cloak, with a key to room \ref{nursery} in the pocket.%
-\footnote{See \autopageref{saving_the_children} for how the key arrived here.}
 \iftoggle{intro}{%
+  \footnote{See \autopageref{saving_the_children} for how the key arrived here.}
   As with the others, the \Gls{deep} Scroll requires a riddle to be answered, and vanishes once used.
 }{}
 

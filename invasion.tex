@@ -50,34 +50,37 @@
   }
 }
 
-\subsection{The Premise}
+\iftoggle{hardcore}{}{
+  \subsection{The Premise}
 
-The \glspl{pc} awaken to find themselves in a cell, deep underground.
-Their last memories surface slowly\iftoggle{hardcore}{}{ as the players \iftoggle{intro}{get to know their character}{themselves start to make their characters}}.
+  The \glspl{pc} awaken to find themselves in a cell, deep underground.
+  Their last memories surface slowly as the players get to know their characters.
 
-Once they escape into the once-gnomish \gls{warren}, the troupe might:
+  Once they escape into the once-gnomish \gls{warren}, the troupe might:
 
-\begin{itemize}
-  \item
-  speak to a dragon who cannot squeeze through the door to the treasure room,
-  \item
-  grab magical scrolls made by the gnomes before their defeat,
-  \item
-  avoid goblins raiding parties,
-  \item
-  dodge the traps left by the gnomes,
-  \item
-  find and free other prisoners,
-  \item
-  and perhaps even escape.
-\end{itemize}
+  \begin{itemize}
+    \item
+    speak to a dragon who cannot squeeze through the door to the treasure room,
+    \item
+    grab magical scrolls made by the gnomes before their defeat,
+    \item
+    avoid goblins raiding parties,
+    \item
+    dodge the traps left by the gnomes,
+    \item
+    find and free other prisoners,
+    \item
+    and perhaps even escape.
+  \end{itemize}
 
-\iftoggle{hardcore}{
-  Once out, they emerge into the hillside at night, without food or water.
-  Once night comes, a light appears in the distance, which seems to signal for aid.
-  If the \glspl{pc} investigate, they will find the black tower, where goblins have surrounded the proprietor, known as `\gls{alchemist}'.
-}{
-  The \glspl{pc}' mission is simple -- to escape through the exit at the top, and return to civilization.
+  \iftoggle{intro}{
+    The \glspl{pc}' mission is simple -- to escape through the exit at the top, and return to civilization.
+  }{
+    Once out, they emerge into the hillside at night, without food or water.
+    Once night comes, a light appears in the distance, which seems to signal for aid.
+    If the \glspl{pc} investigate, they will find the black tower, where goblins have surrounded the proprietor, known as `\gls{alchemist}'.
+
+  }
 }
 
 \widePic{Roch_Hercka/transformation}
@@ -170,6 +173,7 @@ You should cut (or tear) these apart, so you can hand them to players to individ
   Go through the first couple of areas, and try a few practice rolls on your own.
   You'll quickly develop a feel for the \gls{attribute} plus \gls{skill} system.
 }
+
 \iftoggle{intro}{
 
   \subsection{Understanding Boxtext}
@@ -318,19 +322,22 @@ Their ultimate goal is to return home.
 
   Have the player mark $1D6$ \glspl{ep} on the character sheet.}
 
-\subsection{Setbacks \& Death}
+\iftoggle{hardcore}{}{
+  \subsection{Setbacks \& Death}
 
-If any character dies, you can introduce another once the troupe reaches any prison (rooms \ref{entrycell} and \ref{secondPrison}).
-The goblins regularly send out raiding parties to capture people, then return and dump them into the prisons, so even if the \glspl{pc} have passed a prison, any time they return, they can find and liberate more prisoners.
+  If any character dies, you can introduce another once the troupe reaches any prison (rooms \ref{entrycell} and \ref{secondPrison}).
+  The goblins regularly send out raiding parties to capture people, then return and dump them into the prisons, so even if the \glspl{pc} have passed a prison, any time they return, they can find and liberate more prisoners.
 
-\subsubsection{Captured}
-\glspl{pc} are better-off than dead \glspl{pc}.
-So if the party ever lose a fight, do not push this until each lie dead.
-Instead, when it becomes obvious they cannot win, have the horde draw back, mock the party, and then tell them to drop their weapons so a group of \glspl{ogre} can escort them down to their cells.
+  \subsubsection{Captured}
+  \glspl{pc} are better-off than dead \glspl{pc}.
+  So if the party ever lose a fight, do not push this until each lie dead.
+  Instead, when it becomes obvious they cannot win, have the horde draw back, mock the party, and then tell them to drop their weapons so a group of \glspl{ogre} can escort them down to their cells.
 
-\subsubsection{Annihilation}
-doesn't have to mean the game ends.
-If you have at least a couple of hours more time for the game's night, just pull up some more characters, and have the new group awaken, ready for the goblins to eat them.
-Perhaps \gls{sadMan} still waits for them, this time more cynical than ever!
+  \subsubsection{Annihilation}
+  doesn't have to mean the game ends.
+  If you have at least a couple of hours more time for the game's night, just pull up some more characters, and have the new group awaken, ready for the goblins to eat them.
+  Perhaps \gls{sadMan} still waits for them, this time more cynical than ever!
+}
 
 \end{multicols}
+

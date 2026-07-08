@@ -49,7 +49,7 @@ images/extracted/lower-1.jpg: images/Dyson_Logos/lower.svg | images/extracted/
 	cat $< | inkscape --pipe \
 	--export-type=png --export-area=159:1936:3020:3039 | \
 	$(LOWER_SECTION_1_RECTS)
-images/extracted/lower-2.jpg: images/Dyson_Logos/lower.svg | images/extracted/lower-1.jpg
+images/extracted/lower-2.jpg: images/Dyson_Logos/lower.svg
 	cat $< | inkscape --pipe \
 	--export-type=png --export-area=422:502:3463:2133 | \
 	$(LOWER_SECTION_2_RECTS)
@@ -65,32 +65,32 @@ images/extracted/lower-handout-1.jpg: images/Dyson_Logos/lower.svg | images/extr
 	--export-type=png --export-area=159:1936:3020:3039 | \
 	$(LOWER_SECTION_1_RECTS)
 
-images/extracted/lower-handout-2.jpg: images/Dyson_Logos/lower.svg | images/extracted/lower-handout-1.jpg
+images/extracted/lower-handout-2.jpg: images/Dyson_Logos/lower.svg
 	cat $< | inkscape --pipe \
 	--select=layer2 --actions=delete \
 	--export-type=png --export-area=422:502:3463:2133 | \
 	$(LOWER_SECTION_2_RECTS)
 
-images/extracted/lower-handout-3.jpg: images/Dyson_Logos/lower.svg | images/extracted/lower-handout-2.jpg
+images/extracted/lower-handout-3.jpg: images/Dyson_Logos/lower.svg
 	cat $< | inkscape --pipe \
 	--select=layer2 --actions=delete \
 	--export-type=png --export-area=30:40:2350:1400 | \
 	$(LOWER_SECTION_3_RECTS)
 
-images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg | images/extracted/lower-handout-2.jpg
+images/extracted/upper-handout.svg: images/Dyson_Logos/upper.svg
 	inkscape $< --export-id-only --export-id=layer3 -l --export-filename $@
 
-images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg | images/extracted/upper-handout.svg
+images/extracted/lower-handout.svg: images/Dyson_Logos/lower.svg
 	inkscape $< --select=layer2 --actions=delete -l --export-filename $@
 
-config/rules.pdf: images/extracted/lower-handout.svg
+config/rules.pdf:
 	$(MAKE) -C config rules.pdf
 
 $(DROSS)/characters.pdf: $(DBOOK)
 
 $(DBOOK): $(DEPS) $(WARREN) $(MAP_PARTS) $(DROSS)/$(BOOK)-switch-gls
 
-$(DROSS)/extended_$(BOOK).pdf: $(DEPS) $(UPPER_WARREN)
+$(DROSS)/extended_$(BOOK).pdf: $(DEPS) $(UPPER_WARREN) | images/extracted/upper-handout.svg
 	@$(COMPILER) -jobname=extended_$(BOOK) main.tex
 Extended_$(TITLE).pdf: $(DROSS)/extended_$(BOOK).pdf $(DROSS)/characters.pdf
 	pdfunite $^ $@

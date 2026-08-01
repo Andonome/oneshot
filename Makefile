@@ -95,7 +95,7 @@ $(DROSS)/extended_$(BOOK).pdf: $(DEPS) $(UPPER_WARREN) | images/extracted/upper-
 Extended_$(TITLE).pdf: $(DROSS)/extended_$(BOOK).pdf $(DROSS)/characters.pdf
 	pdfunite $^ $@
 
-$(DROSS)/hardcore_$(BOOK).pdf: $(DEPS) $(OUTSIDE_WARREN)
+$(DROSS)/hardcore_$(BOOK).pdf: $(DEPS) $(OUTSIDE_WARREN) | images/extracted/upper-handout.svg
 	@$(COMPILER) -jobname=hardcore_$(BOOK) module.tex
 Enter_the_Horde.pdf: $(DROSS)/hardcore_$(BOOK).pdf
 	@$(CP) $< $@

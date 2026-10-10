@@ -52,7 +52,7 @@ As they travel upwards towards the sunlight, they learn about the rules and the 
 
 For existing chronicles, the troupe may simply [enter the horde][enter_the_horde], to rescue allies.
 
-[compiling]: https://gitlab.com/bindrpg/core/-/wikis/dev/Compiling
+[compiling]: https://gitlab.com/bindrpg/core/-/wikis/Development/Compiling
 [issues email]: mailto:contact-project+bindrpg-oneshot-22760003-issue-@incoming.gitlab.com
 [oneshot]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Escape_from_the_Goblin_Horde.pdf?job=build
 [extended]: https://gitlab.com/bindrpg/oneshot/-/jobs/artifacts/master/raw/Extended_Escape_from_the_Goblin_Horde.pdf?job=build

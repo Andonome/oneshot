@@ -5,7 +5,7 @@ variables:
 build:
   image: $LATEX_IMAGE
   script:
-    - make all -sj
+    - make all cs_zine -sj
   rules:
     - if: $CI_COMMIT_BRANCH == "master"
     - if: $CI_COMMIT_BRANCH == "run"
